@@ -94,7 +94,13 @@ odds: oranlar[String(m.fixture?.id)]
 games.sort((a, b) =>
   siralama(a.status) - siralama(b.status)
 );
-    renderMatches();
+   games.forEach(g => {
+  const o = oranlar[g.id];
+  g.odds = o
+    ? [o['1'], o['X'], o['2']]
+    : ['-', '-', '-'];
+});
+renderMatches(); 
   })
   .catch(error => console.error(error));
 }
