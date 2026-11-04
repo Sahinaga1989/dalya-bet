@@ -42,6 +42,20 @@ nav{display:flex;gap:8px;padding:10px 4%;background:#111;border-bottom:1px solid
 <script>
 
 let games = [];
+let oranlar = {};
+  fetch('./odds.json?t=' + Date.now())
+  .then(r => r.json())
+  .then(data => {
+    oranlar = data.matches || {};
+    if (games.length) {
+      games.forEach(g => {
+        const o = oranlar[g.id];
+        g.odds = o ? [o['1'], o['X'], o['2']] : ['-', '-', '-'];
+      });
+      renderMatches();
+    }
+  })
+  .catch(error => console.error('Oran hatasi:', error));
 function verileriGuncelle() {
 fetch('./matches.json?t=' + Date.now())
   .then(response => {
@@ -50,6 +64,7 @@ fetch('./matches.json?t=' + Date.now())
   })
   .then(data => {
     games = (data.response || []).map(m => ({
+      id: String(m.fixture?.id || ''),
       league: m.league?.name || 'Futbol',
       time: m.fixture?.date
   ? new Date(m.fixture.date).toLocaleTimeString('tr-TR', {
@@ -65,7 +80,13 @@ fetch('./matches.json?t=' + Date.now())
   : '-',
 status: m.fixture?.status?.short || 'NS',
 minute: m.fixture?.status?.elapsed,
-odds: ['-', '-', '-']
+odds: oranlar[String(m.fixture?.id)] 
+  ? [
+      oranlar[String(m.fixture?.id)]['1'],
+      oranlar[String(m.fixture?.id)]['X'],
+      oranlar[String(m.fixture?.id)]['2']
+    ]
+  : ['-', '-', '-']
     }));                                 const siralama = s =>
   ['1H','2H','HT','ET','P','LIVE','BT'].includes(s) ? 0 :
   ['NS','TBD'].includes(s) ? 1 : 2;
