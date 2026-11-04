@@ -40,14 +40,28 @@ nav{display:flex;gap:8px;padding:10px 4%;background:#111;border-bottom:1px solid
 <section class="promo"><div>🎁 <b>Hoş Geldin</b><span>Demo tanıtım alanı</span></div><div>⚽ <b>Maç Merkezi</b><span>Örnek maç programı</span></div><div>♛ <b>DALYA BET</b><span>Siyah & altın tasarım</span></div></section>
 <footer>DALYA BET • DEMO WEB TASARIMI · Örnek maç ve oranlar kullanılmıştır.</footer>
 <script>
-const games=[
- {league:'🇹🇷 Türkiye Ligi (Örnek)',time:'19:00',home:'İstanbul FK',away:'İzmir Spor',odds:[1.75,3.40,4.10]},
- {league:'🌍 Avrupa Ligi (Örnek)',time:'20:45',home:'Madrid FC',away:'Liverpool FC',odds:[1.95,3.60,3.10]},
- {league:'🏴 İngiltere Ligi (Örnek)',time:'21:00',home:'Londra Arsenal',away:'Manchester Blue',odds:[2.10,3.40,2.85]},
- {league:'🇩🇪 Almanya Ligi (Örnek)',time:'21:30',home:'Münih 09',away:'Dortmund 09',odds:[1.60,4.00,4.75]}
-];
+
+let games = [];
+
+fetch('./matches.json?t=' + Date.now())
+  .then(response => {
+    if (!response.ok) throw new Error('Veri alınamadı');
+    return response.json();
+  })
+  .then(data => {
+    games = (data.response || []).map(m => ({
+      league: m.league?.name || 'Futbol',
+      time: (m.fixture?.date || '').slice(11, 16),
+      home: m.teams?.home?.name || '',
+      away: m.teams?.away?.name || '',
+      odds: ['-', '-', '-']
+    }));
+    renderMatches();
+  })
+  .catch(error => console.error(error));
+
 let slip=[];
-function renderMatches(){let html='';games.forEach((g,gi)=>{html+=`<div class="league">${g.league}</div><div class="match"><div class="teams"><span class="time">${g.time} · ÖRNEK</span><b>${g.home}</b><br>vs <b>${g.away}</b></div>${g.odds.map((o,oi)=>{let label=['1','X','2'][oi],active=slip.some(s=>s.gi===gi&&s.oi===oi);return `<button class="odd ${active?'selected':''}" onclick="toggle(${gi},${oi})"><small>${label}</small><strong>${o.toFixed(2)}</strong></button>`}).join('')}</div>`});document.getElementById('matches').innerHTML=html}
+function renderMatches(){let html='';games.forEach((g,gi)=>{html+=`<div class="league">${g.league}</div><div class="match"><div class="teams"><span class="time">${g.time} · ÖRNEK</span><b>${g.home}</b><br>vs <b>${g.away}</b></div>${g.odds.map((o,oi)=>{let label=['1','X','2'][oi],active=slip.some(s=>s.gi===gi&&s.oi===oi);return `<button class="odd ${active?'selected':''}" onclick="toggle(${gi},${oi})"><small>${label}</small><strong>${typeof o === 'number' ? o.toFixed(2) : '-'}</strong></button>`}).join('')}</div>`});document.getElementById('matches').innerHTML=html}
 function toggle(gi,oi){let idx=slip.findIndex(s=>s.gi===gi);if(idx>=0&&slip[idx].oi===oi)slip.splice(idx,1);else if(idx>=0)slip[idx]={gi,oi,odd:games[gi].odds[oi]};else slip.push({gi,oi,odd:games[gi].odds[oi]});renderMatches();renderSlip()}
 function renderSlip(){let el=document.getElementById('selections');if(!slip.length)el.innerHTML='<div class="empty">Kupona eklemek için bir maç oranına dokun.</div>';else el.innerHTML=slip.map((s,i)=>`<div class="selection"><button onclick="removeItem(${i})">×</button><b>${games[s.gi].home} – ${games[s.gi].away}</b><br>Maç sonucu: ${['1','X','2'][s.oi]} <b>${s.odd.toFixed(2)}</b></div>`).join('');let total=slip.reduce((a,s)=>a*s.odd,1);document.getElementById('totalOdds').textContent=total.toFixed(2);let stake=Math.max(0,Number(document.getElementById('stake').value)||0);document.getElementById('potential').textContent=(stake*total).toLocaleString('tr-TR',{minimumFractionDigits:2,maximumFractionDigits:2})+' TL'}
 function removeItem(i){slip.splice(i,1);renderMatches();renderSlip()}function clearSlip(){slip=[];renderMatches();renderSlip()}function demoSubmit(){if(!slip.length){alert('Önce örnek maç oranlarından seçim yap.');return}alert('Demo kuponu hazırlandı! Bu işlem gerçek bahis değildir ve para kullanılmaz.')}function setTab(btn,label){document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');if(label==='Yarınki Maçlar'){alert('Yarınki maçlar bu örnek demoda henüz tanımlanmadı.');return}if(label==='Canlı Maçlar'){alert('Canlı skor bağlantısı bulunmuyor; listelenen karşılaşmalar örnektir.')}}renderMatches();renderSlip();
