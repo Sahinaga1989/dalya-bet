@@ -73,13 +73,42 @@ jobs:
 
           with open("matches.json", "w", encoding="utf-8") as f:
               json.dump(data, f, ensure_ascii=False)
+                        odds_data = {"matches": {}}
+          for match in data.get("response", [])[:2]:
+              fixture_id = match.get("fixture", {}).get("id")
+              if fixture_id:
+                  try:
+                      result = fetch(
+                          f"https://v3.football.api-sports.io/odds?fixture={fixture_id}&bet=1"
+                      )
+                      for item in result.get("response", []):
+                          for bookmaker in item.get("bookmakers", []):
+                              for bet in bookmaker.get("bets", []):
+                                  values = {
+                                      v["value"]: v["odd"]
+                                      for v in bet.get("values", [])
+                                  }
+                                  if all(k in values for k in ("Home", "Draw", "Away")):
+                                      odds_data["matches"][str(fixture_id)] = {
+                                          "1": values["Home"],
+                                          "X": values["Draw"],
+                                          "2": values["Away"]
+                                      }
+                                      break
+                              if str(fixture_id) in odds_data["matches"]:
+                                  break
+                  except Exception as exc:
+                      print(f"Oran alınamadı: {exc}")
+
+          with open("odds.json", "w", encoding="utf-8") as f:
+              json.dump(odds_data, f, ensure_ascii=False)
           PY
 
       - name: Verileri kaydet
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add matches.json superlig-upcoming.json
+          git add matches.json superlig-upcoming.json odds.json
           if ! git diff --cached --quiet; then
             git commit -m "Canli futbol ve Super Lig verilerini guncelle"
             git push
