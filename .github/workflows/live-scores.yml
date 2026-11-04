@@ -1,10 +1,9 @@
-
 name: DALYA BET Canli Skorlar
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "7,27,47 * * * *"
+    - cron: '7,27,47 * * * *'
 
 permissions:
   contents: write
@@ -18,14 +17,17 @@ jobs:
 
       - name: Futbol verilerini getir
         env:
-          API_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+          API_KEY: ${{ secrets.API_KEY }}
         run: |
           python3 - <<'PY'
-          import os, json, urllib.request
+          import os
+          import json
+          import urllib.request
           from datetime import datetime, timezone
 
           key = os.environ["API_KEY"]
-          url = "https://v3.football.api-sports.io/fixtures?date=" + datetime.now(timezone.utc).strftime("%Y-%m-%d")
+          today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+          url = "https://v3.football.api-sports.io/fixtures?date=" + today
           request = urllib.request.Request(
               url, headers={"x-apisports-key": key}
           )
