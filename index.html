@@ -32,9 +32,9 @@ nav{display:flex;gap:8px;padding:10px 4%;background:#111;border-bottom:1px solid
   <button onclick="setTab(this,'Tüm Maçlar')">🏆 Tüm Maçlar</button>
 </nav>
 <section class="hero"><div><h1>DALYA BET<br>MAÇ HEYECANI!</h1><p>Maçları keşfet, oranları incele ve demo kuponunu oluştur.</p></div><div class="ball">⚽</div></section>
-<div class="notice">ℹ️ DEMO SÜRÜMÜ: Bu sayfadaki maçlar ve oranlar örnektir; canlı veri değildir. Gerçek para, para yatırma/çekme veya gerçek bahis özelliği yoktur.</div>
+<div class="notice">ℹ️  DALYA BET: Maç bilgileri futbol API'sinden belirli aralıklarla güncellenir. Oranlar henüz bağlı değildir. Kuponlar sanal puanlı demodur; gerçek para kullanılmaz.</div>
 <main class="layout">
-<section class="panel"><h2>⚽ Maç Programı <span class="pill">ÖRNEK VERİ</span></h2><div id="matches"></div></section>
+<section class="panel"><h2>⚽ Maç Programı <span class="pill">API MAÇ VERİLERİ</span></h2><div id="matches"></div></section>
 <aside class="panel slip"><h2>🎟️ Demo Kuponum <button class="btn secondary" style="padding:5px 8px" onclick="clearSlip()">Temizle</button></h2><div class="slip-content"><div id="selections"><div class="empty">Kupona eklemek için bir maç oranına dokun.</div></div><div class="field"><label for="stake">Demo tutarı (TL)</label><input id="stake" type="number" min="1" value="100" oninput="renderSlip()"></div><div class="total"><span>Toplam oran</span><strong id="totalOdds">1.00</strong></div><div class="total"><span>Tahmini demo tutarı</span><strong id="potential">100,00 TL</strong></div><button class="play" onclick="demoSubmit()">✓ Demo Kuponu Oluştur</button><p style="color:#aaa;font-size:11px;line-height:1.5">Kupon yalnızca bu sayfada örnek hesaplama yapar; bahis kabul edilmez.</p></div></aside>
 </main>
 <section class="promo"><div>🎁 <b>Hoş Geldin</b><span>Demo tanıtım alanı</span></div><div>⚽ <b>Maç Merkezi</b><span>Örnek maç programı</span></div><div>♛ <b>DALYA BET</b><span>Siyah & altın tasarım</span></div></section>
