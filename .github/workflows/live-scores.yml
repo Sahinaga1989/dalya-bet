@@ -73,7 +73,7 @@ jobs:
 
           with open("matches.json", "w", encoding="utf-8") as f:
               json.dump(data, f, ensure_ascii=False)
-                        odds_data = {"matches": {}}
+          odds_data = {"matches": {}}
           for match in data.get("response", [])[:2]:
               fixture_id = match.get("fixture", {}).get("id")
               if fixture_id:
