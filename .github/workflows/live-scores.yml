@@ -14,7 +14,6 @@ jobs:
     steps:
       - name: Dosyalari al
         uses: actions/checkout@v4
-
       - name: Futbol verilerini getir
         env:
           API_KEY: ${{ secrets.API_KEY }}
@@ -26,16 +25,51 @@ jobs:
           from datetime import datetime, timezone
 
           key = os.environ["API_KEY"]
-          today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-          url = "https://v3.football.api-sports.io/fixtures?date=" + today
-          request = urllib.request.Request(
-              url, headers={"x-apisports-key": key}
-          )
-          with urllib.request.urlopen(request, timeout=30) as response:
-              data = json.load(response)
+          now = datetime.now(timezone.utc)
+          today = now.strftime("%Y-%m-%d")
+          headers = {"x-apisports-key": key}
 
-          if data.get("errors"):
-              raise RuntimeError(str(data["errors"]))
+          def fetch(url):
+              request = urllib.request.Request(url, headers=headers)
+              with urllib.request.urlopen(request, timeout=30) as response:
+                  result = json.load(response)
+              if result.get("errors"):
+                  raise RuntimeError(str(result["errors"]))
+              return result
+
+          # Today's fixtures and live scores: every scheduled run.
+          data = fetch("https://v3.football.api-sports.io/fixtures?date=" + today)
+
+          # Upcoming Turkish Super Lig: refresh at most every six hours.
+          cache_path = "superlig-upcoming.json"
+          refresh_upcoming = not os.path.exists(cache_path) or (
+              now.hour % 6 == 0 and now.minute < 20
+          )
+          if refresh_upcoming:
+              try:
+                  upcoming = fetch(
+                      "https://v3.football.api-sports.io/fixtures"
+                      "?league=203&season=2026&next=20"
+                  )
+                  with open(cache_path, "w", encoding="utf-8") as f:
+                      json.dump(upcoming, f, ensure_ascii=False)
+              except Exception as exc:
+                  print("Super Lig refresh unavailable:", exc)
+                  if os.path.exists(cache_path):
+                      with open(cache_path, encoding="utf-8") as f:
+                          upcoming = json.load(f)
+                  else:
+                      upcoming = {"response": []}
+          else:
+              with open(cache_path, encoding="utf-8") as f:
+                  upcoming = json.load(f)
+
+          seen = {m["fixture"]["id"] for m in data.get("response", [])}
+          for match in upcoming.get("response", []):
+              match_id = match["fixture"]["id"]
+              if match_id not in seen:
+                  data.setdefault("response", []).append(match)
+                  seen.add(match_id)
 
           with open("matches.json", "w", encoding="utf-8") as f:
               json.dump(data, f, ensure_ascii=False)
@@ -45,8 +79,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add matches.json
+          git add matches.json superlig-upcoming.json
           if ! git diff --cached --quiet; then
-            git commit -m "Canli futbol verilerini guncelle"
+            git commit -m "Canli futbol ve Super Lig verilerini guncelle"
             git push
           fi
