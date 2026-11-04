@@ -42,7 +42,7 @@ nav{display:flex;gap:8px;padding:10px 4%;background:#111;border-bottom:1px solid
 <script>
 
 let games = [];
-
+function verileriGuncelle() {
 fetch('./matches.json?t=' + Date.now())
   .then(response => {
     if (!response.ok) throw new Error('Veri alınamadı');
@@ -76,7 +76,9 @@ games.sort((a, b) =>
     renderMatches();
   })
   .catch(error => console.error(error));
-
+}
+verileriGuncelle();
+setInterval(verileriGuncelle, 60000);
 let slip=[];
 function renderMatches(){
   let html = '';
