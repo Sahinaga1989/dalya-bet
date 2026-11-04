@@ -66,7 +66,13 @@ fetch('./matches.json?t=' + Date.now())
 status: m.fixture?.status?.short || 'NS',
 minute: m.fixture?.status?.elapsed,
 odds: ['-', '-', '-']
-    }));
+    }));                                 const siralama = s =>
+  ['1H','2H','HT','ET','P','LIVE','BT'].includes(s) ? 0 :
+  ['NS','TBD'].includes(s) ? 1 : 2;
+
+games.sort((a, b) =>
+  siralama(a.status) - siralama(b.status)
+);
     renderMatches();
   })
   .catch(error => console.error(error));
