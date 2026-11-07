@@ -170,3 +170,4 @@ jobs:
           if ! git diff --cached --quiet; then
             git commit -m 'Update DALYA BET football data'
             git push
+          fi
