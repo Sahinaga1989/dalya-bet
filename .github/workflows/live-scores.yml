@@ -19,8 +19,6 @@ jobs:
     steps:
       - name: Dosyalari al
         uses: actions/checkout@v4
-        with:
-          persist-credentials: true
       - name: Python kur
         uses: actions/setup-python@v5
         with:
@@ -42,16 +40,15 @@ jobs:
           BASE = 'https://v3.football.api-sports.io/'
           KEY = os.environ.get('API_FOOTBALL_KEY', '').strip()
           if not KEY:
-              raise SystemExit('GitHub secret API_FOOTBALL_KEY bulunamadi')
+              raise SystemExit('API_FOOTBALL_KEY secret eksik')
 
-          # These are safety caps, not proof of the provider's actual plan allowance.
+          # Conservative local caps. Set MAX_DAILY below your actual provider allowance.
           MAX_DAILY = 6500
-          MAX_RUN = 180
+          MAX_RUN = 100
           MAX_MATCHES = 250
-          # Avoid rechecking matches without odds too frequently.
           RETRY_AFTER_HOURS = 6
-          today = dt.datetime.now(dt.timezone.utc).date().isoformat()
           now = dt.datetime.now(dt.timezone.utc)
+          today = now.date().isoformat()
           stamp = now.isoformat()
           progress_path = Path('odds-progress.json')
           odds_path = Path('odds.json')
@@ -73,16 +70,13 @@ jobs:
           last_attempt = progress.get('last_attempt', {})
           if not isinstance(last_attempt, dict):
               last_attempt = {}
-          # Migrate previous format: attempted IDs are only retained for this day.
-          for ident in progress.get('attempted', []):
-              last_attempt.setdefault(str(ident), stamp)
+          # Do not convert old attempted IDs into a fresh timestamp: that would delay retries.
           run_calls = 0
 
           def fetch(endpoint, params):
               global daily, run_calls
               if daily >= MAX_DAILY or run_calls >= MAX_RUN:
-                  raise RuntimeError('Yerel API guvenlik sinirina ulasildi')
-              # Count before HTTP attempt to conservatively track usage.
+                  raise RuntimeError('Yerel API istek limiti')
               daily += 1
               run_calls += 1
               query = urllib.parse.urlencode(params)
@@ -108,51 +102,60 @@ jobs:
               odds = {ident: old_odds[ident] for ident in ids if ident in old_odds
                       and isinstance(old_odds[ident], dict)
                       and all(old_odds[ident].get(k) for k in ('1', 'X', '2'))}
+              # API supports batched odds by fixture IDs, reducing requests for missing matches.
+              pending = []
               for ident in ids:
                   if ident in odds:
                       continue
                   attempted_at = last_attempt.get(ident)
                   if attempted_at:
                       try:
-                          elapsed = now - dt.datetime.fromisoformat(attempted_at)
-                          if elapsed.total_seconds() < RETRY_AFTER_HOURS * 3600:
+                          if (now - dt.datetime.fromisoformat(attempted_at)).total_seconds() < RETRY_AFTER_HOURS * 3600:
                               continue
                       except (ValueError, TypeError):
                           pass
+                  pending.append(ident)
+
+              def parse_odds(events):
+                  result = {}
+                  for event in events:
+                      ident = str(event.get('fixture', {}).get('id', ''))
+                      if not ident:
+                          continue
+                      for bookmaker in event.get('bookmakers', []):
+                          found = None
+                          for bet in bookmaker.get('bets', []):
+                              if str(bet.get('id')) != '1' and str(bet.get('name', '')).lower() != 'match winner':
+                                  continue
+                              values = {str(v.get('value', '')).strip().lower(): v.get('odd')
+                                        for v in bet.get('values', [])}
+                              if all(values.get(k) for k in ('home', 'draw', 'away')):
+                                  found = {'1': str(values['home']), 'X': str(values['draw']),
+                                           '2': str(values['away']), 'bookmaker': bookmaker.get('name', '')}
+                                  break
+                          if found:
+                              result[ident] = found
+                              break
+                  return result
+
+              # Keep one fixture per request for compatibility with API-Football odds endpoint.
+              for ident in pending:
                   if daily >= MAX_DAILY or run_calls >= MAX_RUN:
                       break
                   last_attempt[ident] = stamp
                   try:
-                      events = fetch('odds', {'fixture': ident})
-                      found = None
-                      for event in events:
-                          for bookmaker in event.get('bookmakers', []):
-                              for bet in bookmaker.get('bets', []):
-                                  if str(bet.get('id')) != '1' and bet.get('name') != 'Match Winner':
-                                      continue
-                                  values = {str(v.get('value', '')).strip().lower(): v.get('odd')
-                                            for v in bet.get('values', [])}
-                                  home, draw, away = values.get('home'), values.get('draw'), values.get('away')
-                                  if home and draw and away:
-                                      found = {'1': str(home), 'X': str(draw), '2': str(away),
-                                               'bookmaker': bookmaker.get('name', '')}
-                                      break
-                              if found:
-                                  break
-                          if found:
-                              break
-                      if found:
-                          odds[ident] = found
+                      found = parse_odds(fetch('odds', {'fixture': ident}))
+                      odds.update(found)
                   except (urllib.error.URLError, TimeoutError, ValueError) as exc:
-                      print('Oran sorgusu gecici hata:', ident, str(exc)[:120])
+                      print('Gecici hata:', ident, str(exc)[:120])
                       last_attempt.pop(ident, None)
                   except RuntimeError as exc:
-                      print('API sorgusu durduruldu:', str(exc)[:200])
+                      print('API durduruldu:', str(exc)[:200])
                       break
                   time.sleep(0.12)
               write_json(scores_path, {'updated_at': stamp, 'date': today, 'response': fixtures})
               write_json(odds_path, {'updated_at': stamp, 'matches': odds})
-              print('Mac:', len(fixtures), 'Oran:', len(odds), 'Eksik:', max(0, len(ids) - len(odds)))
+              print('Mac:', len(fixtures), 'Oran:', len(odds), 'Eksik:', max(0, len(ids)-len(odds)))
           finally:
               write_json(progress_path, {'date': today, 'requests': daily,
                   'last_attempt': last_attempt, 'updated_at': stamp})
@@ -167,4 +170,3 @@ jobs:
           if ! git diff --cached --quiet; then
             git commit -m 'Update DALYA BET football data'
             git push
-          fi
