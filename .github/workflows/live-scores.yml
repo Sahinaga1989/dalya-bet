@@ -15,7 +15,7 @@ concurrency:
 jobs:
   update-scores:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - name: Dosyalari al
         uses: actions/checkout@v4
@@ -28,112 +28,110 @@ jobs:
           API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
         run: |
           python - <<'PY'
-          import datetime, json, os, time, urllib.error, urllib.request
+          import datetime as dt
+          import json
+          import os
+          import time
+          import urllib.error
+          import urllib.parse
+          import urllib.request
           from pathlib import Path
 
-          key = os.environ.get('API_FOOTBALL_KEY', '').strip()
-          if not key:
-              raise SystemExit('API_FOOTBALL_KEY GitHub secret eksik')
-          base = 'https://v3.football.api-sports.io/'
-          MAX_PER_RUN = 30
-          MAX_PER_DAY = 120
-          calls = 0
-          today = datetime.datetime.now(datetime.timezone.utc).date().isoformat()
-          progress_file = Path('odds-progress.json')
-          odds_file = Path('odds.json')
+          BASE = 'https://v3.football.api-sports.io/'
+          KEY = os.environ.get('API_FOOTBALL_KEY', '').strip()
+          if not KEY:
+              raise SystemExit('GitHub secret API_FOOTBALL_KEY bulunamadi')
+          MAX_DAILY = 6500  # 7500 saglayici limitinin altinda guvenlik payi
+          MAX_RUN = 280    # 250 maca kadar odds + fikstur istegi
+          MAX_MATCHES = 250
+          today = dt.datetime.now(dt.timezone.utc).date().isoformat()
+          progress_path = Path('odds-progress.json')
+          odds_path = Path('odds.json')
+          scores_path = Path('scores.json')
 
           def read_json(path, default):
               try:
-                  data = json.loads(path.read_text(encoding='utf-8'))
-                  return data if isinstance(data, dict) else default
+                  return json.loads(path.read_text(encoding='utf-8'))
               except (OSError, ValueError):
                   return default
 
-          progress = read_json(progress_file, {})
-          if progress.get('date') != today:
-              progress = {'date': today, 'attempted': [], 'requests': 0}
-          attempted = set(map(str, progress.get('attempted', [])))
-          daily_requests = max(0, int(progress.get('requests', 0)))
+          def write_json(path, data):
+              path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding='utf-8')
 
-          def fetch(endpoint):
-              global calls, daily_requests
-              if calls >= MAX_PER_RUN or daily_requests >= MAX_PER_DAY:
-                  raise RuntimeError('API istek limiti doldu')
-              # Count even failed HTTP requests, to avoid exceeding our own cap.
-              calls += 1
-              daily_requests += 1
-              req = urllib.request.Request(base + endpoint, headers={'x-apisports-key': key})
-              with urllib.request.urlopen(req, timeout=25) as response:
+          progress = read_json(progress_path, {})
+          if progress.get('date') != today:
+              progress = {'date': today, 'requests': 0, 'attempted': []}
+          daily = max(0, int(progress.get('requests', 0)))
+          attempted = set(map(str, progress.get('attempted', [])))
+          run_calls = 0
+          stamp = dt.datetime.now(dt.timezone.utc).isoformat()
+
+          def fetch(endpoint, params):
+              global daily, run_calls
+              if daily >= MAX_DAILY or run_calls >= MAX_RUN:
+                  raise RuntimeError('API guvenlik sinirina ulasildi')
+              # Sayaci HTTP isteginden once arttir; hatali istekleri de say.
+              daily += 1
+              run_calls += 1
+              url = BASE + endpoint + '?' + urllib.parse.urlencode(params)
+              req = urllib.request.Request(url, headers={'x-apisports-key': KEY})
+              with urllib.request.urlopen(req, timeout=30) as response:
                   payload = json.load(response)
               if payload.get('errors'):
                   raise RuntimeError(str(payload['errors']))
               return payload.get('response', [])
 
-          # Keep already collected odds for fixtures still in today's list.
-          old = read_json(odds_file, {}).get('matches', {})
-          if not isinstance(old, dict):
-              old = {}
+          old_odds = read_json(odds_path, {}).get('matches', {})
+          if not isinstance(old_odds, dict):
+              old_odds = {}
           fixtures = []
           try:
-              fixtures = fetch('fixtures?date=' + today)[:250]
-          except (urllib.error.URLError, TimeoutError, RuntimeError) as error:
-              print('Fikstur alinamadi:', error)
-              raise SystemExit(1)
-          ids = [str(m['fixture']['id']) for m in fixtures
-                 if isinstance(m, dict) and m.get('fixture', {}).get('id') is not None]
-          odds = {ident: old[ident] for ident in ids if ident in old and isinstance(old[ident], dict)}
-          new_odds = 0
-          for ident in ids:
-              if calls >= MAX_PER_RUN or daily_requests >= MAX_PER_DAY:
-                  break
-              if ident in odds or ident in attempted:
-                  continue
-              attempted.add(ident)
-              try:
-                  results = fetch('odds?fixture=' + ident + '&bet=1')
-                  found = None
-                  for event in results:
-                      for bookmaker in event.get('bookmakers', []):
-                          for bet in bookmaker.get('bets', []):
-                              if str(bet.get('id')) != '1':
-                                  continue
-                              values = {str(v.get('value', '')).lower(): v.get('odd') for v in bet.get('values', [])}
-                              home = values.get('home') or values.get('1')
-                              draw = values.get('draw') or values.get('x')
-                              away = values.get('away') or values.get('2')
-                              if home and draw and away:
-                                  found = {'1': home, 'X': draw, '2': away,
-                                           'bookmaker': bookmaker.get('name')}
+              fixtures = fetch('fixtures', {'date': today, 'timezone': 'UTC'})[:MAX_MATCHES]
+              ids = [str(m['fixture']['id']) for m in fixtures if isinstance(m, dict) and m.get('fixture', {}).get('id')]
+              # Eski oranlari yalnizca halen listelenen maclar icin tut.
+              odds = {ident: old_odds[ident] for ident in ids if ident in old_odds}
+              for ident in ids:
+                  if ident in odds or ident in attempted:
+                      continue
+                  if daily >= MAX_DAILY or run_calls >= MAX_RUN:
+                      break
+                  attempted.add(ident)
+                  try:
+                      events = fetch('odds', {'fixture': ident})
+                      found = None
+                      for event in events:
+                          for bookmaker in event.get('bookmakers', []):
+                              for bet in bookmaker.get('bets', []):
+                                  if str(bet.get('id')) != '1' and bet.get('name') != 'Match Winner':
+                                      continue
+                                  values = {str(v.get('value', '')).lower(): v.get('odd') for v in bet.get('values', [])}
+                                  home = values.get('home')
+                                  draw = values.get('draw')
+                                  away = values.get('away')
+                                  if home and draw and away:
+                                      found = {'1': str(home), 'X': str(draw), '2': str(away), 'bookmaker': bookmaker.get('name', '')}
+                                      break
+                              if found:
                                   break
                           if found:
                               break
                       if found:
+                          odds[ident] = found
+                  except (urllib.error.URLError, TimeoutError, RuntimeError, ValueError) as exc:
+                      print('Oran sorgusu basarisiz:', ident, str(exc)[:160])
+                      attempted.discard(ident)  # Sonraki calismada tekrar denensin
+                      if isinstance(exc, RuntimeError):
                           break
-                  if found:
-                      odds[ident] = found
-                      new_odds += 1
-              except (urllib.error.URLError, TimeoutError, RuntimeError) as error:
-                  print('Oran sorgusu basarisiz:', ident, str(error))
-                  # Retry failed requests on a later run, except when quota errors persist.
-                  attempted.discard(ident)
-                  if isinstance(error, RuntimeError) or isinstance(error, urllib.error.HTTPError):
-                      break
-              time.sleep(0.15)
-
-          stamp = datetime.datetime.now(datetime.timezone.utc).isoformat()
-          Path('scores.json').write_text(json.dumps({
-              'updated_at': stamp, 'date': today, 'count': len(fixtures),
-              'response': fixtures}, ensure_ascii=False, indent=2), encoding='utf-8')
-          odds_file.write_text(json.dumps({
-              'updated_at': stamp, 'matches': odds}, ensure_ascii=False, indent=2), encoding='utf-8')
-          progress_file.write_text(json.dumps({
-              'date': today, 'attempted': sorted(attempted), 'requests': daily_requests,
-              'updated_at': stamp}, ensure_ascii=False, indent=2), encoding='utf-8')
-          print('Mac:', len(fixtures), 'Oran:', len(odds), 'Yeni oran:', new_odds,
-                'API istek:', calls, 'Gunluk istek:', daily_requests,
-                'Bugun sorgulanan:', len(attempted))
+                  time.sleep(0.12)
+              write_json(scores_path, {'updated_at': stamp, 'date': today, 'response': fixtures})
+              write_json(odds_path, {'updated_at': stamp, 'matches': odds})
+              print('Mac:', len(fixtures), 'Oran:', len(odds))
+          finally:
+              write_json(progress_path, {'date': today, 'requests': daily, 'attempted': sorted(attempted), 'updated_at': stamp})
+              print('Bu calismadaki API istegi:', run_calls, 'Gunluk kaydedilen:', daily)
           PY
       - name: Degisiklikleri kaydet
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
