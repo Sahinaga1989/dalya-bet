@@ -3,113 +3,106 @@ name: DALYA BET Canli Skorlar
 on:
   workflow_dispatch:
   schedule:
-   - cron: '7 0,6,12,18 * * *' 
+    - cron: '7 0,6,12,18 * * *'
 
 permissions:
   contents: write
 
+concurrency:
+  group: dalya-live-scores
+  cancel-in-progress: false
+
 jobs:
   update-scores:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: Dosyalari al
         uses: actions/checkout@v4
-      - name: Futbol verilerini getir
+      - name: Python kur
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Maclari ve oranlari guncelle
         env:
-          API_KEY: ${{ secrets.API_KEY }}
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
         run: |
-          python3 - <<'PY'
-          import os
-          import json
-          import urllib.request
-          from datetime import datetime, timezone
+          python - <<'PY'
+          import os, json, urllib.request, urllib.error, datetime, time
+          from pathlib import Path
 
-          key = os.environ["API_KEY"]
-          now = datetime.now(timezone.utc)
-          today = now.strftime("%Y-%m-%d")
-          headers = {"x-apisports-key": key}
+          key = os.environ.get('API_FOOTBALL_KEY', '').strip()
+          if not key:
+              raise SystemExit('API_FOOTBALL_KEY GitHub secret eksik')
+          base = 'https://v3.football.api-sports.io/'
+          calls = 0
+          MAX_CALLS = 40
 
-          def fetch(url):
-              request = urllib.request.Request(url, headers=headers)
-              with urllib.request.urlopen(request, timeout=30) as response:
-                  result = json.load(response)
-              if result.get("errors"):
-                  raise RuntimeError(str(result["errors"]))
-              return result
+          def fetch(endpoint):
+              global calls
+              if calls >= MAX_CALLS:
+                  raise RuntimeError('Bu calisma icin API istek sinirina ulasildi')
+              req = urllib.request.Request(base + endpoint, headers={'x-apisports-key': key})
+              with urllib.request.urlopen(req, timeout=25) as response:
+                  payload = json.load(response)
+              calls += 1
+              if payload.get('errors'):
+                  raise RuntimeError(str(payload['errors']))
+              return payload.get('response', [])
 
-          # Today's fixtures and live scores: every scheduled run.
-          data = fetch("https://v3.football.api-sports.io/fixtures?date=" + today)
-
-          # Upcoming Turkish Super Lig: refresh at most every six hours.
-          cache_path = "superlig-upcoming.json"
-          refresh_upcoming = not os.path.exists(cache_path) or (
-              now.hour % 6 == 0 and now.minute < 20
-          )
-          if refresh_upcoming:
+          today = datetime.datetime.now(datetime.timezone.utc).date()
+          fixtures = fetch('fixtures?date=' + today.isoformat())[:250]
+          previous = {}
+          odds_file = Path('odds.json')
+          if odds_file.exists():
               try:
-                  upcoming = fetch(
-                      "https://v3.football.api-sports.io/fixtures"
-                      "?league=203&season=2026&next=20"
-                  )
-                  with open(cache_path, "w", encoding="utf-8") as f:
-                      json.dump(upcoming, f, ensure_ascii=False)
-              except Exception as exc:
-                  print("Super Lig refresh unavailable:", exc)
-                  if os.path.exists(cache_path):
-                      with open(cache_path, encoding="utf-8") as f:
-                          upcoming = json.load(f)
-                  else:
-                      upcoming = {"response": []}
-          else:
-              with open(cache_path, encoding="utf-8") as f:
-                  upcoming = json.load(f)
-
-          seen = {m["fixture"]["id"] for m in data.get("response", [])}
-          for match in upcoming.get("response", []):
-              match_id = match["fixture"]["id"]
-              if match_id not in seen:
-                  data.setdefault("response", []).append(match)
-                  seen.add(match_id)
-
-          with open("matches.json", "w", encoding="utf-8") as f:
-              json.dump(data, f, ensure_ascii=False)
-          odds_data = {"matches": {}}
-          for match in data.get("response", [])[:2]:
-              fixture_id = match.get("fixture", {}).get("id")
-              if fixture_id:
-                  try:
-                      result = fetch(
-                          f"https://v3.football.api-sports.io/odds?fixture={fixture_id}&bet=1"
-                      )
-                      for item in result.get("response", []):
-                          for bookmaker in item.get("bookmakers", []):
-                              for bet in bookmaker.get("bets", []):
-                                  values = {
-                                      v["value"]: v["odd"]
-                                      for v in bet.get("values", [])
-                                  }
-                                  if all(k in values for k in ("Home", "Draw", "Away")):
-                                      odds_data["matches"][str(fixture_id)] = {
-                                          "1": values["Home"],
-                                          "X": values["Draw"],
-                                          "2": values["Away"]
-                                      }
-                                      break
-                              if str(fixture_id) in odds_data["matches"]:
+                  previous = json.loads(odds_file.read_text(encoding='utf-8')).get('matches', {})
+              except (ValueError, OSError, AttributeError):
+                  previous = {}
+          odds = {}
+          # One odds request per fixture; cap prevents accidental quota exhaustion.
+          for match in fixtures:
+              fixture_id = match.get('fixture', {}).get('id')
+              if fixture_id is None:
+                  continue
+              ident = str(fixture_id)
+              if ident in previous:
+                  odds[ident] = previous[ident]
+              if calls >= MAX_CALLS:
+                  continue
+              try:
+                  results = fetch('odds?fixture=' + ident + '&bet=1')
+                  for event in results:
+                      for bookmaker in event.get('bookmakers', []):
+                          for bet in bookmaker.get('bets', []):
+                              if bet.get('id') != 1:
+                                  continue
+                              values = {str(v.get('value', '')).lower(): v.get('odd') for v in bet.get('values', [])}
+                              home = values.get('home') or values.get('1')
+                              draw = values.get('draw') or values.get('x')
+                              away = values.get('away') or values.get('2')
+                              if home and draw and away:
+                                  odds[ident] = {'1': home, 'X': draw, '2': away, 'bookmaker': bookmaker.get('name')}
                                   break
-                  except Exception as exc:
-                      print(f"Oran alınamadı: {exc}")
+                          if ident in odds and odds[ident].get('bookmaker'):
+                              break
+                      if ident in odds and odds[ident].get('bookmaker'):
+                          break
+              except (urllib.error.URLError, TimeoutError, RuntimeError) as error:
+                  print('Oran alinamadi:', ident, str(error))
+              time.sleep(0.15)
 
-          with open("odds.json", "w", encoding="utf-8") as f:
-              json.dump(odds_data, f, ensure_ascii=False)
+          stamp = datetime.datetime.now(datetime.timezone.utc).isoformat()
+          Path('scores.json').write_text(json.dumps({'updated_at': stamp, 'date': today.isoformat(), 'count': len(fixtures), 'response': fixtures}, ensure_ascii=False, indent=2), encoding='utf-8')
+          odds_file.write_text(json.dumps({'updated_at': stamp, 'matches': odds}, ensure_ascii=False, indent=2), encoding='utf-8')
+          print('Mac:', len(fixtures), 'Oran:', len(odds), 'API istek:', calls)
           PY
-
-      - name: Verileri kaydet
+      - name: Degisiklikleri kaydet
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add matches.json odds.json
+          git add scores.json odds.json
           if ! git diff --cached --quiet; then
-            git commit -m "Canli futbol ve Super Lig verilerini guncelle"
+            git commit -m "Update DALYA BET football data"
             git push
           fi
