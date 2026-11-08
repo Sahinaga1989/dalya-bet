@@ -27,7 +27,7 @@ if(!matchError){games=data.response.map(m=>{const id=String(m.fixture?.id??'');c
 else if(games.length){games.forEach(g=>{const o=oddsById[g.id]||{};g.odds=[parseOdd(o['1']),parseOdd(o['X']),parseOdd(o['2'])]})}
 for(const [id,s] of selected){const g=games.find(x=>x.id===id);if(!g||g.odds[s.choice]===null)selected.delete(id)}
 const available=games.filter(g=>g.odds.every(x=>x!==null)).length;
-$('notice').textContent=matchError&&!games.length?'Maç verileri okunamadı. GitHub dosyalarını kontrol edin.':`${games.length} maç yüklendi • ${available} maçta 1-X-2 oranı mevcut${oddsError?' • Oran dosyası okunamadı':''}. Eksik oranlar uydurulmaz. Veriler API güncellemesine bağlıdır.`;
+$('notice').textContent=matchError&&!games.length?'Maç verileri okunamadı. GitHub dosyalarını kontrol edin.':`Günlük en fazla 50 seçilmiş maç • ${games.length} maçlık kaynak • ${available} maçta 1-X-2 oranı mevcut${oddsError?' • Oran dosyası okunamadı':''}. Eksik oranlar uydurulmaz. Veriler API güncellemesine bağlıdır.`;
 syncDateFilter();renderMatches();renderSlip()}
 function isTurkey(g){return /^(turkey|türkiye|turkiye)$/i.test(String(g.country||'').trim())}
 function leagueRank(g){
@@ -59,7 +59,26 @@ if(/brazil|brezilya/.test(country)&&/serie a/.test(name))return 33;
 if(/argentina|arjantin/.test(country)&&/primera division|liga profesional/.test(name))return 34;
 return 100;
 }
-function renderMatches(){const filterDate=$('fixtureDate').value;const list=games.filter(g=>{const d=gameDay(g);return (activeTab==='live'?liveStatuses.has(g.status):activeTab==='today'?d===dateTR():activeTab==='tomorrow'?d===dateTR(1):true)&&(!filterDate||d===filterDate)}).sort((a,b)=>leagueRank(a)-leagueRank(b)||a.league.localeCompare(b.league,'tr')||gameDay(a).localeCompare(gameDay(b))||a.date.localeCompare(b.date));if(!list.length){$('matches').innerHTML='<div class="empty">Bu bölümde gösterilecek maç bulunamadı.</div>';return}let html='',league='';for(const g of list){const leagueLabel=gameDay(g)+' • '+(isTurkey(g)?'🇹🇷 Türkiye • ':'')+g.league;if(leagueLabel!==league){league=leagueLabel;html+='<div class="league">'+esc(league)+'</div>'}const live=liveStatuses.has(g.status),status=live?'🔴 CANLI '+(g.minute??g.status):['FT','AET','PEN'].includes(g.status)?'BİTTİ':'BAŞLAMADI';html+='<div class="match"><div class="teams"><span class="time">'+esc(g.time+' · '+status+' · '+g.score)+'</span><b>'+esc(g.home)+'</b><br>vs <b>'+esc(g.away)+'</b></div>';for(let i=0;i<3;i++){const n=g.odds[i],on=selected.get(g.id)?.choice===i;const canSelect=eligibleCouponIds.has(g.id)&&g.status==='NS'&&Number.isFinite(Date.parse(g.date))&&Date.parse(g.date)>Date.now()&&g.oddsUpdatedAt&&Date.now()-Date.parse(g.oddsUpdatedAt)<48*3600000;html+='<button class="odd'+(on?' selected':'')+'" data-id="'+esc(g.id)+'" data-choice="'+i+'" '+(!canSelect||n===null?'disabled title="Maç başlamış veya oran güncel değil"':'')+'><small>'+['1','X','2'][i]+'</small>'+(n===null?'—':n.toFixed(2))+'</button>'}html+='</div>'}$('matches').innerHTML=html}
+// Each Turkish-calendar day shows at most 50 featured fixtures.
+// Keep the full fixture feed for score updates and already placed coupons.
+const DAILY_MATCH_LIMIT=50;
+function featuredGames(){
+ const byDay=new Map();
+ for(const g of games){
+  const day=gameDay(g);
+  if(!byDay.has(day))byDay.set(day,[]);
+  byDay.get(day).push(g);
+ }
+ const result=[];
+ for(const daily of byDay.values()){
+  daily.sort((a,b)=>leagueRank(a)-leagueRank(b)
+   ||Number(b.odds.every(x=>x!==null))-Number(a.odds.every(x=>x!==null))
+   ||a.date.localeCompare(b.date)||a.id.localeCompare(b.id));
+  result.push(...daily.slice(0,DAILY_MATCH_LIMIT));
+ }
+ return result;
+}
+function renderMatches(){const filterDate=$('fixtureDate').value;const list=featuredGames().filter(g=>{const d=gameDay(g);return (activeTab==='live'?liveStatuses.has(g.status):activeTab==='today'?d===dateTR():activeTab==='tomorrow'?d===dateTR(1):true)&&(!filterDate||d===filterDate)}).sort((a,b)=>leagueRank(a)-leagueRank(b)||a.league.localeCompare(b.league,'tr')||gameDay(a).localeCompare(gameDay(b))||a.date.localeCompare(b.date));if(!list.length){$('matches').innerHTML='<div class="empty">Bu bölümde gösterilecek maç bulunamadı.</div>';return}let html='',league='';for(const g of list){const leagueLabel=gameDay(g)+' • '+(isTurkey(g)?'🇹🇷 Türkiye • ':'')+g.league;if(leagueLabel!==league){league=leagueLabel;html+='<div class="league">'+esc(league)+'</div>'}const live=liveStatuses.has(g.status),status=live?'🔴 CANLI '+(g.minute??g.status):['FT','AET','PEN'].includes(g.status)?'BİTTİ':'BAŞLAMADI';html+='<div class="match"><div class="teams"><span class="time">'+esc(g.time+' · '+status+' · '+g.score)+'</span><b>'+esc(g.home)+'</b><br>vs <b>'+esc(g.away)+'</b></div>';for(let i=0;i<3;i++){const n=g.odds[i],on=selected.get(g.id)?.choice===i;const canSelect=eligibleCouponIds.has(g.id)&&g.status==='NS'&&Number.isFinite(Date.parse(g.date))&&Date.parse(g.date)>Date.now()&&g.oddsUpdatedAt&&Date.now()-Date.parse(g.oddsUpdatedAt)<48*3600000;html+='<button class="odd'+(on?' selected':'')+'" data-id="'+esc(g.id)+'" data-choice="'+i+'" '+(!canSelect||n===null?'disabled title="Maç başlamış veya oran güncel değil"':'')+'><small>'+['1','X','2'][i]+'</small>'+(n===null?'—':n.toFixed(2))+'</button>'}html+='</div>'}$('matches').innerHTML=html}
 function renderSlip(){let html='',total=1;for(const [id,s] of selected){const g=games.find(x=>x.id===id);if(!g)continue;const n=g.odds[s.choice];if(n===null)continue;total*=n;html+='<div class="selection"><button data-remove="'+esc(id)+'">×</button><b>'+esc(g.home)+' – '+esc(g.away)+'</b><br>Maç sonucu: '+['1','X','2'][s.choice]+' · '+n.toFixed(2)+'</div>'}$('selections').className=html?'':'empty';$('selections').innerHTML=html||'Kupona eklemek için oran seç.';$('totalOdds').textContent=total.toFixed(2);$('potential').textContent=((Math.max(0,Number($('stake').value)||0))*total).toLocaleString('tr-TR',{minimumFractionDigits:2,maximumFractionDigits:2})}
 $('fixtureDate').addEventListener('change',renderMatches);document.querySelector('nav').addEventListener('click',e=>{const b=e.target.closest('button[data-tab]');if(!b)return;document.querySelectorAll('nav button').forEach(x=>x.classList.remove('active'));b.classList.add('active');activeTab=b.dataset.tab;renderMatches()});$('matches').addEventListener('click',e=>{const b=e.target.closest('button[data-id]');if(!b||b.disabled)return;const id=b.dataset.id,choice=Number(b.dataset.choice);if(selected.get(id)?.choice===choice)selected.delete(id);else selected.set(id,{choice});renderMatches();renderSlip()});$('selections').addEventListener('click',e=>{const b=e.target.closest('button[data-remove]');if(b){selected.delete(b.dataset.remove);renderMatches();renderSlip()}});$('clear').onclick=()=>{selected.clear();renderMatches();renderSlip()};$('stake').oninput=renderSlip;let couponClient=null;let eligibleCouponIds=new Set();
 async function refreshCouponEligibility(){if(!couponClient)return;const {data,error}=await couponClient.rpc('dalya_coupon_eligible_fixtures');eligibleCouponIds=new Set(error?[]:(data||[]).map(x=>String(x.fixture_id)));for(const id of [...selected.keys()])if(!eligibleCouponIds.has(id))selected.delete(id);renderMatches();renderSlip();}
