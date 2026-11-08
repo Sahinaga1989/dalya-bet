@@ -47,7 +47,10 @@ jobs:
           CUP_ID = 206
           now = dt.datetime.now(dt.timezone.utc)
           today = now.astimezone(ZoneInfo('Europe/Istanbul')).date()
-          dates = [(today + dt.timedelta(days=i)).isoformat() for i in range(2)]  # Rolling today and tomorrow
+          dates = [(today + dt.timedelta(days=i)).isoformat() for i in range(2)]  # Always refresh today and tomorrow
+          # Refresh two more days per run, rotating across a 30-day horizon.
+          rotation = (int(now.timestamp()) // 3600) % 14
+          dates += [(today + dt.timedelta(days=2 + (rotation * 2 + j) % 28)).isoformat() for j in range(2)]
           stamp = now.isoformat()
           day_key = today.isoformat()
 
@@ -157,6 +160,12 @@ jobs:
               # All countries, with Turkey Cup and Turkish leagues prioritized.
               # Only competitions provided by the API can be included.
               matches = []
+              # Preserve future fixtures until their next rotating refresh.
+              if isinstance(old_scores, dict):
+                  matches.extend(m for m in old_scores.get('response', [])
+                                 if isinstance(m, dict) and today.isoformat() <= local_date(m)
+                                 <= (today + dt.timedelta(days=29)).isoformat()
+                                 and local_date(m) not in dates)
               for day in dates:
                   response, _ = fetch('fixtures', {'date': day, 'timezone': 'Europe/Istanbul'})
                   matches.extend(m for m in response if local_date(m) == day)
@@ -165,10 +174,10 @@ jobs:
                   ident = fixture_id(match)
                   if ident:
                       unique[ident] = match
-              # Turkey Cup first, other Turkish competitions second, rest of world third.
+              # Keep all available fixtures within the rolling horizon, without a 250-match truncation.
               fixtures = sorted(unique.values(), key=lambda m: (
-                  0 if is_cup(m) else (1 if turkey(m) else 2),
-                  (m.get('fixture') or {}).get('date') or '', fixture_id(m)))[:MAX_MATCHES]
+                  (m.get('fixture') or {}).get('date') or '',
+                  0 if is_cup(m) else (1 if turkey(m) else 2), fixture_id(m)))
               ids = [fixture_id(m) for m in fixtures]
               scheduled = {fixture_id(m): m for m in fixtures}
               # Cup first, then missing odds, then refresh existing odds.
@@ -183,7 +192,7 @@ jobs:
               # This allows more coverage with the same request budget.
               eligible = set(ids)
               odds_pages = 0
-              for day in dates:
+              for day in dates[:2]:
                   page = 1
                   while calls < MAX_RUN and daily < MAX_DAILY:
                       try:
@@ -210,7 +219,7 @@ jobs:
                       page += 1
               print('Toplu oran sayfalari:', odds_pages)
               score_payload = {'updated_at': stamp, 'date': dates[0],
-                               'dates': dates, 'response': fixtures}
+                               'dates': dates, 'horizon_days': 30, 'response': fixtures}
               save('scores.json', score_payload)
               save('matches.json', score_payload)
               save('odds.json', {'updated_at': stamp, 'matches': odds})
