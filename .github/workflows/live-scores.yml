@@ -222,9 +222,28 @@ jobs:
                       if not events or page >= total_pages:
                           break
                       page += 1
+              # If date-wide odds are unavailable, try individual upcoming fixtures.
+              # A small rotating batch prevents repeatedly spending the quota on the same games.
+              missing = [ident for ident in ids if ident not in odds
+                         and scheduled[ident].get('fixture', {}).get('status', {}).get('short') == 'NS'
+                         and local_date(scheduled[ident]) in dates[:2]]
+              if missing and calls < MAX_RUN and daily < MAX_DAILY:
+                  offset = (int(now.timestamp()) // 3600 * 12) % len(missing)
+                  ordered = missing[offset:] + missing[:offset]
+                  for ident in ordered[:min(12, MAX_RUN - calls, MAX_DAILY - daily)]:
+                      try:
+                          events, _ = fetch('odds', {'fixture': ident, 'bet': 1})
+                          fresh = extract_odds(events)
+                          if ident in fresh:
+                              fresh[ident]['fetched_at'] = stamp
+                              odds[ident] = fresh[ident]
+                      except Exception as exc:
+                          print('Tek mac oran sorgusu basarisiz:', ident, str(exc)[:120])
+                          if any(x in str(exc).casefold() for x in ('limit', 'quota', '429', 'rate')):
+                              raise
               print('Toplu oran sayfalari:', odds_pages)
-              if odds_errors and odds_pages == 0:
-                  raise RuntimeError('Oran API sorgulari basarisiz: ' + '; '.join(odds_errors))
+              if odds_errors:
+                  print('UYARI: Toplu oran API hatalari:', '; '.join(odds_errors))
               score_payload = {'updated_at': stamp, 'date': dates[0],
                                'dates': dates, 'horizon_days': 30, 'response': fixtures}
               if not fixtures:
