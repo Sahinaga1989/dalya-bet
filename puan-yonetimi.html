@@ -28,7 +28,7 @@ async function load(){
  $('status').textContent='Yönetici girişi doğrulandı.';
 }
 $('inviteBtn').onclick=async()=>{
- const email=$('inviteEmail').value.trim();if(!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email)){$('inviteStatus').textContent='Geçerli e-posta adresi girin.';return;}
+ const email=$('inviteEmail').value.trim();if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){$('inviteStatus').textContent='Geçerli e-posta adresi girin.';return;}
  if(!confirm(email+' adresine üyelik daveti gönderilsin mi?'))return;
  $('inviteBtn').disabled=true;$('inviteStatus').textContent='Davet gönderiliyor…';
  try{const {data,error}=await db.functions.invoke('dalya-invite-member',{body:{email}});
