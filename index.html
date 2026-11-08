@@ -126,8 +126,8 @@ $('submit').onclick=async()=>{
   }
   await loadMyBalance();
   document.body.style.visibility='visible';
-  document.addEventListener('visibilitychange',()=>{if(!document.hidden)loadMyBalance();});
-  setInterval(loadMyBalance,60000);
+  document.addEventListener('visibilitychange',()=>{if(!document.hidden){loadMyBalance();renderSavedCoupons();}});
+  setInterval(()=>{loadMyBalance();renderSavedCoupons();},60000);
   const btn=document.createElement('button');
   btn.textContent='Çıkış Yap';
   btn.onclick=async()=>{
