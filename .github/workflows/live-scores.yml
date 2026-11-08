@@ -40,8 +40,8 @@ jobs:
           if not KEY:
               raise SystemExit('API_FOOTBALL_KEY veya API_KEY GitHub secret eksik')
           BASE = 'https://v3.football.api-sports.io/'
-          MAX_RUN = 32
-          MAX_DAILY = 600  # Reserve most of the 7,500/day plan for other usage
+          MAX_RUN = 24
+          MAX_DAILY = 650  # This workflow only; reserve quota for other consumers
           MAX_MATCHES = 1000
           RETRY_HOURS = 4
           CUP_ID = 206
@@ -168,7 +168,10 @@ jobs:
                                  and local_date(m) not in dates)
               for day in dates:
                   response, _ = fetch('fixtures', {'date': day, 'timezone': 'Europe/Istanbul'})
-                  matches.extend(m for m in response if local_date(m) == day)
+                  current = [m for m in response if local_date(m) == day]
+                  if not current:
+                      print('UYARI: Tarihte mac yok:', day)
+                  matches.extend(current)
               unique = {}
               for match in matches:
                   ident = fixture_id(match)
@@ -188,10 +191,11 @@ jobs:
               odds = {ident: old_odds[ident] for ident in ids
                       if ident in old_odds and valid_odd(old_odds[ident])
                       and (scheduled[ident].get('fixture', {}).get('status', {}).get('short') == 'NS')}
-              # Fetch odds by date, ten fixtures per page, instead of one API call per match.
+              # Fetch odds by date, using the provider's paginated response.
               # This allows more coverage with the same request budget.
               eligible = set(ids)
               odds_pages = 0
+              odds_errors = []
               for day in dates[:2]:
                   page = 1
                   while calls < MAX_RUN and daily < MAX_DAILY:
@@ -201,6 +205,7 @@ jobs:
                               'bet': 1, 'page': page})
                       except Exception as exc:
                           print('Toplu oran sorgusu basarisiz:', day, page, str(exc)[:160])
+                          odds_errors.append(str(exc)[:160])
                           if any(x in str(exc).casefold() for x in ('limit', 'quota', '429', 'rate')):
                               raise
                           break
@@ -218,8 +223,12 @@ jobs:
                           break
                       page += 1
               print('Toplu oran sayfalari:', odds_pages)
+              if odds_errors and odds_pages == 0:
+                  raise RuntimeError('Oran API sorgulari basarisiz: ' + '; '.join(odds_errors))
               score_payload = {'updated_at': stamp, 'date': dates[0],
                                'dates': dates, 'horizon_days': 30, 'response': fixtures}
+              if not fixtures:
+                  raise RuntimeError('Bos fikstur mevcut dosyalarin uzerine yazilmadi')
               save('scores.json', score_payload)
               save('matches.json', score_payload)
               save('odds.json', {'updated_at': stamp, 'matches': odds})
