@@ -1,6 +1,6 @@
 import { createClient } from "npm:@supabase/supabase-js@2";
 Deno.serve(async (req: Request) => {
- const headers={"Access-Control-Allow-Origin":"https://sahinaga1989.github.io","Access-Control-Allow-Headers":"authorization, apikey, content-type","Access-Control-Allow-Methods":"POST, OPTIONS","Content-Type":"application/json"};
+ const headers={"Access-Control-Allow-Origin":"https://sahinaga1989.github.io","Access-Control-Allow-Headers":"authorization, x-client-info, apikey, content-type","Access-Control-Allow-Methods":"POST, OPTIONS","Content-Type":"application/json"};
  const send=(status:number,body:unknown)=>new Response(JSON.stringify(body),{status,headers});
  if(req.method==="OPTIONS")return new Response(null,{status:204,headers});
  if(req.method!=="POST")return send(405,{message:"Yalnızca POST."});
