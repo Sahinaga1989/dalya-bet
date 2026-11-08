@@ -5,7 +5,7 @@ import { createClient } from "npm:@supabase/supabase-js@2";
 Deno.serve(async (req) => {
   const headers = {
     "Access-Control-Allow-Origin": "https://sahinaga1989.github.io",
-    "Access-Control-Allow-Headers": "authorization, apikey, content-type",
+    "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
     "Access-Control-Allow-Methods": "POST, OPTIONS",
     "Content-Type": "application/json",
   };
