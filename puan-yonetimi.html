@@ -22,11 +22,17 @@ async function load(){
  const t=document.createElement('table');t.innerHTML='<thead><tr><th>Üye kimliği</th><th>Bakiye</th></tr></thead>';
  const b=document.createElement('tbody');for(const m of members||[]){const tr=document.createElement('tr');for(const v of [m.user_id,String(m.balance)]){const td=document.createElement('td');td.textContent=v;tr.append(td)}b.append(tr)}t.append(b);$('balances').append(t);
  const {data:logs,error:logError}=await db.from('dalya_point_log').select('created_at,user_id,delta,balance_after,note').order('created_at',{ascending:false}).limit(30);
+ $('history').replaceChildren();
  if(logError){$('history').textContent='Puan hareketleri okunamadı: '+logError.message;}
- $('history').replaceChildren();for(const l of logs||[]){const line=document.createElement('p');line.textContent=new Date(l.created_at).toLocaleString('tr-TR')+' | '+l.user_id.slice(0,8)+'… | '+(l.delta>0?'+':'')+l.delta+' | Bakiye: '+l.balance_after+' | '+l.note;$('history').append(line)}
+ for(const l of (logError?[]:(logs||[]))){const line=document.createElement('p');line.textContent=new Date(l.created_at).toLocaleString('tr-TR')+' | '+l.user_id.slice(0,8)+'… | '+(l.delta>0?'+':'')+l.delta+' | Bakiye: '+l.balance_after+' | '+l.note;$('history').append(line)}
  $('status').textContent='Yönetici girişi doğrulandı.';
 }
+db.auth.onAuthStateChange((event,session)=>{if(event==='SIGNED_OUT'||!session){$('panel').hidden=true;$('status').textContent='Oturum kapandı. Yeniden giriş yapın.';}});
 $('save').onclick=async()=>{
+ const {data:authCheck,error:authError}=await db.auth.getUser();
+ if(authError||!authCheck.user){$('panel').hidden=true;$('status').textContent='Oturum kapandı. Yeniden giriş yapın.';return;}
+ const {data:adminCheck,error:adminError}=await db.from('dalya_admins').select('user_id').eq('user_id',authCheck.user.id).maybeSingle();
+ if(adminError||!adminCheck){$('panel').hidden=true;$('status').textContent='Yönetici yetkisi doğrulanamadı. İşlem engellendi.';return;}
  const id=$('member').value,amount=Number($('amount').value);
  if(!id||!Number.isSafeInteger(amount)||amount<1||amount>100000000){$('status').textContent='Üye ve geçerli puan miktarı seçin.';return;}
  const delta=$('action').value==='subtract'?-amount:amount;
