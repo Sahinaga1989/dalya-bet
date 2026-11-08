@@ -8,7 +8,7 @@
 <section id="walletBar" aria-live="polite" style="margin:14px auto;padding:16px 20px;max-width:1100px;background:#191919;border:1px solid #6b5700;border-radius:12px"><div style="color:#ffd400;font-weight:bold">💰 Sanal Puan Bakiyem</div><div id="myBalance" style="font-size:30px;font-weight:800;margin-top:6px">Yükleniyor…</div><div id="walletInfo" style="color:#bbb;font-size:13px;margin-top:5px">Yalnızca kendi bakiyeniz gösterilir.</div></section>
 <section class="hero"><h1>DALYA BET<br>MAÇ HEYECANI!</h1><p>Maçları keşfet, doğrulanmış oranları incele ve sanal puanlı kupon oluştur.</p></section>
 <div class="notice" id="notice">Maç ve oran verileri yükleniyor… Gerçek para kullanılmaz.</div>
-<main class="layout"><section class="panel"><h2>⚽ Maç Programı</h2><div style="padding:12px"><label for="fixtureDate">Tarihe göre filtrele: </label><select id="fixtureDate" style="background:#222;color:#fff;padding:10px;border:1px solid #666;border-radius:8px"><option value="">Tüm tarihler</option></select></div><div id="matches"><div class="empty">Maçlar yükleniyor…</div></div></section><aside class="panel"><h2>🎟️ Demo Kuponum</h2><div class="slip-body"><button class="action" id="clear">Temizle</button><div id="selections" class="empty">Kupona eklemek için oran seç.</div><div class="field"><label for="stake">Sanal puan</label><input id="stake" type="number" min="1" value="100"></div><div class="total"><span>Toplam oran</span><strong id="totalOdds">1.00</strong></div><div class="total"><span>Olası sanal puan</span><strong id="potential">100.00</strong></div><button class="action primary" id="submit">✓ Demo Kuponu Oluştur</button><p style="font-size:12px;color:#aaa">Bu yalnızca demo hesaplamadır; bahis kabul edilmez.</p></div><div class="slip-body" style="border-top:1px solid #444"><h3>📁 Kaydedilen Demo Kuponlarım</h3><p style="color:#aaa;font-size:12px">Bu cihazda saklanır; diğer cihazlarla eşitlenmez.</p><div id="savedCoupons"></div></div></aside></main>
+<main class="layout"><section class="panel"><h2>⚽ Maç Programı</h2><div style="padding:12px"><label for="fixtureDate">Tarihe göre filtrele: </label><select id="fixtureDate" style="background:#222;color:#fff;padding:10px;border:1px solid #666;border-radius:8px"><option value="">Tüm tarihler</option></select></div><div id="matches"><div class="empty">Maçlar yükleniyor…</div></div></section><aside class="panel"><h2>🎟️ Demo Kuponum</h2><div class="slip-body"><button class="action" id="clear">Temizle</button><div id="selections" class="empty">Kupona eklemek için oran seç.</div><div class="field"><label for="stake">Sanal puan</label><input id="stake" type="number" min="1" value="100"></div><div class="total"><span>Toplam oran</span><strong id="totalOdds">1.00</strong></div><div class="total"><span>Olası sanal puan</span><strong id="potential">100.00</strong></div><button class="action primary" id="submit">✓ Sanal Kuponu Kaydet</button><p style="font-size:12px;color:#aaa">Bu yalnızca demo hesaplamadır; bahis kabul edilmez.</p></div><div class="slip-body" style="border-top:1px solid #444"><h3>📁 Kaydedilen Demo Kuponlarım</h3><p style="color:#aaa;font-size:12px">Veritabanında hesabına özel saklanır. Eski cihaz içi demo kuponlar bu listeye aktarılmaz.</p><div id="savedCoupons"></div></div></aside></main>
 <footer>DALYA BET • SANAL PUANLI DEMO • Oran bulunmayan maçlarda tahmini oran gösterilmez.</footer>
 <script>
 'use strict';
@@ -61,10 +61,39 @@ return 100;
 }
 function renderMatches(){const filterDate=$('fixtureDate').value;const list=games.filter(g=>{const d=gameDay(g);return (activeTab==='live'?liveStatuses.has(g.status):activeTab==='today'?d===dateTR():activeTab==='tomorrow'?d===dateTR(1):true)&&(!filterDate||d===filterDate)}).sort((a,b)=>leagueRank(a)-leagueRank(b)||a.league.localeCompare(b.league,'tr')||gameDay(a).localeCompare(gameDay(b))||a.date.localeCompare(b.date));if(!list.length){$('matches').innerHTML='<div class="empty">Bu bölümde gösterilecek maç bulunamadı.</div>';return}let html='',league='';for(const g of list){const leagueLabel=gameDay(g)+' • '+(isTurkey(g)?'🇹🇷 Türkiye • ':'')+g.league;if(leagueLabel!==league){league=leagueLabel;html+='<div class="league">'+esc(league)+'</div>'}const live=liveStatuses.has(g.status),status=live?'🔴 CANLI '+(g.minute??g.status):['FT','AET','PEN'].includes(g.status)?'BİTTİ':'BAŞLAMADI';html+='<div class="match"><div class="teams"><span class="time">'+esc(g.time+' · '+status+' · '+g.score)+'</span><b>'+esc(g.home)+'</b><br>vs <b>'+esc(g.away)+'</b></div>';for(let i=0;i<3;i++){const n=g.odds[i],on=selected.get(g.id)?.choice===i;html+='<button class="odd'+(on?' selected':'')+'" data-id="'+esc(g.id)+'" data-choice="'+i+'" '+(n===null?'disabled':'')+'><small>'+['1','X','2'][i]+'</small>'+(n===null?'—':n.toFixed(2))+'</button>'}html+='</div>'}$('matches').innerHTML=html}
 function renderSlip(){let html='',total=1;for(const [id,s] of selected){const g=games.find(x=>x.id===id);if(!g)continue;const n=g.odds[s.choice];if(n===null)continue;total*=n;html+='<div class="selection"><button data-remove="'+esc(id)+'">×</button><b>'+esc(g.home)+' – '+esc(g.away)+'</b><br>Maç sonucu: '+['1','X','2'][s.choice]+' · '+n.toFixed(2)+'</div>'}$('selections').className=html?'':'empty';$('selections').innerHTML=html||'Kupona eklemek için oran seç.';$('totalOdds').textContent=total.toFixed(2);$('potential').textContent=((Math.max(0,Number($('stake').value)||0))*total).toLocaleString('tr-TR',{minimumFractionDigits:2,maximumFractionDigits:2})}
-$('fixtureDate').addEventListener('change',renderMatches);document.querySelector('nav').addEventListener('click',e=>{const b=e.target.closest('button[data-tab]');if(!b)return;document.querySelectorAll('nav button').forEach(x=>x.classList.remove('active'));b.classList.add('active');activeTab=b.dataset.tab;renderMatches()});$('matches').addEventListener('click',e=>{const b=e.target.closest('button[data-id]');if(!b||b.disabled)return;const id=b.dataset.id,choice=Number(b.dataset.choice);if(selected.get(id)?.choice===choice)selected.delete(id);else selected.set(id,{choice});renderMatches();renderSlip()});$('selections').addEventListener('click',e=>{const b=e.target.closest('button[data-remove]');if(b){selected.delete(b.dataset.remove);renderMatches();renderSlip()}});$('clear').onclick=()=>{selected.clear();renderMatches();renderSlip()};$('stake').oninput=renderSlip;let couponKey=null;
-function readCoupons(){if(!couponKey)return [];try{const v=JSON.parse(localStorage.getItem(couponKey)||'[]');return Array.isArray(v)?v:[]}catch{return []}}
-function renderSavedCoupons(){const items=readCoupons();$('savedCoupons').innerHTML=items.length?items.map(c=>'<div class="selection"><b>'+esc(new Date(c.date).toLocaleString('tr-TR'))+'</b><div>'+c.matches.map(m=>esc(m.home+' – '+m.away+' / '+m.choice+' / '+m.odd.toFixed(2))).join('<br>')+'</div><p>'+esc(c.stake)+' puan · '+c.total.toFixed(2)+' oran · Olası '+(c.stake*c.total).toLocaleString('tr-TR',{minimumFractionDigits:2,maximumFractionDigits:2})+' puan</p></div>').join(''):'<p class="empty">Henüz kayıtlı kupon yok.</p>'}
-$('submit').onclick=()=>{if(!couponKey){alert('Önce üye girişi yapın.');return;}if(!selected.size){alert('Önce oranı olan bir maç seçin.');return}const stake=Number($('stake').value);if(!Number.isFinite(stake)||stake<=0){alert('Geçerli bir sanal puan girin.');return}const matches=[];let total=1;for(const [id,s] of selected){const g=games.find(x=>x.id===id);if(!g||!Number.isFinite(g.odds[s.choice])){alert('Kupondaki oran değişmiş. Tekrar seçin.');return}const odd=g.odds[s.choice];total*=odd;matches.push({id,home:g.home,away:g.away,choice:['1','X','2'][s.choice],odd})}try{const coupons=readCoupons();coupons.unshift({date:new Date().toISOString(),matches,stake,total});localStorage.setItem(couponKey,JSON.stringify(coupons.slice(0,100)));renderSavedCoupons();alert('Demo kuponu bu cihaza kaydedildi. Gerçek bahis değildir.')}catch(e){alert('Kupon kaydedilemedi: Tarayıcı depolamasını kontrol edin.')}};
+$('fixtureDate').addEventListener('change',renderMatches);document.querySelector('nav').addEventListener('click',e=>{const b=e.target.closest('button[data-tab]');if(!b)return;document.querySelectorAll('nav button').forEach(x=>x.classList.remove('active'));b.classList.add('active');activeTab=b.dataset.tab;renderMatches()});$('matches').addEventListener('click',e=>{const b=e.target.closest('button[data-id]');if(!b||b.disabled)return;const id=b.dataset.id,choice=Number(b.dataset.choice);if(selected.get(id)?.choice===choice)selected.delete(id);else selected.set(id,{choice});renderMatches();renderSlip()});$('selections').addEventListener('click',e=>{const b=e.target.closest('button[data-remove]');if(b){selected.delete(b.dataset.remove);renderMatches();renderSlip()}});$('clear').onclick=()=>{selected.clear();renderMatches();renderSlip()};$('stake').oninput=renderSlip;let couponClient=null;
+async function renderSavedCoupons(){
+ if(!couponClient){$('savedCoupons').textContent='Oturum bekleniyor…';return;}
+ $('savedCoupons').textContent='Kupon geçmişi yükleniyor…';
+ const {data,error}=await couponClient.from('dalya_coupons').select('id,created_at,stake,total_odds,potential_win,selections,status').order('created_at',{ascending:false}).limit(50);
+ if(error){$('savedCoupons').textContent='Kupon geçmişi okunamadı: '+error.message;return;}
+ $('savedCoupons').replaceChildren();
+ if(!data?.length){$('savedCoupons').textContent='Henüz veritabanına kaydedilmiş kupon yok.';return;}
+ for(const c of data){
+  const card=document.createElement('div');card.className='selection';
+  const title=document.createElement('b');title.textContent=new Date(c.created_at).toLocaleString('tr-TR')+' · '+({pending:'Bekliyor',won:'Kazandı',lost:'Kaybetti',void:'İptal',review:'İncelemede'}[c.status]||c.status);card.append(title);
+  for(const m of (Array.isArray(c.selections)?c.selections:[])){const line=document.createElement('div');line.textContent=(m.home||m.id)+' – '+(m.away||'')+' / '+m.choice+' / '+Number(m.odd).toFixed(2);card.append(line);}
+  const summary=document.createElement('p');summary.textContent=c.stake+' puan · '+Number(c.total_odds).toFixed(2)+' oran · Olası '+Number(c.potential_win).toLocaleString('tr-TR')+' puan';card.append(summary);$('savedCoupons').append(card);
+ }
+}
+$('submit').onclick=async()=>{
+ if(!couponClient){alert('Önce üye girişi yapın.');return;}
+ if(!selected.size){alert('Önce oranı olan bir maç seçin.');return;}
+ const stake=Number($('stake').value);
+ if(!Number.isSafeInteger(stake)||stake<1||stake>100000000){alert('1 ile 100.000.000 arasında tam sayı puan girin.');return;}
+ const selections=[];
+ for(const [id,s] of selected){const g=games.find(x=>x.id===id);if(!g||!Number.isFinite(g.odds[s.choice])){alert('Kupondaki oran değişmiş. Tekrar seçin.');return;}selections.push({id:String(id),choice:['1','X','2'][s.choice]});}
+ if(!confirm(stake+' sanal puan bakiyenden düşülecek ve kupon kaydedilecek. Onaylıyor musun?'))return;
+ $('submit').disabled=true;
+ try{
+  const {error}=await couponClient.rpc('dalya_place_coupon',{p_stake:stake,p_selections:selections});
+  if(error){alert('Kupon kabul edilmedi: '+error.message);return;}
+  selected.clear();renderMatches();renderSlip();await renderSavedCoupons();
+  if(typeof window.refreshDalyaBalance==='function')await window.refreshDalyaBalance();
+  alert('Kupon veritabanına kaydedildi. Sanal puan bakiyenden düşüldü.');
+ }catch(e){alert('İşlem sonucu doğrulanamadı. Tekrar denemeden önce kupon geçmişini ve bakiyeni kontrol et.');}
+ finally{$('submit').disabled=false;}
+};
 
 (async()=>{
   const {createClient}=await import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm');
@@ -77,10 +106,11 @@ $('submit').onclick=()=>{if(!couponKey){alert('Önce üye girişi yapın.');retu
     location.replace('./dalya-bet-giris.html');
     return;
   }
-  couponKey='dalya_demo_coupons_v2_'+data.user.id;
+  couponClient=auth;
   renderSavedCoupons();
   const balanceEl=document.getElementById('myBalance');
   const infoEl=document.getElementById('walletInfo');
+  window.refreshDalyaBalance=loadMyBalance;
   async function loadMyBalance(){
     const {data:wallet,error:walletError}=await auth.from('dalya_wallets')
       .select('balance').eq('user_id',data.user.id).maybeSingle();
