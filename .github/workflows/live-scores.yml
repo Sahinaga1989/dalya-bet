@@ -235,32 +235,41 @@ jobs:
               missing = [ident for ident in ids if ident not in odds
                          and scheduled[ident].get('fixture', {}).get('status', {}).get('short') == 'NS'
                          and today.isoformat() <= local_date(scheduled[ident]) <= (today + dt.timedelta(days=29)).isoformat()]
-              if missing and calls < MAX_RUN and daily < MAX_DAILY:
-                  # Rotate through Turkish fixtures first, including future matches.
-                  priority = [ident for ident in missing if ident in turkish_ids]
-                  others = [ident for ident in missing if ident not in turkish_ids]
-                  ordered = priority + others
+              # Track each fixture independently: rotating a cursor over a changing list
+              # could repeatedly skip some matches and waste requests on others.
+              retry_seconds = RETRY_HOURS * 3600
+              def last_checked(ident):
                   try:
-                      cursor = max(0, int(state.get('odds_cursor', 0)))
-                  except (TypeError, ValueError):
-                      cursor = 0
-                  cursor %= len(ordered)
-                  ordered = ordered[cursor:] + ordered[:cursor]
-                  checked = 0
-                  for ident in ordered[:min(len(ordered), MAX_RUN - calls, MAX_DAILY - daily)]:
-                      checked += 1
-                      try:
-                          events, _ = fetch('odds', {'fixture': ident, 'bet': 1})
-                          fresh = extract_odds(events, turkish_ids)
-                          if ident in fresh:
-                              fresh[ident]['fetched_at'] = stamp
-                              odds[ident] = fresh[ident]
-                      except Exception as exc:
-                          print('Tek mac oran sorgusu basarisiz:', ident, str(exc)[:120])
-                          if any(x in str(exc).casefold() for x in ('limit', 'quota', '429', 'rate')):
-                              raise
-                  state['odds_cursor'] = (cursor + checked) % len(ordered)
-                  print('Tekil oran taramasi:', checked, 'aday:', len(ordered))
+                      return dt.datetime.fromisoformat(str(attempts.get(ident, '1970-01-01T00:00:00+00:00')).replace('Z', '+00:00')).timestamp()
+                  except (ValueError, TypeError, OverflowError):
+                      return 0
+              eligible_missing = [ident for ident in missing
+                                  if now.timestamp() - last_checked(ident) >= retry_seconds]
+              eligible_missing.sort(key=lambda ident: (
+                  0 if is_cup(scheduled[ident]) else (1 if ident in turkish_ids else 2),
+                  local_date(scheduled[ident]),
+                  last_checked(ident), ident))
+              checked = 0
+              for ident in eligible_missing[:max(0, min(len(eligible_missing), MAX_RUN - calls, MAX_DAILY - daily))]:
+                  checked += 1
+                  attempts[ident] = stamp
+                  try:
+                      events, _ = fetch('odds', {'fixture': ident, 'bet': 1})
+                      fresh = extract_odds(events, turkish_ids)
+                      if ident in fresh:
+                          fresh[ident]['fetched_at'] = stamp
+                          odds[ident] = fresh[ident]
+                  except Exception as exc:
+                      print('Tek mac oran sorgusu basarisiz:', ident, str(exc)[:120])
+                      if any(x in str(exc).casefold() for x in ('limit', 'quota', '429', 'rate')):
+                          raise
+              # Keep only recent fixture checks so the progress file stays small.
+              active_ids = set(missing)
+              attempts = {ident: checked_at for ident, checked_at in attempts.items()
+                          if ident in active_ids}
+              state['last_attempt'] = attempts
+              print('Tekil oran taramasi:', checked, 'bekleyen:', len(missing),
+                    'yeniden sorgulanabilir:', len(eligible_missing))
               turkey_missing = [ident for ident in turkish_ids if ident not in odds and scheduled[ident].get('fixture', {}).get('status', {}).get('short') == 'NS']
               print('Turkiye oran durumu: bulunan', len(turkish_ids) - len(turkey_missing), 'eksik', len(turkey_missing))
               for ident in sorted(turkey_missing, key=lambda x: local_date(scheduled[x]))[:60]:
