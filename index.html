@@ -110,6 +110,7 @@ $('submit').onclick=async()=>{
     return;
   }
   couponClient=auth;
+  try{await auth.functions.invoke('dalya-sync-coupon-data',{body:{}});}catch(e){console.warn('Kupon veri eşitlemesi ertelendi',e);}
   await refreshCouponEligibility();
   renderSavedCoupons();
   const balanceEl=document.getElementById('myBalance');
@@ -137,7 +138,7 @@ $('submit').onclick=async()=>{
   document.querySelector('nav').appendChild(btn);
   refresh();
   setInterval(refresh,60000);
-  setInterval(refreshCouponEligibility,60000);
+  setInterval(async()=>{try{await auth.functions.invoke('dalya-sync-coupon-data',{body:{}});}catch(e){console.warn('Kupon veri eşitlemesi ertelendi',e);}await refreshCouponEligibility();},600000);
 })().catch(()=>{
   document.body.style.visibility='visible';
   document.body.replaceChildren();
