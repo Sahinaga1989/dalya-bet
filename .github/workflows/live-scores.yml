@@ -40,7 +40,7 @@ jobs:
           if not KEY:
               raise SystemExit('API_FOOTBALL_KEY veya API_KEY GitHub secret eksik')
           BASE = 'https://v3.football.api-sports.io/'
-          MAX_RUN = 12
+          MAX_RUN = 32
           MAX_DAILY = 600  # Reserve most of the 7,500/day plan for other usage
           MAX_MATCHES = 1000
           RETRY_HOURS = 4
@@ -99,7 +99,7 @@ jobs:
                   raise RuntimeError('API hatasi: ' + str(payload['errors'])[:180])
               if not isinstance(payload.get('response'), list):
                   raise RuntimeError('API response listesi bulunamadi')
-              return payload['response']
+              return payload['response'], payload.get('paging') or {}
 
           def turkey(match):
               league = match.get('league') or {}
@@ -158,7 +158,7 @@ jobs:
               # Only competitions provided by the API can be included.
               matches = []
               for day in dates:
-                  response = fetch('fixtures', {'date': day, 'timezone': 'Europe/Istanbul'})
+                  response, _ = fetch('fixtures', {'date': day, 'timezone': 'Europe/Istanbul'})
                   matches.extend(m for m in response if local_date(m) == day)
               unique = {}
               for match in matches:
@@ -179,28 +179,36 @@ jobs:
               odds = {ident: old_odds[ident] for ident in ids
                       if ident in old_odds and valid_odd(old_odds[ident])
                       and (scheduled[ident].get('fixture', {}).get('status', {}).get('short') == 'NS')}
-              for ident in ids:
-                  if calls >= MAX_RUN or daily >= MAX_DAILY:
-                      break
-                  last = attempts.get(ident)
-                  if last:
+              # Fetch odds by date, ten fixtures per page, instead of one API call per match.
+              # This allows more coverage with the same request budget.
+              eligible = set(ids)
+              odds_pages = 0
+              for day in dates:
+                  page = 1
+                  while calls < MAX_RUN and daily < MAX_DAILY:
                       try:
-                          if (now - dt.datetime.fromisoformat(last)).total_seconds() < RETRY_HOURS * 3600:
-                              continue
-                      except (TypeError, ValueError):
-                          pass
-                  if (scheduled[ident].get('fixture', {}).get('status', {}).get('short') != 'NS'):
-                      continue
-                  attempts[ident] = stamp
-                  try:
-                      fresh = extract_odds(fetch('odds', {'fixture': ident}))
-                      if ident in fresh:
-                          fresh[ident]['fetched_at'] = stamp
-                          odds.update(fresh)
-                  except Exception as exc:
-                      print('Oran sorgusu basarisiz:', ident, str(exc)[:120])
-                      if any(x in str(exc).casefold() for x in ('limit', 'quota', '429', 'rate')):
+                          events, paging = fetch('odds', {
+                              'date': day, 'timezone': 'Europe/Istanbul',
+                              'bet': 1, 'page': page})
+                      except Exception as exc:
+                          print('Toplu oran sorgusu basarisiz:', day, page, str(exc)[:160])
+                          if any(x in str(exc).casefold() for x in ('limit', 'quota', '429', 'rate')):
+                              raise
                           break
+                      fresh = extract_odds(events)
+                      for ident, entry in fresh.items():
+                          if ident in eligible and scheduled[ident].get('fixture', {}).get('status', {}).get('short') == 'NS':
+                              entry['fetched_at'] = stamp
+                              odds[ident] = entry
+                      odds_pages += 1
+                      try:
+                          total_pages = int(paging.get('total', 1))
+                      except (TypeError, ValueError):
+                          total_pages = 1
+                      if not events or page >= total_pages:
+                          break
+                      page += 1
+              print('Toplu oran sayfalari:', odds_pages)
               score_payload = {'updated_at': stamp, 'date': dates[0],
                                'dates': dates, 'response': fixtures}
               save('scores.json', score_payload)
