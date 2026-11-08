@@ -1,13 +1,17 @@
 name: DALYA BET Canli Skorlar
+
 on:
   workflow_dispatch:
   schedule:
     - cron: '7 0,6,12,18 * * *'
+
 permissions:
   contents: write
+
 concurrency:
   group: dalya-live-scores
   cancel-in-progress: false
+
 jobs:
   update-scores:
     runs-on: ubuntu-latest
@@ -19,13 +23,18 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Bugun ve yarin maclarini ve oranlari guncelle
+      - name: Bugun ve yarin maclarini guncelle
         env:
           API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
         run: |
           python - <<'PY'
           import datetime as dt
-          import json, os, time, urllib.error, urllib.parse, urllib.request
+          import json
+          import os
+          import time
+          import urllib.error
+          import urllib.parse
+          import urllib.request
           from pathlib import Path
           from zoneinfo import ZoneInfo
 
@@ -33,15 +42,15 @@ jobs:
           if not KEY:
               raise SystemExit('API_FOOTBALL_KEY secret eksik')
           BASE = 'https://v3.football.api-sports.io/'
-          MAX_RUN = 100
-          MAX_DAILY = 90  # Muhafazakar gunluk sinir; API plan kotasi ayrica dogrulanmali.
-          MAX_MATCHES = 250  # Iki gun toplaminda.
-          RETRY_AFTER_HOURS = 6
+          MAX_RUN = 12       # 4 zamanlanmis calismada en fazla 48 istek; diger istekler haric
+          MAX_DAILY = 80     # Yerel emniyet siniri; saglayici kotasinin garantisi degildir
+          MAX_MATCHES = 250
+          RETRY_HOURS = 6
           now = dt.datetime.now(dt.timezone.utc)
-          today_utc = now.astimezone(ZoneInfo('Europe/Istanbul')).date().isoformat()
-          local_today = now.astimezone(ZoneInfo('Europe/Istanbul')).date()
-          dates = [local_today.isoformat(), (local_today + dt.timedelta(days=1)).isoformat()]
+          today_tr = now.astimezone(ZoneInfo('Europe/Istanbul')).date()
+          days = [today_tr.isoformat(), (today_tr + dt.timedelta(days=1)).isoformat()]
           stamp = now.isoformat()
+          utc_day = now.date().isoformat()
           progress_path = Path('odds-progress.json')
           odds_path = Path('odds.json')
           scores_path = Path('scores.json')
@@ -51,124 +60,152 @@ jobs:
                   return json.loads(path.read_text(encoding='utf-8'))
               except (OSError, ValueError):
                   return default
-          def write_json(path, data):
+
+          def save(path, data):
               path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding='utf-8')
 
           progress = read_json(progress_path, {})
-          if not isinstance(progress, dict) or progress.get('date') != today_utc:
-              progress = {'date': today_utc, 'requests': 0, 'last_attempt': {}}
+          if not isinstance(progress, dict) or progress.get('date') != utc_day:
+              progress = {'date': utc_day, 'requests': 0, 'last_attempt': {}}
           daily = max(0, int(progress.get('requests', 0)))
-          last_attempt = progress.get('last_attempt', {})
-          if not isinstance(last_attempt, dict):
-              last_attempt = {}
+          attempts = progress.get('last_attempt', {})
+          if not isinstance(attempts, dict):
+              attempts = {}
           run_calls = 0
 
           def fetch(endpoint, params):
               global daily, run_calls
               if daily >= MAX_DAILY or run_calls >= MAX_RUN:
-                  raise RuntimeError('Yerel API istek limiti')
+                  raise RuntimeError('Yerel API istek siniri doldu')
               daily += 1
               run_calls += 1
-              query = urllib.parse.urlencode(params)
-              req = urllib.request.Request(BASE + endpoint + '?' + query,
-                  headers={'x-apisports-key': KEY, 'Accept': 'application/json'})
-              with urllib.request.urlopen(req, timeout=20) as resp:
-                  payload = json.load(resp)
+              url = BASE + endpoint + '?' + urllib.parse.urlencode(params)
+              req = urllib.request.Request(url, headers={
+                  'x-apisports-key': KEY, 'Accept': 'application/json'})
+              with urllib.request.urlopen(req, timeout=25) as response:
+                  payload = json.load(response)
               if payload.get('errors'):
                   raise RuntimeError('API hatasi: ' + str(payload['errors'])[:200])
-              return payload.get('response', [])
+              if not isinstance(payload.get('response'), list):
+                  raise RuntimeError('API response listesi eksik')
+              return payload['response']
+
+          old_scores = read_json(scores_path, {})
+          old_odds_data = read_json(odds_path, {})
+          old_odds = old_odds_data.get('matches', {}) if isinstance(old_odds_data, dict) else {}
+          if not isinstance(old_odds, dict):
+              old_odds = {}
+
+          def match_date(m):
+              try:
+                  raw = m['fixture']['date'].replace('Z', '+00:00')
+                  return dt.datetime.fromisoformat(raw).astimezone(
+                      ZoneInfo('Europe/Istanbul')).date().isoformat()
+              except (KeyError, TypeError, ValueError, AttributeError):
+                  return ''
+
+          def valid_odd(o):
+              return isinstance(o, dict) and all(o.get(k) for k in ('1', 'X', '2'))
 
           def parse_odds(events):
               result = {}
               for event in events:
                   ident = str(event.get('fixture', {}).get('id', ''))
-                  if not ident:
-                      continue
                   for bookmaker in event.get('bookmakers', []):
                       for bet in bookmaker.get('bets', []):
                           if str(bet.get('id')) != '1' and str(bet.get('name', '')).lower() != 'match winner':
                               continue
-                          values = {str(v.get('value', '')).strip().lower(): v.get('odd') for v in bet.get('values', [])}
+                          values = {str(v.get('value', '')).strip().lower(): v.get('odd')
+                                    for v in bet.get('values', [])}
                           if all(values.get(k) for k in ('home', 'draw', 'away')):
-                              result[ident] = {'1': str(values['home']), 'X': str(values['draw']),
-                                               '2': str(values['away']), 'bookmaker': bookmaker.get('name', '')}
+                              result[ident] = {'1': str(values['home']),
+                                               'X': str(values['draw']),
+                                               '2': str(values['away']),
+                                               'bookmaker': bookmaker.get('name', '')}
                               break
                       if ident in result:
                           break
               return result
 
-          old_data = read_json(odds_path, {})
-          old_odds = old_data.get('matches', {}) if isinstance(old_data, dict) else {}
-          if not isinstance(old_odds, dict):
-              old_odds = {}
-          previous_scores = read_json(scores_path, {})
-          fixtures = []
-          odds = {}
-          fixtures_ok = True
           try:
-              for date in dates:
-                  try:
-                      events = fetch('fixtures', {'date': date, 'timezone': 'Europe/Istanbul'})
-                      fixtures.extend(m for m in events if isinstance(m, dict))
-                  except (RuntimeError, urllib.error.URLError, TimeoutError, ValueError) as exc:
-                      print('Fikstur hatasi:', date, str(exc)[:200])
-                      fixtures_ok = False
+              # Both dates must succeed before replacing the current fixtures.
+              by_day = []
+              for day in days:
+                  data = fetch('fixtures', {'date': day, 'timezone': 'Europe/Istanbul'})
+                  by_day.append([m for m in data if match_date(m) == day])
+                  # All Turkish competitions returned by the API are prioritized,
+              # regardless of league name or division.
+              def is_turkish(m):
+                  league = m.get('league') or {}
+                  return str(league.get('country', '')).strip().casefold() in (
+                      'turkey', 'türkiye', 'turkiye')
+
+              def kickoff(m):
+                  return str((m.get('fixture') or {}).get('date', ''))
+
+              turkish = sorted(
+                  [m for day_matches in by_day for m in day_matches if is_turkish(m)],
+                  key=lambda m: (match_date(m), kickoff(m)))
+              foreign_days = [sorted([m for m in day_matches if not is_turkish(m)],
+                                     key=kickoff) for day_matches in by_day]
+              if len(turkish) > MAX_MATCHES:
+                  print('UYARI: Turkiye mac sayisi 250 sinirini asiyor:', len(turkish))
+              fixtures = turkish[:MAX_MATCHES]
+              available = MAX_MATCHES - len(fixtures)
+              # Reserve some remaining capacity for tomorrow when possible.
+              if available:
+                  tomorrow = foreign_days[1][:available // 2]
+                  today = foreign_days[0][:available - len(tomorrow)]
+                  fixtures.extend(today + tomorrow)
+                  available = MAX_MATCHES - len(fixtures)
+                  if available:
+                      fixtures.extend((foreign_days[1][len(tomorrow):] +
+                                       foreign_days[0][len(today):])[:available])
+              print('Turkiye maclari:', len(turkish),
+                    'Listeye alinan:', sum(is_turkish(m) for m in fixtures))
+              ids = [str(m['fixture']['id']) for m in fixtures
+                     if isinstance(m, dict) and isinstance(m.get('fixture'), dict)
+                     and m['fixture'].get('id') is not None]
+              odds = {i: old_odds[i] for i in ids if i in old_odds and valid_odd(old_odds[i])}
+              pending = []
+              for ident in ids:
+                  if ident in odds:
+                      continue
+                  last = attempts.get(ident)
+                  if last:
+                      try:
+                          if (now - dt.datetime.fromisoformat(last)).total_seconds() < RETRY_HOURS * 3600:
+                              continue
+                      except (TypeError, ValueError):
+                          pass
+                  pending.append(ident)
+              for ident in pending:
+                  if daily >= MAX_DAILY or run_calls >= MAX_RUN:
                       break
-              if fixtures_ok:
-                  # Her iki gunu koruyarak toplam 250 maclik kota.
-                  # Iki tarihe de yer ayir; eksik kalan kontenjani diger gunden tamamla.
-                  by_day = {d: [] for d in dates}
-                  for event in fixtures:
-                      raw_date = event.get('fixture', {}).get('date', '')
-                      try:
-                          event_day = dt.datetime.fromisoformat(raw_date.replace('Z', '+00:00')).astimezone(ZoneInfo('Europe/Istanbul')).date().isoformat()
-                      except (ValueError, TypeError):
-                          continue
-                      if event_day in by_day:
-                          by_day[event_day].append(event)
-                  fixtures = by_day[dates[0]][:125] + by_day[dates[1]][:125]
-                  for day in dates:
-                      if len(fixtures) >= MAX_MATCHES:
-                          break
-                      for event in by_day[day][125:]:
-                          if len(fixtures) >= MAX_MATCHES:
-                              break
-                          fixtures.append(event)
-                  ids = [str(m['fixture']['id']) for m in fixtures
-                         if isinstance(m.get('fixture'), dict) and m['fixture'].get('id') is not None]
-                  odds = {ident: old_odds[ident] for ident in ids if ident in old_odds
-                          and isinstance(old_odds[ident], dict)
-                          and all(old_odds[ident].get(k) for k in ('1', 'X', '2'))}
-                  for ident in ids:
-                      if ident in odds or daily >= MAX_DAILY or run_calls >= MAX_RUN:
-                          continue
-                      attempted_at = last_attempt.get(ident)
-                      if attempted_at:
-                          try:
-                              if (now - dt.datetime.fromisoformat(attempted_at)).total_seconds() < RETRY_AFTER_HOURS * 3600:
-                                  continue
-                          except (ValueError, TypeError):
-                              pass
-                      last_attempt[ident] = stamp
-                      try:
-                          odds.update(parse_odds(fetch('odds', {'fixture': ident})))
-                      except (urllib.error.URLError, TimeoutError, ValueError) as exc:
-                          print('Gecici oran hatasi:', ident, str(exc)[:120])
-                          last_attempt.pop(ident, None)
-                      except RuntimeError as exc:
-                          print('API durduruldu:', str(exc)[:200])
-                          break
-                      time.sleep(0.12)
-                  write_json(scores_path, {'updated_at': stamp, 'date': dates[0], 'dates': dates,
-                                           'response': fixtures})
-                  write_json(odds_path, {'updated_at': stamp, 'matches': odds})
-                  print('Mac:', len(fixtures), 'Oran:', len(odds), 'Tarihler:', dates)
-              else:
-                  print('Fiksturler tam alinamadi; mevcut skor dosyasi korundu.')
+                  attempts[ident] = stamp
+                  try:
+                      odds.update(parse_odds(fetch('odds', {'fixture': ident})))
+                  except (urllib.error.URLError, TimeoutError, ValueError) as exc:
+                      print('Gecici oran hatasi:', ident, str(exc)[:100])
+                      attempts.pop(ident, None)
+                  except RuntimeError as exc:
+                      print('Oran sorgusu durduruldu:', str(exc)[:160])
+                      break
+                  time.sleep(0.12)
+              save(scores_path, {'updated_at': stamp, 'date': days[0],
+                                 'dates': days, 'response': fixtures})
+              save(odds_path, {'updated_at': stamp, 'matches': odds})
+              print('Tarih:', days, 'Mac:', len(fixtures), 'Oran:', len(odds),
+                    'Yarin:', sum(match_date(m) == days[1] for m in fixtures))
+          except Exception as exc:
+              # Preserve last known working data if either fixture request fails.
+              print('Fikstur guncellenemedi, eski veriler korundu:', str(exc)[:250])
+              if not isinstance(old_scores, dict) or not isinstance(old_scores.get('response'), list):
+                  raise
           finally:
-              write_json(progress_path, {'date': today_utc, 'requests': daily,
-                                         'last_attempt': last_attempt, 'updated_at': stamp})
-              print('Bu calismadaki API istegi:', run_calls, 'Gunluk kaydedilen:', daily)
+              save(progress_path, {'date': utc_day, 'requests': daily,
+                                   'last_attempt': attempts, 'updated_at': stamp})
+              print('Bu calismada API istegi:', run_calls, 'Gunluk yerel sayac:', daily)
           PY
       - name: Degisiklikleri kaydet
         if: always()
@@ -177,6 +214,6 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add scores.json odds.json odds-progress.json
           if ! git diff --cached --quiet; then
-            git commit -m 'Update DALYA BET football data'
+            git commit -m 'Update DALYA BET today and tomorrow fixtures'
             git push
           fi
