@@ -27,7 +27,7 @@ if(!matchError){games=data.response.map(m=>{const id=String(m.fixture?.id??'');c
 else if(games.length){games.forEach(g=>{const o=oddsById[g.id]||{};g.odds=[parseOdd(o['1']),parseOdd(o['X']),parseOdd(o['2'])]})}
 for(const [id,s] of selected){const g=games.find(x=>x.id===id);if(!g||g.odds[s.choice]===null)selected.delete(id)}
 const available=games.filter(g=>g.odds.every(x=>x!==null)).length;
-$('notice').textContent=matchError&&!games.length?'Maç verileri okunamadı. GitHub dosyalarını kontrol edin.':`Günlük en fazla 50 seçilmiş maç • ${games.length} maçlık kaynak • ${available} maçta 1-X-2 oranı mevcut${oddsError?' • Oran dosyası okunamadı':''}. Eksik oranlar uydurulmaz. Veriler API güncellemesine bağlıdır.`;
+$('notice').textContent=matchError&&!games.length?'Maç verileri okunamadı. GitHub dosyalarını kontrol edin.':`Günlük en fazla 200 seçilmiş maç • ${games.length} maçlık kaynak • ${available} maçta 1-X-2 oranı mevcut${oddsError?' • Oran dosyası okunamadı':''}. Eksik oranlar uydurulmaz. Veriler API güncellemesine bağlıdır.`;
 syncDateFilter();renderMatches();renderSlip()}
 function isTurkey(g){return /^(turkey|türkiye|turkiye)$/i.test(String(g.country||'').trim())}
 function leagueRank(g){
@@ -61,7 +61,7 @@ return 100;
 }
 // Each Turkish-calendar day shows at most 50 featured fixtures.
 // Keep the full fixture feed for score updates and already placed coupons.
-const DAILY_MATCH_LIMIT=50;
+const DAILY_MATCH_LIMIT=200;
 function featuredGames(){
  const byDay=new Map();
  for(const g of games){
