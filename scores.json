@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-08T03:55:44.844273+00:00",
+  "updated_at": "2026-11-08T04:56:23.150612+00:00",
   "date": "2026-11-08",
   "dates": [
     "2026-11-08",
@@ -3313,9 +3313,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
           "extra": null
         }
       },
@@ -3334,27 +3334,27 @@
           "id": 28297,
           "name": "Celaya 2",
           "logo": "https://media.api-sports.io/football/teams/28297.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 22054,
           "name": "Deportivo Ayense",
           "logo": "https://media.api-sports.io/football/teams/22054.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 2,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 0
         },
         "extratime": {
           "home": null,
@@ -7023,10 +7023,10 @@
           "city": "Alajuela"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
+          "long": "Match Finished",
+          "short": "FT",
           "elapsed": 90,
-          "extra": 1
+          "extra": 7
         }
       },
       "league": {
@@ -7063,8 +7063,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 0
         },
         "extratime": {
           "home": null,
@@ -7093,10 +7093,10 @@
           "city": "San Marcos"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 86,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 4
         }
       },
       "league": {
@@ -7133,8 +7133,8 @@
           "away": 1
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 2
         },
         "extratime": {
           "home": null,
@@ -7163,10 +7163,10 @@
           "city": "San Salvador"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
+          "long": "Match Finished",
+          "short": "FT",
           "elapsed": 90,
-          "extra": 1
+          "extra": 7
         }
       },
       "league": {
@@ -7203,8 +7203,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 3,
+          "away": 2
         },
         "extratime": {
           "home": null,
@@ -7233,9 +7233,9 @@
           "city": null
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 87,
+          "long": "Match Finished",
+          "short": "AET",
+          "elapsed": 120,
           "extra": null
         }
       },
@@ -7254,17 +7254,17 @@
           "id": 27251,
           "name": "Boise",
           "logo": "https://media.api-sports.io/football/teams/27251.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 9016,
           "name": "Chattanooga Red Wolves",
           "logo": "https://media.api-sports.io/football/teams/9016.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "score": {
@@ -7273,12 +7273,12 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "extratime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         },
         "penalty": {
           "home": null,
@@ -7303,10 +7303,10 @@
           "city": "Albuquerque"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 54,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 5
         }
       },
       "league": {
@@ -7334,7 +7334,7 @@
         }
       },
       "goals": {
-        "home": 3,
+        "home": 4,
         "away": 0
       },
       "score": {
@@ -7343,8 +7343,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 4,
+          "away": 0
         },
         "extratime": {
           "home": null,
@@ -7365,7 +7365,7 @@
         "timestamp": 1794106800,
         "periods": {
           "first": 1794106800,
-          "second": null
+          "second": 1794110400
         },
         "venue": {
           "id": 2788,
@@ -7373,10 +7373,10 @@
           "city": "Kohimarama"
         },
         "status": {
-          "long": "Halftime",
-          "short": "HT",
-          "elapsed": 45,
-          "extra": 1
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 5
         }
       },
       "league": {
@@ -7394,17 +7394,17 @@
           "id": 13977,
           "name": "Eastern Suburbs",
           "logo": "https://media.api-sports.io/football/teams/13977.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 20651,
           "name": "Cashmere Technical",
           "logo": "https://media.api-sports.io/football/teams/20651.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": 0,
+        "home": 2,
         "away": 0
       },
       "score": {
@@ -7413,8 +7413,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 0
         },
         "extratime": {
           "home": null,
@@ -7435,7 +7435,7 @@
         "timestamp": 1794106800,
         "periods": {
           "first": 1794106800,
-          "second": null
+          "second": 1794110400
         },
         "venue": {
           "id": 11936,
@@ -7443,9 +7443,9 @@
           "city": "Sacramento"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 45,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 86,
           "extra": null
         }
       },
@@ -7464,17 +7464,17 @@
           "id": 4015,
           "name": "Sacramento Republic",
           "logo": "https://media.api-sports.io/football/teams/4015.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 3993,
           "name": "El Paso Locomotive",
           "logo": "https://media.api-sports.io/football/teams/3993.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": 1,
+        "home": 2,
         "away": 1
       },
       "score": {
@@ -7513,9 +7513,9 @@
           "city": "La Paz"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 45,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 84,
           "extra": null
         }
       },
@@ -7544,8 +7544,8 @@
         }
       },
       "goals": {
-        "home": 2,
-        "away": 0
+        "home": 3,
+        "away": 2
       },
       "score": {
         "halftime": {
@@ -7583,9 +7583,9 @@
           "city": "Mexico City"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 45,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 81,
           "extra": null
         }
       },
@@ -7614,8 +7614,8 @@
         }
       },
       "goals": {
-        "home": 1,
-        "away": 1
+        "home": 2,
+        "away": 2
       },
       "score": {
         "halftime": {
@@ -7653,9 +7653,9 @@
           "city": "Chiba"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 22,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 67,
           "extra": null
         }
       },
@@ -7674,17 +7674,17 @@
           "id": 16948,
           "name": "JEF United W",
           "logo": "https://media.api-sports.io/football/teams/16948.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 16950,
           "name": "Omiya Ardija Ventus W",
           "logo": "https://media.api-sports.io/football/teams/16950.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "score": {
@@ -7714,7 +7714,7 @@
         "date": "2026-11-08T07:00:00+03:00",
         "timestamp": 1794110400,
         "periods": {
-          "first": null,
+          "first": 1794110400,
           "second": null
         },
         "venue": {
@@ -7723,10 +7723,10 @@
           "city": "Kumamoto"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
+          "long": "Halftime",
+          "short": "HT",
+          "elapsed": 45,
+          "extra": 2
         }
       },
       "league": {
@@ -7744,23 +7744,23 @@
           "id": 314,
           "name": "Roasso Kumamoto",
           "logo": "https://media.api-sports.io/football/teams/314.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 309,
           "name": "Renofa Yamaguchi",
           "logo": "https://media.api-sports.io/football/teams/309.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -7793,9 +7793,9 @@
           "city": "Kawagoe"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "Halftime",
+          "short": "HT",
+          "elapsed": 45,
           "extra": null
         }
       },
@@ -7814,23 +7814,23 @@
           "id": 16946,
           "name": "Elfen Saitama W",
           "logo": "https://media.api-sports.io/football/teams/16946.png",
-          "winner": null
+          "winner": false
         },
         "away": {
           "id": 16955,
           "name": "Sanfrecce Hiroshima W",
           "logo": "https://media.api-sports.io/football/teams/16955.png",
-          "winner": null
+          "winner": true
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 2
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 2
         },
         "fulltime": {
           "home": null,
@@ -7854,7 +7854,7 @@
         "date": "2026-11-08T07:00:00+03:00",
         "timestamp": 1794110400,
         "periods": {
-          "first": null,
+          "first": 1794110400,
           "second": null
         },
         "venue": {
@@ -7863,10 +7863,10 @@
           "city": "Ufa"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
+          "long": "Halftime",
+          "short": "HT",
+          "elapsed": 45,
+          "extra": 1
         }
       },
       "league": {
@@ -7884,23 +7884,23 @@
           "id": 16856,
           "name": "Dinamo Vladivostok",
           "logo": "https://media.api-sports.io/football/teams/16856.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 6802,
           "name": "Kaluga",
           "logo": "https://media.api-sports.io/football/teams/6802.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -7919,12 +7919,12 @@
     {
       "fixture": {
         "id": 1593702,
-        "referee": "Adam Kersey",
+        "referee": "Adam Kersey, Australia",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-08T07:00:00+03:00",
         "timestamp": 1794110400,
         "periods": {
-          "first": null,
+          "first": 1794110400,
           "second": null
         },
         "venue": {
@@ -7933,10 +7933,10 @@
           "city": "Campbelltown"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
+          "long": "Halftime",
+          "short": "HT",
+          "elapsed": 45,
+          "extra": 5
         }
       },
       "league": {
@@ -7964,13 +7964,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -7994,7 +7994,7 @@
         "date": "2026-11-08T07:00:00+03:00",
         "timestamp": 1794110400,
         "periods": {
-          "first": null,
+          "first": 1794110400,
           "second": null
         },
         "venue": {
@@ -8003,10 +8003,10 @@
           "city": "Hachinohe"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
+          "long": "Halftime",
+          "short": "HT",
+          "elapsed": 45,
+          "extra": 4
         }
       },
       "league": {
@@ -8034,13 +8034,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -8064,7 +8064,7 @@
         "date": "2026-11-08T07:00:00+03:00",
         "timestamp": 1794110400,
         "periods": {
-          "first": null,
+          "first": 1794110400,
           "second": null
         },
         "venue": {
@@ -8073,10 +8073,10 @@
           "city": "Melbourne"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
+          "long": "Halftime",
+          "short": "HT",
+          "elapsed": 45,
+          "extra": 2
         }
       },
       "league": {
@@ -8104,13 +8104,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -8134,7 +8134,7 @@
         "date": "2026-11-08T07:00:00+03:00",
         "timestamp": 1794110400,
         "periods": {
-          "first": null,
+          "first": 1794110400,
           "second": null
         },
         "venue": {
@@ -8143,10 +8143,10 @@
           "city": "Hobart"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
+          "long": "Halftime",
+          "short": "HT",
+          "elapsed": 45,
+          "extra": 1
         }
       },
       "league": {
@@ -8164,23 +8164,23 @@
           "id": 14106,
           "name": "South Hobart",
           "logo": "https://media.api-sports.io/football/teams/14106.png",
-          "winner": null
+          "winner": false
         },
         "away": {
           "id": 10217,
           "name": "Lions",
           "logo": "https://media.api-sports.io/football/teams/10217.png",
-          "winner": null
+          "winner": true
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 1
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 1
         },
         "fulltime": {
           "home": null,
@@ -8549,7 +8549,7 @@
     {
       "fixture": {
         "id": 1556136,
-        "referee": null,
+        "referee": "Masuya Ueda",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-08T08:00:00+03:00",
         "timestamp": 1794114000,
@@ -8619,7 +8619,7 @@
     {
       "fixture": {
         "id": 1556140,
-        "referee": null,
+        "referee": "Koei Koya",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-08T08:00:00+03:00",
         "timestamp": 1794114000,
@@ -9249,7 +9249,7 @@
     {
       "fixture": {
         "id": 1647378,
-        "referee": null,
+        "referee": "Choi Cheol-jun",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-08T08:00:00+03:00",
         "timestamp": 1794114000,
@@ -9319,7 +9319,7 @@
     {
       "fixture": {
         "id": 1647379,
-        "referee": null,
+        "referee": "Chae Sang-Hyeop",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-08T08:00:00+03:00",
         "timestamp": 1794114000,
@@ -9389,7 +9389,7 @@
     {
       "fixture": {
         "id": 1556134,
-        "referee": null,
+        "referee": "Atsushi Kamimura",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-08T09:00:00+03:00",
         "timestamp": 1794117600,
