@@ -203,9 +203,10 @@ jobs:
               turkish_ids = {ident for ident in ids if turkey(scheduled[ident])}
               odds_pages = 0
               odds_errors = []
-              for day in dates[:2]:
+              for day in dates:
                   page = 1
-                  while calls < MAX_RUN and daily < MAX_DAILY:
+                  # Spread requests across today, tomorrow and rotating future dates.
+                  while page <= 4 and calls < MAX_RUN and daily < MAX_DAILY:
                       try:
                           events, paging = fetch('odds', {
                               'date': day, 'timezone': 'Europe/Istanbul',
@@ -233,11 +234,14 @@ jobs:
               # A small rotating batch prevents repeatedly spending the quota on the same games.
               missing = [ident for ident in ids if ident not in odds
                          and scheduled[ident].get('fixture', {}).get('status', {}).get('short') == 'NS'
-                         and local_date(scheduled[ident]) in dates[:2]]
+                         and local_date(scheduled[ident]) in dates]
               if missing and calls < MAX_RUN and daily < MAX_DAILY:
-                  offset = (int(now.timestamp()) // 3600 * 12) % len(missing)
-                  ordered = missing[offset:] + missing[:offset]
-                  for ident in ordered[:min(12, MAX_RUN - calls, MAX_DAILY - daily)]:
+                  # Rotate through Turkish fixtures first, including future matches.
+                  priority = [ident for ident in missing if ident in turkish_ids]
+                  others = [ident for ident in missing if ident not in turkish_ids]
+                  offset = (int(now.timestamp()) // 3600 * 8)
+                  ordered = (priority[offset % len(priority):] + priority[:offset % len(priority)] if priority else []) + (others[offset % len(others):] + others[:offset % len(others)] if others else [])
+                  for ident in ordered[:min(8, MAX_RUN - calls, MAX_DAILY - daily)]:
                       try:
                           events, _ = fetch('odds', {'fixture': ident, 'bet': 1})
                           fresh = extract_odds(events)
