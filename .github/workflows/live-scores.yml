@@ -40,8 +40,8 @@ jobs:
           if not KEY:
               raise SystemExit('API_FOOTBALL_KEY veya API_KEY GitHub secret eksik')
           BASE = 'https://v3.football.api-sports.io/'
-          MAX_RUN = 24
-          MAX_DAILY = 650  # This workflow only; reserve quota for other consumers
+          MAX_RUN = 48
+          MAX_DAILY = 1500  # This workflow only; keep quota for other API consumers
           MAX_MATCHES = 1000
           RETRY_HOURS = 4
           CUP_ID = 206
@@ -230,8 +230,8 @@ jobs:
                       if not events or page >= total_pages:
                           break
                       page += 1
-              # If date-wide odds are unavailable, try individual upcoming fixtures.
-              # A small rotating batch prevents repeatedly spending the quota on the same games.
+              # Scan every eligible fixture over successive hourly runs, prioritizing Turkey.
+              # Persist a cursor so a fixed small subset is not queried repeatedly.
               missing = [ident for ident in ids if ident not in odds
                          and scheduled[ident].get('fixture', {}).get('status', {}).get('short') == 'NS'
                          and today.isoformat() <= local_date(scheduled[ident]) <= (today + dt.timedelta(days=13)).isoformat()]
@@ -239,9 +239,16 @@ jobs:
                   # Rotate through Turkish fixtures first, including future matches.
                   priority = [ident for ident in missing if ident in turkish_ids]
                   others = [ident for ident in missing if ident not in turkish_ids]
-                  offset = (int(now.timestamp()) // 3600 * 8)
-                  ordered = (priority[offset % len(priority):] + priority[:offset % len(priority)] if priority else []) + (others[offset % len(others):] + others[:offset % len(others)] if others else [])
-                  for ident in ordered[:min(12, MAX_RUN - calls, MAX_DAILY - daily)]:
+                  ordered = priority + others
+                  try:
+                      cursor = max(0, int(state.get('odds_cursor', 0)))
+                  except (TypeError, ValueError):
+                      cursor = 0
+                  cursor %= len(ordered)
+                  ordered = ordered[cursor:] + ordered[:cursor]
+                  checked = 0
+                  for ident in ordered[:min(len(ordered), MAX_RUN - calls, MAX_DAILY - daily)]:
+                      checked += 1
                       try:
                           events, _ = fetch('odds', {'fixture': ident, 'bet': 1})
                           fresh = extract_odds(events, turkish_ids)
@@ -252,6 +259,8 @@ jobs:
                           print('Tek mac oran sorgusu basarisiz:', ident, str(exc)[:120])
                           if any(x in str(exc).casefold() for x in ('limit', 'quota', '429', 'rate')):
                               raise
+                  state['odds_cursor'] = (cursor + checked) % len(ordered)
+                  print('Tekil oran taramasi:', checked, 'aday:', len(ordered))
               print('Toplu oran sayfalari:', odds_pages)
               if odds_errors:
                   print('UYARI: Toplu oran API hatalari:', '; '.join(odds_errors))
@@ -272,6 +281,7 @@ jobs:
           finally:
               save('dalya-api-budget.json', {'date': day_key, 'requests': daily, 'updated_at': stamp})
               save('odds-progress.json', {'date': day_key, 'requests': state.get('requests', 0),
+                                          'odds_cursor': state.get('odds_cursor', 0),
                                           'last_attempt': attempts, 'updated_at': stamp})
               print('Bu calismadaki API istekleri:', calls, 'gunluk sayac:', daily)
           PY
