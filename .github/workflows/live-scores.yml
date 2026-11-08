@@ -293,5 +293,14 @@ jobs:
           git add scores.json matches.json odds.json odds-progress.json dalya-api-budget.json
           if ! git diff --cached --quiet; then
             git commit -m 'Update DALYA BET world fixtures with Turkey priority'
-            git push
+            for attempt in 1 2 3; do
+              git fetch origin main
+              git -c rebase.autoStash=false rebase -X theirs origin/main || { git rebase --abort; exit 1; }
+              if git push origin HEAD:main; then
+                exit 0
+              fi
+              sleep 3
+            done
+            echo 'GitHub push 3 denemede basarisiz oldu' >&2
+            exit 1
           fi
