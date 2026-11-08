@@ -42,8 +42,8 @@ jobs:
           if not KEY:
               raise SystemExit('API_FOOTBALL_KEY secret eksik')
           BASE = 'https://v3.football.api-sports.io/'
-          MAX_RUN = 12       # 4 zamanlanmis calismada en fazla 48 istek; diger istekler haric
-          MAX_DAILY = 80     # Yerel emniyet siniri; saglayici kotasinin garantisi degildir
+          MAX_RUN = 100      # Calisma basina en fazla 100 API istegi
+          MAX_DAILY = 6500   # 7500 gunluk paket varsayiminda guvenlik payi
           MAX_MATCHES = 250
           RETRY_HOURS = 6
           now = dt.datetime.now(dt.timezone.utc)
