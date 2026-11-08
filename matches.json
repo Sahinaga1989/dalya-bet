@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-08T17:39:36.623073+00:00",
+  "updated_at": "2026-11-08T18:46:50.135676+00:00",
   "date": "2026-11-08",
   "dates": [
     "2026-11-08",
@@ -1703,9 +1703,9 @@
           "city": "Mardin"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 79,
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
           "extra": null
         }
       },
@@ -1743,8 +1743,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -1759,24 +1759,24 @@
     {
       "fixture": {
         "id": 1584458,
-        "referee": "A. Karaoglan",
+        "referee": "Atilla Karaoglan, Türkiye",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-08T21:00:00+03:00",
         "timestamp": 1794160800,
         "periods": {
-          "first": null,
+          "first": 1794160800,
           "second": null
         },
         "venue": {
           "id": null,
-          "name": "Tupras Stadium",
+          "name": "Tüpraş Stadyumu",
           "city": "Istanbul"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 45,
+          "extra": 1
         }
       },
       "league": {
@@ -1794,23 +1794,23 @@
           "id": 549,
           "name": "Beşiktaş",
           "logo": "https://media.api-sports.io/football/teams/549.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 997,
           "name": "Gençlerbirliği S.K.",
           "logo": "https://media.api-sports.io/football/teams/997.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 2,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -16114,8 +16114,8 @@
         "date": "2026-11-08T13:30:00+03:00",
         "timestamp": 1794133800,
         "periods": {
-          "first": null,
-          "second": null
+          "first": 1794133800,
+          "second": 1794137400
         },
         "venue": {
           "id": null,
@@ -16123,9 +16123,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
           "extra": null
         }
       },
@@ -16154,17 +16154,17 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 1
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 1
         },
         "extratime": {
           "home": null,
