@@ -79,7 +79,6 @@ $('submit').onclick=()=>{if(!couponKey){alert('Önce üye girişi yapın.');retu
   }
   couponKey='dalya_demo_coupons_v2_'+data.user.id;
   renderSavedCoupons();
-  document.body.style.visibility='visible';
   const balanceEl=document.getElementById('myBalance');
   const infoEl=document.getElementById('walletInfo');
   async function loadMyBalance(){
@@ -91,6 +90,7 @@ $('submit').onclick=()=>{if(!couponKey){alert('Önce üye girişi yapın.');retu
     infoEl.textContent='Sanal puan • '+(data.user.email||'Üye');
   }
   await loadMyBalance();
+  document.body.style.visibility='visible';
   document.addEventListener('visibilitychange',()=>{if(!document.hidden)loadMyBalance();});
   setInterval(loadMyBalance,60000);
   const btn=document.createElement('button');
@@ -104,7 +104,14 @@ $('submit').onclick=()=>{if(!couponKey){alert('Önce üye girişi yapın.');retu
   refresh();
   setInterval(refresh,60000);
 })().catch(()=>{
-  document.body.textContent='Üyelik doğrulanamadı. Sayfayı yenileyin.';
+  document.body.style.visibility='visible';
+  document.body.replaceChildren();
+  const msg=document.createElement('main');
+  msg.style.cssText='max-width:520px;margin:15vh auto;padding:24px;color:#fff;font:16px Arial,sans-serif;text-align:center';
+  const heading=document.createElement('h1');heading.textContent='DALYA BET';
+  const note=document.createElement('p');note.textContent='Üyelik doğrulanamadı. Bağlantınızı kontrol edip tekrar giriş yapın.';
+  const link=document.createElement('a');link.href='./dalya-bet-giris.html';link.textContent='Üye girişine git';link.style.color='#ffd400';
+  msg.append(heading,note,link);document.body.append(msg);
 });
 
 </script></body></html>
