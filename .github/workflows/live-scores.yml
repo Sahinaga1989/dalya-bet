@@ -130,11 +130,17 @@ jobs:
           def valid_odd(value):
               return isinstance(value, dict) and all(value.get(k) for k in ('1', 'X', '2'))
 
-          def extract_odds(events):
+          TURKISH_BOOKMAKERS = ('iddaa', 'nesine', 'misli', 'bilyoner')
+          def bookmaker_priority(name, prefer_turkish):
+              label = str(name or '').casefold()
+              return 0 if prefer_turkish and any(x in label for x in TURKISH_BOOKMAKERS) else 1
+
+          def extract_odds(events, prefer_turkish_ids=None):
+              prefer_turkish_ids = prefer_turkish_ids or set()
               result = {}
               for event in events:
                   ident = str((event.get('fixture') or {}).get('id', ''))
-                  for bookmaker in event.get('bookmakers') or []:
+                  for bookmaker in sorted(event.get('bookmakers') or [], key=lambda b: bookmaker_priority(b.get('name'), ident in prefer_turkish_ids)):
                       for bet in bookmaker.get('bets') or []:
                           if str(bet.get('id')) != '1' and str(bet.get('name', '')).casefold() != 'match winner':
                               continue
@@ -194,6 +200,7 @@ jobs:
               # Fetch odds by date, using the provider's paginated response.
               # This allows more coverage with the same request budget.
               eligible = set(ids)
+              turkish_ids = {ident for ident in ids if turkey(scheduled[ident])}
               odds_pages = 0
               odds_errors = []
               for day in dates[:2]:
@@ -209,7 +216,7 @@ jobs:
                           if any(x in str(exc).casefold() for x in ('limit', 'quota', '429', 'rate')):
                               raise
                           break
-                      fresh = extract_odds(events)
+                      fresh = extract_odds(events, turkish_ids)
                       for ident, entry in fresh.items():
                           if ident in eligible and scheduled[ident].get('fixture', {}).get('status', {}).get('short') == 'NS':
                               entry['fetched_at'] = stamp
