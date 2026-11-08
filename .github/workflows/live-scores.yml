@@ -40,14 +40,14 @@ jobs:
           if not KEY:
               raise SystemExit('API_FOOTBALL_KEY veya API_KEY GitHub secret eksik')
           BASE = 'https://v3.football.api-sports.io/'
-          MAX_RUN = 8
-          MAX_DAILY = 80  # Conservative local cap; API provider may impose a lower cap
-          MAX_MATCHES = 250
-          RETRY_HOURS = 6
+          MAX_RUN = 12
+          MAX_DAILY = 600  # Reserve most of the 7,500/day plan for other usage
+          MAX_MATCHES = 1000
+          RETRY_HOURS = 4
           CUP_ID = 206
           now = dt.datetime.now(dt.timezone.utc)
           today = now.astimezone(ZoneInfo('Europe/Istanbul')).date()
-          dates = [(today + dt.timedelta(days=i)).isoformat() for i in range(2)]
+          dates = [(today + dt.timedelta(days=i)).isoformat() for i in range(2)]  # Rolling today and tomorrow
           stamp = now.isoformat()
           day_key = today.isoformat()
 
@@ -64,7 +64,7 @@ jobs:
               temp.replace(target)
 
           state = load('odds-progress.json', {})
-          # Track only this workflow's calls. Do not treat legacy counter as provider quota.
+          # Track only this workflow's calls. Other API consumers are not counted.
           budget = load('dalya-api-budget.json', {})
           if not isinstance(budget, dict) or budget.get('date') != day_key:
               budget = {'date': day_key, 'requests': 0}
