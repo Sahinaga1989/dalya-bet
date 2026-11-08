@@ -234,7 +234,7 @@ jobs:
               # Persist a cursor so a fixed small subset is not queried repeatedly.
               missing = [ident for ident in ids if ident not in odds
                          and scheduled[ident].get('fixture', {}).get('status', {}).get('short') == 'NS'
-                         and today.isoformat() <= local_date(scheduled[ident]) <= (today + dt.timedelta(days=13)).isoformat()]
+                         and today.isoformat() <= local_date(scheduled[ident]) <= (today + dt.timedelta(days=29)).isoformat()]
               if missing and calls < MAX_RUN and daily < MAX_DAILY:
                   # Rotate through Turkish fixtures first, including future matches.
                   priority = [ident for ident in missing if ident in turkish_ids]
@@ -261,6 +261,11 @@ jobs:
                               raise
                   state['odds_cursor'] = (cursor + checked) % len(ordered)
                   print('Tekil oran taramasi:', checked, 'aday:', len(ordered))
+              turkey_missing = [ident for ident in turkish_ids if ident not in odds and scheduled[ident].get('fixture', {}).get('status', {}).get('short') == 'NS']
+              print('Turkiye oran durumu: bulunan', len(turkish_ids) - len(turkey_missing), 'eksik', len(turkey_missing))
+              for ident in sorted(turkey_missing, key=lambda x: local_date(scheduled[x]))[:60]:
+                  m = scheduled[ident]
+                  print('TR ORAN YOK:', ident, local_date(m), (m.get('league') or {}).get('name'), (m.get('teams') or {}).get('home', {}).get('name'), '-', (m.get('teams') or {}).get('away', {}).get('name'))
               print('Toplu oran sayfalari:', odds_pages)
               if odds_errors:
                   print('UYARI: Toplu oran API hatalari:', '; '.join(odds_errors))
