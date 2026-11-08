@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-08T15:40:33.186635+00:00",
+  "updated_at": "2026-11-08T16:43:07.746661+00:00",
   "date": "2026-11-08",
   "dates": [
     "2026-11-08",
@@ -504,8 +504,8 @@
         "date": "2026-11-08T13:00:00+03:00",
         "timestamp": 1794132000,
         "periods": {
-          "first": null,
-          "second": null
+          "first": 1794132000,
+          "second": 1794135600
         },
         "venue": {
           "id": null,
@@ -513,9 +513,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
           "extra": null
         }
       },
@@ -534,18 +534,18 @@
           "id": 7973,
           "name": "Beşiktaş U19",
           "logo": "https://media.api-sports.io/football/teams/7973.png",
-          "winner": null
+          "winner": false
         },
         "away": {
           "id": 28247,
           "name": "Genclerbirligi U19",
           "logo": "https://media.api-sports.io/football/teams/28247.png",
-          "winner": null
+          "winner": true
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 1
       },
       "score": {
         "halftime": {
@@ -553,8 +553,8 @@
           "away": null
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -1625,7 +1625,7 @@
         "timestamp": 1794151800,
         "periods": {
           "first": 1794151800,
-          "second": null
+          "second": 1794155400
         },
         "venue": {
           "id": null,
@@ -1633,9 +1633,9 @@
           "city": "Alanya"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 10,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 53,
           "extra": null
         }
       },
@@ -1654,23 +1654,23 @@
           "id": 996,
           "name": "Alanyaspor",
           "logo": "https://media.api-sports.io/football/teams/996.png",
-          "winner": null
+          "winner": false
         },
         "away": {
           "id": 998,
           "name": "Trabzonspor",
           "logo": "https://media.api-sports.io/football/teams/998.png",
-          "winner": null
+          "winner": true
         }
       },
       "goals": {
         "home": 0,
-        "away": 0
+        "away": 2
       },
       "score": {
         "halftime": {
           "home": 0,
-          "away": 0
+          "away": 2
         },
         "fulltime": {
           "home": null,
@@ -1703,9 +1703,9 @@
           "city": "Mardin"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 42,
           "extra": null
         }
       },
@@ -1734,13 +1734,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
