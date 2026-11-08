@@ -1,0 +1,39 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DALYA BET | Puan Yönetimi</title>
+<style>*{box-sizing:border-box}body{margin:0;background:#0c0c0c;color:#eee;font:16px Arial,sans-serif}.wrap{max-width:700px;margin:auto;padding:24px}.logo{color:#ffd400;font-size:30px;font-weight:900}.panel{background:#191919;border:1px solid #5d4a0b;border-radius:15px;padding:22px;margin-top:20px}label{display:block;margin:16px 0 7px}input,select,textarea{width:100%;padding:12px;background:#101010;border:1px solid #666;border-radius:7px;color:#fff;font-size:16px}button{padding:13px 19px;background:#ffd400;color:#111;border:0;border-radius:8px;font-weight:bold;cursor:pointer;margin-top:15px}button:disabled{opacity:.5}a{color:#ffd400}#status{color:#ffd400;white-space:pre-wrap}table{width:100%;border-collapse:collapse}td,th{padding:9px;text-align:left;border-bottom:1px solid #444}small{color:#bbb}</style></head><body><main class="wrap"><div class="logo">♛ DALYA BET</div><h1>Yönetici Puan Paneli</h1><a href="./index.html">Maç merkezine dön</a><p id="status">Yetki kontrol ediliyor…</p><section class="panel" id="panel" hidden><h2>Sanal puan işlemi</h2><label>Üye</label><select id="member"><option value="">Üye seçin</option></select><label>İşlem</label><select id="action"><option value="add">Puan yükle (+)</option><option value="subtract">Puan düş (−)</option></select><label>Puan miktarı</label><input id="amount" type="number" min="1" max="100000000" step="1" inputmode="numeric" required><label>Açıklama (isteğe bağlı)</label><input id="note" maxlength="200" placeholder="Örn. Yönetici puan yüklemesi"><button id="save">İşlemi onayla</button><h2>Üye bakiyeleri</h2><div id="balances"></div><h2>Son puan hareketleri</h2><div id="history"></div></section></main>
+<script type="module">
+import {createClient} from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
+const db=createClient('https://tqgtctbutprvjklyxmgn.supabase.co','sb_publishable_3NamNe0qiMsFTliKw2Kl4g_qBZ4wdVP');
+const $=id=>document.getElementById(id);
+const {data:{user},error}=await db.auth.getUser();
+if(error||!user){location.replace('./dalya-bet-giris.html');}
+else{
+ const {data:admin,error:ae}=await db.from('dalya_admins').select('user_id').eq('user_id',user.id).maybeSingle();
+ if(ae||!admin){$('status').textContent='Bu sayfa yalnızca DALYA BET yöneticisine açıktır.';}
+ else{$('panel').hidden=false;await load();}
+}
+async function load(){
+ const {data:members,error:me}=await db.from('dalya_wallets').select('user_id,balance').order('user_id').limit(2000);
+ if(me){$('status').textContent='Üye bakiyeleri okunamadı: '+me.message;return;}
+ const selected=$('member').value;
+ $('member').replaceChildren(new Option('Üye seçin',''));
+ for(const m of members||[])$('member').add(new Option(m.user_id+' — '+m.balance+' puan',m.user_id));
+ $('member').value=selected;
+ $('balances').replaceChildren();
+ const t=document.createElement('table');t.innerHTML='<thead><tr><th>Üye kimliği</th><th>Bakiye</th></tr></thead>';
+ const b=document.createElement('tbody');for(const m of members||[]){const tr=document.createElement('tr');for(const v of [m.user_id,String(m.balance)]){const td=document.createElement('td');td.textContent=v;tr.append(td)}b.append(tr)}t.append(b);$('balances').append(t);
+ const {data:logs}=await db.from('dalya_point_log').select('created_at,user_id,delta,balance_after,note').order('created_at',{ascending:false}).limit(30);
+ $('history').replaceChildren();for(const l of logs||[]){const line=document.createElement('p');line.textContent=new Date(l.created_at).toLocaleString('tr-TR')+' | '+l.user_id.slice(0,8)+'… | '+(l.delta>0?'+':'')+l.delta+' | Bakiye: '+l.balance_after+' | '+l.note;$('history').append(line)}
+ $('status').textContent='Yönetici girişi doğrulandı.';
+}
+$('save').onclick=async()=>{
+ const id=$('member').value,amount=Number($('amount').value);
+ if(!id||!Number.isSafeInteger(amount)||amount<1||amount>100000000){$('status').textContent='Üye ve geçerli puan miktarı seçin.';return;}
+ const delta=$('action').value==='subtract'?-amount:amount;
+ if(!confirm('Seçilen üyeye '+delta+' sanal puan uygulansın mı?'))return;
+ $('save').disabled=true;
+ const {data,error}=await db.rpc('dalya_adjust_points',{p_user_id:id,p_delta:delta,p_note:$('note').value});
+ $('save').disabled=false;
+ if(error){$('status').textContent='İşlem yapılamadı: '+error.message;return;}
+ await load();$('status').textContent='İşlem başarılı. Yeni bakiye: '+data;
+};
+</script></body></html>
