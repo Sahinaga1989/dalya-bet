@@ -21,7 +21,8 @@ async function load(){
  $('balances').replaceChildren();
  const t=document.createElement('table');t.innerHTML='<thead><tr><th>Üye kimliği</th><th>Bakiye</th></tr></thead>';
  const b=document.createElement('tbody');for(const m of members||[]){const tr=document.createElement('tr');for(const v of [m.user_id,String(m.balance)]){const td=document.createElement('td');td.textContent=v;tr.append(td)}b.append(tr)}t.append(b);$('balances').append(t);
- const {data:logs}=await db.from('dalya_point_log').select('created_at,user_id,delta,balance_after,note').order('created_at',{ascending:false}).limit(30);
+ const {data:logs,error:logError}=await db.from('dalya_point_log').select('created_at,user_id,delta,balance_after,note').order('created_at',{ascending:false}).limit(30);
+ if(logError){$('history').textContent='Puan hareketleri okunamadı: '+logError.message;}
  $('history').replaceChildren();for(const l of logs||[]){const line=document.createElement('p');line.textContent=new Date(l.created_at).toLocaleString('tr-TR')+' | '+l.user_id.slice(0,8)+'… | '+(l.delta>0?'+':'')+l.delta+' | Bakiye: '+l.balance_after+' | '+l.note;$('history').append(line)}
  $('status').textContent='Yönetici girişi doğrulandı.';
 }
@@ -31,9 +32,11 @@ $('save').onclick=async()=>{
  const delta=$('action').value==='subtract'?-amount:amount;
  if(!confirm('Seçilen üyeye '+delta+' sanal puan uygulansın mı?'))return;
  $('save').disabled=true;
- const {data,error}=await db.rpc('dalya_adjust_points',{p_user_id:id,p_delta:delta,p_note:$('note').value});
- $('save').disabled=false;
- if(error){$('status').textContent='İşlem yapılamadı: '+error.message;return;}
- await load();$('status').textContent='İşlem başarılı. Yeni bakiye: '+data;
+ try{
+  const {data,error}=await db.rpc('dalya_adjust_points',{p_user_id:id,p_delta:delta,p_note:$('note').value});
+  if(error){$('status').textContent='İşlem yapılamadı: '+error.message;return;}
+  await load();$('status').textContent='İşlem başarılı. Yeni bakiye: '+data;
+ }catch(e){$('status').textContent='Bağlantı veya işlem hatası. Bakiyeyi kontrol etmeden yeniden denemeyin.';}
+ finally{$('save').disabled=false;}
 };
 </script></body></html>
