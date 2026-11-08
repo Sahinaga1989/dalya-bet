@@ -5,6 +5,7 @@
 </style></head><body>
 <header><div class="brand">♛ DALYA <span>BET</span></div><div class="tag">ŞANS SENİNLE OLSUN • DEMO MAÇ MERKEZİ</div></header>
 <nav><button class="active" data-tab="all">⌂ Ana Sayfa</button><button data-tab="all">⚽ Maçlar</button><button data-tab="live">◉ Canlı</button><button data-tab="tomorrow">▦ Yarınki Maçlar</button><button data-tab="all">🏆 Tüm Maçlar</button></nav>
+<section id="walletBar" aria-live="polite" style="margin:14px auto;padding:16px 20px;max-width:1100px;background:#191919;border:1px solid #6b5700;border-radius:12px"><div style="color:#ffd400;font-weight:bold">💰 Sanal Puan Bakiyem</div><div id="myBalance" style="font-size:30px;font-weight:800;margin-top:6px">Yükleniyor…</div><div id="walletInfo" style="color:#bbb;font-size:13px;margin-top:5px">Yalnızca kendi bakiyeniz gösterilir.</div></section>
 <section class="hero"><h1>DALYA BET<br>MAÇ HEYECANI!</h1><p>Maçları keşfet, doğrulanmış oranları incele ve sanal puanlı kupon oluştur.</p></section>
 <div class="notice" id="notice">Maç ve oran verileri yükleniyor… Gerçek para kullanılmaz.</div>
 <main class="layout"><section class="panel"><h2>⚽ Maç Programı</h2><div id="matches"><div class="empty">Maçlar yükleniyor…</div></div></section><aside class="panel"><h2>🎟️ Demo Kuponum</h2><div class="slip-body"><button class="action" id="clear">Temizle</button><div id="selections" class="empty">Kupona eklemek için oran seç.</div><div class="field"><label for="stake">Sanal puan</label><input id="stake" type="number" min="1" value="100"></div><div class="total"><span>Toplam oran</span><strong id="totalOdds">1.00</strong></div><div class="total"><span>Olası sanal puan</span><strong id="potential">100.00</strong></div><button class="action primary" id="submit">✓ Demo Kuponu Oluştur</button><p style="font-size:12px;color:#aaa">Bu yalnızca demo hesaplamadır; bahis kabul edilmez.</p></div></aside></main>
@@ -41,6 +42,19 @@ document.querySelector('nav').addEventListener('click',e=>{const b=e.target.clos
     location.replace('./dalya-bet-giris.html');
     return;
   }
+  const balanceEl=document.getElementById('myBalance');
+  const infoEl=document.getElementById('walletInfo');
+  async function loadMyBalance(){
+    const {data:wallet,error:walletError}=await auth.from('dalya_wallets')
+      .select('balance').eq('user_id',data.user.id).maybeSingle();
+    if(walletError){balanceEl.textContent='Bakiye okunamadı';infoEl.textContent='Veritabanı erişim yetkilerini kontrol edin.';return;}
+    if(!wallet){balanceEl.textContent='Bakiye bulunamadı';infoEl.textContent='Yönetici hesabınız için puan cüzdanı oluşturmalıdır.';return;}
+    balanceEl.textContent=Number(wallet.balance).toLocaleString('tr-TR')+' P';
+    infoEl.textContent='Sanal puan • '+(data.user.email||'Üye');
+  }
+  await loadMyBalance();
+  document.addEventListener('visibilitychange',()=>{if(!document.hidden)loadMyBalance();});
+  setInterval(loadMyBalance,60000);
   const btn=document.createElement('button');
   btn.textContent='Çıkış Yap';
   btn.onclick=async()=>{
