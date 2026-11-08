@@ -32,7 +32,7 @@ Deno.serve(async (req) => {
     if (email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
       return reply(400, "Geçerli e-posta adresi girin.");
     const { error: inviteError } = await admin.auth.admin.inviteUserByEmail(email, {
-      redirectTo: "https://sahinaga1989.github.io/dalya-bet/dalya-bet-giris.html",
+      redirectTo: "https://sahinaga1989.github.io/dalya-bet/uye-sifre-belirle.html",
     });
     if (inviteError) return reply(400, "Davet gönderilemedi. Adres veya davet ayarlarını kontrol edin.");
     return reply(200, "Üyelik daveti gönderildi. Puan yüklemesi ayrı yapılmalıdır.");
