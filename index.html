@@ -33,6 +33,9 @@ function isTurkey(g){return /^(turkey|türkiye|turkiye)$/i.test(String(g.country
 function leagueRank(g){
 const name=String(g.league||'').toLocaleLowerCase('tr-TR').normalize('NFD').replace(/[\u0300-\u036f]/g,'');
 const country=String(g.country||'').toLocaleLowerCase('tr-TR').normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+const youth=/(?:u[- ]?\d{2}|under[- ]?\d{2}|youth|reserve|development|division one|division two)/i.test(name);
+const women=/(?:women|woman|femin|frauen|femen|ladies|feminin|kadın|kadin|\bw\b)/i.test(name);
+if(youth||women)return isTurkey(g)?80:150;
 if(isTurkey(g)){
  if(/super lig|super league/.test(name))return 0;
  if(/1\. lig|1st league|first league|tff 1/.test(name))return 1;
