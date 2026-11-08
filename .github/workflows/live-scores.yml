@@ -206,7 +206,7 @@ jobs:
               for day in dates:
                   page = 1
                   # Spread requests across today, tomorrow and rotating future dates.
-                  while page <= 2 and calls < MAX_RUN - 12 and daily < MAX_DAILY:
+                  while page <= 5 and calls < MAX_RUN - 12 and daily < MAX_DAILY:
                       try:
                           events, paging = fetch('odds', {
                               'date': day, 'timezone': 'Europe/Istanbul',
