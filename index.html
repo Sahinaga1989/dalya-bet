@@ -71,6 +71,8 @@ function featuredGames(){
  }
  const result=[];
  for(const daily of byDay.values()){
+  // Prioritize Turkish fixtures, then major international fixtures with real 1-X-2 odds.
+  // Within each priority group, prefer complete and recently fetched odds.
   daily.sort((a,b)=>leagueRank(a)-leagueRank(b)
    ||Number(b.odds.every(x=>x!==null))-Number(a.odds.every(x=>x!==null))
    ||a.date.localeCompare(b.date)||a.id.localeCompare(b.id));
