@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-08T16:43:07.746661+00:00",
+  "updated_at": "2026-11-08T17:39:36.623073+00:00",
   "date": "2026-11-08",
   "dates": [
     "2026-11-08",
@@ -14,8 +14,8 @@
         "date": "2026-11-08T12:00:00+03:00",
         "timestamp": 1794128400,
         "periods": {
-          "first": null,
-          "second": null
+          "first": 1794128400,
+          "second": 1794132000
         },
         "venue": {
           "id": null,
@@ -23,9 +23,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
           "extra": null
         }
       },
@@ -44,18 +44,18 @@
           "id": 28252,
           "name": "Rizespor U19",
           "logo": "https://media.api-sports.io/football/teams/28252.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 28243,
           "name": "Erzurumspor U19",
           "logo": "https://media.api-sports.io/football/teams/28243.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 2,
+        "away": 1
       },
       "score": {
         "halftime": {
@@ -63,8 +63,8 @@
           "away": null
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -1633,10 +1633,10 @@
           "city": "Alanya"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 53,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 5
         }
       },
       "league": {
@@ -1673,8 +1673,8 @@
           "away": 2
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 2
         },
         "extratime": {
           "home": null,
@@ -1703,9 +1703,9 @@
           "city": "Mardin"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 42,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 79,
           "extra": null
         }
       },
@@ -1734,8 +1734,8 @@
         }
       },
       "goals": {
-        "home": 0,
-        "away": 0
+        "home": 1,
+        "away": 1
       },
       "score": {
         "halftime": {
@@ -6210,76 +6210,6 @@
           "id": 2881,
           "name": "Alianza FC",
           "logo": "https://media.api-sports.io/football/teams/2881.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1583809,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-08T04:00:00+03:00",
-        "timestamp": 1794099600,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": "Estadio Futuras Promesas",
-          "city": "Panama City"
-        },
-        "status": {
-          "long": "Match Postponed",
-          "short": "PST",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 304,
-        "name": "Liga Panameña de Fútbol",
-        "country": "Panama",
-        "logo": "https://media.api-sports.io/football/leagues/304.png",
-        "flag": "https://media.api-sports.io/flags/pa.svg",
-        "season": 2026,
-        "round": "Apertura - 16",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 20788,
-          "name": "UMECIT",
-          "logo": "https://media.api-sports.io/football/teams/20788.png",
-          "winner": null
-        },
-        "away": {
-          "id": 2883,
-          "name": "Plaza Amador",
-          "logo": "https://media.api-sports.io/football/teams/2883.png",
           "winner": null
         }
       },
@@ -12124,8 +12054,8 @@
         "date": "2026-11-08T12:00:00+03:00",
         "timestamp": 1794128400,
         "periods": {
-          "first": null,
-          "second": null
+          "first": 1794128400,
+          "second": 1794132000
         },
         "venue": {
           "id": null,
@@ -12133,9 +12063,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
           "extra": null
         }
       },
@@ -12154,27 +12084,27 @@
           "id": 22191,
           "name": "Gloria Bistrița-Năsăud W",
           "logo": "https://media.api-sports.io/football/teams/22191.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 15970,
           "name": "Vasas Femina W",
           "logo": "https://media.api-sports.io/football/teams/15970.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 8,
+        "away": 1
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 3,
+          "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 8,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -17495,6 +17425,76 @@
         "fulltime": {
           "home": 1,
           "away": 2
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1516178,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-08T14:00:00+03:00",
+        "timestamp": 1794135600,
+        "periods": {
+          "first": 1794135600,
+          "second": 1794139200
+        },
+        "venue": {
+          "id": null,
+          "name": "Buxoro FA Stadioni",
+          "city": "Bukhara"
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 5
+        }
+      },
+      "league": {
+        "id": 369,
+        "name": "Super League",
+        "country": "Uzbekistan",
+        "logo": "https://media.api-sports.io/football/leagues/369.png",
+        "flag": "https://media.api-sports.io/flags/uz.svg",
+        "season": 2026,
+        "round": "Regular Season - 27",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 4211,
+          "name": "Buxoro",
+          "logo": "https://media.api-sports.io/football/teams/4211.png",
+          "winner": false
+        },
+        "away": {
+          "id": 4215,
+          "name": "Nasaf",
+          "logo": "https://media.api-sports.io/football/teams/4215.png",
+          "winner": true
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 1
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 0,
+          "away": 1
         },
         "extratime": {
           "home": null,
