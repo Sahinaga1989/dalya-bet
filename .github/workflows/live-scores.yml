@@ -1,9 +1,9 @@
-name: DALYA BET Canli Skorlar
+name: DALYA BET Turkiye Maclari
 
 on:
   workflow_dispatch:
   schedule:
-   - cron: '7 * * * *' 
+    - cron: '7 * * * *'
 
 permissions:
   contents: write
@@ -17,160 +17,158 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - name: Dosyalari al
-        uses: actions/checkout@v4
-      - name: Python kur
-        uses: actions/setup-python@v5
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Bugun ve yarin maclarini guncelle
+      - name: Turkiye ligleri ve kupa verilerini guncelle
         env:
           API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+          API_KEY: ${{ secrets.API_KEY }}
         run: |
           python - <<'PY'
           import datetime as dt
           import json
           import os
-          import time
-          import urllib.error
           import urllib.parse
           import urllib.request
           from pathlib import Path
           from zoneinfo import ZoneInfo
 
-          KEY = os.environ.get('API_FOOTBALL_KEY', '').strip()
+          KEY = (os.getenv('API_FOOTBALL_KEY') or os.getenv('API_KEY') or '').strip()
           if not KEY:
-              raise SystemExit('API_FOOTBALL_KEY secret eksik')
+              raise SystemExit('API_FOOTBALL_KEY veya API_KEY GitHub secret eksik')
           BASE = 'https://v3.football.api-sports.io/'
-          MAX_RUN = 100      # Calisma basina en fazla 100 API istegi
-          MAX_DAILY = 6500   # 7500 gunluk paket varsayiminda guvenlik payi
+          MAX_RUN = 8
+          MAX_DAILY = 80
           MAX_MATCHES = 250
           RETRY_HOURS = 6
+          CUP_ID = 206
           now = dt.datetime.now(dt.timezone.utc)
-          today_tr = now.astimezone(ZoneInfo('Europe/Istanbul')).date()
-          days = [today_tr.isoformat(), (today_tr + dt.timedelta(days=1)).isoformat()]
+          today = now.astimezone(ZoneInfo('Europe/Istanbul')).date()
+          dates = [(today + dt.timedelta(days=i)).isoformat() for i in range(2)]
           stamp = now.isoformat()
-          utc_day = now.date().isoformat()
-          progress_path = Path('odds-progress.json')
-          odds_path = Path('odds.json')
-          scores_path = Path('scores.json')
+          day_key = today.isoformat()
 
-          def read_json(path, default):
+          def load(path, default):
               try:
-                  return json.loads(path.read_text(encoding='utf-8'))
+                  return json.loads(Path(path).read_text(encoding='utf-8'))
               except (OSError, ValueError):
                   return default
 
           def save(path, data):
-              path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding='utf-8')
+              target = Path(path)
+              temp = target.with_suffix(target.suffix + '.tmp')
+              temp.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding='utf-8')
+              temp.replace(target)
 
-          progress = read_json(progress_path, {})
-          if not isinstance(progress, dict) or progress.get('date') != utc_day:
-              progress = {'date': utc_day, 'requests': 0, 'last_attempt': {}}
-          daily = max(0, int(progress.get('requests', 0)))
-          attempts = progress.get('last_attempt', {})
+          state = load('odds-progress.json', {})
+          if not isinstance(state, dict) or state.get('date') != day_key:
+              state = {'date': day_key, 'requests': 0, 'last_attempt': {}}
+          attempts = state.get('last_attempt', {})
           if not isinstance(attempts, dict):
               attempts = {}
-          run_calls = 0
+          try:
+              daily = max(0, int(state.get('requests', 0)))
+          except (TypeError, ValueError):
+              daily = 0
+          calls = 0
 
           def fetch(endpoint, params):
-              global daily, run_calls
-              if daily >= MAX_DAILY or run_calls >= MAX_RUN:
-                  raise RuntimeError('Yerel API istek siniri doldu')
-              daily += 1
-              run_calls += 1
+              global daily, calls
+              if calls >= MAX_RUN or daily >= MAX_DAILY:
+                  raise RuntimeError('Yerel istek limiti doldu')
+              calls += 1
+              daily += 1  # Basarisiz istekler de sayilir
               url = BASE + endpoint + '?' + urllib.parse.urlencode(params)
               req = urllib.request.Request(url, headers={
                   'x-apisports-key': KEY, 'Accept': 'application/json'})
-              with urllib.request.urlopen(req, timeout=25) as response:
-                  payload = json.load(response)
+              with urllib.request.urlopen(req, timeout=25) as res:
+                  payload = json.load(res)
               if payload.get('errors'):
-                  raise RuntimeError('API hatasi: ' + str(payload['errors'])[:200])
+                  raise RuntimeError('API hatasi: ' + str(payload['errors'])[:180])
               if not isinstance(payload.get('response'), list):
-                  raise RuntimeError('API response listesi eksik')
+                  raise RuntimeError('API response listesi bulunamadi')
               return payload['response']
 
-          old_scores = read_json(scores_path, {})
-          old_odds_data = read_json(odds_path, {})
-          old_odds = old_odds_data.get('matches', {}) if isinstance(old_odds_data, dict) else {}
-          if not isinstance(old_odds, dict):
-              old_odds = {}
+          def turkey(match):
+              league = match.get('league') or {}
+              return str(league.get('country', '')).casefold().strip() in (
+                  'turkey', 'türkiye', 'turkiye')
 
-          def match_date(m):
+          def is_cup(match):
+              league = match.get('league') or {}
+              name = str(league.get('name', '')).casefold()
+              return str(league.get('id', '')) == str(CUP_ID) or (
+                  'cup' in name and any(x in name for x in ('turkey', 'türkiye', 'turkiye')))
+
+          def local_date(match):
               try:
-                  raw = m['fixture']['date'].replace('Z', '+00:00')
+                  raw = match['fixture']['date'].replace('Z', '+00:00')
                   return dt.datetime.fromisoformat(raw).astimezone(
                       ZoneInfo('Europe/Istanbul')).date().isoformat()
               except (KeyError, TypeError, ValueError, AttributeError):
                   return ''
 
-          def valid_odd(o):
-              return isinstance(o, dict) and all(o.get(k) for k in ('1', 'X', '2'))
+          def fixture_id(match):
+              value = (match.get('fixture') or {}).get('id')
+              return str(value) if value is not None else ''
 
-          def parse_odds(events):
+          def valid_odd(value):
+              return isinstance(value, dict) and all(value.get(k) for k in ('1', 'X', '2'))
+
+          def extract_odds(events):
               result = {}
               for event in events:
-                  ident = str(event.get('fixture', {}).get('id', ''))
-                  for bookmaker in event.get('bookmakers', []):
-                      for bet in bookmaker.get('bets', []):
-                          if str(bet.get('id')) != '1' and str(bet.get('name', '')).lower() != 'match winner':
+                  ident = str((event.get('fixture') or {}).get('id', ''))
+                  for bookmaker in event.get('bookmakers') or []:
+                      for bet in bookmaker.get('bets') or []:
+                          if str(bet.get('id')) != '1' and str(bet.get('name', '')).casefold() != 'match winner':
                               continue
-                          values = {str(v.get('value', '')).strip().lower(): v.get('odd')
-                                    for v in bet.get('values', [])}
+                          values = {str(v.get('value', '')).strip().casefold(): v.get('odd')
+                                    for v in bet.get('values') or []}
                           if all(values.get(k) for k in ('home', 'draw', 'away')):
-                              result[ident] = {'1': str(values['home']),
-                                               'X': str(values['draw']),
-                                               '2': str(values['away']),
-                                               'bookmaker': bookmaker.get('name', '')}
+                              result[ident] = {
+                                  '1': str(values['home']), 'X': str(values['draw']),
+                                  '2': str(values['away']), 'bookmaker': bookmaker.get('name', '')}
                               break
                       if ident in result:
                           break
               return result
 
+          old_scores = load('scores.json', load('matches.json', {}))
+          old_odds_data = load('odds.json', {})
+          old_odds = old_odds_data.get('matches', {}) if isinstance(old_odds_data, dict) else {}
+          if not isinstance(old_odds, dict):
+              old_odds = {}
           try:
-              # Both dates must succeed before replacing the current fixtures.
-              by_day = []
-              for day in days:
-                  data = fetch('fixtures', {'date': day, 'timezone': 'Europe/Istanbul'})
-                  by_day.append([m for m in data if match_date(m) == day])
-                  # All Turkish competitions returned by the API are prioritized,
-              # regardless of league name or division.
-              def is_turkish(m):
-                  league = m.get('league') or {}
-                  return str(league.get('country', '')).strip().casefold() in (
-                      'turkey', 'türkiye', 'turkiye')
-
-              def kickoff(m):
-                  return str((m.get('fixture') or {}).get('date', ''))
-
-              turkish = sorted(
-                  [m for day_matches in by_day for m in day_matches if is_turkish(m)],
-                  key=lambda m: (match_date(m), kickoff(m)))
-              foreign_days = [sorted([m for m in day_matches if not is_turkish(m)],
-                                     key=kickoff) for day_matches in by_day]
-              if len(turkish) > MAX_MATCHES:
-                  print('UYARI: Turkiye mac sayisi 250 sinirini asiyor:', len(turkish))
-              fixtures = turkish[:MAX_MATCHES]
-              available = MAX_MATCHES - len(fixtures)
-              # Reserve some remaining capacity for tomorrow when possible.
-              if available:
-                  tomorrow = foreign_days[1][:available // 2]
-                  today = foreign_days[0][:available - len(tomorrow)]
-                  fixtures.extend(today + tomorrow)
-                  available = MAX_MATCHES - len(fixtures)
-                  if available:
-                      fixtures.extend((foreign_days[1][len(tomorrow):] +
-                                       foreign_days[0][len(today):])[:available])
-              print('Turkiye maclari:', len(turkish),
-                    'Listeye alinan:', sum(is_turkish(m) for m in fixtures))
-              ids = [str(m['fixture']['id']) for m in fixtures
-                     if isinstance(m, dict) and isinstance(m.get('fixture'), dict)
-                     and m['fixture'].get('id') is not None]
-              odds = {i: old_odds[i] for i in ids if i in old_odds and valid_odd(old_odds[i])}
-              pending = []
+              # Tum Turkiye organizasyonlari: ligler ve Turkiye Kupasi.
+              # API'nin o tarihte sagladigi karsilasmalar dahil edilir.
+              matches = []
+              for day in dates:
+                  response = fetch('fixtures', {'date': day, 'timezone': 'Europe/Istanbul'})
+                  matches.extend(m for m in response if turkey(m) and local_date(m) == day)
+              unique = {}
+              for match in matches:
+                  ident = fixture_id(match)
+                  if ident:
+                      unique[ident] = match
+              fixtures = sorted(unique.values(), key=lambda m: (
+                  0 if is_cup(m) else 1,
+                  (m.get('fixture') or {}).get('date') or '', fixture_id(m)))[:MAX_MATCHES]
+              ids = [fixture_id(m) for m in fixtures]
+              # Cup first, then missing odds, then refresh existing odds.
+              ids.sort(key=lambda ident: (
+                  0 if is_cup(next(m for m in fixtures if fixture_id(m) == ident)) else 1,
+                  0 if ident not in old_odds else 1))
+              # Only show previously fetched pre-match odds for fixtures not yet started.
+              scheduled = {fixture_id(m): m for m in fixtures}
+              odds = {ident: old_odds[ident] for ident in ids
+                      if ident in old_odds and valid_odd(old_odds[ident])
+                      and (scheduled[ident].get('fixture', {}).get('status', {}).get('short') == 'NS')}
               for ident in ids:
-                  if ident in odds:
-                      continue
+                  if calls >= MAX_RUN or daily >= MAX_DAILY:
+                      break
                   last = attempts.get(ident)
                   if last:
                       try:
@@ -178,42 +176,40 @@ jobs:
                               continue
                       except (TypeError, ValueError):
                           pass
-                  pending.append(ident)
-              for ident in pending:
-                  if daily >= MAX_DAILY or run_calls >= MAX_RUN:
-                      break
+                  if (scheduled[ident].get('fixture', {}).get('status', {}).get('short') != 'NS'):
+                      continue
                   attempts[ident] = stamp
                   try:
-                      odds.update(parse_odds(fetch('odds', {'fixture': ident})))
-                  except (urllib.error.URLError, TimeoutError, ValueError) as exc:
-                      print('Gecici oran hatasi:', ident, str(exc)[:100])
-                      attempts.pop(ident, None)
-                  except RuntimeError as exc:
-                      print('Oran sorgusu durduruldu:', str(exc)[:160])
-                      break
-                  time.sleep(0.12)
-              save(scores_path, {'updated_at': stamp, 'date': days[0],
-                                 'dates': days, 'response': fixtures})
-              save(odds_path, {'updated_at': stamp, 'matches': odds})
-              print('Tarih:', days, 'Mac:', len(fixtures), 'Oran:', len(odds),
-                    'Yarin:', sum(match_date(m) == days[1] for m in fixtures))
+                      fresh = extract_odds(fetch('odds', {'fixture': ident}))
+                      if ident in fresh:
+                          fresh[ident]['fetched_at'] = stamp
+                          odds.update(fresh)
+                  except Exception as exc:
+                      print('Oran sorgusu basarisiz:', ident, str(exc)[:120])
+                      if any(x in str(exc).casefold() for x in ('limit', 'quota', '429', 'rate')):
+                          break
+              score_payload = {'updated_at': stamp, 'date': dates[0],
+                               'dates': dates, 'response': fixtures}
+              save('scores.json', score_payload)
+              save('matches.json', score_payload)
+              save('odds.json', {'updated_at': stamp, 'matches': odds})
+              print('Turkiye maclari:', len(fixtures), 'oranli maclar:', len(odds))
           except Exception as exc:
-              # Preserve last known working data if either fixture request fails.
-              print('Fikstur guncellenemedi, eski veriler korundu:', str(exc)[:250])
+              print('Fikstur alinamadi; mevcut dosyalar korundu:', str(exc)[:200])
               if not isinstance(old_scores, dict) or not isinstance(old_scores.get('response'), list):
                   raise
           finally:
-              save(progress_path, {'date': utc_day, 'requests': daily,
-                                   'last_attempt': attempts, 'updated_at': stamp})
-              print('Bu calismada API istegi:', run_calls, 'Gunluk yerel sayac:', daily)
+              save('odds-progress.json', {'date': day_key, 'requests': daily,
+                                          'last_attempt': attempts, 'updated_at': stamp})
+              print('Bu calismadaki API istekleri:', calls, 'gunluk sayac:', daily)
           PY
-      - name: Degisiklikleri kaydet
+      - name: Degisiklikleri GitHub'a kaydet
         if: always()
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add scores.json odds.json odds-progress.json
+          git add scores.json matches.json odds.json odds-progress.json
           if ! git diff --cached --quiet; then
-            git commit -m 'Update DALYA BET today and tomorrow fixtures'
+            git commit -m 'Update DALYA BET Turkish competitions'
             git push
           fi
