@@ -47,7 +47,7 @@ jobs:
           CUP_ID = 206
           now = dt.datetime.now(dt.timezone.utc)
           today = now.astimezone(ZoneInfo('Europe/Istanbul')).date()
-          dates = [(today + dt.timedelta(days=i)).isoformat() for i in range(2)]  # Always refresh today and tomorrow
+          dates = [(today + dt.timedelta(days=i)).isoformat() for i in (-2, -1, 0, 1)]  # Refresh last 2 days for coupon settlement, plus today and tomorrow
           # Refresh two more days per run, rotating across a 30-day horizon.
           rotation = (int(now.timestamp()) // 3600) % 14
           dates += [(today + dt.timedelta(days=2 + (rotation * 2 + j) % 28)).isoformat() for j in range(2)]
@@ -169,7 +169,7 @@ jobs:
               # Preserve future fixtures until their next rotating refresh.
               if isinstance(old_scores, dict):
                   matches.extend(m for m in old_scores.get('response', [])
-                                 if isinstance(m, dict) and today.isoformat() <= local_date(m)
+                                 if isinstance(m, dict) and (today - dt.timedelta(days=2)).isoformat() <= local_date(m)
                                  <= (today + dt.timedelta(days=29)).isoformat()
                                  and local_date(m) not in dates)
               for day in dates:
@@ -269,7 +269,7 @@ jobs:
               print('Toplu oran sayfalari:', odds_pages)
               if odds_errors:
                   print('UYARI: Toplu oran API hatalari:', '; '.join(odds_errors))
-              score_payload = {'updated_at': stamp, 'date': dates[0],
+              score_payload = {'updated_at': stamp, 'date': today.isoformat(),
                                'dates': dates, 'horizon_days': 30, 'response': fixtures}
               if not fixtures:
                   raise RuntimeError('Bos fikstur mevcut dosyalarin uzerine yazilmadi')
