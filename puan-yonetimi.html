@@ -1,5 +1,5 @@
 <!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DALYA BET | Puan Yönetimi</title>
-<style>*{box-sizing:border-box}body{margin:0;background:#0c0c0c;color:#eee;font:16px Arial,sans-serif}.wrap{max-width:700px;margin:auto;padding:24px}.logo{color:#ffd400;font-size:30px;font-weight:900}.panel{background:#191919;border:1px solid #5d4a0b;border-radius:15px;padding:22px;margin-top:20px}label{display:block;margin:16px 0 7px}input,select,textarea{width:100%;padding:12px;background:#101010;border:1px solid #666;border-radius:7px;color:#fff;font-size:16px}button{padding:13px 19px;background:#ffd400;color:#111;border:0;border-radius:8px;font-weight:bold;cursor:pointer;margin-top:15px}button:disabled{opacity:.5}a{color:#ffd400}#status{color:#ffd400;white-space:pre-wrap}table{width:100%;border-collapse:collapse}td,th{padding:9px;text-align:left;border-bottom:1px solid #444}small{color:#bbb}</style></head><body><main class="wrap"><div class="logo">♛ DALYA BET</div><h1>Yönetici Puan Paneli</h1><a href="./index.html">Maç merkezine dön</a><p id="status">Yetki kontrol ediliyor…</p><section class="panel" id="panel" hidden><h2>Yeni Üye Daveti</h2><p><small>Yeni üyeye e-posta daveti gönderilir. Şifresini üye kendisi belirler. Üye davet bağlantısıyla kendi şifresini belirler.</small></p><label for="inviteEmail">Yeni üyenin e-posta adresi</label><input id="inviteEmail" type="email" autocomplete="off" placeholder="uye@ornek.com"><button id="inviteBtn" type="button">Üyelik Daveti Gönder</button><p id="inviteStatus" role="status"></p><h2>Sanal puan işlemi</h2><label>Üye</label><select id="member"><option value="">Üye seçin</option></select><label>İşlem</label><select id="action"><option value="add">Puan yükle (+)</option><option value="subtract">Puan düş (−)</option></select><label>Puan miktarı</label><input id="amount" type="number" min="1" max="100000000" step="1" inputmode="numeric" required><label>Açıklama (isteğe bağlı)</label><input id="note" maxlength="200" placeholder="Örn. Yönetici puan yüklemesi"><button id="save">İşlemi onayla</button><h2>Üye bakiyeleri</h2><div id="balances"></div><h2>Son puan hareketleri</h2><div id="history"></div></section></main>
+<style>*{box-sizing:border-box}body{margin:0;background:#0c0c0c;color:#eee;font:16px Arial,sans-serif}.wrap{max-width:700px;margin:auto;padding:24px}.logo{color:#ffd400;font-size:30px;font-weight:900}.panel{background:#191919;border:1px solid #5d4a0b;border-radius:15px;padding:22px;margin-top:20px}label{display:block;margin:16px 0 7px}input,select,textarea{width:100%;padding:12px;background:#101010;border:1px solid #666;border-radius:7px;color:#fff;font-size:16px}button{padding:13px 19px;background:#ffd400;color:#111;border:0;border-radius:8px;font-weight:bold;cursor:pointer;margin-top:15px}button:disabled{opacity:.5}a{color:#ffd400}#status{color:#ffd400;white-space:pre-wrap}table{width:100%;border-collapse:collapse}td,th{padding:9px;text-align:left;border-bottom:1px solid #444}small{color:#bbb}</style></head><body><main class="wrap"><div class="logo">♛ DALYA BET</div><h1>Yönetici Puan Paneli</h1><a href="./index.html">Maç merkezine dön</a><p id="status">Yetki kontrol ediliyor…</p><section class="panel" id="panel" hidden><h2>Yeni Üye Daveti</h2><p><small>Yeni üye davetlerini daha sonra test edeceğiz. Davet edilen kişi şifresini kendisi belirler.</small></p><label for="inviteEmail">Yeni üyenin e-posta adresi</label><input id="inviteEmail" type="email" autocomplete="off" placeholder="uye@ornek.com"><button id="inviteBtn" type="button">Üyelik Daveti Gönder</button><p id="inviteStatus" role="status"></p><h2>Üye Yönetimi</h2><p><small>Üye bilgileri yalnızca yöneticilere gösterilir. Listeden üye seçerek puan işlemi yapabilirsin.</small></p><button id="refreshMembers" type="button">Üye Listesini Yenile</button><div id="memberStatus" role="status"></div><div id="memberList" style="overflow-x:auto"></div><div><button id="prevMembers" type="button" disabled>Önceki Sayfa</button> <span id="memberPage">1</span> <button id="nextMembers" type="button" disabled>Sonraki Sayfa</button></div><h2>Sanal puan işlemi</h2><label>Üye</label><select id="member"><option value="">Üye seçin</option></select><label>İşlem</label><select id="action"><option value="add">Puan yükle (+)</option><option value="subtract">Puan düş (−)</option></select><label>Puan miktarı</label><input id="amount" type="number" min="1" max="100000000" step="1" inputmode="numeric" required><label>Açıklama (isteğe bağlı)</label><input id="note" maxlength="200" placeholder="Örn. Yönetici puan yüklemesi"><button id="save">İşlemi onayla</button><h2>Üye bakiyeleri</h2><div id="balances"></div><h2>Son puan hareketleri</h2><div id="history"></div></section></main>
 <script type="module">
 import {createClient} from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
 const db=createClient('https://tqgtctbutprvjklyxmgn.supabase.co','sb_publishable_3NamNe0qiMsFTliKw2Kl4g_qBZ4wdVP');
@@ -9,7 +9,7 @@ if(error||!user){location.replace('./dalya-bet-giris.html');}
 else{
  const {data:admin,error:ae}=await db.from('dalya_admins').select('user_id').eq('user_id',user.id).maybeSingle();
  if(ae||!admin){$('status').textContent='Bu sayfa yalnızca DALYA BET yöneticisine açıktır.';}
- else{$('panel').hidden=false;await load();}
+ else{$('panel').hidden=false;await load();await loadMembers();}
 }
 async function load(){
  const {data:members,error:me}=await db.from('dalya_wallets').select('user_id,balance').order('user_id').limit(2000);
@@ -27,6 +27,37 @@ async function load(){
  for(const l of (logError?[]:(logs||[]))){const line=document.createElement('p');line.textContent=new Date(l.created_at).toLocaleString('tr-TR')+' | '+l.user_id.slice(0,8)+'… | '+(l.delta>0?'+':'')+l.delta+' | Bakiye: '+l.balance_after+' | '+l.note;$('history').append(line)}
  $('status').textContent='Yönetici girişi doğrulandı.';
 }
+let memberPage=1;
+async function loadMembers(page=1){
+ $('refreshMembers').disabled=true;$('memberStatus').textContent='Üyeler yükleniyor…';
+ try{
+  const {data,error}=await db.functions.invoke('dalya-admin-members',{body:{page}});
+  if(error||!Array.isArray(data?.members))throw error||new Error(data?.message||'Liste alınamadı');
+  memberPage=page;$('memberPage').textContent='Sayfa '+page;
+  $('prevMembers').disabled=page<=1;$('nextMembers').disabled=!data.has_more;
+  $('memberList').replaceChildren();
+  const table=document.createElement('table');const thead=document.createElement('thead');
+  const hr=document.createElement('tr');
+  for(const h of ['E-posta','Durum','Son giriş','Puan','İşlem']){const th=document.createElement('th');th.textContent=h;hr.append(th);}
+  thead.append(hr);table.append(thead);
+  const tbody=document.createElement('tbody');
+  for(const m of data.members){
+   const tr=document.createElement('tr');
+   const status=m.banned_until&&new Date(m.banned_until)>new Date()?'Erişim engelli':m.confirmed?'Onaylı':m.invited?'Davet bekliyor':'Onay bekliyor';
+   for(const v of [m.email||'E-posta yok',status,m.last_sign_in_at?new Date(m.last_sign_in_at).toLocaleDateString('tr-TR'):'Henüz giriş yok',String(m.balance)]){const td=document.createElement('td');td.textContent=v;tr.append(td);}
+   const td=document.createElement('td'),btn=document.createElement('button');btn.textContent='Puan Seç';btn.type='button';
+   btn.onclick=()=>{let option=Array.from($('member').options).find(o=>o.value===m.id);if(!option){option=new Option((m.email||m.id)+' — '+m.balance+' puan',m.id);$('member').add(option);} $('member').value=m.id;$('amount').focus();};
+   td.append(btn);tr.append(td);tbody.append(tr);
+  }
+  table.append(tbody);$('memberList').append(table);
+  $('memberStatus').textContent=data.members.length+' üye görüntüleniyor.';
+ }catch(e){$('memberStatus').textContent='Üye listesi alınamadı. Yönetici oturumunu ve bağlantıyı kontrol edin.';}
+ finally{$('refreshMembers').disabled=false;}
+}
+$('refreshMembers').onclick=()=>loadMembers(memberPage);
+$('prevMembers').onclick=()=>loadMembers(memberPage-1);
+$('nextMembers').onclick=()=>loadMembers(memberPage+1);
+
 $('inviteBtn').onclick=async()=>{
  const email=$('inviteEmail').value.trim();if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){$('inviteStatus').textContent='Geçerli e-posta adresi girin.';return;}
  if(!confirm(email+' adresine üyelik daveti gönderilsin mi?'))return;
