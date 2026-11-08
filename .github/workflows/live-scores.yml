@@ -1,4 +1,4 @@
-name: DALYA BET Turkiye Maclari
+name: DALYA BET Dunya Maclari
 
 on:
   workflow_dispatch:
@@ -21,7 +21,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Turkiye ligleri ve kupa verilerini guncelle
+      - name: Turkiye kupasi oncelikli dunya maclarini guncelle
         env:
           API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
           API_KEY: ${{ secrets.API_KEY }}
@@ -30,6 +30,7 @@ jobs:
           import datetime as dt
           import json
           import os
+          import urllib.error
           import urllib.parse
           import urllib.request
           from pathlib import Path
@@ -40,7 +41,7 @@ jobs:
               raise SystemExit('API_FOOTBALL_KEY veya API_KEY GitHub secret eksik')
           BASE = 'https://v3.football.api-sports.io/'
           MAX_RUN = 8
-          MAX_DAILY = 80
+          MAX_DAILY = 80  # Conservative local cap; API provider may impose a lower cap
           MAX_MATCHES = 250
           RETRY_HOURS = 6
           CUP_ID = 206
@@ -63,13 +64,17 @@ jobs:
               temp.replace(target)
 
           state = load('odds-progress.json', {})
+          # Track only this workflow's calls. Do not treat legacy counter as provider quota.
+          budget = load('dalya-api-budget.json', {})
+          if not isinstance(budget, dict) or budget.get('date') != day_key:
+              budget = {'date': day_key, 'requests': 0}
           if not isinstance(state, dict) or state.get('date') != day_key:
-              state = {'date': day_key, 'requests': 0, 'last_attempt': {}}
+              state = {'date': day_key, 'requests': 0, 'last_attempt': state.get('last_attempt', {}) if isinstance(state, dict) else {}}
           attempts = state.get('last_attempt', {})
           if not isinstance(attempts, dict):
               attempts = {}
           try:
-              daily = max(0, int(state.get('requests', 0)))
+              daily = max(0, int(budget.get('requests', 0)))
           except (TypeError, ValueError):
               daily = 0
           calls = 0
@@ -83,8 +88,13 @@ jobs:
               url = BASE + endpoint + '?' + urllib.parse.urlencode(params)
               req = urllib.request.Request(url, headers={
                   'x-apisports-key': KEY, 'Accept': 'application/json'})
-              with urllib.request.urlopen(req, timeout=25) as res:
-                  payload = json.load(res)
+              try:
+                  with urllib.request.urlopen(req, timeout=25) as res:
+                      payload = json.load(res)
+              except urllib.error.HTTPError as exc:
+                  raise RuntimeError('API HTTP status ' + str(exc.code)) from exc
+              if not isinstance(payload, dict):
+                  raise RuntimeError('API JSON object bekleniyordu')
               if payload.get('errors'):
                   raise RuntimeError('API hatasi: ' + str(payload['errors'])[:180])
               if not isinstance(payload.get('response'), list):
@@ -141,28 +151,31 @@ jobs:
           old_odds = old_odds_data.get('matches', {}) if isinstance(old_odds_data, dict) else {}
           if not isinstance(old_odds, dict):
               old_odds = {}
+          if daily >= MAX_DAILY:
+              raise SystemExit('Gunluk yerel API limiti dolu; yeni veri cekilmedi')
           try:
-              # Tum Turkiye organizasyonlari: ligler ve Turkiye Kupasi.
-              # API'nin o tarihte sagladigi karsilasmalar dahil edilir.
+              # All countries, with Turkey Cup and Turkish leagues prioritized.
+              # Only competitions provided by the API can be included.
               matches = []
               for day in dates:
                   response = fetch('fixtures', {'date': day, 'timezone': 'Europe/Istanbul'})
-                  matches.extend(m for m in response if turkey(m) and local_date(m) == day)
+                  matches.extend(m for m in response if local_date(m) == day)
               unique = {}
               for match in matches:
                   ident = fixture_id(match)
                   if ident:
                       unique[ident] = match
+              # Turkey Cup first, other Turkish competitions second, rest of world third.
               fixtures = sorted(unique.values(), key=lambda m: (
-                  0 if is_cup(m) else 1,
+                  0 if is_cup(m) else (1 if turkey(m) else 2),
                   (m.get('fixture') or {}).get('date') or '', fixture_id(m)))[:MAX_MATCHES]
               ids = [fixture_id(m) for m in fixtures]
+              scheduled = {fixture_id(m): m for m in fixtures}
               # Cup first, then missing odds, then refresh existing odds.
               ids.sort(key=lambda ident: (
-                  0 if is_cup(next(m for m in fixtures if fixture_id(m) == ident)) else 1,
+                  0 if is_cup(scheduled[ident]) else (1 if turkey(scheduled[ident]) else 2),
                   0 if ident not in old_odds else 1))
               # Only show previously fetched pre-match odds for fixtures not yet started.
-              scheduled = {fixture_id(m): m for m in fixtures}
               odds = {ident: old_odds[ident] for ident in ids
                       if ident in old_odds and valid_odd(old_odds[ident])
                       and (scheduled[ident].get('fixture', {}).get('status', {}).get('short') == 'NS')}
@@ -193,13 +206,16 @@ jobs:
               save('scores.json', score_payload)
               save('matches.json', score_payload)
               save('odds.json', {'updated_at': stamp, 'matches': odds})
-              print('Turkiye maclari:', len(fixtures), 'oranli maclar:', len(odds))
+              print('Tum maclar:', len(fixtures), 'Turkiye:', sum(turkey(m) for m in fixtures), 'Turkiye Kupasi:', sum(is_cup(m) for m in fixtures), 'oranli maclar:', len(odds))
+              if not fixtures:
+                  print('UYARI: Bu tarih araliginda mac bulunamadi')
           except Exception as exc:
               print('Fikstur alinamadi; mevcut dosyalar korundu:', str(exc)[:200])
-              if not isinstance(old_scores, dict) or not isinstance(old_scores.get('response'), list):
-                  raise
+              # A green GitHub check must not hide an API failure.
+              raise
           finally:
-              save('odds-progress.json', {'date': day_key, 'requests': daily,
+              save('dalya-api-budget.json', {'date': day_key, 'requests': daily, 'updated_at': stamp})
+              save('odds-progress.json', {'date': day_key, 'requests': state.get('requests', 0),
                                           'last_attempt': attempts, 'updated_at': stamp})
               print('Bu calismadaki API istekleri:', calls, 'gunluk sayac:', daily)
           PY
@@ -208,8 +224,8 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add scores.json matches.json odds.json odds-progress.json
+          git add scores.json matches.json odds.json odds-progress.json dalya-api-budget.json
           if ! git diff --cached --quiet; then
-            git commit -m 'Update DALYA BET Turkish competitions'
+            git commit -m 'Update DALYA BET world fixtures with Turkey priority'
             git push
           fi
