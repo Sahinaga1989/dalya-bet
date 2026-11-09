@@ -40,8 +40,8 @@ jobs:
           if not KEY:
               raise SystemExit('API_FOOTBALL_KEY veya API_KEY GitHub secret eksik')
           BASE = 'https://v3.football.api-sports.io/'
-          MAX_RUN = 65
-          MAX_DAILY = 1800  # This workflow only; keep quota for other API consumers
+          MAX_RUN = 1000000
+          MAX_DAILY = 7500  # This workflow only; keep quota for other API consumers
           MAX_MATCHES = 1000
           RETRY_HOURS = 4
           CUP_ID = 206
@@ -216,7 +216,7 @@ jobs:
                           break
                       try:
                           events, paging = fetch('odds', {'league': league_id, 'season': season, 'bet': 1, 'page': 1})
-                          pages = min(3, int(paging.get('total', 1)))
+                          pages = int(paging.get('total', 1))
                           for page in range(1, pages + 1):
                               if page > 1:
                                   if calls >= MAX_RUN - 22 or daily >= MAX_DAILY:
@@ -239,7 +239,7 @@ jobs:
               for day in dates:
                   page = 1
                   # Spread requests across today, tomorrow and rotating future dates.
-                  while page <= 20 and calls < MAX_RUN - 12 and daily < MAX_DAILY:
+                  while calls < MAX_RUN - 12 and daily < MAX_DAILY:
                       try:
                           events, paging = fetch('odds', {
                               'date': day, 'timezone': 'Europe/Istanbul',
