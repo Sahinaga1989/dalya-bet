@@ -209,7 +209,7 @@ jobs:
                   while page <= 5 and calls < MAX_RUN - 12 and daily < MAX_DAILY:
                       try:
                           events, paging = fetch('odds', {
-                              'date': day, 'timezone': 'Europe/Istanbul',
+                              'date': day,
                               'bet': 1, 'page': page})
                       except Exception as exc:
                           print('Toplu oran sorgusu basarisiz:', day, page, str(exc)[:160])
