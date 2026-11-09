@@ -27,7 +27,9 @@ if(!matchError){estimateCache.clear();games=data.response.map(m=>{const id=Strin
 else if(games.length){games.forEach(g=>{const o=oddsById[g.id]||{};g.odds=[parseOdd(o['1']),parseOdd(o['X']),parseOdd(o['2'])]})}
 for(const [id,s] of selected){const g=games.find(x=>x.id===id);if(!g||(g.odds[s.choice]===null&&!estimatedOdds(g)))selected.delete(id)}
 const available=games.filter(g=>g.odds.every(x=>x!==null)).length;
-$('notice').textContent=matchError&&!games.length?'Maç verileri okunamadı. GitHub dosyalarını kontrol edin.':`${games.length} maçlık kaynak • ${available} maçta 1-X-2 oranı mevcut${oddsError?' • Oran dosyası okunamadı':''}. * Tahmini oranlar yalnızca DEMO kuponlarda kullanılabilir; gerçek oran değildir. Demo kuponlar bu cihazda saklanır ve puan bakiyesini değiştirmez. Veriler API güncellemesine bağlıdır.`;
+const turkeyGames=games.filter(isTurkey), turkeyWithOdds=turkeyGames.filter(g=>g.odds.every(x=>x!==null)).length;
+const turkeyLeagues=[...new Set(turkeyGames.map(g=>g.league))].sort((a,b)=>a.localeCompare(b,'tr'));
+$('notice').textContent=matchError&&!games.length?'Maç verileri okunamadı. GitHub dosyalarını kontrol edin.':`${games.length} maçlık kaynak • ${available} maçta gerçek 1-X-2 oranı • Türkiye: ${turkeyGames.length} maç, ${turkeyWithOdds} gerçek oranlı • Ligler: ${turkeyLeagues.slice(0,8).join(', ')||'veri yok'}${oddsError?' • Oran dosyası okunamadı':''}. * Tahmini oranlar yalnızca DEMO kuponlarda kullanılabilir; gerçek oran değildir. Demo kuponlar bu cihazda saklanır ve puan bakiyesini değiştirmez. Veriler API güncellemesine bağlıdır.`;
 syncDateFilter();renderMatches();renderSlip()}
 function isTurkey(g){return /^(turkey|türkiye|turkiye|türkei|turquie)$/i.test(String(g.country||'').trim())||/^(süper lig|super lig|1\. lig|2\. lig|3\. lig|turkish cup|türkiye kupası)$/i.test(String(g.league||'').trim())}
 function leagueRank(g){
