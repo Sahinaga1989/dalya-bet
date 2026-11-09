@@ -197,6 +197,39 @@ jobs:
               odds = {ident: old_odds[ident] for ident in ids
                       if ident in old_odds and valid_odd(old_odds[ident])
                       and (scheduled[ident].get('fixture', {}).get('status', {}).get('short') == 'NS')}
+              # Turkey-first dedicated league queries. The general date feed can omit
+              # Turkish fixtures even when they are present in the fixture feed.
+              turkey_leagues = sorted({str((scheduled[i].get('league') or {}).get('id'))
+                                       for i in turkish_ids
+                                       if (scheduled[i].get('league') or {}).get('id') is not None})
+              for league_id in turkey_leagues:
+                  if calls >= MAX_RUN - 22 or daily >= MAX_DAILY:
+                      break
+                  league_fixtures = [i for i in turkish_ids
+                                     if str((scheduled[i].get('league') or {}).get('id')) == league_id
+                                     and scheduled[i].get('fixture', {}).get('status', {}).get('short') == 'NS']
+                  seasons = sorted({str((scheduled[i].get('league') or {}).get('season'))
+                                    for i in league_fixtures
+                                    if (scheduled[i].get('league') or {}).get('season') is not None})
+                  for season in seasons:
+                      if calls >= MAX_RUN - 22 or daily >= MAX_DAILY:
+                          break
+                      try:
+                          events, paging = fetch('odds', {'league': league_id, 'season': season, 'bet': 1, 'page': 1})
+                          pages = min(3, int(paging.get('total', 1)))
+                          for page in range(1, pages + 1):
+                              if page > 1:
+                                  if calls >= MAX_RUN - 22 or daily >= MAX_DAILY:
+                                      break
+                                  events, _ = fetch('odds', {'league': league_id, 'season': season, 'bet': 1, 'page': page})
+                              for ident, entry in extract_odds(events, turkish_ids).items():
+                                  if ident in eligible and scheduled[ident].get('fixture', {}).get('status', {}).get('short') == 'NS':
+                                      entry['fetched_at'] = stamp
+                                      odds[ident] = entry
+                      except Exception as exc:
+                          print('Turkiye lig oran sorgusu:', league_id, season, str(exc)[:160])
+                          if any(x in str(exc).casefold() for x in ('limit', 'quota', '429', 'rate')):
+                              raise
               # Fetch odds by date, using the provider's paginated response.
               # This allows more coverage with the same request budget.
               eligible = set(ids)
