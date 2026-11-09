@@ -282,6 +282,23 @@ jobs:
                                'dates': dates, 'horizon_days': 30, 'response': fixtures}
               if not fixtures:
                   raise RuntimeError('Bos fikstur mevcut dosyalarin uzerine yazilmadi')
+              # Small, browser-friendly fixture payload; full files stay unchanged for compatibility.
+              compact = []
+              for m in fixtures:
+                  f = m.get('fixture') or {}
+                  l = m.get('league') or {}
+                  t = m.get('teams') or {}
+                  compact.append({
+                      'fixture': {'id': f.get('id'), 'date': f.get('date'),
+                                  'status': {'short': (f.get('status') or {}).get('short'),
+                                             'elapsed': (f.get('status') or {}).get('elapsed')}},
+                      'league': {'name': l.get('name'), 'country': l.get('country')},
+                      'teams': {'home': {'name': (t.get('home') or {}).get('name')},
+                                'away': {'name': (t.get('away') or {}).get('name')}},
+                      'goals': {'home': (m.get('goals') or {}).get('home'),
+                                'away': (m.get('goals') or {}).get('away')}
+                  })
+              save('fixtures-lite.json', {'updated_at': stamp, 'response': compact})
               save('scores.json', score_payload)
               save('matches.json', score_payload)
               save('odds.json', {'updated_at': stamp, 'matches': odds})
@@ -304,7 +321,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add scores.json matches.json odds.json odds-progress.json dalya-api-budget.json
+          git add scores.json matches.json fixtures-lite.json odds.json odds-progress.json dalya-api-budget.json
           if ! git diff --cached --quiet; then
             git commit -m 'Update DALYA BET world fixtures with Turkey priority'
             for attempt in 1 2 3; do
