@@ -30,7 +30,7 @@ const available=games.filter(g=>g.odds.every(x=>x!==null)).length;
 const turkeyGames=games.filter(isTurkey), turkeyWithOdds=turkeyGames.filter(g=>g.odds.every(x=>x!==null)).length;
 const turkeyLeagues=[...new Set(turkeyGames.map(g=>g.league))].sort((a,b)=>a.localeCompare(b,'tr'));
 $('notice').textContent=matchError&&!games.length?'Maç verileri okunamadı. GitHub dosyalarını kontrol edin.':`${games.length} maçlık kaynak • ${available} maçta gerçek 1-X-2 oranı • Türkiye: ${turkeyGames.length} maç, ${turkeyWithOdds} gerçek oranlı • Ligler: ${turkeyLeagues.slice(0,8).join(', ')||'veri yok'}${oddsError?' • Oran dosyası okunamadı':''}. * Tahmini oranlar yalnızca DEMO kuponlarda kullanılabilir; gerçek oran değildir. Demo kuponlar bu cihazda saklanır ve puan bakiyesini değiştirmez. Veriler API güncellemesine bağlıdır.`;
-syncDateFilter();renderMatches();renderSlip()}
+rebuildCompletedIndex();syncDateFilter();renderMatches();renderSlip()}
 function isTurkey(g){return /^(turkey|türkiye|turkiye|türkei|turquie)$/i.test(String(g.country||'').trim())||/^(süper lig|super lig|1\. lig|2\. lig|3\. lig|turkish cup|türkiye kupası)$/i.test(String(g.league||'').trim())}
 function leagueRank(g){
 const name=String(g.league||'').toLocaleLowerCase('tr-TR').normalize('NFD').replace(/[\u0300-\u036f]/g,'');
@@ -83,10 +83,23 @@ function featuredGames(){
 // Demonstration-only model: recent completed fixtures when available, otherwise neutral prior.
 // These are NOT bookmaker prices and must never be eligible for coupon submission.
 const estimateCache=new Map();
+let completedByTeam=new Map();
+function rebuildCompletedIndex(){
+ completedByTeam=new Map();
+ for(const m of games){
+  if(!['FT','AET'].includes(m.status)||!/^[0-9]+ - [0-9]+$/.test(m.score))continue;
+  for(const team of new Set([m.home,m.away])){
+   const key=JSON.stringify([m.country,m.league,team]);
+   if(!completedByTeam.has(key))completedByTeam.set(key,[]);
+   completedByTeam.get(key).push(m);
+  }
+ }
+ for(const list of completedByTeam.values())list.sort((a,b)=>b.date.localeCompare(a.date));
+}
 function estimatedOdds(g){
  if(estimateCache.has(g.id))return estimateCache.get(g.id);
  if(g.status!=='NS'||!Number.isFinite(Date.parse(g.date))||Date.parse(g.date)<=Date.now())return null;
- const history=(team)=>games.filter(m=>m.id!==g.id&&m.country===g.country&&m.league===g.league&&Date.parse(m.date)<Date.parse(g.date)&&['FT','AET'].includes(m.status)&&(m.home===team||m.away===team)&&/^\d+ - \d+$/.test(m.score)).sort((a,b)=>b.date.localeCompare(a.date)).slice(0,5);
+ const history=(team)=>(completedByTeam.get(JSON.stringify([g.country,g.league,team]))||[]).filter(m=>m.id!==g.id&&m.date<g.date).slice(0,5);
  const strength=(team)=>{const h=history(team);let points=0;for(const m of h){const [a,b]=m.score.split(' - ').map(Number);const own=m.home===team?a:b,opp=m.home===team?b:a;points+=own>opp?3:own===opp?1:0;}return (points+4.5)/(3*(h.length+3));};
  const diff=Math.max(-0.3,Math.min(0.3,(strength(g.home)-strength(g.away))*0.6));
  const p1=Math.max(.2,Math.min(.62,.425+diff)),px=.27,p2=1-p1-px;
