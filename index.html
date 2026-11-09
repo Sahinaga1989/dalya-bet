@@ -27,7 +27,7 @@ if(!matchError){games=data.response.map(m=>{const id=String(m.fixture?.id??'');c
 else if(games.length){games.forEach(g=>{const o=oddsById[g.id]||{};g.odds=[parseOdd(o['1']),parseOdd(o['X']),parseOdd(o['2'])]})}
 for(const [id,s] of selected){const g=games.find(x=>x.id===id);if(!g||g.odds[s.choice]===null)selected.delete(id)}
 const available=games.filter(g=>g.odds.every(x=>x!==null)).length;
-$('notice').textContent=matchError&&!games.length?'Maç verileri okunamadı. GitHub dosyalarını kontrol edin.':`Günlük en fazla 200 seçilmiş maç • ${games.length} maçlık kaynak • ${available} maçta 1-X-2 oranı mevcut${oddsError?' • Oran dosyası okunamadı':''}. Eksik oranlar uydurulmaz. Veriler API güncellemesine bağlıdır.`;
+$('notice').textContent=matchError&&!games.length?'Maç verileri okunamadı. GitHub dosyalarını kontrol edin.':`${games.length} maçlık kaynak • ${available} maçta 1-X-2 oranı mevcut${oddsError?' • Oran dosyası okunamadı':''}. Eksik oranlar uydurulmaz. Veriler API güncellemesine bağlıdır.`;
 syncDateFilter();renderMatches();renderSlip()}
 function isTurkey(g){return /^(turkey|türkiye|turkiye)$/i.test(String(g.country||'').trim())}
 function leagueRank(g){
@@ -76,7 +76,7 @@ function featuredGames(){
   daily.sort((a,b)=>leagueRank(a)-leagueRank(b)
    ||Number(b.odds.every(x=>x!==null))-Number(a.odds.every(x=>x!==null))
    ||a.date.localeCompare(b.date)||a.id.localeCompare(b.id));
-  result.push(...daily.slice(0,DAILY_MATCH_LIMIT));
+  result.push(...daily);
  }
  return result;
 }
@@ -131,9 +131,12 @@ $('submit').onclick=async()=>{
     return;
   }
   couponClient=auth;
-  try{await auth.functions.invoke('dalya-sync-coupon-data',{body:{}});}catch(e){console.warn('Kupon veri eşitlemesi ertelendi',e);}
-  await refreshCouponEligibility();
-  renderSavedCoupons();
+  // Do not block match display on optional coupon synchronization.
+  document.body.style.visibility='visible';
+  refresh();
+  auth.functions.invoke('dalya-sync-coupon-data',{body:{}}).catch(e=>console.warn('Kupon veri eşitlemesi ertelendi',e));
+  refreshCouponEligibility().catch(e=>console.warn('Kupon uygunlugu alinamadi',e));
+  renderSavedCoupons().catch(e=>console.warn('Kupon gecmisi alinamadi',e));
   const balanceEl=document.getElementById('myBalance');
   const infoEl=document.getElementById('walletInfo');
   window.refreshDalyaBalance=loadMyBalance;
@@ -157,7 +160,6 @@ $('submit').onclick=async()=>{
     location.replace('./dalya-bet-giris.html');
   };
   document.querySelector('nav').appendChild(btn);
-  refresh();
   setInterval(refresh,60000);
   setInterval(async()=>{try{await auth.functions.invoke('dalya-sync-coupon-data',{body:{}});}catch(e){console.warn('Kupon veri eşitlemesi ertelendi',e);}await refreshCouponEligibility();},600000);
 })().catch(()=>{
