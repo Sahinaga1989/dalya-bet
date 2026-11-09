@@ -21,8 +21,10 @@ function gameDay(g){return g.date?new Intl.DateTimeFormat('sv-SE',{timeZone:'Eur
 function syncDateFilter(){const el=$('fixtureDate'),v=el.value;const days=[...new Set(games.map(gameDay).filter(Boolean))].sort();el.innerHTML='<option value="">Tüm tarihler</option>'+days.map(d=>'<option value="'+esc(d)+'">'+esc(d)+'</option>').join('');el.value=days.includes(v)?v:''}
 function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 async function getJSON(file){const controller=new AbortController();const timeout=setTimeout(()=>controller.abort(),12000);try{const r=await fetch('./'+file+'?t='+Date.now(),{cache:'no-store',signal:controller.signal});if(!r.ok)throw Error(file+' HTTP '+r.status);return await r.json()}finally{clearTimeout(timeout)}}
-async function refresh(){let oddsError=false,matchError=false;try{const data=await getJSON('odds.json');oddsById=data.matches&&typeof data.matches==='object'?data.matches:{};}catch(e){oddsError=true;console.error(e)}
+async function refresh(){let oddsError=false,matchError=false;
+const oddsRequest=getJSON('odds.json').then(data=>{if(!data.matches||typeof data.matches!=='object')throw Error('odds.json matches eksik');oddsById=data.matches;}).catch(e=>{oddsError=true;console.error('Oran verisi alinamadi',e)});
 let data;try{data=await getJSON('scores.json');if(!Array.isArray(data.response))throw Error('scores.json response eksik')}catch(e){console.warn('scores.json okunamadi, matches.json deneniyor',e);try{data=await getJSON('matches.json');if(!Array.isArray(data.response))throw Error('matches.json response eksik')}catch(e2){matchError=true;console.error(e2)}}
+await oddsRequest;
 if(!matchError){estimateCache.clear();games=data.response.map(m=>{const id=String(m.fixture?.id??'');const o=oddsById[id]||{};return{id,league:m.league?.name||'Futbol',country:m.league?.country||'',home:m.teams?.home?.name||'Ev sahibi',away:m.teams?.away?.name||'Deplasman',date:m.fixture?.date||'',time:m.fixture?.date?new Date(m.fixture.date).toLocaleTimeString('tr-TR',{timeZone:'Europe/Istanbul',hour:'2-digit',minute:'2-digit'}):'--:--',status:m.fixture?.status?.short||'NS',minute:m.fixture?.status?.elapsed,score:m.goals?.home!=null&&m.goals?.away!=null?m.goals.home+' - '+m.goals.away:'-',oddsUpdatedAt:o.fetched_at||null,odds:[parseOdd(o['1']),parseOdd(o['X']),parseOdd(o['2'])]}}).filter(g=>g.id);games.sort((a,b)=>Number(liveStatuses.has(b.status))-Number(liveStatuses.has(a.status))||a.date.localeCompare(b.date));}
 else if(games.length){games.forEach(g=>{const o=oddsById[g.id]||{};g.odds=[parseOdd(o['1']),parseOdd(o['X']),parseOdd(o['2'])]})}
 for(const [id,s] of selected){const g=games.find(x=>x.id===id);if(!g||(g.odds[s.choice]===null&&!estimatedOdds(g)))selected.delete(id)}
@@ -153,13 +155,13 @@ $('submit').onclick=async()=>{
 };
 
 (async()=>{
-  const {createClient}=await import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm');
+  const {createClient}=await Promise.race([import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'),new Promise((_,reject)=>setTimeout(()=>reject(new Error('Üyelik kütüphanesi yüklenemedi')),12000))]);
   const auth=createClient(
     'https://tqgtctbutprvjklyxmgn.supabase.co',
     'sb_publishable_3NamNe0qiMsFTliKw2Kl4g_qBZ4wdVP'
   );
-  const {data,error}=await auth.auth.getUser();
-  if(error||!data.user){
+  const {data,error}=await Promise.race([auth.auth.getUser(),new Promise((_,reject)=>setTimeout(()=>reject(new Error('Üyelik sunucusu 12 saniye içinde yanıt vermedi')),12000))]);
+  if(error||!data?.user){
     location.replace('./dalya-bet-giris.html');
     return;
   }
@@ -174,8 +176,8 @@ $('submit').onclick=async()=>{
   const infoEl=document.getElementById('walletInfo');
   window.refreshDalyaBalance=loadMyBalance;
   async function loadMyBalance(){
-    const {data:wallet,error:walletError}=await auth.from('dalya_wallets')
-      .select('balance').eq('user_id',data.user.id).maybeSingle();
+    const {data:wallet,error:walletError}=await Promise.race([auth.from('dalya_wallets')
+      .select('balance').eq('user_id',data.user.id).maybeSingle(),new Promise((_,reject)=>setTimeout(()=>reject(new Error('Bakiye sunucusu yanıt vermedi')),10000))]).catch(e=>({data:null,error:e}));
     if(walletError){balanceEl.textContent='Bakiye okunamadı';infoEl.textContent='Veritabanı erişim yetkilerini kontrol edin.';return;}
     if(!wallet){balanceEl.textContent='Bakiye bulunamadı';infoEl.textContent='Yönetici hesabınız için puan cüzdanı oluşturmalıdır.';return;}
     balanceEl.textContent=Number(wallet.balance).toLocaleString('tr-TR')+' P';
@@ -201,7 +203,7 @@ $('submit').onclick=async()=>{
   const msg=document.createElement('main');
   msg.style.cssText='max-width:520px;margin:15vh auto;padding:24px;color:#fff;font:16px Arial,sans-serif;text-align:center';
   const heading=document.createElement('h1');heading.textContent='DALYA BET';
-  const note=document.createElement('p');note.textContent='Üyelik doğrulanamadı. Bağlantınızı kontrol edip tekrar giriş yapın.';
+  const note=document.createElement('p');note.textContent='Üyelik doğrulanamadı veya sunucu yanıt vermedi. Lütfen bağlantınızı kontrol edip yeniden deneyin.';
   const link=document.createElement('a');link.href='./dalya-bet-giris.html';link.textContent='Üye girişine git';link.style.color='#ffd400';
   msg.append(heading,note,link);document.body.append(msg);
 });
