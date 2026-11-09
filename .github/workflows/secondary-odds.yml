@@ -1,0 +1,42 @@
+name: DALYA BET Secondary Odds
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 3,9 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dalya-live-scores
+  cancel-in-progress: false
+
+jobs:
+  secondary-odds:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Import missing licensed 1X2 odds without replacing existing feed
+        env:
+          THE_ODDS_API_KEY: ${{ secrets.THE_ODDS_API_KEY }}
+        run: python integrations/the_odds_api.py
+      - name: Commit only updated odds and monthly budget
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add odds.json the-odds-api-budget.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Refresh missing odds from licensed secondary feed'
+            for attempt in 1 2 3; do
+              git fetch origin main
+              git -c rebase.autoStash=false rebase -X theirs origin/main || { git rebase --abort; exit 1; }
+              if git push origin HEAD:main; then exit 0; fi
+              sleep 3
+            done
+            exit 1
+          fi
