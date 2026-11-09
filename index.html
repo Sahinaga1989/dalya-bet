@@ -160,8 +160,8 @@ $('submit').onclick=async()=>{
     'https://tqgtctbutprvjklyxmgn.supabase.co',
     'sb_publishable_3NamNe0qiMsFTliKw2Kl4g_qBZ4wdVP'
   );
-  const {data,error}=await auth.auth.getUser();
-  if(error||!data.user){
+  const {data,error}=await Promise.race([auth.auth.getUser(),new Promise((_,reject)=>setTimeout(()=>reject(new Error('Üyelik sunucusu 12 saniye içinde yanıt vermedi')),12000))]);
+  if(error||!data?.user){
     location.replace('./dalya-bet-giris.html');
     return;
   }
@@ -203,7 +203,7 @@ $('submit').onclick=async()=>{
   const msg=document.createElement('main');
   msg.style.cssText='max-width:520px;margin:15vh auto;padding:24px;color:#fff;font:16px Arial,sans-serif;text-align:center';
   const heading=document.createElement('h1');heading.textContent='DALYA BET';
-  const note=document.createElement('p');note.textContent='Üyelik doğrulanamadı. Bağlantınızı kontrol edip tekrar giriş yapın.';
+  const note=document.createElement('p');note.textContent='Üyelik doğrulanamadı veya sunucu yanıt vermedi. Lütfen bağlantınızı kontrol edip yeniden deneyin.';
   const link=document.createElement('a');link.href='./dalya-bet-giris.html';link.textContent='Üye girişine git';link.style.color='#ffd400';
   msg.append(heading,note,link);document.body.append(msg);
 });
