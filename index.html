@@ -29,7 +29,7 @@ for(const [id,s] of selected){const g=games.find(x=>x.id===id);if(!g||(g.odds[s.
 const available=games.filter(g=>g.odds.every(x=>x!==null)).length;
 $('notice').textContent=matchError&&!games.length?'Maç verileri okunamadı. GitHub dosyalarını kontrol edin.':`${games.length} maçlık kaynak • ${available} maçta 1-X-2 oranı mevcut${oddsError?' • Oran dosyası okunamadı':''}. * Tahmini oranlar yalnızca DEMO kuponlarda kullanılabilir; gerçek oran değildir. Demo kuponlar bu cihazda saklanır ve puan bakiyesini değiştirmez. Veriler API güncellemesine bağlıdır.`;
 syncDateFilter();renderMatches();renderSlip()}
-function isTurkey(g){return /^(turkey|türkiye|turkiye)$/i.test(String(g.country||'').trim())}
+function isTurkey(g){return /^(turkey|türkiye|turkiye|türkei|turquie)$/i.test(String(g.country||'').trim())||/^(süper lig|super lig|1\. lig|2\. lig|3\. lig|turkish cup|türkiye kupası)$/i.test(String(g.league||'').trim())}
 function leagueRank(g){
 const name=String(g.league||'').toLocaleLowerCase('tr-TR').normalize('NFD').replace(/[\u0300-\u036f]/g,'');
 const country=String(g.country||'').toLocaleLowerCase('tr-TR').normalize('NFD').replace(/[\u0300-\u036f]/g,'');
@@ -59,9 +59,7 @@ if(/brazil|brezilya/.test(country)&&/serie a/.test(name))return 33;
 if(/argentina|arjantin/.test(country)&&/primera division|liga profesional/.test(name))return 34;
 return 100;
 }
-// Each Turkish-calendar day shows at most 50 featured fixtures.
-// Keep the full fixture feed for score updates and already placed coupons.
-const DAILY_MATCH_LIMIT=200;
+// Show all available fixtures; Turkey leagues are sorted first.
 function featuredGames(){
  const byDay=new Map();
  for(const g of games){
