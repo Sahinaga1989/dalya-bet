@@ -20,7 +20,7 @@ function dateTR(offset=0){const d=new Date(Date.now()+offset*86400000);return ne
 function gameDay(g){return g.date?new Intl.DateTimeFormat('sv-SE',{timeZone:'Europe/Istanbul',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(g.date)):''}
 function syncDateFilter(){const el=$('fixtureDate'),v=el.value;const days=[...new Set(games.map(gameDay).filter(Boolean))].sort();el.innerHTML='<option value="">Tüm tarihler</option>'+days.map(d=>'<option value="'+esc(d)+'">'+esc(d)+'</option>').join('');el.value=days.includes(v)?v:''}
 function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-async function getJSON(file){const r=await fetch('./'+file+'?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error(file+' HTTP '+r.status);return r.json()}
+async function getJSON(file){const controller=new AbortController();const timeout=setTimeout(()=>controller.abort(),12000);try{const r=await fetch('./'+file+'?t='+Date.now(),{cache:'no-store',signal:controller.signal});if(!r.ok)throw Error(file+' HTTP '+r.status);return await r.json()}finally{clearTimeout(timeout)}}
 async function refresh(){let oddsError=false,matchError=false;try{const data=await getJSON('odds.json');oddsById=data.matches&&typeof data.matches==='object'?data.matches:{};}catch(e){oddsError=true;console.error(e)}
 let data;try{data=await getJSON('scores.json');if(!Array.isArray(data.response))throw Error('scores.json response eksik')}catch(e){console.warn('scores.json okunamadi, matches.json deneniyor',e);try{data=await getJSON('matches.json');if(!Array.isArray(data.response))throw Error('matches.json response eksik')}catch(e2){matchError=true;console.error(e2)}}
 if(!matchError){games=data.response.map(m=>{const id=String(m.fixture?.id??'');const o=oddsById[id]||{};return{id,league:m.league?.name||'Futbol',country:m.league?.country||'',home:m.teams?.home?.name||'Ev sahibi',away:m.teams?.away?.name||'Deplasman',date:m.fixture?.date||'',time:m.fixture?.date?new Date(m.fixture.date).toLocaleTimeString('tr-TR',{timeZone:'Europe/Istanbul',hour:'2-digit',minute:'2-digit'}):'--:--',status:m.fixture?.status?.short||'NS',minute:m.fixture?.status?.elapsed,score:m.goals?.home!=null&&m.goals?.away!=null?m.goals.home+' - '+m.goals.away:'-',oddsUpdatedAt:o.fetched_at||null,odds:[parseOdd(o['1']),parseOdd(o['X']),parseOdd(o['2'])]}}).filter(g=>g.id);games.sort((a,b)=>Number(liveStatuses.has(b.status))-Number(liveStatuses.has(a.status))||a.date.localeCompare(b.date));}
@@ -150,7 +150,7 @@ $('submit').onclick=async()=>{
   couponClient=auth;
   // Do not block match display on optional coupon synchronization.
   document.body.style.visibility='visible';
-  refresh();
+  refresh().catch(e=>{console.error('Mac listesi hatasi',e);document.getElementById('notice').textContent='Maç listesi hatası: '+String(e?.message||e);});
   auth.functions.invoke('dalya-sync-coupon-data',{body:{}}).catch(e=>console.warn('Kupon veri eşitlemesi ertelendi',e));
   refreshCouponEligibility().catch(e=>console.warn('Kupon uygunlugu alinamadi',e));
   renderSavedCoupons().catch(e=>console.warn('Kupon gecmisi alinamadi',e));
