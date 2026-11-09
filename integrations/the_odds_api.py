@@ -42,8 +42,7 @@ def fetch(path, params):
 
 def main():
     if not KEY:
-        print("THE_ODDS_API_KEY unavailable; secondary odds skipped")
-        return
+        raise SystemExit("THE_ODDS_API_KEY missing: secondary odds cannot run")
     now = dt.datetime.now(dt.timezone.utc)
     month = now.strftime("%Y-%m")
     budget = read(STATE, {})
