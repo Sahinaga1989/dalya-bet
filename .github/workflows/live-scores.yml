@@ -40,8 +40,8 @@ jobs:
           if not KEY:
               raise SystemExit('API_FOOTBALL_KEY veya API_KEY GitHub secret eksik')
           BASE = 'https://v3.football.api-sports.io/'
-          MAX_RUN = 48
-          MAX_DAILY = 1500  # This workflow only; keep quota for other API consumers
+          MAX_RUN = 65
+          MAX_DAILY = 1800  # This workflow only; keep quota for other API consumers
           MAX_MATCHES = 1000
           RETRY_HOURS = 4
           CUP_ID = 206
@@ -239,10 +239,10 @@ jobs:
               for day in dates:
                   page = 1
                   # Spread requests across today, tomorrow and rotating future dates.
-                  while page <= 5 and calls < MAX_RUN - 12 and daily < MAX_DAILY:
+                  while page <= 20 and calls < MAX_RUN - 12 and daily < MAX_DAILY:
                       try:
                           events, paging = fetch('odds', {
-                              'date': day,
+                              'date': day, 'timezone': 'Europe/Istanbul',
                               'bet': 1, 'page': page})
                       except Exception as exc:
                           print('Toplu oran sorgusu basarisiz:', day, page, str(exc)[:160])
@@ -325,7 +325,7 @@ jobs:
                       'fixture': {'id': f.get('id'), 'date': f.get('date'),
                                   'status': {'short': (f.get('status') or {}).get('short'),
                                              'elapsed': (f.get('status') or {}).get('elapsed')}},
-                      'league': {'name': l.get('name'), 'country': l.get('country')},
+                      'league': {'id': l.get('id'), 'season': l.get('season'), 'name': l.get('name'), 'country': l.get('country')},
                       'teams': {'home': {'name': (t.get('home') or {}).get('name')},
                                 'away': {'name': (t.get('away') or {}).get('name')}},
                       'goals': {'home': (m.get('goals') or {}).get('home'),
