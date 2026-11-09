@@ -40,7 +40,7 @@ jobs:
           if not KEY:
               raise SystemExit('API_FOOTBALL_KEY veya API_KEY GitHub secret eksik')
           BASE = 'https://v3.football.api-sports.io/'
-          MAX_RUN = 1000000
+          MAX_RUN = 250
           MAX_DAILY = 7500  # This workflow only; keep quota for other API consumers
           MAX_MATCHES = 1000
           RETRY_HOURS = 4
@@ -197,6 +197,8 @@ jobs:
               odds = {ident: old_odds[ident] for ident in ids
                       if ident in old_odds and valid_odd(old_odds[ident])
                       and (scheduled[ident].get('fixture', {}).get('status', {}).get('short') == 'NS')}
+              eligible = set(ids)
+              turkish_ids = {ident for ident in ids if turkey(scheduled[ident])}
               # Turkey-first dedicated league queries. The general date feed can omit
               # Turkish fixtures even when they are present in the fixture feed.
               turkey_leagues = sorted({str((scheduled[i].get('league') or {}).get('id'))
@@ -232,8 +234,6 @@ jobs:
                               raise
               # Fetch odds by date, using the provider's paginated response.
               # This allows more coverage with the same request budget.
-              eligible = set(ids)
-              turkish_ids = {ident for ident in ids if turkey(scheduled[ident])}
               odds_pages = 0
               odds_errors = []
               for day in dates:
