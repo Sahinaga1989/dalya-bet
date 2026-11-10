@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-11-10T22:46:51.144588+00:00",
+  "updated_at": "2026-11-10T23:40:07.695690+00:00",
   "date": "2026-11-11",
   "dates": [
     "2026-11-09",
     "2026-11-10",
     "2026-11-11",
     "2026-11-12",
-    "2026-11-17",
-    "2026-11-18"
+    "2026-11-19",
+    "2026-11-20"
   ],
   "horizon_days": 30,
   "response": [
@@ -16408,10 +16408,10 @@
           "city": "San Miguel"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 56,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 4
         }
       },
       "league": {
@@ -16448,8 +16448,8 @@
           "away": 1
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -16470,7 +16470,7 @@
         "timestamp": 1794348000,
         "periods": {
           "first": 1794348000,
-          "second": null
+          "second": 1794351600
         },
         "venue": {
           "id": null,
@@ -16478,9 +16478,9 @@
           "city": "Juazeiro do Norte"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 44,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 78,
           "extra": null
         }
       },
@@ -16539,7 +16539,7 @@
         "date": "2026-11-11T02:30:00+03:00",
         "timestamp": 1794353400,
         "periods": {
-          "first": null,
+          "first": 1794353400,
           "second": null
         },
         "venue": {
@@ -16548,9 +16548,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 10,
           "extra": null
         }
       },
@@ -16569,23 +16569,23 @@
           "id": 1134,
           "name": "Internacional de Bogota",
           "logo": "https://media.api-sports.io/football/teams/1134.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 1138,
           "name": "America de Cali",
           "logo": "https://media.api-sports.io/football/teams/1138.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -207213,426 +207213,6 @@
     },
     {
       "fixture": {
-        "id": 1632062,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-19T00:00:00+03:00",
-        "timestamp": 1795035600,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": "Pedro Juan Caballero"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 252,
-        "name": "Division Profesional - Clausura",
-        "country": "Paraguay",
-        "logo": "https://media.api-sports.io/football/leagues/252.png",
-        "flag": "https://media.api-sports.io/flags/py.svg",
-        "season": 2026,
-        "round": "Clausura - 20",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 2140,
-          "name": "2 de Mayo",
-          "logo": "https://media.api-sports.io/football/teams/2140.png",
-          "winner": null
-        },
-        "away": {
-          "id": 2125,
-          "name": "Club Sp. San Lorenzo",
-          "logo": "https://media.api-sports.io/football/teams/2125.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1632063,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-19T00:00:00+03:00",
-        "timestamp": 1795035600,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 252,
-        "name": "Division Profesional - Clausura",
-        "country": "Paraguay",
-        "logo": "https://media.api-sports.io/football/leagues/252.png",
-        "flag": "https://media.api-sports.io/flags/py.svg",
-        "season": 2026,
-        "round": "Clausura - 20",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 10487,
-          "name": "Sportivo Ameliano",
-          "logo": "https://media.api-sports.io/football/teams/10487.png",
-          "winner": null
-        },
-        "away": {
-          "id": 1183,
-          "name": "Sportivo Luqueno",
-          "logo": "https://media.api-sports.io/football/teams/1183.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1632064,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-19T00:00:00+03:00",
-        "timestamp": 1795035600,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": "Estadio Arsenio Erico",
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 252,
-        "name": "Division Profesional - Clausura",
-        "country": "Paraguay",
-        "logo": "https://media.api-sports.io/football/leagues/252.png",
-        "flag": "https://media.api-sports.io/flags/py.svg",
-        "season": 2026,
-        "round": "Clausura - 20",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 1175,
-          "name": "Nacional Asuncion",
-          "logo": "https://media.api-sports.io/football/teams/1175.png",
-          "winner": null
-        },
-        "away": {
-          "id": 1176,
-          "name": "Cerro Porteno",
-          "logo": "https://media.api-sports.io/football/teams/1176.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1632065,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-19T00:00:00+03:00",
-        "timestamp": 1795035600,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": "Estadio Osvaldo Dominguez Dibb",
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 252,
-        "name": "Division Profesional - Clausura",
-        "country": "Paraguay",
-        "logo": "https://media.api-sports.io/football/leagues/252.png",
-        "flag": "https://media.api-sports.io/flags/py.svg",
-        "season": 2026,
-        "round": "Clausura - 20",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 1182,
-          "name": "Olimpia",
-          "logo": "https://media.api-sports.io/football/teams/1182.png",
-          "winner": null
-        },
-        "away": {
-          "id": 1187,
-          "name": "Sportivo Trinidense",
-          "logo": "https://media.api-sports.io/football/teams/1187.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1632066,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-19T00:00:00+03:00",
-        "timestamp": 1795035600,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 252,
-        "name": "Division Profesional - Clausura",
-        "country": "Paraguay",
-        "logo": "https://media.api-sports.io/football/leagues/252.png",
-        "flag": "https://media.api-sports.io/flags/py.svg",
-        "season": 2026,
-        "round": "Clausura - 20",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 10476,
-          "name": "Deportivo Recoleta",
-          "logo": "https://media.api-sports.io/football/teams/10476.png",
-          "winner": null
-        },
-        "away": {
-          "id": 1174,
-          "name": "Club Guarani",
-          "logo": "https://media.api-sports.io/football/teams/1174.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1632067,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-19T00:00:00+03:00",
-        "timestamp": 1795035600,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 252,
-        "name": "Division Profesional - Clausura",
-        "country": "Paraguay",
-        "logo": "https://media.api-sports.io/football/leagues/252.png",
-        "flag": "https://media.api-sports.io/flags/py.svg",
-        "season": 2026,
-        "round": "Clausura - 20",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 1185,
-          "name": "Rubio NU",
-          "logo": "https://media.api-sports.io/football/teams/1185.png",
-          "winner": null
-        },
-        "away": {
-          "id": 1179,
-          "name": "Libertad Asuncion",
-          "logo": "https://media.api-sports.io/football/teams/1179.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
         "id": 1647622,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -210933,7 +210513,7 @@
           "second": null
         },
         "venue": {
-          "id": null,
+          "id": 2755,
           "name": "Takhti Stadium",
           "city": "Khorramabad"
         },
@@ -236263,6 +235843,76 @@
     },
     {
       "fixture": {
+        "id": 1570454,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-20T23:00:00+03:00",
+        "timestamp": 1795204800,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": "Bilbao"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 140,
+        "name": "La Liga",
+        "country": "Spain",
+        "logo": "https://media.api-sports.io/football/leagues/140.png",
+        "flag": "https://media.api-sports.io/flags/es.svg",
+        "season": 2026,
+        "round": "Regular Season - 13",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 531,
+          "name": "Athletic Club",
+          "logo": "https://media.api-sports.io/football/teams/531.png",
+          "winner": null
+        },
+        "away": {
+          "id": 540,
+          "name": "Espanyol",
+          "logo": "https://media.api-sports.io/football/teams/540.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
         "id": 1571224,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -236655,6 +236305,76 @@
           "id": 5302,
           "name": "Juvenes / Dogana",
           "logo": "https://media.api-sports.io/football/teams/5302.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1632063,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-20T23:30:00+03:00",
+        "timestamp": 1795206600,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 252,
+        "name": "Division Profesional - Clausura",
+        "country": "Paraguay",
+        "logo": "https://media.api-sports.io/football/leagues/252.png",
+        "flag": "https://media.api-sports.io/flags/py.svg",
+        "season": 2026,
+        "round": "Clausura - 20",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 10487,
+          "name": "Sportivo Ameliano",
+          "logo": "https://media.api-sports.io/football/teams/10487.png",
+          "winner": null
+        },
+        "away": {
+          "id": 1183,
+          "name": "Sportivo Luqueno",
+          "logo": "https://media.api-sports.io/football/teams/1183.png",
           "winner": null
         }
       },
@@ -366855,76 +366575,6 @@
           "id": 544,
           "name": "Deportivo La Coruna",
           "logo": "https://media.api-sports.io/football/teams/544.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1570454,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-22T19:00:00+03:00",
-        "timestamp": 1795363200,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": "Bilbao"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 140,
-        "name": "La Liga",
-        "country": "Spain",
-        "logo": "https://media.api-sports.io/football/leagues/140.png",
-        "flag": "https://media.api-sports.io/flags/es.svg",
-        "season": 2026,
-        "round": "Regular Season - 13",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 531,
-          "name": "Athletic Club",
-          "logo": "https://media.api-sports.io/football/teams/531.png",
-          "winner": null
-        },
-        "away": {
-          "id": 540,
-          "name": "Espanyol",
-          "logo": "https://media.api-sports.io/football/teams/540.png",
           "winner": null
         }
       },
