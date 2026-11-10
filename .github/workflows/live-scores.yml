@@ -130,17 +130,16 @@ jobs:
           def valid_odd(value):
               return isinstance(value, dict) and all(value.get(k) for k in ('1', 'X', '2'))
 
-          TURKISH_BOOKMAKERS = ('iddaa', 'nesine', 'misli', 'bilyoner')
-          def bookmaker_priority(name, prefer_turkish):
-              label = str(name or '').casefold()
-              return 0 if prefer_turkish and any(x in label for x in TURKISH_BOOKMAKERS) else 1
+          SELECTED_BOOKMAKER = 'william hill'
 
           def extract_odds(events, prefer_turkish_ids=None):
               prefer_turkish_ids = prefer_turkish_ids or set()
               result = {}
               for event in events:
                   ident = str((event.get('fixture') or {}).get('id', ''))
-                  for bookmaker in sorted(event.get('bookmakers') or [], key=lambda b: bookmaker_priority(b.get('name'), ident in prefer_turkish_ids)):
+                  for bookmaker in event.get('bookmakers') or []:
+                      if str(bookmaker.get('name') or '').casefold().strip() != SELECTED_BOOKMAKER:
+                          continue
                       for bet in bookmaker.get('bets') or []:
                           if str(bet.get('id')) != '1' and str(bet.get('name', '')).casefold() != 'match winner':
                               continue
@@ -196,6 +195,7 @@ jobs:
               # Only show previously fetched pre-match odds for fixtures not yet started.
               odds = {ident: old_odds[ident] for ident in ids
                       if ident in old_odds and valid_odd(old_odds[ident])
+                      and str(old_odds[ident].get('bookmaker') or '').casefold().strip() == SELECTED_BOOKMAKER
                       and (scheduled[ident].get('fixture', {}).get('status', {}).get('short') == 'NS')}
               eligible = set(ids)
               turkish_ids = {ident for ident in ids if turkey(scheduled[ident])}
