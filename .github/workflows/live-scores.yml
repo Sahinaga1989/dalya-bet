@@ -130,15 +130,21 @@ jobs:
           def valid_odd(value):
               return isinstance(value, dict) and all(value.get(k) for k in ('1', 'X', '2'))
 
-          SELECTED_BOOKMAKER = 'william hill'
+          BOOKMAKER_PRIORITY = ('william hill', 'bet365', '1xbet', 'marathonbet')
+          def bookmaker_rank(name):
+              label = str(name or '').casefold().strip()
+              try:
+                  return BOOKMAKER_PRIORITY.index(label)
+              except ValueError:
+                  return len(BOOKMAKER_PRIORITY)
 
           def extract_odds(events, prefer_turkish_ids=None):
               prefer_turkish_ids = prefer_turkish_ids or set()
               result = {}
               for event in events:
                   ident = str((event.get('fixture') or {}).get('id', ''))
-                  for bookmaker in event.get('bookmakers') or []:
-                      if str(bookmaker.get('name') or '').casefold().strip() != SELECTED_BOOKMAKER:
+                  for bookmaker in sorted(event.get('bookmakers') or [], key=lambda b: bookmaker_rank(b.get('name'))):
+                      if bookmaker_rank(bookmaker.get('name')) >= len(BOOKMAKER_PRIORITY):
                           continue
                       for bet in bookmaker.get('bets') or []:
                           if str(bet.get('id')) != '1' and str(bet.get('name', '')).casefold() != 'match winner':
@@ -195,7 +201,7 @@ jobs:
               # Only show previously fetched pre-match odds for fixtures not yet started.
               odds = {ident: old_odds[ident] for ident in ids
                       if ident in old_odds and valid_odd(old_odds[ident])
-                      and str(old_odds[ident].get('bookmaker') or '').casefold().strip() == SELECTED_BOOKMAKER
+                      and bookmaker_rank(old_odds[ident].get('bookmaker')) < len(BOOKMAKER_PRIORITY)
                       and (scheduled[ident].get('fixture', {}).get('status', {}).get('short') == 'NS')}
               eligible = set(ids)
               turkish_ids = {ident for ident in ids if turkey(scheduled[ident])}
