@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-11-10T02:07:21.933324+00:00",
+  "updated_at": "2026-11-10T03:53:45.361326+00:00",
   "date": "2026-11-10",
   "dates": [
     "2026-11-08",
     "2026-11-09",
     "2026-11-10",
     "2026-11-11",
-    "2026-12-02",
-    "2026-12-03"
+    "2026-12-04",
+    "2026-12-05"
   ],
   "horizon_days": 30,
   "response": [
@@ -53293,9 +53293,9 @@
           "second": 1794150000
         },
         "venue": {
-          "id": null,
+          "id": 19692,
           "name": "Jarfallavallen",
-          "city": null
+          "city": "Jarfalla"
         },
         "status": {
           "long": "Match Finished",
@@ -53433,9 +53433,9 @@
           "second": 1794150000
         },
         "venue": {
-          "id": null,
+          "id": 4895,
           "name": "Sollentunavallen",
-          "city": null
+          "city": "Sollentuna"
         },
         "status": {
           "long": "Match Finished",
@@ -53575,7 +53575,7 @@
         "venue": {
           "id": null,
           "name": "Danderyd IP",
-          "city": null
+          "city": "Stocksund"
         },
         "status": {
           "long": "Match Finished",
@@ -96404,7 +96404,7 @@
     {
       "fixture": {
         "id": 1549860,
-        "referee": "Wilmar Roldan",
+        "referee": "Wilmar Roldan, Colombia",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-10T03:00:00+03:00",
         "timestamp": 1794268800,
@@ -96628,9 +96628,9 @@
           "city": "Cochabamba"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 80,
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
           "extra": null
         }
       },
@@ -96649,17 +96649,17 @@
           "id": 3637,
           "name": "Aurora",
           "logo": "https://media.api-sports.io/football/teams/3637.png",
-          "winner": false
+          "winner": null
         },
         "away": {
           "id": 17762,
           "name": "Universitario de Vinto",
           "logo": "https://media.api-sports.io/football/teams/17762.png",
-          "winner": true
+          "winner": null
         }
       },
       "goals": {
-        "home": 0,
+        "home": 1,
         "away": 1
       },
       "score": {
@@ -96668,8 +96668,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -96760,7 +96760,7 @@
         "timestamp": 1794272400,
         "periods": {
           "first": 1794272400,
-          "second": null
+          "second": 1794276000
         },
         "venue": {
           "id": null,
@@ -96768,10 +96768,10 @@
           "city": null
         },
         "status": {
-          "long": "Halftime",
-          "short": "HT",
-          "elapsed": 45,
-          "extra": 2
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 6
         }
       },
       "league": {
@@ -96808,8 +96808,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "extratime": {
           "home": null,
@@ -96830,7 +96830,7 @@
         "timestamp": 1794272400,
         "periods": {
           "first": 1794272400,
-          "second": null
+          "second": 1794276000
         },
         "venue": {
           "id": null,
@@ -96838,9 +96838,9 @@
           "city": "Kingston"
         },
         "status": {
-          "long": "Halftime",
-          "short": "HT",
-          "elapsed": 45,
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
           "extra": null
         }
       },
@@ -96859,17 +96859,17 @@
           "id": 3436,
           "name": "Arnett Gardens",
           "logo": "https://media.api-sports.io/football/teams/3436.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 3447,
           "name": "Waterhouse",
           "logo": "https://media.api-sports.io/football/teams/3447.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "score": {
@@ -96878,8 +96878,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         },
         "extratime": {
           "home": null,
@@ -96900,7 +96900,7 @@
         "timestamp": 1794276300,
         "periods": {
           "first": 1794276300,
-          "second": null
+          "second": 1794279900
         },
         "venue": {
           "id": null,
@@ -96908,9 +96908,9 @@
           "city": null
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 1,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 89,
           "extra": null
         }
       },
@@ -96929,17 +96929,17 @@
           "id": 26525,
           "name": "Chapulineros",
           "logo": "https://media.api-sports.io/football/teams/26525.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 24939,
           "name": "Cordobés",
           "logo": "https://media.api-sports.io/football/teams/24939.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "score": {
@@ -601733,81 +601733,11 @@
     },
     {
       "fixture": {
-        "id": 1556171,
+        "id": 1507506,
         "referee": null,
         "timezone": "Europe/Istanbul",
         "date": "2026-12-04T12:30:00+03:00",
         "timestamp": 1796376600,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": "Ajinomoto Stadium",
-          "city": "Tokyo"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 98,
-        "name": "J1 League",
-        "country": "Japan",
-        "logo": "https://media.api-sports.io/football/leagues/98.png",
-        "flag": "https://media.api-sports.io/flags/jp.svg",
-        "season": 2027,
-        "round": "Regular Season - 18",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 292,
-          "name": "FC Tokyo",
-          "logo": "https://media.api-sports.io/football/teams/292.png",
-          "winner": null
-        },
-        "away": {
-          "id": 294,
-          "name": "Kawasaki Frontale",
-          "logo": "https://media.api-sports.io/football/teams/294.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1507506,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-04T13:00:00+03:00",
-        "timestamp": 1796378400,
         "periods": {
           "first": null,
           "second": null
@@ -601876,8 +601806,8 @@
         "id": 1507507,
         "referee": null,
         "timezone": "Europe/Istanbul",
-        "date": "2026-12-04T13:00:00+03:00",
-        "timestamp": 1796378400,
+        "date": "2026-12-04T12:30:00+03:00",
+        "timestamp": 1796376600,
         "periods": {
           "first": null,
           "second": null
@@ -601946,8 +601876,8 @@
         "id": 1507508,
         "referee": null,
         "timezone": "Europe/Istanbul",
-        "date": "2026-12-04T13:00:00+03:00",
-        "timestamp": 1796378400,
+        "date": "2026-12-04T12:30:00+03:00",
+        "timestamp": 1796376600,
         "periods": {
           "first": null,
           "second": null
@@ -602016,8 +601946,8 @@
         "id": 1507509,
         "referee": null,
         "timezone": "Europe/Istanbul",
-        "date": "2026-12-04T13:00:00+03:00",
-        "timestamp": 1796378400,
+        "date": "2026-12-04T12:30:00+03:00",
+        "timestamp": 1796376600,
         "periods": {
           "first": null,
           "second": null
@@ -602086,8 +602016,8 @@
         "id": 1507510,
         "referee": null,
         "timezone": "Europe/Istanbul",
-        "date": "2026-12-04T13:00:00+03:00",
-        "timestamp": 1796378400,
+        "date": "2026-12-04T12:30:00+03:00",
+        "timestamp": 1796376600,
         "periods": {
           "first": null,
           "second": null
@@ -602156,8 +602086,8 @@
         "id": 1507511,
         "referee": null,
         "timezone": "Europe/Istanbul",
-        "date": "2026-12-04T13:00:00+03:00",
-        "timestamp": 1796378400,
+        "date": "2026-12-04T12:30:00+03:00",
+        "timestamp": 1796376600,
         "periods": {
           "first": null,
           "second": null
@@ -602226,8 +602156,8 @@
         "id": 1507512,
         "referee": null,
         "timezone": "Europe/Istanbul",
-        "date": "2026-12-04T13:00:00+03:00",
-        "timestamp": 1796378400,
+        "date": "2026-12-04T12:30:00+03:00",
+        "timestamp": 1796376600,
         "periods": {
           "first": null,
           "second": null
@@ -602296,8 +602226,8 @@
         "id": 1507513,
         "referee": null,
         "timezone": "Europe/Istanbul",
-        "date": "2026-12-04T13:00:00+03:00",
-        "timestamp": 1796378400,
+        "date": "2026-12-04T12:30:00+03:00",
+        "timestamp": 1796376600,
         "periods": {
           "first": null,
           "second": null
@@ -602335,6 +602265,76 @@
           "id": 13860,
           "name": "Betlemi",
           "logo": "https://media.api-sports.io/football/teams/13860.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1556171,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-04T12:30:00+03:00",
+        "timestamp": 1796376600,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Ajinomoto Stadium",
+          "city": "Tokyo"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 98,
+        "name": "J1 League",
+        "country": "Japan",
+        "logo": "https://media.api-sports.io/football/leagues/98.png",
+        "flag": "https://media.api-sports.io/flags/jp.svg",
+        "season": 2027,
+        "round": "Regular Season - 18",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 292,
+          "name": "FC Tokyo",
+          "logo": "https://media.api-sports.io/football/teams/292.png",
+          "winner": null
+        },
+        "away": {
+          "id": 294,
+          "name": "Kawasaki Frontale",
+          "logo": "https://media.api-sports.io/football/teams/294.png",
           "winner": null
         }
       },
