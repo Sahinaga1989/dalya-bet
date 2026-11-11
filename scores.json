@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-11-10T23:40:07.695690+00:00",
+  "updated_at": "2026-11-11T01:05:52.168755+00:00",
   "date": "2026-11-11",
   "dates": [
     "2026-11-09",
     "2026-11-10",
     "2026-11-11",
     "2026-11-12",
-    "2026-11-19",
-    "2026-11-20"
+    "2026-11-23",
+    "2026-11-24"
   ],
   "horizon_days": 30,
   "response": [
@@ -16478,9 +16478,9 @@
           "city": "Juazeiro do Norte"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 78,
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
           "extra": null
         }
       },
@@ -16509,7 +16509,7 @@
         }
       },
       "goals": {
-        "home": 3,
+        "home": 5,
         "away": 1
       },
       "score": {
@@ -16518,8 +16518,8 @@
           "away": 1
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 5,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -16540,7 +16540,7 @@
         "timestamp": 1794353400,
         "periods": {
           "first": 1794353400,
-          "second": null
+          "second": 1794357000
         },
         "venue": {
           "id": null,
@@ -16548,9 +16548,9 @@
           "city": null
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 10,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 75,
           "extra": null
         }
       },
@@ -16569,23 +16569,23 @@
           "id": 1134,
           "name": "Internacional de Bogota",
           "logo": "https://media.api-sports.io/football/teams/1134.png",
-          "winner": true
+          "winner": false
         },
         "away": {
           "id": 1138,
           "name": "America de Cali",
           "logo": "https://media.api-sports.io/football/teams/1138.png",
-          "winner": false
+          "winner": true
         }
       },
       "goals": {
         "home": 1,
-        "away": 0
+        "away": 2
       },
       "score": {
         "halftime": {
           "home": 1,
-          "away": 0
+          "away": 2
         },
         "fulltime": {
           "home": null,
@@ -16609,7 +16609,7 @@
         "date": "2026-11-11T03:00:00+03:00",
         "timestamp": 1794355200,
         "periods": {
-          "first": null,
+          "first": 1794355200,
           "second": null
         },
         "venue": {
@@ -16618,10 +16618,10 @@
           "city": "Montevideo"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
+          "long": "Halftime",
+          "short": "HT",
+          "elapsed": 45,
+          "extra": 6
         }
       },
       "league": {
@@ -16639,23 +16639,23 @@
           "id": 2358,
           "name": "Liverpool Montevideo",
           "logo": "https://media.api-sports.io/football/teams/2358.png",
-          "winner": null
+          "winner": false
         },
         "away": {
           "id": 2353,
           "name": "Juventud",
           "logo": "https://media.api-sports.io/football/teams/2353.png",
-          "winner": null
+          "winner": true
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 1
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 1
         },
         "fulltime": {
           "home": null,
@@ -16889,7 +16889,7 @@
         "date": "2026-11-11T04:00:00+03:00",
         "timestamp": 1794358800,
         "periods": {
-          "first": null,
+          "first": 1794358800,
           "second": null
         },
         "venue": {
@@ -16898,9 +16898,9 @@
           "city": "Mexico City"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 5,
           "extra": null
         }
       },
@@ -16929,13 +16929,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -236683,76 +236683,6 @@
     },
     {
       "fixture": {
-        "id": 1649498,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-21T00:00:00+03:00",
-        "timestamp": 1795208400,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": "CITYPARK",
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 253,
-        "name": "Major League Soccer",
-        "country": "USA",
-        "logo": "https://media.api-sports.io/football/leagues/253.png",
-        "flag": "https://media.api-sports.io/flags/us.svg",
-        "season": 2026,
-        "round": "Round of 16",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 20787,
-          "name": "St. Louis City",
-          "logo": "https://media.api-sports.io/football/teams/20787.png",
-          "winner": null
-        },
-        "away": {
-          "id": 1616,
-          "name": "Los Angeles FC",
-          "logo": "https://media.api-sports.io/football/teams/1616.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
         "id": 1631646,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -366743,76 +366673,6 @@
     },
     {
       "fixture": {
-        "id": 1570457,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-22T19:00:00+03:00",
-        "timestamp": 1795363200,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": "Valencia"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 140,
-        "name": "La Liga",
-        "country": "Spain",
-        "logo": "https://media.api-sports.io/football/leagues/140.png",
-        "flag": "https://media.api-sports.io/flags/es.svg",
-        "season": 2026,
-        "round": "Regular Season - 13",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 539,
-          "name": "Levante",
-          "logo": "https://media.api-sports.io/football/teams/539.png",
-          "winner": null
-        },
-        "away": {
-          "id": 797,
-          "name": "Elche",
-          "logo": "https://media.api-sports.io/football/teams/797.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
         "id": 1570458,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -384103,6 +383963,146 @@
     },
     {
       "fixture": {
+        "id": 1632065,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-23T00:00:00+03:00",
+        "timestamp": 1795381200,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Estadio Osvaldo Dominguez Dibb",
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 252,
+        "name": "Division Profesional - Clausura",
+        "country": "Paraguay",
+        "logo": "https://media.api-sports.io/football/leagues/252.png",
+        "flag": "https://media.api-sports.io/flags/py.svg",
+        "season": 2026,
+        "round": "Clausura - 20",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 1182,
+          "name": "Olimpia",
+          "logo": "https://media.api-sports.io/football/teams/1182.png",
+          "winner": null
+        },
+        "away": {
+          "id": 1187,
+          "name": "Sportivo Trinidense",
+          "logo": "https://media.api-sports.io/football/teams/1187.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1632067,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-23T00:00:00+03:00",
+        "timestamp": 1795381200,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 252,
+        "name": "Division Profesional - Clausura",
+        "country": "Paraguay",
+        "logo": "https://media.api-sports.io/football/leagues/252.png",
+        "flag": "https://media.api-sports.io/flags/py.svg",
+        "season": 2026,
+        "round": "Clausura - 20",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 1185,
+          "name": "Rubio NU",
+          "logo": "https://media.api-sports.io/football/teams/1185.png",
+          "winner": null
+        },
+        "away": {
+          "id": 1179,
+          "name": "Libertad Asuncion",
+          "logo": "https://media.api-sports.io/football/teams/1179.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
         "id": 1639806,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -392923,6 +392923,76 @@
     },
     {
       "fixture": {
+        "id": 1570457,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-23T23:00:00+03:00",
+        "timestamp": 1795464000,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": "Valencia"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 140,
+        "name": "La Liga",
+        "country": "Spain",
+        "logo": "https://media.api-sports.io/football/leagues/140.png",
+        "flag": "https://media.api-sports.io/flags/es.svg",
+        "season": 2026,
+        "round": "Regular Season - 13",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 539,
+          "name": "Levante",
+          "logo": "https://media.api-sports.io/football/teams/539.png",
+          "winner": null
+        },
+        "away": {
+          "id": 797,
+          "name": "Elche",
+          "logo": "https://media.api-sports.io/football/teams/797.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
         "id": 1648486,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -392965,6 +393035,76 @@
           "id": 25020,
           "name": "Racing United",
           "logo": "https://media.api-sports.io/football/teams/25020.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1632062,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-24T00:00:00+03:00",
+        "timestamp": 1795467600,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": "Pedro Juan Caballero"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 252,
+        "name": "Division Profesional - Clausura",
+        "country": "Paraguay",
+        "logo": "https://media.api-sports.io/football/leagues/252.png",
+        "flag": "https://media.api-sports.io/flags/py.svg",
+        "season": 2026,
+        "round": "Clausura - 20",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 2140,
+          "name": "2 de Mayo",
+          "logo": "https://media.api-sports.io/football/teams/2140.png",
+          "winner": null
+        },
+        "away": {
+          "id": 2125,
+          "name": "Club Sp. San Lorenzo",
+          "logo": "https://media.api-sports.io/football/teams/2125.png",
           "winner": null
         }
       },
@@ -393273,6 +393413,76 @@
     },
     {
       "fixture": {
+        "id": 1632064,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-24T02:15:00+03:00",
+        "timestamp": 1795475700,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Estadio Arsenio Erico",
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 252,
+        "name": "Division Profesional - Clausura",
+        "country": "Paraguay",
+        "logo": "https://media.api-sports.io/football/leagues/252.png",
+        "flag": "https://media.api-sports.io/flags/py.svg",
+        "season": 2026,
+        "round": "Clausura - 20",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 1175,
+          "name": "Nacional Asuncion",
+          "logo": "https://media.api-sports.io/football/teams/1175.png",
+          "winner": null
+        },
+        "away": {
+          "id": 1176,
+          "name": "Cerro Porteno",
+          "logo": "https://media.api-sports.io/football/teams/1176.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
         "id": 1492469,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -393385,6 +393595,76 @@
           "id": 8238,
           "name": "Estrella",
           "logo": "https://media.api-sports.io/football/teams/8238.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1649498,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-24T04:00:00+03:00",
+        "timestamp": 1795482000,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "CITYPARK",
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 253,
+        "name": "Major League Soccer",
+        "country": "USA",
+        "logo": "https://media.api-sports.io/football/leagues/253.png",
+        "flag": "https://media.api-sports.io/flags/us.svg",
+        "season": 2026,
+        "round": "Round of 16",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 20787,
+          "name": "St. Louis City",
+          "logo": "https://media.api-sports.io/football/teams/20787.png",
+          "winner": null
+        },
+        "away": {
+          "id": 1616,
+          "name": "Los Angeles FC",
+          "logo": "https://media.api-sports.io/football/teams/1616.png",
           "winner": null
         }
       },
@@ -393774,8 +394054,8 @@
         },
         "venue": {
           "id": 0,
-          "name": null,
-          "city": null
+          "name": "Pakansari Stadium",
+          "city": "Cibinong"
         },
         "status": {
           "long": "Not Started",
@@ -393844,8 +394124,8 @@
         },
         "venue": {
           "id": 0,
-          "name": null,
-          "city": null
+          "name": "Gelora Bung Tomo Stadium",
+          "city": "Surabaya"
         },
         "status": {
           "long": "Not Started",
@@ -394894,8 +395174,8 @@
         },
         "venue": {
           "id": 0,
-          "name": null,
-          "city": null
+          "name": "Bung Karno Stadium",
+          "city": "Jakarta"
         },
         "status": {
           "long": "Not Started",
@@ -394964,8 +395244,8 @@
         },
         "venue": {
           "id": 0,
-          "name": null,
-          "city": null
+          "name": "Sumpah Pemuda",
+          "city": "Bandar Lampung"
         },
         "status": {
           "long": "Not Started",
@@ -395034,8 +395314,8 @@
         },
         "venue": {
           "id": 0,
-          "name": null,
-          "city": null
+          "name": "Gelora Ratu Pamelingan Stadium",
+          "city": "Pamekasan"
         },
         "status": {
           "long": "Not Started",
@@ -396574,8 +396854,8 @@
         },
         "venue": {
           "id": 0,
-          "name": null,
-          "city": null
+          "name": "Harapan Bangsa Stadium",
+          "city": "Banda Aceh"
         },
         "status": {
           "long": "Not Started",
@@ -400288,8 +400568,8 @@
           "city": "Salford"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
+          "long": "Match Postponed",
+          "short": "PST",
           "elapsed": null,
           "extra": null
         }
@@ -400875,566 +401155,6 @@
           "id": 20095,
           "name": "Millwall U21",
           "logo": "https://media.api-sports.io/football/teams/20095.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1649154,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-24T22:00:00+03:00",
-        "timestamp": 1795546800,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": 3244,
-          "name": "Gayfield Park",
-          "city": "Arbroath"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 182,
-        "name": "Challenge Cup",
-        "country": "Scotland",
-        "logo": "https://media.api-sports.io/football/leagues/182.png",
-        "flag": "https://media.api-sports.io/flags/gb-sct.svg",
-        "season": 2026,
-        "round": "Round of 16",
-        "standings": false
-      },
-      "teams": {
-        "home": {
-          "id": 4249,
-          "name": "Arbroath",
-          "logo": "https://media.api-sports.io/football/teams/4249.png",
-          "winner": null
-        },
-        "away": {
-          "id": 4668,
-          "name": "Airdrie United",
-          "logo": "https://media.api-sports.io/football/teams/4668.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1649155,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-24T22:00:00+03:00",
-        "timestamp": 1795546800,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": 1385,
-          "name": "Somerset Park",
-          "city": "Ayr"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 182,
-        "name": "Challenge Cup",
-        "country": "Scotland",
-        "logo": "https://media.api-sports.io/football/leagues/182.png",
-        "flag": "https://media.api-sports.io/flags/gb-sct.svg",
-        "season": 2026,
-        "round": "Round of 16",
-        "standings": false
-      },
-      "teams": {
-        "home": {
-          "id": 1387,
-          "name": "Ayr Utd",
-          "logo": "https://media.api-sports.io/football/teams/1387.png",
-          "winner": null
-        },
-        "away": {
-          "id": 903,
-          "name": "Inverness CT",
-          "logo": "https://media.api-sports.io/football/teams/903.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1649156,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-24T22:00:00+03:00",
-        "timestamp": 1795546800,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 182,
-        "name": "Challenge Cup",
-        "country": "Scotland",
-        "logo": "https://media.api-sports.io/football/leagues/182.png",
-        "flag": "https://media.api-sports.io/flags/gb-sct.svg",
-        "season": 2026,
-        "round": "Round of 16",
-        "standings": false
-      },
-      "teams": {
-        "home": {
-          "id": 17025,
-          "name": "Clydebank",
-          "logo": "https://media.api-sports.io/football/teams/17025.png",
-          "winner": null
-        },
-        "away": {
-          "id": 6778,
-          "name": "Queen's Park",
-          "logo": "https://media.api-sports.io/football/teams/6778.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1649157,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-24T22:00:00+03:00",
-        "timestamp": 1795546800,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": "East End Park",
-          "city": "Dunfermline"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 182,
-        "name": "Challenge Cup",
-        "country": "Scotland",
-        "logo": "https://media.api-sports.io/football/leagues/182.png",
-        "flag": "https://media.api-sports.io/flags/gb-sct.svg",
-        "season": 2026,
-        "round": "Round of 16",
-        "standings": false
-      },
-      "teams": {
-        "home": {
-          "id": 1388,
-          "name": "Dunfermline",
-          "logo": "https://media.api-sports.io/football/teams/1388.png",
-          "winner": null
-        },
-        "away": {
-          "id": 6773,
-          "name": "Kelty Hearts",
-          "logo": "https://media.api-sports.io/football/teams/6773.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1649158,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-24T22:00:00+03:00",
-        "timestamp": 1795546800,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": 4945,
-          "name": "K-Park Training Academy",
-          "city": "East Kilbride"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 182,
-        "name": "Challenge Cup",
-        "country": "Scotland",
-        "logo": "https://media.api-sports.io/football/leagues/182.png",
-        "flag": "https://media.api-sports.io/flags/gb-sct.svg",
-        "season": 2026,
-        "round": "Round of 16",
-        "standings": false
-      },
-      "teams": {
-        "home": {
-          "id": 6765,
-          "name": "East Kilbride",
-          "logo": "https://media.api-sports.io/football/teams/6765.png",
-          "winner": null
-        },
-        "away": {
-          "id": 901,
-          "name": "Partick",
-          "logo": "https://media.api-sports.io/football/teams/901.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1649159,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-24T22:00:00+03:00",
-        "timestamp": 1795546800,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": 19937,
-          "name": "ZLX Stadium",
-          "city": "Hamilton"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 182,
-        "name": "Challenge Cup",
-        "country": "Scotland",
-        "logo": "https://media.api-sports.io/football/leagues/182.png",
-        "flag": "https://media.api-sports.io/flags/gb-sct.svg",
-        "season": 2026,
-        "round": "Round of 16",
-        "standings": false
-      },
-      "teams": {
-        "home": {
-          "id": 248,
-          "name": "Hamilton Academical",
-          "logo": "https://media.api-sports.io/football/teams/248.png",
-          "winner": null
-        },
-        "away": {
-          "id": 6763,
-          "name": "Cove Rangers",
-          "logo": "https://media.api-sports.io/football/teams/6763.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1649160,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-24T22:00:00+03:00",
-        "timestamp": 1795546800,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": "The Home of the Set Fare Arena",
-          "city": "Livingston"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 182,
-        "name": "Challenge Cup",
-        "country": "Scotland",
-        "logo": "https://media.api-sports.io/football/leagues/182.png",
-        "flag": "https://media.api-sports.io/flags/gb-sct.svg",
-        "season": 2026,
-        "round": "Round of 16",
-        "standings": false
-      },
-      "teams": {
-        "home": {
-          "id": 255,
-          "name": "Livingston",
-          "logo": "https://media.api-sports.io/football/teams/255.png",
-          "winner": null
-        },
-        "away": {
-          "id": 6777,
-          "name": "Peterhead",
-          "logo": "https://media.api-sports.io/football/teams/6777.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1649161,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-24T22:00:00+03:00",
-        "timestamp": 1795546800,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": 1402,
-          "name": "Global Energy Stadium",
-          "city": "Dingwall"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 182,
-        "name": "Challenge Cup",
-        "country": "Scotland",
-        "logo": "https://media.api-sports.io/football/leagues/182.png",
-        "flag": "https://media.api-sports.io/flags/gb-sct.svg",
-        "season": 2026,
-        "round": "Round of 16",
-        "standings": false
-      },
-      "teams": {
-        "home": {
-          "id": 902,
-          "name": "Ross County",
-          "logo": "https://media.api-sports.io/football/teams/902.png",
-          "winner": null
-        },
-        "away": {
-          "id": 6784,
-          "name": "Stenhousemuir",
-          "logo": "https://media.api-sports.io/football/teams/6784.png",
           "winner": null
         }
       },
@@ -406195,6 +405915,566 @@
           "id": 2266,
           "name": "Cliftonville FC",
           "logo": "https://media.api-sports.io/football/teams/2266.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1649154,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-24T22:45:00+03:00",
+        "timestamp": 1795549500,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": 3244,
+          "name": "Gayfield Park",
+          "city": "Arbroath"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 182,
+        "name": "Challenge Cup",
+        "country": "Scotland",
+        "logo": "https://media.api-sports.io/football/leagues/182.png",
+        "flag": "https://media.api-sports.io/flags/gb-sct.svg",
+        "season": 2026,
+        "round": "Round of 16",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 4249,
+          "name": "Arbroath",
+          "logo": "https://media.api-sports.io/football/teams/4249.png",
+          "winner": null
+        },
+        "away": {
+          "id": 4668,
+          "name": "Airdrie United",
+          "logo": "https://media.api-sports.io/football/teams/4668.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1649155,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-24T22:45:00+03:00",
+        "timestamp": 1795549500,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": 1385,
+          "name": "Somerset Park",
+          "city": "Ayr"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 182,
+        "name": "Challenge Cup",
+        "country": "Scotland",
+        "logo": "https://media.api-sports.io/football/leagues/182.png",
+        "flag": "https://media.api-sports.io/flags/gb-sct.svg",
+        "season": 2026,
+        "round": "Round of 16",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 1387,
+          "name": "Ayr Utd",
+          "logo": "https://media.api-sports.io/football/teams/1387.png",
+          "winner": null
+        },
+        "away": {
+          "id": 903,
+          "name": "Inverness CT",
+          "logo": "https://media.api-sports.io/football/teams/903.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1649156,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-24T22:45:00+03:00",
+        "timestamp": 1795549500,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 182,
+        "name": "Challenge Cup",
+        "country": "Scotland",
+        "logo": "https://media.api-sports.io/football/leagues/182.png",
+        "flag": "https://media.api-sports.io/flags/gb-sct.svg",
+        "season": 2026,
+        "round": "Round of 16",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 17025,
+          "name": "Clydebank",
+          "logo": "https://media.api-sports.io/football/teams/17025.png",
+          "winner": null
+        },
+        "away": {
+          "id": 6778,
+          "name": "Queen's Park",
+          "logo": "https://media.api-sports.io/football/teams/6778.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1649157,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-24T22:45:00+03:00",
+        "timestamp": 1795549500,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "East End Park",
+          "city": "Dunfermline"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 182,
+        "name": "Challenge Cup",
+        "country": "Scotland",
+        "logo": "https://media.api-sports.io/football/leagues/182.png",
+        "flag": "https://media.api-sports.io/flags/gb-sct.svg",
+        "season": 2026,
+        "round": "Round of 16",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 1388,
+          "name": "Dunfermline",
+          "logo": "https://media.api-sports.io/football/teams/1388.png",
+          "winner": null
+        },
+        "away": {
+          "id": 6773,
+          "name": "Kelty Hearts",
+          "logo": "https://media.api-sports.io/football/teams/6773.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1649158,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-24T22:45:00+03:00",
+        "timestamp": 1795549500,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": 4945,
+          "name": "K-Park Training Academy",
+          "city": "East Kilbride"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 182,
+        "name": "Challenge Cup",
+        "country": "Scotland",
+        "logo": "https://media.api-sports.io/football/leagues/182.png",
+        "flag": "https://media.api-sports.io/flags/gb-sct.svg",
+        "season": 2026,
+        "round": "Round of 16",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 6765,
+          "name": "East Kilbride",
+          "logo": "https://media.api-sports.io/football/teams/6765.png",
+          "winner": null
+        },
+        "away": {
+          "id": 901,
+          "name": "Partick",
+          "logo": "https://media.api-sports.io/football/teams/901.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1649159,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-24T22:45:00+03:00",
+        "timestamp": 1795549500,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": 19937,
+          "name": "ZLX Stadium",
+          "city": "Hamilton"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 182,
+        "name": "Challenge Cup",
+        "country": "Scotland",
+        "logo": "https://media.api-sports.io/football/leagues/182.png",
+        "flag": "https://media.api-sports.io/flags/gb-sct.svg",
+        "season": 2026,
+        "round": "Round of 16",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 248,
+          "name": "Hamilton Academical",
+          "logo": "https://media.api-sports.io/football/teams/248.png",
+          "winner": null
+        },
+        "away": {
+          "id": 6763,
+          "name": "Cove Rangers",
+          "logo": "https://media.api-sports.io/football/teams/6763.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1649160,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-24T22:45:00+03:00",
+        "timestamp": 1795549500,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "The Home of the Set Fare Arena",
+          "city": "Livingston"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 182,
+        "name": "Challenge Cup",
+        "country": "Scotland",
+        "logo": "https://media.api-sports.io/football/leagues/182.png",
+        "flag": "https://media.api-sports.io/flags/gb-sct.svg",
+        "season": 2026,
+        "round": "Round of 16",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 255,
+          "name": "Livingston",
+          "logo": "https://media.api-sports.io/football/teams/255.png",
+          "winner": null
+        },
+        "away": {
+          "id": 6777,
+          "name": "Peterhead",
+          "logo": "https://media.api-sports.io/football/teams/6777.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1649161,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-24T22:45:00+03:00",
+        "timestamp": 1795549500,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": 1402,
+          "name": "Global Energy Stadium",
+          "city": "Dingwall"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 182,
+        "name": "Challenge Cup",
+        "country": "Scotland",
+        "logo": "https://media.api-sports.io/football/leagues/182.png",
+        "flag": "https://media.api-sports.io/flags/gb-sct.svg",
+        "season": 2026,
+        "round": "Round of 16",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 902,
+          "name": "Ross County",
+          "logo": "https://media.api-sports.io/football/teams/902.png",
+          "winner": null
+        },
+        "away": {
+          "id": 6784,
+          "name": "Stenhousemuir",
+          "logo": "https://media.api-sports.io/football/teams/6784.png",
           "winner": null
         }
       },
