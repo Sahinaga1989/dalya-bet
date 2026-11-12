@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-11-12T07:28:18.375686+00:00",
+  "updated_at": "2026-11-12T09:03:34.543300+00:00",
   "date": "2026-11-12",
   "dates": [
     "2026-11-10",
     "2026-11-11",
     "2026-11-12",
     "2026-11-13",
-    "2026-11-28",
-    "2026-11-29"
+    "2026-12-02",
+    "2026-12-03"
   ],
   "horizon_days": 30,
   "response": [
@@ -20862,8 +20862,8 @@
           "away": 1
         },
         "extratime": {
-          "home": 0,
-          "away": 0
+          "home": null,
+          "away": null
         },
         "penalty": {
           "home": 6,
@@ -22708,10 +22708,10 @@
           "city": "Auckland"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 61,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 1
         }
       },
       "league": {
@@ -22739,7 +22739,7 @@
         }
       },
       "goals": {
-        "home": 4,
+        "home": 5,
         "away": 0
       },
       "score": {
@@ -22748,8 +22748,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 5,
+          "away": 0
         },
         "extratime": {
           "home": null,
@@ -22769,8 +22769,8 @@
         "date": "2026-11-12T11:00:00+03:00",
         "timestamp": 1794470400,
         "periods": {
-          "first": null,
-          "second": null
+          "first": 1794470400,
+          "second": 1794474000
         },
         "venue": {
           "id": null,
@@ -22778,9 +22778,9 @@
           "city": "Pleiku"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 47,
           "extra": null
         }
       },
@@ -22799,23 +22799,23 @@
           "id": 10960,
           "name": "Thailand U23",
           "logo": "https://media.api-sports.io/football/teams/10960.png",
-          "winner": null
+          "winner": false
         },
         "away": {
           "id": 10954,
           "name": "Qatar U23",
           "logo": "https://media.api-sports.io/football/teams/10954.png",
-          "winner": null
+          "winner": true
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 2
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 2
         },
         "fulltime": {
           "home": null,
@@ -22839,7 +22839,7 @@
         "date": "2026-11-12T11:30:00+03:00",
         "timestamp": 1794472200,
         "periods": {
-          "first": null,
+          "first": 1794472200,
           "second": null
         },
         "venue": {
@@ -22848,9 +22848,9 @@
           "city": "Sydney"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 25,
           "extra": null
         }
       },
@@ -22869,23 +22869,23 @@
           "id": 26874,
           "name": "Wests APIA",
           "logo": "https://media.api-sports.io/football/teams/26874.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 3785,
           "name": "Adelaide City",
           "logo": "https://media.api-sports.io/football/teams/3785.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 2,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -23085,6 +23085,76 @@
           "id": 26887,
           "name": "AS New Soger",
           "logo": "https://media.api-sports.io/football/teams/26887.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1646213,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-12T15:00:00+03:00",
+        "timestamp": 1794484800,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 424,
+        "name": "Ligue 1",
+        "country": "Congo-DR",
+        "logo": "https://media.api-sports.io/football/leagues/424.png",
+        "flag": "https://media.api-sports.io/flags/cg.svg",
+        "season": 2026,
+        "round": "Regular Season - 5",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 20468,
+          "name": "Céleste",
+          "logo": "https://media.api-sports.io/football/teams/20468.png",
+          "winner": null
+        },
+        "away": {
+          "id": 8064,
+          "name": "Maniema Union",
+          "logo": "https://media.api-sports.io/football/teams/8064.png",
           "winner": null
         }
       },
@@ -24345,76 +24415,6 @@
           "id": 8077,
           "name": "Étoile du Congo",
           "logo": "https://media.api-sports.io/football/teams/8077.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1646213,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-12T17:00:00+03:00",
-        "timestamp": 1794492000,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 424,
-        "name": "Ligue 1",
-        "country": "Congo-DR",
-        "logo": "https://media.api-sports.io/football/leagues/424.png",
-        "flag": "https://media.api-sports.io/flags/cg.svg",
-        "season": 2026,
-        "round": "Regular Season - 5",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 20468,
-          "name": "Céleste",
-          "logo": "https://media.api-sports.io/football/teams/20468.png",
-          "winner": null
-        },
-        "away": {
-          "id": 8064,
-          "name": "Maniema Union",
-          "logo": "https://media.api-sports.io/football/teams/8064.png",
           "winner": null
         }
       },
@@ -602783,6 +602783,76 @@
     },
     {
       "fixture": {
+        "id": 1649291,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-02T16:30:00+03:00",
+        "timestamp": 1796218200,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Misurata Stadium",
+          "city": "Misrata"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 584,
+        "name": "Premier League",
+        "country": "Libya",
+        "logo": "https://media.api-sports.io/football/leagues/584.png",
+        "flag": "https://media.api-sports.io/flags/ly.svg",
+        "season": 2026,
+        "round": "Regular season",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 12433,
+          "name": "Alittihad Misurata",
+          "logo": "https://media.api-sports.io/football/teams/12433.png",
+          "winner": null
+        },
+        "away": {
+          "id": 22727,
+          "name": "Al Bashaer Club",
+          "logo": "https://media.api-sports.io/football/teams/22727.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
         "id": 1598757,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -615103,6 +615173,76 @@
     },
     {
       "fixture": {
+        "id": 1649292,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-03T16:00:00+03:00",
+        "timestamp": 1796302800,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 584,
+        "name": "Premier League",
+        "country": "Libya",
+        "logo": "https://media.api-sports.io/football/leagues/584.png",
+        "flag": "https://media.api-sports.io/flags/ly.svg",
+        "season": 2026,
+        "round": "Regular season",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 25455,
+          "name": "Al-Magd",
+          "logo": "https://media.api-sports.io/football/teams/25455.png",
+          "winner": null
+        },
+        "away": {
+          "id": 12429,
+          "name": "Al-Khmes",
+          "logo": "https://media.api-sports.io/football/teams/12429.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
         "id": 1649634,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -615215,426 +615355,6 @@
           "id": 5329,
           "name": "Al-Shabab",
           "logo": "https://media.api-sports.io/football/teams/5329.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1649290,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-03T17:00:00+03:00",
-        "timestamp": 1796306400,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": "Tripoli International Stadium",
-          "city": "Tripoli"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 584,
-        "name": "Premier League",
-        "country": "Libya",
-        "logo": "https://media.api-sports.io/football/leagues/584.png",
-        "flag": "https://media.api-sports.io/flags/ly.svg",
-        "season": 2026,
-        "round": "Regular season",
-        "standings": false
-      },
-      "teams": {
-        "home": {
-          "id": 8053,
-          "name": "Al-Ittihad",
-          "logo": "https://media.api-sports.io/football/teams/8053.png",
-          "winner": null
-        },
-        "away": {
-          "id": 12436,
-          "name": "Asswehly",
-          "logo": "https://media.api-sports.io/football/teams/12436.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1649291,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-03T17:00:00+03:00",
-        "timestamp": 1796306400,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": "Misurata Stadium",
-          "city": "Misrata"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 584,
-        "name": "Premier League",
-        "country": "Libya",
-        "logo": "https://media.api-sports.io/football/leagues/584.png",
-        "flag": "https://media.api-sports.io/flags/ly.svg",
-        "season": 2026,
-        "round": "Regular season",
-        "standings": false
-      },
-      "teams": {
-        "home": {
-          "id": 12433,
-          "name": "Alittihad Misurata",
-          "logo": "https://media.api-sports.io/football/teams/12433.png",
-          "winner": null
-        },
-        "away": {
-          "id": 22727,
-          "name": "Al Bashaer Club",
-          "logo": "https://media.api-sports.io/football/teams/22727.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1649292,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-03T17:00:00+03:00",
-        "timestamp": 1796306400,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 584,
-        "name": "Premier League",
-        "country": "Libya",
-        "logo": "https://media.api-sports.io/football/leagues/584.png",
-        "flag": "https://media.api-sports.io/flags/ly.svg",
-        "season": 2026,
-        "round": "Regular season",
-        "standings": false
-      },
-      "teams": {
-        "home": {
-          "id": 25455,
-          "name": "Al-Magd",
-          "logo": "https://media.api-sports.io/football/teams/25455.png",
-          "winner": null
-        },
-        "away": {
-          "id": 12429,
-          "name": "Al-Khmes",
-          "logo": "https://media.api-sports.io/football/teams/12429.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1649293,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-03T17:00:00+03:00",
-        "timestamp": 1796306400,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 584,
-        "name": "Premier League",
-        "country": "Libya",
-        "logo": "https://media.api-sports.io/football/leagues/584.png",
-        "flag": "https://media.api-sports.io/flags/ly.svg",
-        "season": 2026,
-        "round": "Regular season",
-        "standings": false
-      },
-      "teams": {
-        "home": {
-          "id": 22703,
-          "name": "Al Malaab El Libby",
-          "logo": "https://media.api-sports.io/football/teams/22703.png",
-          "winner": null
-        },
-        "away": {
-          "id": 12430,
-          "name": "Al-Madina",
-          "logo": "https://media.api-sports.io/football/teams/12430.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1649294,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-03T17:00:00+03:00",
-        "timestamp": 1796306400,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 584,
-        "name": "Premier League",
-        "country": "Libya",
-        "logo": "https://media.api-sports.io/football/leagues/584.png",
-        "flag": "https://media.api-sports.io/flags/ly.svg",
-        "season": 2026,
-        "round": "Regular season",
-        "standings": false
-      },
-      "teams": {
-        "home": {
-          "id": 27453,
-          "name": "Al Shomooa SC",
-          "logo": "https://media.api-sports.io/football/teams/27453.png",
-          "winner": null
-        },
-        "away": {
-          "id": 12440,
-          "name": "Olympic Azzaweya",
-          "logo": "https://media.api-sports.io/football/teams/12440.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1649295,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-03T17:00:00+03:00",
-        "timestamp": 1796306400,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 584,
-        "name": "Premier League",
-        "country": "Libya",
-        "logo": "https://media.api-sports.io/football/leagues/584.png",
-        "flag": "https://media.api-sports.io/flags/ly.svg",
-        "season": 2026,
-        "round": "Regular season",
-        "standings": false
-      },
-      "teams": {
-        "home": {
-          "id": 25454,
-          "name": "Al Watan",
-          "logo": "https://media.api-sports.io/football/teams/25454.png",
-          "winner": null
-        },
-        "away": {
-          "id": 27454,
-          "name": "Assabah SC",
-          "logo": "https://media.api-sports.io/football/teams/27454.png",
           "winner": null
         }
       },
@@ -616993,6 +616713,76 @@
     },
     {
       "fixture": {
+        "id": 1649293,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-03T19:00:00+03:00",
+        "timestamp": 1796313600,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 584,
+        "name": "Premier League",
+        "country": "Libya",
+        "logo": "https://media.api-sports.io/football/leagues/584.png",
+        "flag": "https://media.api-sports.io/flags/ly.svg",
+        "season": 2026,
+        "round": "Regular season",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 22703,
+          "name": "Al Malaab El Libby",
+          "logo": "https://media.api-sports.io/football/teams/22703.png",
+          "winner": null
+        },
+        "away": {
+          "id": 12430,
+          "name": "Al-Madina",
+          "logo": "https://media.api-sports.io/football/teams/12430.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
         "id": 1649635,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -618295,6 +618085,76 @@
           "id": 1572,
           "name": "Al Ittihad",
           "logo": "https://media.api-sports.io/football/teams/1572.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1649290,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-03T21:30:00+03:00",
+        "timestamp": 1796322600,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Tripoli International Stadium",
+          "city": "Tripoli"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 584,
+        "name": "Premier League",
+        "country": "Libya",
+        "logo": "https://media.api-sports.io/football/leagues/584.png",
+        "flag": "https://media.api-sports.io/flags/ly.svg",
+        "season": 2026,
+        "round": "Regular season",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 8053,
+          "name": "Al-Ittihad",
+          "logo": "https://media.api-sports.io/football/teams/8053.png",
+          "winner": null
+        },
+        "away": {
+          "id": 12436,
+          "name": "Asswehly",
+          "logo": "https://media.api-sports.io/football/teams/12436.png",
           "winner": null
         }
       },
