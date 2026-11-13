@@ -25,6 +25,17 @@ async function refresh(){let oddsError=false,matchError=false;
 const oddsRequest=getJSON('odds.json').then(data=>{if(!data.matches||typeof data.matches!=='object')throw Error('odds.json matches eksik');oddsById=data.matches;}).catch(e=>{oddsError=true;console.error('Oran verisi alinamadi',e)});
 let data;for(const file of ['fixtures-lite.json','scores.json','matches.json']){try{data=await getJSON(file);if(!Array.isArray(data.response))throw Error(file+' response eksik');break}catch(e){console.warn(file+' okunamadi',e);data=null}}if(!data)matchError=true;
 await oddsRequest;
+if(couponClient){
+ try{
+  const {data:future,error:futureError}=await couponClient.rpc('dalya_future_coupon_matches');
+  if(!futureError&&Array.isArray(future)&&future.length){
+   const current=(!matchError&&Array.isArray(data?.response))?data.response:[];
+   const byId=new Map(current.map(m=>[String(m.fixture?.id),m]));
+   for(const m of future)if(m?.fixture?.id)byId.set(String(m.fixture.id),m);
+   data={response:[...byId.values()]};matchError=false;
+  }
+ }catch(e){console.warn('Guncel kupon maclari gecici okunamadi',e)}
+}
 if(!matchError){estimateCache.clear();games=data.response.map(m=>{const id=String(m.fixture?.id??'');const o=oddsById[id]||{};return{id,league:m.league?.name||'Futbol',country:m.league?.country||'',home:m.teams?.home?.name||'Ev sahibi',away:m.teams?.away?.name||'Deplasman',date:m.fixture?.date||'',time:m.fixture?.date?new Date(m.fixture.date).toLocaleTimeString('tr-TR',{timeZone:'Europe/Istanbul',hour:'2-digit',minute:'2-digit'}):'--:--',status:m.fixture?.status?.short||'NS',minute:m.fixture?.status?.elapsed,score:m.goals?.home!=null&&m.goals?.away!=null?m.goals.home+' - '+m.goals.away:'-',oddsUpdatedAt:o.fetched_at||null,odds:[parseOdd(o['1']),parseOdd(o['X']),parseOdd(o['2'])]}}).filter(g=>g.id);games.sort((a,b)=>Number(liveStatuses.has(b.status))-Number(liveStatuses.has(a.status))||a.date.localeCompare(b.date));}
 else if(games.length){games.forEach(g=>{const o=oddsById[g.id]||{};g.odds=[parseOdd(o['1']),parseOdd(o['X']),parseOdd(o['2'])]})}
 for(const [id,s] of selected){const g=games.find(x=>x.id===id);if(!g||(g.odds[s.choice]===null&&!estimatedOdds(g)))selected.delete(id)}
