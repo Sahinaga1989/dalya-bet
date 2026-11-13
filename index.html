@@ -159,7 +159,8 @@ const oldRenderSlip=renderSlip;
 renderSlip=function(){oldRenderSlip();window.dalyaPreview=null;if(selected.size&&couponClient)syncServerCouponPreview().catch(e=>{console.error(e);$('submit').disabled=true;});};
 $('submit').onclick=async()=>{
  if(!couponClient){alert('Önce üye girişi yapın.');return;}
- if(!selected.size){alert('Önce oranı olan bir maç seçin.');return;}\n if(!window.dalyaPreview||window.dalyaPreview.choices.length!==selected.size){alert('Sunucu oran doğrulamasını bekleyin.');return;}
+ if(!selected.size){alert('Önce oranı olan bir maç seçin.');return;}
+ if(!window.dalyaPreview||window.dalyaPreview.choices.length!==selected.size){alert('Sunucu oran doğrulamasını bekleyin.');return;}
  const stake=Number($('stake').value);
  if(!Number.isSafeInteger(stake)||stake<1||stake>100000000){alert('1 ile 100.000.000 arasında tam sayı puan girin.');return;}
  const selections=[];
