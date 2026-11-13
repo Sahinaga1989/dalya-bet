@@ -137,17 +137,36 @@ async function renderSavedCoupons(){
   const summary=document.createElement('p');summary.textContent=c.stake+' puan · '+Number(c.total_odds).toFixed(2)+' oran · Olası '+Number(c.potential_win).toLocaleString('tr-TR')+' puan';card.append(summary);$('savedCoupons').append(card);
  }
 }
+let previewToken=0;
+async function syncServerCouponPreview(){
+ const token=++previewToken;
+ if(!couponClient||!selected.size){window.dalyaPreview=null;return;}
+ const choices=[...selected].map(([id,s])=>({id:String(id),choice:['1','X','2'][s.choice]}));
+ $('submit').disabled=true;
+ $('totalOdds').textContent='Doğrulanıyor…';
+ const {data,error}=await couponClient.rpc('dalya_coupon_preview',{p_selections:choices});
+ if(token!==previewToken)return;
+ if(error||!Array.isArray(data)){window.dalyaPreview=null;$('totalOdds').textContent='—';$('potential').textContent='—';$('submit').disabled=true;$('selections').insertAdjacentText('beforeend',' · Sunucu oranı doğrulanamadı: '+(error?.message||'Veri hatası'));return;}
+ const total=data.reduce((p,x)=>p*Number(x.odd),1);
+ window.dalyaPreview={choices,items:data,total};
+ $('totalOdds').textContent=total.toFixed(2);
+ $('potential').textContent=(Number($('stake').value||0)*total).toLocaleString('tr-TR',{minimumFractionDigits:2,maximumFractionDigits:2});
+ const lines=$('selections').querySelectorAll('.selection');
+ data.forEach((item,i)=>{if(lines[i]){const g=games.find(x=>x.id===String(item.id));lines[i].innerHTML='<button data-remove="'+esc(item.id)+'">×</button><b>'+esc(g?.home||item.id)+' – '+esc(g?.away||'')+'</b><br>Maç sonucu: '+esc(item.choice)+' · '+Number(item.odd).toFixed(2)+(item.virtual?' (DALYA BET SANAL ORANI)':' (GERÇEK ORAN)');}});
+ $('submit').disabled=false;
+}
+const oldRenderSlip=renderSlip;
+renderSlip=function(){oldRenderSlip();window.dalyaPreview=null;if(selected.size&&couponClient)syncServerCouponPreview().catch(e=>{console.error(e);$('submit').disabled=true;});};
 $('submit').onclick=async()=>{
  if(!couponClient){alert('Önce üye girişi yapın.');return;}
- if(!selected.size){alert('Önce oranı olan bir maç seçin.');return;}
+ if(!selected.size){alert('Önce oranı olan bir maç seçin.');return;}\n if(!window.dalyaPreview||window.dalyaPreview.choices.length!==selected.size){alert('Sunucu oran doğrulamasını bekleyin.');return;}
  const stake=Number($('stake').value);
  if(!Number.isSafeInteger(stake)||stake<1||stake>100000000){alert('1 ile 100.000.000 arasında tam sayı puan girin.');return;}
  const selections=[];
  for(const [id,s] of selected){const g=games.find(x=>x.id===id);if(!g||g.status!=='NS'||!Number.isFinite(Date.parse(g.date))||Date.parse(g.date)<=Date.now()){alert('Maç başlamış veya geçersiz.');return;}selections.push({id:String(id),choice:['1','X','2'][s.choice]});}
- if(!confirm(stake+' sanal puan bakiyenden düşülecek ve kupon kaydedilecek. Onaylıyor musun?'))return;
+ if(!confirm('Sunucu tarafından doğrulanan toplam oran: '+window.dalyaPreview.total.toFixed(2)+' · '+stake+' sanal puan bakiyenden düşülecek. Onaylıyor musun?'))return;
  $('submit').disabled=true;
  try{
-  await refreshCouponEligibility();
   const {error}=await couponClient.rpc('dalya_place_coupon',{p_stake:stake,p_selections:selections});
   if(error){alert('Kupon kabul edilmedi: '+error.message);return;}
   selected.clear();renderMatches();renderSlip();await renderSavedCoupons();
