@@ -172,7 +172,7 @@ $('submit').onclick=async()=>{
   // Do not block match display on optional coupon synchronization.
   document.body.style.visibility='visible';
   refresh().catch(e=>{console.error('Mac listesi hatasi',e);document.getElementById('notice').textContent='Maç listesi hatası: '+String(e?.message||e);document.getElementById('matches').textContent='Maçlar yüklenemedi. Lütfen sayfayı yenileyin.';});
-  auth.functions.invoke('dalya-sync-coupon-data',{body:{}}).catch(e=>console.warn('Kupon veri eşitlemesi ertelendi',e));
+  auth.functions.invoke('dalya-sync-coupon-data',{body:{}}).then(()=>refresh()).catch(e=>console.warn('Kupon veri eşitlemesi ertelendi',e));
   refreshCouponEligibility().catch(e=>console.warn('Kupon uygunlugu alinamadi',e));
   renderSavedCoupons().catch(e=>console.warn('Kupon gecmisi alinamadi',e));
   const balanceEl=document.getElementById('myBalance');
