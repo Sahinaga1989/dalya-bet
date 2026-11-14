@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-11-13T23:44:15.540241+00:00",
+  "updated_at": "2026-11-14T01:02:12.935665+00:00",
   "date": "2026-11-14",
   "dates": [
     "2026-11-12",
     "2026-11-13",
     "2026-11-14",
     "2026-11-15",
-    "2026-11-26",
-    "2026-11-27"
+    "2026-11-30",
+    "2026-12-01"
   ],
   "horizon_days": 30,
   "response": [
@@ -16268,8 +16268,8 @@
           "city": "Rzeszow"
         },
         "status": {
-          "long": "Match Postponed",
-          "short": "PST",
+          "long": "Not Started",
+          "short": "NS",
           "elapsed": null,
           "extra": null
         }
@@ -23828,10 +23828,10 @@
           "city": null
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 84,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 5
         }
       },
       "league": {
@@ -23868,8 +23868,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -23890,7 +23890,7 @@
         "timestamp": 1794610800,
         "periods": {
           "first": 1794610800,
-          "second": null
+          "second": 1794614400
         },
         "venue": {
           "id": null,
@@ -23898,10 +23898,10 @@
           "city": "Buenos Aires"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 38,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 6
         }
       },
       "league": {
@@ -23919,18 +23919,18 @@
           "id": 26,
           "name": "Argentina",
           "logo": "https://media.api-sports.io/football/teams/26.png",
-          "winner": null
+          "winner": false
         },
         "away": {
           "id": 7,
           "name": "Uruguay",
           "logo": "https://media.api-sports.io/football/teams/7.png",
-          "winner": null
+          "winner": true
         }
       },
       "goals": {
-        "home": 0,
-        "away": 0
+        "home": 1,
+        "away": 2
       },
       "score": {
         "halftime": {
@@ -23938,8 +23938,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 2
         },
         "extratime": {
           "home": null,
@@ -23968,9 +23968,9 @@
           "city": "Basseterre"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 44,
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
           "extra": null
         }
       },
@@ -24000,7 +24000,7 @@
       },
       "goals": {
         "home": 0,
-        "away": 1
+        "away": 2
       },
       "score": {
         "halftime": {
@@ -24008,8 +24008,8 @@
           "away": 1
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 2
         },
         "extratime": {
           "home": null,
@@ -24030,7 +24030,7 @@
         "timestamp": 1794610800,
         "periods": {
           "first": 1794610800,
-          "second": null
+          "second": 1794614400
         },
         "venue": {
           "id": null,
@@ -24038,10 +24038,10 @@
           "city": null
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 42,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 5
         }
       },
       "league": {
@@ -24059,17 +24059,17 @@
           "id": 16200,
           "name": "Brazil U20",
           "logo": "https://media.api-sports.io/football/teams/16200.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 16203,
           "name": "Peru U20",
           "logo": "https://media.api-sports.io/football/teams/16203.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": 0,
+        "home": 2,
         "away": 0
       },
       "score": {
@@ -24078,8 +24078,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 0
         },
         "extratime": {
           "home": null,
@@ -24099,19 +24099,19 @@
         "date": "2026-11-14T03:00:00+03:00",
         "timestamp": 1794614400,
         "periods": {
-          "first": null,
+          "first": 1794614400,
           "second": null
         },
         "venue": {
           "id": null,
-          "name": null,
-          "city": "Cali"
+          "name": "Olimpico Pascual Guerrero",
+          "city": "Santiago de Cali"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
+          "long": "Halftime",
+          "short": "HT",
+          "elapsed": 45,
+          "extra": 4
         }
       },
       "league": {
@@ -24129,23 +24129,23 @@
           "id": 8,
           "name": "Colombia",
           "logo": "https://media.api-sports.io/football/teams/8.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 2383,
           "name": "Chile",
           "logo": "https://media.api-sports.io/football/teams/2383.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -24169,19 +24169,19 @@
         "date": "2026-11-14T03:00:00+03:00",
         "timestamp": 1794614400,
         "periods": {
-          "first": null,
+          "first": 1794614400,
           "second": null
         },
         "venue": {
           "id": null,
-          "name": null,
+          "name": "Olimpico Atahualpa",
           "city": "Quito"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
+          "long": "Halftime",
+          "short": "HT",
+          "elapsed": 45,
+          "extra": 3
         }
       },
       "league": {
@@ -24199,23 +24199,23 @@
           "id": 2382,
           "name": "Ecuador",
           "logo": "https://media.api-sports.io/football/teams/2382.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 29,
           "name": "Costa Rica",
           "logo": "https://media.api-sports.io/football/teams/29.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -24248,9 +24248,9 @@
           "city": "Santiago de Los"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "Halftime",
+          "short": "HT",
+          "elapsed": 45,
           "extra": null
         }
       },
@@ -24269,23 +24269,23 @@
           "id": 8170,
           "name": "Montserrat",
           "logo": "https://media.api-sports.io/football/teams/8170.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 5164,
           "name": "Nicaragua",
           "logo": "https://media.api-sports.io/football/teams/5164.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -24309,7 +24309,7 @@
         "date": "2026-11-14T03:30:00+03:00",
         "timestamp": 1794616200,
         "periods": {
-          "first": null,
+          "first": 1794616200,
           "second": null
         },
         "venue": {
@@ -24318,9 +24318,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 24,
           "extra": null
         }
       },
@@ -24339,23 +24339,23 @@
           "id": 24664,
           "name": "Lexington W",
           "logo": "https://media.api-sports.io/football/teams/24664.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 24661,
           "name": "Fort Lauderdale United W",
           "logo": "https://media.api-sports.io/football/teams/24661.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -24519,7 +24519,7 @@
         "date": "2026-11-14T04:00:00+03:00",
         "timestamp": 1794618000,
         "periods": {
-          "first": null,
+          "first": 1794618000,
           "second": null
         },
         "venue": {
@@ -24528,9 +24528,9 @@
           "city": "Lower Hutt"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 3,
           "extra": null
         }
       },
@@ -24559,13 +24559,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -26865,76 +26865,6 @@
           "id": 25310,
           "name": "N. Mariana Islands U17",
           "logo": "https://media.api-sports.io/football/teams/25310.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1640877,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-14T11:00:00+03:00",
-        "timestamp": 1794643200,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 734,
-        "name": "Diski Challenge",
-        "country": "South-Africa",
-        "logo": "https://media.api-sports.io/football/leagues/734.png",
-        "flag": "https://media.api-sports.io/flags/za.svg",
-        "season": 2026,
-        "round": "Regular Season - 8",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 15985,
-          "name": "AmaZulu U23",
-          "logo": "https://media.api-sports.io/football/teams/15985.png",
-          "winner": null
-        },
-        "away": {
-          "id": 15993,
-          "name": "Mamelodi Sundowns U23",
-          "logo": "https://media.api-sports.io/football/teams/15993.png",
           "winner": null
         }
       },
@@ -33515,6 +33445,76 @@
           "id": 10355,
           "name": "Andorra U19",
           "logo": "https://media.api-sports.io/football/teams/10355.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1640877,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-14T14:00:00+03:00",
+        "timestamp": 1794654000,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 734,
+        "name": "Diski Challenge",
+        "country": "South-Africa",
+        "logo": "https://media.api-sports.io/football/leagues/734.png",
+        "flag": "https://media.api-sports.io/flags/za.svg",
+        "season": 2026,
+        "round": "Regular Season - 8",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 15985,
+          "name": "AmaZulu U23",
+          "logo": "https://media.api-sports.io/football/teams/15985.png",
+          "winner": null
+        },
+        "away": {
+          "id": 15993,
+          "name": "Mamelodi Sundowns U23",
+          "logo": "https://media.api-sports.io/football/teams/15993.png",
           "winner": null
         }
       },
@@ -47838,8 +47838,8 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
+          "long": "Match Postponed",
+          "short": "PST",
           "elapsed": null,
           "extra": null
         }
@@ -52038,8 +52038,8 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
+          "long": "Match Postponed",
+          "short": "PST",
           "elapsed": null,
           "extra": null
         }
@@ -59598,8 +59598,8 @@
           "city": "Vienna"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
+          "long": "Match Postponed",
+          "short": "PST",
           "elapsed": null,
           "extra": null
         }
@@ -60124,8 +60124,8 @@
       },
       "score": {
         "halftime": {
-          "home": 0,
-          "away": 0
+          "home": null,
+          "away": null
         },
         "fulltime": {
           "home": null,
@@ -66458,8 +66458,8 @@
           "city": "Peterborough"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
+          "long": "Match Postponed",
+          "short": "PST",
           "elapsed": null,
           "extra": null
         }
@@ -89333,6 +89333,146 @@
     },
     {
       "fixture": {
+        "id": 1649965,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-14T21:00:00+03:00",
+        "timestamp": 1794679200,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 1135,
+        "name": "Sergipano - 2",
+        "country": "Brazil",
+        "logo": "https://media.api-sports.io/football/leagues/1135.png",
+        "flag": "https://media.api-sports.io/flags/br.svg",
+        "season": 2026,
+        "round": "Semi-finals",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 22819,
+          "name": "Carmópolis",
+          "logo": "https://media.api-sports.io/football/teams/22819.png",
+          "winner": null
+        },
+        "away": {
+          "id": 10001,
+          "name": "Frei Paulistano",
+          "logo": "https://media.api-sports.io/football/teams/10001.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1649966,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-14T21:00:00+03:00",
+        "timestamp": 1794679200,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 1135,
+        "name": "Sergipano - 2",
+        "country": "Brazil",
+        "logo": "https://media.api-sports.io/football/leagues/1135.png",
+        "flag": "https://media.api-sports.io/flags/br.svg",
+        "season": 2026,
+        "round": "Semi-finals",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 15605,
+          "name": "Maruinense",
+          "logo": "https://media.api-sports.io/football/teams/15605.png",
+          "winner": null
+        },
+        "away": {
+          "id": 24806,
+          "name": "Caninde",
+          "logo": "https://media.api-sports.io/football/teams/24806.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
         "id": 1578388,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -95633,146 +95773,6 @@
     },
     {
       "fixture": {
-        "id": 1649965,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-15T00:00:00+03:00",
-        "timestamp": 1794690000,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 1135,
-        "name": "Sergipano - 2",
-        "country": "Brazil",
-        "logo": "https://media.api-sports.io/football/leagues/1135.png",
-        "flag": "https://media.api-sports.io/flags/br.svg",
-        "season": 2026,
-        "round": "Semi-finals",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 22819,
-          "name": "Carmópolis",
-          "logo": "https://media.api-sports.io/football/teams/22819.png",
-          "winner": null
-        },
-        "away": {
-          "id": 10001,
-          "name": "Frei Paulistano",
-          "logo": "https://media.api-sports.io/football/teams/10001.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1649966,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-15T00:00:00+03:00",
-        "timestamp": 1794690000,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 1135,
-        "name": "Sergipano - 2",
-        "country": "Brazil",
-        "logo": "https://media.api-sports.io/football/leagues/1135.png",
-        "flag": "https://media.api-sports.io/flags/br.svg",
-        "season": 2026,
-        "round": "Semi-finals",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 15605,
-          "name": "Maruinense",
-          "logo": "https://media.api-sports.io/football/teams/15605.png",
-          "winner": null
-        },
-        "away": {
-          "id": 24806,
-          "name": "Caninde",
-          "logo": "https://media.api-sports.io/football/teams/24806.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
         "id": 1492455,
         "referee": "S. Sampaio",
         "timezone": "Europe/Istanbul",
@@ -96095,6 +96095,76 @@
           "id": 17788,
           "name": "Montañeses",
           "logo": "https://media.api-sports.io/football/teams/17788.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1636036,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-15T00:30:00+03:00",
+        "timestamp": 1794691800,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 1242,
+        "name": "Primera Premier",
+        "country": "Mexico",
+        "logo": "https://media.api-sports.io/football/leagues/1242.png",
+        "flag": "https://media.api-sports.io/flags/mx.svg",
+        "season": 2026,
+        "round": "Regular Season - 12",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 24939,
+          "name": "Cordobés",
+          "logo": "https://media.api-sports.io/football/teams/24939.png",
+          "winner": null
+        },
+        "away": {
+          "id": 15936,
+          "name": "Pioneros de Cancún",
+          "logo": "https://media.api-sports.io/football/teams/15936.png",
           "winner": null
         }
       },
@@ -97145,76 +97215,6 @@
           "id": 3657,
           "name": "Cobán Imperial",
           "logo": "https://media.api-sports.io/football/teams/3657.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1636036,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-15T02:00:00+03:00",
-        "timestamp": 1794697200,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 1242,
-        "name": "Primera Premier",
-        "country": "Mexico",
-        "logo": "https://media.api-sports.io/football/leagues/1242.png",
-        "flag": "https://media.api-sports.io/flags/mx.svg",
-        "season": 2026,
-        "round": "Regular Season - 12",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 24939,
-          "name": "Cordobés",
-          "logo": "https://media.api-sports.io/football/teams/24939.png",
-          "winner": null
-        },
-        "away": {
-          "id": 15936,
-          "name": "Pioneros de Cancún",
-          "logo": "https://media.api-sports.io/football/teams/15936.png",
           "winner": null
         }
       },
@@ -573394,7 +573394,7 @@
         },
         "venue": {
           "id": null,
-          "name": "TRC Polo Synthetic Turf Ground",
+          "name": "TRC Turf Ground",
           "city": "Srinagar"
         },
         "status": {
@@ -576743,146 +576743,6 @@
     },
     {
       "fixture": {
-        "id": 1638245,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-01T17:00:00+03:00",
-        "timestamp": 1796133600,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 880,
-        "name": "World Cup - Women - Qualification Europe",
-        "country": "World",
-        "logo": "https://media.api-sports.io/football/leagues/880.png",
-        "flag": null,
-        "season": 2027,
-        "round": "Qualification - Promotion Group - 2",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 1978,
-          "name": "South Africa W",
-          "logo": "https://media.api-sports.io/football/teams/1978.png",
-          "winner": null
-        },
-        "away": {
-          "id": 1731,
-          "name": "Ecuador W",
-          "logo": "https://media.api-sports.io/football/teams/1731.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1638246,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-01T17:00:00+03:00",
-        "timestamp": 1796133600,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 880,
-        "name": "World Cup - Women - Qualification Europe",
-        "country": "World",
-        "logo": "https://media.api-sports.io/football/leagues/880.png",
-        "flag": null,
-        "season": 2027,
-        "round": "Qualification - Promotion Group - 2",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 16945,
-          "name": "Uzbekistan W",
-          "logo": "https://media.api-sports.io/football/teams/16945.png",
-          "winner": null
-        },
-        "away": {
-          "id": 15583,
-          "name": "Ghana W",
-          "logo": "https://media.api-sports.io/football/teams/15583.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
         "id": 1604080,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -576925,6 +576785,146 @@
           "id": 2935,
           "name": "Al-Raed",
           "logo": "https://media.api-sports.io/football/teams/2935.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1509223,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-01T18:00:00+03:00",
+        "timestamp": 1796137200,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Tengiz Burjanadze Stadium",
+          "city": "Gori"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 327,
+        "name": "Erovnuli Liga",
+        "country": "Georgia",
+        "logo": "https://media.api-sports.io/football/leagues/327.png",
+        "flag": "https://media.api-sports.io/flags/ge.svg",
+        "season": 2026,
+        "round": "Regular Season - 34",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 3499,
+          "name": "Dila",
+          "logo": "https://media.api-sports.io/football/teams/3499.png",
+          "winner": null
+        },
+        "away": {
+          "id": 10017,
+          "name": "Samgurali",
+          "logo": "https://media.api-sports.io/football/teams/10017.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1509224,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-01T18:00:00+03:00",
+        "timestamp": 1796137200,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Mikheil Meskhi Stadium",
+          "city": "Tbilisi"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 327,
+        "name": "Erovnuli Liga",
+        "country": "Georgia",
+        "logo": "https://media.api-sports.io/football/leagues/327.png",
+        "flag": "https://media.api-sports.io/flags/ge.svg",
+        "season": 2026,
+        "round": "Regular Season - 34",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 3502,
+          "name": "FC Iberia 1999",
+          "logo": "https://media.api-sports.io/football/teams/3502.png",
+          "winner": null
+        },
+        "away": {
+          "id": 705,
+          "name": "Dinamo Batumi",
+          "logo": "https://media.api-sports.io/football/teams/705.png",
           "winner": null
         }
       },
@@ -577933,6 +577933,76 @@
     },
     {
       "fixture": {
+        "id": 1646041,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-01T19:00:00+03:00",
+        "timestamp": 1796140800,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 880,
+        "name": "World Cup - Women - Qualification Europe",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/880.png",
+        "flag": null,
+        "season": 2027,
+        "round": "Qualification - Promotion - Play Offs",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 1774,
+          "name": "Slovenia W",
+          "logo": "https://media.api-sports.io/football/teams/1774.png",
+          "winner": null
+        },
+        "away": {
+          "id": 1733,
+          "name": "Netherlands W",
+          "logo": "https://media.api-sports.io/football/teams/1733.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
         "id": 1646053,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -578045,6 +578115,146 @@
           "id": 1765,
           "name": "Greece W",
           "logo": "https://media.api-sports.io/football/teams/1765.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1638246,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-01T19:30:00+03:00",
+        "timestamp": 1796142600,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 880,
+        "name": "World Cup - Women - Qualification Europe",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/880.png",
+        "flag": null,
+        "season": 2027,
+        "round": "Qualification - Promotion Group - 2",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 16945,
+          "name": "Uzbekistan W",
+          "logo": "https://media.api-sports.io/football/teams/16945.png",
+          "winner": null
+        },
+        "away": {
+          "id": 15583,
+          "name": "Ghana W",
+          "logo": "https://media.api-sports.io/football/teams/15583.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1646037,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-01T19:30:00+03:00",
+        "timestamp": 1796142600,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 880,
+        "name": "World Cup - Women - Qualification Europe",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/880.png",
+        "flag": null,
+        "season": 2027,
+        "round": "Qualification - Promotion - Play Offs",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 1771,
+          "name": "Finland W",
+          "logo": "https://media.api-sports.io/football/teams/1771.png",
+          "winner": null
+        },
+        "away": {
+          "id": 1748,
+          "name": "Italy W",
+          "logo": "https://media.api-sports.io/football/teams/1748.png",
           "winner": null
         }
       },
@@ -578325,6 +578535,216 @@
           "id": 10513,
           "name": "NEOM",
           "logo": "https://media.api-sports.io/football/teams/10513.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1646038,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-01T20:00:00+03:00",
+        "timestamp": 1796144400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 880,
+        "name": "World Cup - Women - Qualification Europe",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/880.png",
+        "flag": null,
+        "season": 2027,
+        "round": "Qualification - Promotion - Play Offs",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 1749,
+          "name": "Poland W",
+          "logo": "https://media.api-sports.io/football/teams/1749.png",
+          "winner": null
+        },
+        "away": {
+          "id": 14456,
+          "name": "Republic of Ireland W",
+          "logo": "https://media.api-sports.io/football/teams/14456.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1646039,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-01T20:00:00+03:00",
+        "timestamp": 1796144400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 880,
+        "name": "World Cup - Women - Qualification Europe",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/880.png",
+        "flag": null,
+        "season": 2027,
+        "round": "Qualification - Promotion - Play Offs",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 1769,
+          "name": "Portugal W",
+          "logo": "https://media.api-sports.io/football/teams/1769.png",
+          "winner": null
+        },
+        "away": {
+          "id": 1746,
+          "name": "Iceland W",
+          "logo": "https://media.api-sports.io/football/teams/1746.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1646043,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-01T20:00:00+03:00",
+        "timestamp": 1796144400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 880,
+        "name": "World Cup - Women - Qualification Europe",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/880.png",
+        "flag": null,
+        "season": 2027,
+        "round": "Qualification - Promotion - Play Offs",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 1750,
+          "name": "Ukraine W",
+          "logo": "https://media.api-sports.io/football/teams/1750.png",
+          "winner": null
+        },
+        "away": {
+          "id": 1721,
+          "name": "England W",
+          "logo": "https://media.api-sports.io/football/teams/1721.png",
           "winner": null
         }
       },
@@ -579123,6 +579543,76 @@
     },
     {
       "fixture": {
+        "id": 1646042,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-01T21:00:00+03:00",
+        "timestamp": 1796148000,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 880,
+        "name": "World Cup - Women - Qualification Europe",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/880.png",
+        "flag": null,
+        "season": 2027,
+        "round": "Qualification - Promotion - Play Offs",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 1732,
+          "name": "Switzerland W",
+          "logo": "https://media.api-sports.io/football/teams/1732.png",
+          "winner": null
+        },
+        "away": {
+          "id": 14458,
+          "name": "Austria W",
+          "logo": "https://media.api-sports.io/football/teams/14458.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
         "id": 1646668,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -579414,8 +579904,8 @@
         },
         "venue": {
           "id": null,
-          "name": null,
-          "city": null
+          "name": "Academy Stadium",
+          "city": "Manchester"
         },
         "status": {
           "long": "Not Started",
@@ -579515,6 +580005,76 @@
           "id": 19745,
           "name": "Derby County U21",
           "logo": "https://media.api-sports.io/football/teams/19745.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1638245,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-01T22:00:00+03:00",
+        "timestamp": 1796151600,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 880,
+        "name": "World Cup - Women - Qualification Europe",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/880.png",
+        "flag": null,
+        "season": 2027,
+        "round": "Qualification - Promotion Group - 2",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 1978,
+          "name": "South Africa W",
+          "logo": "https://media.api-sports.io/football/teams/1978.png",
+          "winner": null
+        },
+        "away": {
+          "id": 1731,
+          "name": "Ecuador W",
+          "logo": "https://media.api-sports.io/football/teams/1731.png",
           "winner": null
         }
       },
@@ -579865,6 +580425,146 @@
           "id": 1273,
           "name": "SC Genemuiden",
           "logo": "https://media.api-sports.io/football/teams/1273.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1646044,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-01T22:15:00+03:00",
+        "timestamp": 1796152500,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 880,
+        "name": "World Cup - Women - Qualification Europe",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/880.png",
+        "flag": null,
+        "season": 2027,
+        "round": "Qualification - Promotion - Play Offs",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 1772,
+          "name": "Wales W",
+          "logo": "https://media.api-sports.io/football/teams/1772.png",
+          "winner": null
+        },
+        "away": {
+          "id": 1724,
+          "name": "Norway W",
+          "logo": "https://media.api-sports.io/football/teams/1724.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1646040,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-01T22:25:00+03:00",
+        "timestamp": 1796153100,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 880,
+        "name": "World Cup - Women - Qualification Europe",
+        "country": "World",
+        "logo": "https://media.api-sports.io/football/leagues/880.png",
+        "flag": null,
+        "season": 2027,
+        "round": "Qualification - Promotion - Play Offs",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 1775,
+          "name": "Scotland W",
+          "logo": "https://media.api-sports.io/football/teams/1775.png",
+          "winner": null
+        },
+        "away": {
+          "id": 1739,
+          "name": "Sweden W",
+          "logo": "https://media.api-sports.io/football/teams/1739.png",
           "winner": null
         }
       },
