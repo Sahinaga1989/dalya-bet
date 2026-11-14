@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-11-14T04:56:26.254797+00:00",
+  "updated_at": "2026-11-14T05:53:32.244942+00:00",
   "date": "2026-11-14",
   "dates": [
     "2026-11-12",
     "2026-11-13",
     "2026-11-14",
     "2026-11-15",
-    "2026-12-06",
-    "2026-12-07"
+    "2026-12-08",
+    "2026-12-09"
   ],
   "horizon_days": 30,
   "response": [
@@ -25360,7 +25360,7 @@
         "timestamp": 1794628800,
         "periods": {
           "first": 1794628800,
-          "second": null
+          "second": 1794632400
         },
         "venue": {
           "id": null,
@@ -25368,10 +25368,10 @@
           "city": null
         },
         "status": {
-          "long": "Halftime",
-          "short": "HT",
-          "elapsed": 45,
-          "extra": 1
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 90,
+          "extra": null
         }
       },
       "league": {
@@ -25430,7 +25430,7 @@
         "timestamp": 1794628800,
         "periods": {
           "first": 1794628800,
-          "second": null
+          "second": 1794632400
         },
         "venue": {
           "id": null,
@@ -25438,10 +25438,10 @@
           "city": "Sydney"
         },
         "status": {
-          "long": "Halftime",
-          "short": "HT",
-          "elapsed": 45,
-          "extra": 2
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 90,
+          "extra": null
         }
       },
       "league": {
@@ -25459,17 +25459,17 @@
           "id": 3776,
           "name": "Sydney United",
           "logo": "https://media.api-sports.io/football/teams/3776.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 3811,
           "name": "South Melbourne",
           "logo": "https://media.api-sports.io/football/teams/3811.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "score": {
@@ -25499,7 +25499,7 @@
         "date": "2026-11-14T08:00:00+03:00",
         "timestamp": 1794632400,
         "periods": {
-          "first": null,
+          "first": 1794632400,
           "second": null
         },
         "venue": {
@@ -25508,10 +25508,10 @@
           "city": "Fukushima"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
+          "long": "Halftime",
+          "short": "HT",
+          "elapsed": 45,
+          "extra": 4
         }
       },
       "league": {
@@ -25529,23 +25529,23 @@
           "id": 4318,
           "name": "Fukushima United",
           "logo": "https://media.api-sports.io/football/teams/4318.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 4324,
           "name": "Sagamihara",
           "logo": "https://media.api-sports.io/football/teams/4324.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -25569,7 +25569,7 @@
         "date": "2026-11-14T08:00:00+03:00",
         "timestamp": 1794632400,
         "periods": {
-          "first": null,
+          "first": 1794632400,
           "second": null
         },
         "venue": {
@@ -25578,10 +25578,10 @@
           "city": "Gifu"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
+          "long": "Halftime",
+          "short": "HT",
+          "elapsed": 45,
+          "extra": 2
         }
       },
       "league": {
@@ -25609,13 +25609,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -25639,7 +25639,7 @@
         "date": "2026-11-14T08:00:00+03:00",
         "timestamp": 1794632400,
         "periods": {
-          "first": null,
+          "first": 1794632400,
           "second": null
         },
         "venue": {
@@ -25648,10 +25648,10 @@
           "city": "Kitakyushu"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
+          "long": "Halftime",
+          "short": "HT",
+          "elapsed": 45,
+          "extra": 2
         }
       },
       "league": {
@@ -25679,13 +25679,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 1
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 1
         },
         "fulltime": {
           "home": null,
@@ -25718,9 +25718,9 @@
           "city": "Nagano"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "Halftime",
+          "short": "HT",
+          "elapsed": 45,
           "extra": null
         }
       },
@@ -25739,23 +25739,23 @@
           "id": 16954,
           "name": "Parceiro Nagano W",
           "logo": "https://media.api-sports.io/football/teams/16954.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 16949,
           "name": "Nojima Stella W",
           "logo": "https://media.api-sports.io/football/teams/16949.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -25788,9 +25788,9 @@
           "city": "Hiroshima"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "Halftime",
+          "short": "HT",
+          "elapsed": 45,
           "extra": null
         }
       },
@@ -25809,23 +25809,23 @@
           "id": 16955,
           "name": "Sanfrecce Hiroshima W",
           "logo": "https://media.api-sports.io/football/teams/16955.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 16948,
           "name": "JEF United W",
           "logo": "https://media.api-sports.io/football/teams/16948.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -25849,7 +25849,7 @@
         "date": "2026-11-14T08:00:00+03:00",
         "timestamp": 1794632400,
         "periods": {
-          "first": null,
+          "first": 1794632400,
           "second": null
         },
         "venue": {
@@ -25858,10 +25858,10 @@
           "city": "Oita"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
+          "long": "Halftime",
+          "short": "HT",
+          "elapsed": 45,
+          "extra": 4
         }
       },
       "league": {
@@ -25879,23 +25879,23 @@
           "id": 298,
           "name": "Oita Trinita",
           "logo": "https://media.api-sports.io/football/teams/298.png",
-          "winner": null
+          "winner": false
         },
         "away": {
           "id": 7145,
           "name": "Tochigi City",
           "logo": "https://media.api-sports.io/football/teams/7145.png",
-          "winner": null
+          "winner": true
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 4
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 4
         },
         "fulltime": {
           "home": null,
@@ -25919,7 +25919,7 @@
         "date": "2026-11-14T08:00:00+03:00",
         "timestamp": 1794632400,
         "periods": {
-          "first": null,
+          "first": 1794632400,
           "second": null
         },
         "venue": {
@@ -25928,10 +25928,10 @@
           "city": "Hiratsuka"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
+          "long": "Halftime",
+          "short": "HT",
+          "elapsed": 45,
+          "extra": 3
         }
       },
       "league": {
@@ -25949,23 +25949,23 @@
           "id": 284,
           "name": "Shonan Bellmare",
           "logo": "https://media.api-sports.io/football/teams/284.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 307,
           "name": "Yokohama FC",
           "logo": "https://media.api-sports.io/football/teams/307.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -25989,7 +25989,7 @@
         "date": "2026-11-14T08:00:00+03:00",
         "timestamp": 1794632400,
         "periods": {
-          "first": null,
+          "first": 1794632400,
           "second": null
         },
         "venue": {
@@ -25998,10 +25998,10 @@
           "city": "Niigata"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
+          "long": "Halftime",
+          "short": "HT",
+          "elapsed": 45,
+          "extra": 3
         }
       },
       "league": {
@@ -26029,13 +26029,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 1
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 1
         },
         "fulltime": {
           "home": null,
@@ -26059,7 +26059,7 @@
         "date": "2026-11-14T08:00:00+03:00",
         "timestamp": 1794632400,
         "periods": {
-          "first": null,
+          "first": 1794632400,
           "second": null
         },
         "venue": {
@@ -26068,10 +26068,10 @@
           "city": "Saitama"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
+          "long": "Halftime",
+          "short": "HT",
+          "elapsed": 45,
+          "extra": 1
         }
       },
       "league": {
@@ -26089,23 +26089,23 @@
           "id": 313,
           "name": "Omiya Ardija",
           "logo": "https://media.api-sports.io/football/teams/313.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 312,
           "name": "Montedio Yamagata",
           "logo": "https://media.api-sports.io/football/teams/312.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -26129,7 +26129,7 @@
         "date": "2026-11-14T08:00:00+03:00",
         "timestamp": 1794632400,
         "periods": {
-          "first": null,
+          "first": 1794632400,
           "second": null
         },
         "venue": {
@@ -26138,10 +26138,10 @@
           "city": "Fujieda"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
+          "long": "Halftime",
+          "short": "HT",
+          "elapsed": 45,
+          "extra": 2
         }
       },
       "league": {
@@ -26169,13 +26169,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
