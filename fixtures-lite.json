@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-16T02:58:47.281044+00:00",
+  "updated_at": "2026-11-16T04:17:31.583200+00:00",
   "response": [
     {
       "fixture": {
@@ -52646,7 +52646,7 @@
         "id": 1649469,
         "date": "2026-11-16T04:00:00+03:00",
         "status": {
-          "short": "2H",
+          "short": "FT",
           "elapsed": 90
         }
       },
@@ -52674,8 +52674,8 @@
         "id": 1647451,
         "date": "2026-11-16T04:10:00+03:00",
         "status": {
-          "short": "2H",
-          "elapsed": 88
+          "short": "FT",
+          "elapsed": 90
         }
       },
       "league": {
@@ -52694,7 +52694,7 @@
       },
       "goals": {
         "home": 0,
-        "away": 1
+        "away": 2
       }
     },
     {
@@ -52702,8 +52702,8 @@
         "id": 1649470,
         "date": "2026-11-16T06:10:00+03:00",
         "status": {
-          "short": "NS",
-          "elapsed": null
+          "short": "2H",
+          "elapsed": 46
         }
       },
       "league": {
@@ -52721,8 +52721,8 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 2
       }
     },
     {
@@ -118219,6 +118219,34 @@
     },
     {
       "fixture": {
+        "id": 1616783,
+        "date": "2026-11-22T14:30:00+03:00",
+        "status": {
+          "short": "NS",
+          "elapsed": null
+        }
+      },
+      "league": {
+        "id": 452,
+        "season": 2026,
+        "name": "Tercera División RFEF - Group 14",
+        "country": "Spain"
+      },
+      "teams": {
+        "home": {
+          "name": "Moralo"
+        },
+        "away": {
+          "name": "Llerenense"
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "fixture": {
         "id": 1590219,
         "date": "2026-11-22T14:45:00+03:00",
         "status": {
@@ -119339,34 +119367,6 @@
     },
     {
       "fixture": {
-        "id": 1538730,
-        "date": "2026-11-22T15:30:00+03:00",
-        "status": {
-          "short": "NS",
-          "elapsed": null
-        }
-      },
-      "league": {
-        "id": 391,
-        "season": 2026,
-        "name": "Super League",
-        "country": "Malawi"
-      },
-      "teams": {
-        "home": {
-          "name": "Nyasa Big Bullets"
-        },
-        "away": {
-          "name": "Be Forward Wanderers"
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      }
-    },
-    {
-      "fixture": {
         "id": 1538731,
         "date": "2026-11-22T15:30:00+03:00",
         "status": {
@@ -119386,62 +119386,6 @@
         },
         "away": {
           "name": "Red Lions"
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      }
-    },
-    {
-      "fixture": {
-        "id": 1538732,
-        "date": "2026-11-22T15:30:00+03:00",
-        "status": {
-          "short": "NS",
-          "elapsed": null
-        }
-      },
-      "league": {
-        "id": 391,
-        "season": 2026,
-        "name": "Super League",
-        "country": "Malawi"
-      },
-      "teams": {
-        "home": {
-          "name": "Karonga United"
-        },
-        "away": {
-          "name": "Kamuzu Barracks"
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      }
-    },
-    {
-      "fixture": {
-        "id": 1538733,
-        "date": "2026-11-22T15:30:00+03:00",
-        "status": {
-          "short": "NS",
-          "elapsed": null
-        }
-      },
-      "league": {
-        "id": 391,
-        "season": 2026,
-        "name": "Super League",
-        "country": "Malawi"
-      },
-      "teams": {
-        "home": {
-          "name": "Mitundu Baptist"
-        },
-        "away": {
-          "name": "Masters FC"
         }
       },
       "goals": {
@@ -120618,6 +120562,90 @@
         },
         "away": {
           "name": "Djurgardens IF"
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "fixture": {
+        "id": 1538730,
+        "date": "2026-11-22T16:00:00+03:00",
+        "status": {
+          "short": "NS",
+          "elapsed": null
+        }
+      },
+      "league": {
+        "id": 391,
+        "season": 2026,
+        "name": "Super League",
+        "country": "Malawi"
+      },
+      "teams": {
+        "home": {
+          "name": "Nyasa Big Bullets"
+        },
+        "away": {
+          "name": "Be Forward Wanderers"
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "fixture": {
+        "id": 1538732,
+        "date": "2026-11-22T16:00:00+03:00",
+        "status": {
+          "short": "NS",
+          "elapsed": null
+        }
+      },
+      "league": {
+        "id": 391,
+        "season": 2026,
+        "name": "Super League",
+        "country": "Malawi"
+      },
+      "teams": {
+        "home": {
+          "name": "Karonga United"
+        },
+        "away": {
+          "name": "Kamuzu Barracks"
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "fixture": {
+        "id": 1538733,
+        "date": "2026-11-22T16:00:00+03:00",
+        "status": {
+          "short": "NS",
+          "elapsed": null
+        }
+      },
+      "league": {
+        "id": 391,
+        "season": 2026,
+        "name": "Super League",
+        "country": "Malawi"
+      },
+      "teams": {
+        "home": {
+          "name": "Mitundu Baptist"
+        },
+        "away": {
+          "name": "Masters FC"
         }
       },
       "goals": {
@@ -124155,34 +124183,6 @@
     },
     {
       "fixture": {
-        "id": 1624116,
-        "date": "2026-11-22T16:30:00+03:00",
-        "status": {
-          "short": "NS",
-          "elapsed": null
-        }
-      },
-      "league": {
-        "id": 426,
-        "season": 2026,
-        "name": "Serie D - Girone A",
-        "country": "Italy"
-      },
-      "teams": {
-        "home": {
-          "name": "Fezzanese"
-        },
-        "away": {
-          "name": "Sanremese"
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      }
-    },
-    {
-      "fixture": {
         "id": 1624117,
         "date": "2026-11-22T16:30:00+03:00",
         "status": {
@@ -125695,34 +125695,6 @@
     },
     {
       "fixture": {
-        "id": 1625977,
-        "date": "2026-11-22T16:30:00+03:00",
-        "status": {
-          "short": "NS",
-          "elapsed": null
-        }
-      },
-      "league": {
-        "id": 433,
-        "season": 2026,
-        "name": "Serie D - Girone H",
-        "country": "Italy"
-      },
-      "teams": {
-        "home": {
-          "name": "Martina Franca"
-        },
-        "away": {
-          "name": "Brindisi"
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      }
-    },
-    {
-      "fixture": {
         "id": 1625978,
         "date": "2026-11-22T16:30:00+03:00",
         "status": {
@@ -126734,7 +126706,7 @@
         "id": 1576538,
         "date": "2026-11-22T17:00:00+03:00",
         "status": {
-          "short": "NS",
+          "short": "PST",
           "elapsed": null
         }
       },
@@ -128234,6 +128206,34 @@
         },
         "away": {
           "name": "Friedberg"
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "fixture": {
+        "id": 1624116,
+        "date": "2026-11-22T17:30:00+03:00",
+        "status": {
+          "short": "NS",
+          "elapsed": null
+        }
+      },
+      "league": {
+        "id": 426,
+        "season": 2026,
+        "name": "Serie D - Girone A",
+        "country": "Italy"
+      },
+      "teams": {
+        "home": {
+          "name": "Fezzanese"
+        },
+        "away": {
+          "name": "Sanremese"
         }
       },
       "goals": {
@@ -130707,6 +130707,34 @@
     },
     {
       "fixture": {
+        "id": 1616787,
+        "date": "2026-11-22T18:30:00+03:00",
+        "status": {
+          "short": "NS",
+          "elapsed": null
+        }
+      },
+      "league": {
+        "id": 452,
+        "season": 2026,
+        "name": "Tercera División RFEF - Group 14",
+        "country": "Spain"
+      },
+      "teams": {
+        "home": {
+          "name": "Santa Amalia"
+        },
+        "away": {
+          "name": "Jaraíz"
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "fixture": {
         "id": 1617397,
         "date": "2026-11-22T18:30:00+03:00",
         "status": {
@@ -132415,6 +132443,34 @@
     },
     {
       "fixture": {
+        "id": 1625977,
+        "date": "2026-11-22T19:00:00+03:00",
+        "status": {
+          "short": "NS",
+          "elapsed": null
+        }
+      },
+      "league": {
+        "id": 433,
+        "season": 2026,
+        "name": "Serie D - Girone H",
+        "country": "Italy"
+      },
+      "teams": {
+        "home": {
+          "name": "Martina Franca"
+        },
+        "away": {
+          "name": "Brindisi"
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "fixture": {
         "id": 1636989,
         "date": "2026-11-22T19:00:00+03:00",
         "status": {
@@ -133227,6 +133283,34 @@
     },
     {
       "fixture": {
+        "id": 1613721,
+        "date": "2026-11-22T19:30:00+03:00",
+        "status": {
+          "short": "NS",
+          "elapsed": null
+        }
+      },
+      "league": {
+        "id": 442,
+        "season": 2026,
+        "name": "Tercera División RFEF - Group 4",
+        "country": "Spain"
+      },
+      "teams": {
+        "home": {
+          "name": "Derio"
+        },
+        "away": {
+          "name": "Amurrio Club"
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      }
+    },
+    {
+      "fixture": {
         "id": 1617398,
         "date": "2026-11-22T19:30:00+03:00",
         "status": {
@@ -134011,34 +134095,6 @@
     },
     {
       "fixture": {
-        "id": 1613721,
-        "date": "2026-11-22T20:00:00+03:00",
-        "status": {
-          "short": "NS",
-          "elapsed": null
-        }
-      },
-      "league": {
-        "id": 442,
-        "season": 2026,
-        "name": "Tercera División RFEF - Group 4",
-        "country": "Spain"
-      },
-      "teams": {
-        "home": {
-          "name": "Derio"
-        },
-        "away": {
-          "name": "Amurrio Club"
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      }
-    },
-    {
-      "fixture": {
         "id": 1613722,
         "date": "2026-11-22T20:00:00+03:00",
         "status": {
@@ -134487,34 +134543,6 @@
     },
     {
       "fixture": {
-        "id": 1616783,
-        "date": "2026-11-22T20:00:00+03:00",
-        "status": {
-          "short": "NS",
-          "elapsed": null
-        }
-      },
-      "league": {
-        "id": 452,
-        "season": 2026,
-        "name": "Tercera División RFEF - Group 14",
-        "country": "Spain"
-      },
-      "teams": {
-        "home": {
-          "name": "Moralo"
-        },
-        "away": {
-          "name": "Llerenense"
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      }
-    },
-    {
-      "fixture": {
         "id": 1616784,
         "date": "2026-11-22T20:00:00+03:00",
         "status": {
@@ -134590,34 +134618,6 @@
         },
         "away": {
           "name": "Montijo"
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      }
-    },
-    {
-      "fixture": {
-        "id": 1616787,
-        "date": "2026-11-22T20:00:00+03:00",
-        "status": {
-          "short": "NS",
-          "elapsed": null
-        }
-      },
-      "league": {
-        "id": 452,
-        "season": 2026,
-        "name": "Tercera División RFEF - Group 14",
-        "country": "Spain"
-      },
-      "teams": {
-        "home": {
-          "name": "Santa Amalia"
-        },
-        "away": {
-          "name": "Jaraíz"
         }
       },
       "goals": {
@@ -139502,7 +139502,7 @@
         "id": 1611421,
         "date": "2026-11-23T19:45:00+03:00",
         "status": {
-          "short": "NS",
+          "short": "PST",
           "elapsed": null
         }
       },
