@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-11-16T09:44:06.341404+00:00",
+  "updated_at": "2026-11-16T11:27:14.856766+00:00",
   "date": "2026-11-16",
   "dates": [
     "2026-11-14",
     "2026-11-15",
     "2026-11-16",
     "2026-11-17",
-    "2026-12-02",
-    "2026-12-03"
+    "2026-12-06",
+    "2026-12-07"
   ],
   "horizon_days": 30,
   "response": [
@@ -73444,7 +73444,7 @@
     {
       "fixture": {
         "id": 1649467,
-        "referee": null,
+        "referee": "P. E. Perez Borja",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-15T02:00:00+03:00",
         "timestamp": 1794697200,
@@ -75124,13 +75124,13 @@
     {
       "fixture": {
         "id": 1649519,
-        "referee": null,
+        "referee": "H. Solorio Arreola",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-15T06:00:00+03:00",
         "timestamp": 1794711600,
         "periods": {
-          "first": null,
-          "second": null
+          "first": 1794711600,
+          "second": 1794715200
         },
         "venue": {
           "id": 19979,
@@ -75194,7 +75194,7 @@
     {
       "fixture": {
         "id": 1649468,
-        "referee": null,
+        "referee": "F. Portillo",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-15T06:06:00+03:00",
         "timestamp": 1794711960,
@@ -126924,13 +126924,13 @@
     {
       "fixture": {
         "id": 1649520,
-        "referee": null,
+        "referee": "A. Barba",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-15T21:00:00+03:00",
         "timestamp": 1794765600,
         "periods": {
-          "first": null,
-          "second": null
+          "first": 1794765600,
+          "second": 1794769200
         },
         "venue": {
           "id": 1071,
@@ -131544,7 +131544,7 @@
     {
       "fixture": {
         "id": 1649469,
-        "referee": null,
+        "referee": "C. Sanchez",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-16T04:00:00+03:00",
         "timestamp": 1794790800,
@@ -131684,7 +131684,7 @@
     {
       "fixture": {
         "id": 1649470,
-        "referee": "Diana Velázquez Lomelí",
+        "referee": "D. Lomeli",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-16T06:10:00+03:00",
         "timestamp": 1794798600,
@@ -131768,10 +131768,10 @@
           "city": "Petrovo"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 12,
-          "extra": null
+          "long": "Match Interrupted",
+          "short": "INT",
+          "elapsed": null,
+          "extra": 1
         }
       },
       "league": {
@@ -131789,22 +131789,22 @@
           "id": 3625,
           "name": "Inhulets",
           "logo": "https://media.api-sports.io/football/teams/3625.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 24568,
           "name": "Probiy Horodenka",
           "logo": "https://media.api-sports.io/football/teams/24568.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "score": {
         "halftime": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "fulltime": {
@@ -131893,7 +131893,7 @@
     },
     {
       "fixture": {
-        "id": 1581969,
+        "id": 1581975,
         "referee": null,
         "timezone": "Europe/Istanbul",
         "date": "2026-11-16T13:00:00+03:00",
@@ -131904,12 +131904,12 @@
         },
         "venue": {
           "id": null,
-          "name": "Chernihiv Stadium",
-          "city": "Chernihiv"
+          "name": null,
+          "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
+          "long": "Match Postponed",
+          "short": "PST",
           "elapsed": null,
           "extra": null
         }
@@ -131926,15 +131926,15 @@
       },
       "teams": {
         "home": {
-          "id": 14433,
-          "name": "Chernihiv",
-          "logo": "https://media.api-sports.io/football/teams/14433.png",
+          "id": 21957,
+          "name": "UCSA",
+          "logo": "https://media.api-sports.io/football/teams/21957.png",
           "winner": null
         },
         "away": {
-          "id": 21954,
-          "name": "Lokomotiv Kyiv",
-          "logo": "https://media.api-sports.io/football/teams/21954.png",
+          "id": 24589,
+          "name": "Polissya II",
+          "logo": "https://media.api-sports.io/football/teams/24589.png",
           "winner": null
         }
       },
@@ -131963,23 +131963,23 @@
     },
     {
       "fixture": {
-        "id": 1581975,
+        "id": 1581969,
         "referee": null,
         "timezone": "Europe/Istanbul",
-        "date": "2026-11-16T13:00:00+03:00",
-        "timestamp": 1794823200,
+        "date": "2026-11-16T13:30:00+03:00",
+        "timestamp": 1794825000,
         "periods": {
           "first": null,
           "second": null
         },
         "venue": {
           "id": null,
-          "name": null,
-          "city": null
+          "name": "Chernihiv Stadium",
+          "city": "Chernihiv"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
+          "long": "Match Postponed",
+          "short": "PST",
           "elapsed": null,
           "extra": null
         }
@@ -131996,15 +131996,15 @@
       },
       "teams": {
         "home": {
-          "id": 21957,
-          "name": "UCSA",
-          "logo": "https://media.api-sports.io/football/teams/21957.png",
+          "id": 14433,
+          "name": "Chernihiv",
+          "logo": "https://media.api-sports.io/football/teams/14433.png",
           "winner": null
         },
         "away": {
-          "id": 24589,
-          "name": "Polissya II",
-          "logo": "https://media.api-sports.io/football/teams/24589.png",
+          "id": 21954,
+          "name": "Lokomotiv Kyiv",
+          "logo": "https://media.api-sports.io/football/teams/21954.png",
           "winner": null
         }
       },
@@ -137293,7 +137293,7 @@
           "second": null
         },
         "venue": {
-          "id": null,
+          "id": 3905,
           "name": "Hasely Crawford Stadium",
           "city": "Port of Spain"
         },
@@ -654653,76 +654653,6 @@
     },
     {
       "fixture": {
-        "id": 1601945,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-05T19:00:00+03:00",
-        "timestamp": 1796486400,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 419,
-        "name": "Premyer Liqa",
-        "country": "Azerbaijan",
-        "logo": "https://media.api-sports.io/football/leagues/419.png",
-        "flag": "https://media.api-sports.io/flags/az.svg",
-        "season": 2026,
-        "round": "Regular Season - 14",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 11238,
-          "name": "Araz",
-          "logo": "https://media.api-sports.io/football/teams/11238.png",
-          "winner": null
-        },
-        "away": {
-          "id": 556,
-          "name": "Qarabag",
-          "logo": "https://media.api-sports.io/football/teams/556.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
         "id": 1601946,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -654765,216 +654695,6 @@
           "id": 627,
           "name": "Qabala",
           "logo": "https://media.api-sports.io/football/teams/627.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1601947,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-05T19:00:00+03:00",
-        "timestamp": 1796486400,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": 155,
-          "name": "ASK Arena",
-          "city": "Baku"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 419,
-        "name": "Premyer Liqa",
-        "country": "Azerbaijan",
-        "logo": "https://media.api-sports.io/football/leagues/419.png",
-        "flag": "https://media.api-sports.io/flags/az.svg",
-        "season": 2026,
-        "round": "Regular Season - 14",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 25318,
-          "name": "Safa Baku",
-          "logo": "https://media.api-sports.io/football/teams/25318.png",
-          "winner": null
-        },
-        "away": {
-          "id": 2270,
-          "name": "Neftchi Baku",
-          "logo": "https://media.api-sports.io/football/teams/2270.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1601948,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-05T19:00:00+03:00",
-        "timestamp": 1796486400,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": "Shamakhi City Stadium",
-          "city": "Shamakhi"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 419,
-        "name": "Premyer Liqa",
-        "country": "Azerbaijan",
-        "logo": "https://media.api-sports.io/football/leagues/419.png",
-        "flag": "https://media.api-sports.io/flags/az.svg",
-        "season": 2026,
-        "round": "Regular Season - 14",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 666,
-          "name": "Şamaxı FK",
-          "logo": "https://media.api-sports.io/football/teams/666.png",
-          "winner": null
-        },
-        "away": {
-          "id": 5490,
-          "name": "Kapaz",
-          "logo": "https://media.api-sports.io/football/teams/5490.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1601949,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-05T19:00:00+03:00",
-        "timestamp": 1796486400,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": "Mehdi Huseynzade Stadium",
-          "city": "Sumqayit"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 419,
-        "name": "Premyer Liqa",
-        "country": "Azerbaijan",
-        "logo": "https://media.api-sports.io/football/leagues/419.png",
-        "flag": "https://media.api-sports.io/flags/az.svg",
-        "season": 2026,
-        "round": "Regular Season - 14",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 5503,
-          "name": "Sumqayıt",
-          "logo": "https://media.api-sports.io/football/teams/5503.png",
-          "winner": null
-        },
-        "away": {
-          "id": 5499,
-          "name": "Turan",
-          "logo": "https://media.api-sports.io/football/teams/5499.png",
           "winner": null
         }
       },
@@ -670473,6 +670193,286 @@
     },
     {
       "fixture": {
+        "id": 1650216,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-06T10:00:00+03:00",
+        "timestamp": 1796540400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 1199,
+        "name": "League Cup",
+        "country": "Hong-Kong",
+        "logo": "https://media.api-sports.io/football/leagues/1199.png",
+        "flag": "https://media.api-sports.io/flags/hk.svg",
+        "season": 2026,
+        "round": "Round of 16",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 4451,
+          "name": "Eastern",
+          "logo": "https://media.api-sports.io/football/teams/4451.png",
+          "winner": null
+        },
+        "away": {
+          "id": 4471,
+          "name": "Shatin",
+          "logo": "https://media.api-sports.io/football/teams/4471.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1650217,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-06T10:00:00+03:00",
+        "timestamp": 1796540400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 1199,
+        "name": "League Cup",
+        "country": "Hong-Kong",
+        "logo": "https://media.api-sports.io/football/leagues/1199.png",
+        "flag": "https://media.api-sports.io/flags/hk.svg",
+        "season": 2026,
+        "round": "Round of 16",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 4462,
+          "name": "Hong Kong FC",
+          "logo": "https://media.api-sports.io/football/teams/4462.png",
+          "winner": null
+        },
+        "away": {
+          "id": 26471,
+          "name": "BC Rangers",
+          "logo": "https://media.api-sports.io/football/teams/26471.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1650218,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-06T10:00:00+03:00",
+        "timestamp": 1796540400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 1199,
+        "name": "League Cup",
+        "country": "Hong-Kong",
+        "logo": "https://media.api-sports.io/football/leagues/1199.png",
+        "flag": "https://media.api-sports.io/flags/hk.svg",
+        "season": 2026,
+        "round": "Round of 16",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 4457,
+          "name": "Wofoo Tai Po",
+          "logo": "https://media.api-sports.io/football/teams/4457.png",
+          "winner": null
+        },
+        "away": {
+          "id": 4453,
+          "name": "Kitchee",
+          "logo": "https://media.api-sports.io/football/teams/4453.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1650219,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-06T10:00:00+03:00",
+        "timestamp": 1796540400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 1199,
+        "name": "League Cup",
+        "country": "Hong-Kong",
+        "logo": "https://media.api-sports.io/football/leagues/1199.png",
+        "flag": "https://media.api-sports.io/flags/hk.svg",
+        "season": 2026,
+        "round": "Quarter-finals",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 4207,
+          "name": "Warriors",
+          "logo": "https://media.api-sports.io/football/teams/4207.png",
+          "winner": null
+        },
+        "away": {
+          "id": 4467,
+          "name": "Eastern District",
+          "logo": "https://media.api-sports.io/football/teams/4467.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
         "id": 1639397,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -674925,6 +674925,76 @@
           "id": 22142,
           "name": "Real Madrid III",
           "logo": "https://media.api-sports.io/football/teams/22142.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1601948,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-06T13:30:00+03:00",
+        "timestamp": 1796553000,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Shamakhi City Stadium",
+          "city": "Shamakhi"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 419,
+        "name": "Premyer Liqa",
+        "country": "Azerbaijan",
+        "logo": "https://media.api-sports.io/football/leagues/419.png",
+        "flag": "https://media.api-sports.io/flags/az.svg",
+        "season": 2026,
+        "round": "Regular Season - 14",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 666,
+          "name": "Şamaxı FK",
+          "logo": "https://media.api-sports.io/football/teams/666.png",
+          "winner": null
+        },
+        "away": {
+          "id": 5490,
+          "name": "Kapaz",
+          "logo": "https://media.api-sports.io/football/teams/5490.png",
           "winner": null
         }
       },
@@ -698585,6 +698655,76 @@
           "id": 28016,
           "name": "RW Wittlich",
           "logo": "https://media.api-sports.io/football/teams/28016.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1601949,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-06T17:00:00+03:00",
+        "timestamp": 1796565600,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Mehdi Huseynzade Stadium",
+          "city": "Sumqayit"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 419,
+        "name": "Premyer Liqa",
+        "country": "Azerbaijan",
+        "logo": "https://media.api-sports.io/football/leagues/419.png",
+        "flag": "https://media.api-sports.io/flags/az.svg",
+        "season": 2026,
+        "round": "Regular Season - 14",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 5503,
+          "name": "Sumqayıt",
+          "logo": "https://media.api-sports.io/football/teams/5503.png",
+          "winner": null
+        },
+        "away": {
+          "id": 5499,
+          "name": "Turan",
+          "logo": "https://media.api-sports.io/football/teams/5499.png",
           "winner": null
         }
       },
@@ -728923,6 +729063,76 @@
     },
     {
       "fixture": {
+        "id": 1601945,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-07T13:30:00+03:00",
+        "timestamp": 1796639400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 419,
+        "name": "Premyer Liqa",
+        "country": "Azerbaijan",
+        "logo": "https://media.api-sports.io/football/leagues/419.png",
+        "flag": "https://media.api-sports.io/flags/az.svg",
+        "season": 2026,
+        "round": "Regular Season - 14",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 11238,
+          "name": "Araz",
+          "logo": "https://media.api-sports.io/football/teams/11238.png",
+          "winner": null
+        },
+        "away": {
+          "id": 556,
+          "name": "Qarabag",
+          "logo": "https://media.api-sports.io/football/teams/556.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
         "id": 1633955,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -729945,6 +730155,76 @@
           "id": 21718,
           "name": "Academico Viseu U23",
           "logo": "https://media.api-sports.io/football/teams/21718.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1601947,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-07T18:00:00+03:00",
+        "timestamp": 1796655600,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": 155,
+          "name": "ASK Arena",
+          "city": "Baku"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 419,
+        "name": "Premyer Liqa",
+        "country": "Azerbaijan",
+        "logo": "https://media.api-sports.io/football/leagues/419.png",
+        "flag": "https://media.api-sports.io/flags/az.svg",
+        "season": 2026,
+        "round": "Regular Season - 14",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 25318,
+          "name": "Safa Baku",
+          "logo": "https://media.api-sports.io/football/teams/25318.png",
+          "winner": null
+        },
+        "away": {
+          "id": 2270,
+          "name": "Neftchi Baku",
+          "logo": "https://media.api-sports.io/football/teams/2270.png",
           "winner": null
         }
       },
