@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-11-16T23:46:35.406792+00:00",
+  "updated_at": "2026-11-17T01:12:12.670049+00:00",
   "date": "2026-11-17",
   "dates": [
     "2026-11-15",
     "2026-11-16",
     "2026-11-17",
     "2026-11-18",
-    "2026-12-03",
-    "2026-12-04"
+    "2026-12-07",
+    "2026-12-08"
   ],
   "horizon_days": 30,
   "response": [
@@ -65960,7 +65960,7 @@
         "timestamp": 1794870000,
         "periods": {
           "first": 1794870000,
-          "second": null
+          "second": 1794873600
         },
         "venue": {
           "id": null,
@@ -65968,9 +65968,9 @@
           "city": null
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 6,
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
           "extra": null
         }
       },
@@ -65989,27 +65989,27 @@
           "id": 26902,
           "name": "G3X",
           "logo": "https://media.api-sports.io/football/teams/26902.png",
-          "winner": null
+          "winner": false
         },
         "away": {
           "id": 26896,
           "name": "Capim",
           "logo": "https://media.api-sports.io/football/teams/26896.png",
-          "winner": null
+          "winner": true
         }
       },
       "goals": {
-        "home": 1,
-        "away": 1
+        "home": 2,
+        "away": 5
       },
       "score": {
         "halftime": {
           "home": 1,
-          "away": 1
+          "away": 3
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 5
         },
         "extratime": {
           "home": null,
@@ -66038,9 +66038,9 @@
           "city": "Montevideo"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 44,
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
           "extra": null
         }
       },
@@ -66069,8 +66069,8 @@
         }
       },
       "goals": {
-        "home": 1,
-        "away": 0
+        "home": 2,
+        "away": 1
       },
       "score": {
         "halftime": {
@@ -66078,8 +66078,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -66100,7 +66100,7 @@
         "timestamp": 1794870000,
         "periods": {
           "first": 1794870000,
-          "second": null
+          "second": 1794873600
         },
         "venue": {
           "id": null,
@@ -66108,10 +66108,10 @@
           "city": null
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 45,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 1
         }
       },
       "league": {
@@ -66139,7 +66139,7 @@
         }
       },
       "goals": {
-        "home": 2,
+        "home": 9,
         "away": 0
       },
       "score": {
@@ -66148,8 +66148,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 9,
+          "away": 0
         },
         "extratime": {
           "home": null,
@@ -66169,7 +66169,7 @@
         "date": "2026-11-17T03:00:00+03:00",
         "timestamp": 1794873600,
         "periods": {
-          "first": null,
+          "first": 1794873600,
           "second": null
         },
         "venue": {
@@ -66178,9 +66178,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 24,
           "extra": null
         }
       },
@@ -66199,23 +66199,23 @@
           "id": 26897,
           "name": "Dendele",
           "logo": "https://media.api-sports.io/football/teams/26897.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 26903,
           "name": "Loud",
           "logo": "https://media.api-sports.io/football/teams/26903.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -66234,7 +66234,7 @@
     {
       "fixture": {
         "id": 1649033,
-        "referee": null,
+        "referee": "Filip Dujic",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-17T03:00:00+03:00",
         "timestamp": 1794873600,
@@ -66248,9 +66248,9 @@
           "city": "Fort-de-France"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 56,
           "extra": null
         }
       },
@@ -66279,13 +66279,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 1
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 1
         },
         "fulltime": {
           "home": null,
@@ -66304,7 +66304,7 @@
     {
       "fixture": {
         "id": 1649034,
-        "referee": null,
+        "referee": "Keylor Herrera",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-17T03:00:00+03:00",
         "timestamp": 1794873600,
@@ -66318,9 +66318,9 @@
           "city": "Port of Spain"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 54,
           "extra": null
         }
       },
@@ -66349,13 +66349,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 1
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 1
         },
         "fulltime": {
           "home": null,
@@ -66444,7 +66444,7 @@
     {
       "fixture": {
         "id": 1644694,
-        "referee": "C. Ramos",
+        "referee": "Cesar Arturo Ramos",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-17T04:00:00+03:00",
         "timestamp": 1794877200,
@@ -66458,9 +66458,9 @@
           "city": "Toronto"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 6,
           "extra": null
         }
       },
@@ -66489,13 +66489,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -66519,7 +66519,7 @@
         "date": "2026-11-17T04:00:00+03:00",
         "timestamp": 1794877200,
         "periods": {
-          "first": null,
+          "first": 1794877200,
           "second": null
         },
         "venue": {
@@ -66528,9 +66528,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 7,
           "extra": null
         }
       },
@@ -66559,13 +66559,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -71218,8 +71218,8 @@
           "city": "Hoima"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
+          "long": "Match Postponed",
+          "short": "PST",
           "elapsed": null,
           "extra": null
         }
@@ -73979,8 +73979,8 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
@@ -87584,7 +87584,7 @@
     {
       "fixture": {
         "id": 1638306,
-        "referee": null,
+        "referee": "Michalina Diakow",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-18T20:45:00+03:00",
         "timestamp": 1795023900,
@@ -87654,7 +87654,7 @@
     {
       "fixture": {
         "id": 1638333,
-        "referee": null,
+        "referee": "Katalin Kulscar",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-18T20:45:00+03:00",
         "timestamp": 1795023900,
@@ -91084,7 +91084,7 @@
     {
       "fixture": {
         "id": 1638301,
-        "referee": null,
+        "referee": "Maria Sole Ferrieri Caputi",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-18T23:00:00+03:00",
         "timestamp": 1795032000,
@@ -91154,7 +91154,7 @@
     {
       "fixture": {
         "id": 1638312,
-        "referee": null,
+        "referee": "Kristina Georgieva",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-18T23:00:00+03:00",
         "timestamp": 1795032000,
