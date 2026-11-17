@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-11-17T02:54:01.168143+00:00",
+  "updated_at": "2026-11-17T03:57:31.409432+00:00",
   "date": "2026-11-17",
   "dates": [
     "2026-11-15",
     "2026-11-16",
     "2026-11-17",
     "2026-11-18",
-    "2026-12-09",
-    "2026-12-10"
+    "2026-12-11",
+    "2026-12-12"
   ],
   "horizon_days": 30,
   "response": [
@@ -66388,8 +66388,8 @@
           "city": "Toronto"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
+          "long": "Match Finished",
+          "short": "FT",
           "elapsed": 90,
           "extra": null
         }
@@ -66428,8 +66428,8 @@
           "away": 1
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 4,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -66458,10 +66458,10 @@
           "city": null
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
+          "long": "Match Finished",
+          "short": "FT",
           "elapsed": 90,
-          "extra": 4
+          "extra": 9
         }
       },
       "league": {
@@ -66498,8 +66498,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 0
         },
         "extratime": {
           "home": null,
@@ -66590,17 +66590,17 @@
         "timestamp": 1794880800,
         "periods": {
           "first": 1794880800,
-          "second": null
+          "second": 1794884400
         },
         "venue": {
-          "id": null,
+          "id": 22767,
           "name": "Rio Grande Credit Union Field at Isotopes Park",
-          "city": null
+          "city": "Albuquerque"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 45,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 90,
           "extra": 2
         }
       },
@@ -66629,8 +66629,8 @@
         }
       },
       "goals": {
-        "home": 0,
-        "away": 0
+        "home": 1,
+        "away": 1
       },
       "score": {
         "halftime": {
@@ -66660,7 +66660,7 @@
         "timestamp": 1794881100,
         "periods": {
           "first": 1794881100,
-          "second": null
+          "second": 1794884700
         },
         "venue": {
           "id": null,
@@ -66668,9 +66668,9 @@
           "city": "Irapuato"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 43,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 86,
           "extra": null
         }
       },
@@ -66689,23 +66689,23 @@
           "id": 15932,
           "name": "Irapuato",
           "logo": "https://media.api-sports.io/football/teams/15932.png",
-          "winner": true
+          "winner": null
         },
         "away": {
           "id": 2308,
           "name": "Celaya",
           "logo": "https://media.api-sports.io/football/teams/2308.png",
-          "winner": false
+          "winner": null
         }
       },
       "goals": {
         "home": 1,
-        "away": 0
+        "away": 1
       },
       "score": {
         "halftime": {
           "home": 1,
-          "away": 0
+          "away": 1
         },
         "fulltime": {
           "home": null,
@@ -66734,8 +66734,8 @@
         },
         "venue": {
           "id": null,
-          "name": "Ali Muhesen Stadium",
-          "city": null
+          "name": "Zhaoqing New District Sports Center Stadium",
+          "city": "Zhaoqing"
         },
         "status": {
           "long": "Not Started",
@@ -67293,8 +67293,8 @@
           "second": null
         },
         "venue": {
-          "id": null,
-          "name": "Stadion Pod Vinici",
+          "id": 2506,
+          "name": "Pod Vinicí",
           "city": "Pardubice"
         },
         "status": {
@@ -694063,6 +694063,76 @@
     },
     {
       "fixture": {
+        "id": 1601955,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-11T13:00:00+03:00",
+        "timestamp": 1796983200,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Shamakhi City Stadium",
+          "city": "Shamakhi"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 419,
+        "name": "Premyer Liqa",
+        "country": "Azerbaijan",
+        "logo": "https://media.api-sports.io/football/leagues/419.png",
+        "flag": "https://media.api-sports.io/flags/az.svg",
+        "season": 2026,
+        "round": "Regular Season - 15",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 666,
+          "name": "Şamaxı FK",
+          "logo": "https://media.api-sports.io/football/teams/666.png",
+          "winner": null
+        },
+        "away": {
+          "id": 5503,
+          "name": "Sumqayıt",
+          "logo": "https://media.api-sports.io/football/teams/5503.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
         "id": 1593715,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -697745,6 +697815,76 @@
           "id": 25468,
           "name": "Masar",
           "logo": "https://media.api-sports.io/football/teams/25468.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1601951,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-11T15:30:00+03:00",
+        "timestamp": 1796992200,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": "Gabala"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 419,
+        "name": "Premyer Liqa",
+        "country": "Azerbaijan",
+        "logo": "https://media.api-sports.io/football/leagues/419.png",
+        "flag": "https://media.api-sports.io/flags/az.svg",
+        "season": 2026,
+        "round": "Regular Season - 15",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 627,
+          "name": "Qabala",
+          "logo": "https://media.api-sports.io/football/teams/627.png",
+          "winner": null
+        },
+        "away": {
+          "id": 5490,
+          "name": "Kapaz",
+          "logo": "https://media.api-sports.io/football/teams/5490.png",
           "winner": null
         }
       },
@@ -721503,6 +721643,146 @@
     },
     {
       "fixture": {
+        "id": 1618529,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-12T16:00:00+03:00",
+        "timestamp": 1797080400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 92,
+        "name": "Derde Divisie",
+        "country": "Netherlands",
+        "logo": "https://media.api-sports.io/football/leagues/92.png",
+        "flag": "https://media.api-sports.io/flags/nl.svg",
+        "season": 2026,
+        "round": "Regular Season - 17",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 1247,
+          "name": "Noordwijk",
+          "logo": "https://media.api-sports.io/football/teams/1247.png",
+          "winner": null
+        },
+        "away": {
+          "id": 1257,
+          "name": "FC Lisse",
+          "logo": "https://media.api-sports.io/football/teams/1257.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1618531,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-12T16:00:00+03:00",
+        "timestamp": 1797080400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 92,
+        "name": "Derde Divisie",
+        "country": "Netherlands",
+        "logo": "https://media.api-sports.io/football/leagues/92.png",
+        "flag": "https://media.api-sports.io/flags/nl.svg",
+        "season": 2026,
+        "round": "Regular Season - 17",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 1275,
+          "name": "Zwaluwen",
+          "logo": "https://media.api-sports.io/football/teams/1275.png",
+          "winner": null
+        },
+        "away": {
+          "id": 3892,
+          "name": "GOES",
+          "logo": "https://media.api-sports.io/football/teams/3892.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
         "id": 1619571,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -724653,76 +724933,6 @@
     },
     {
       "fixture": {
-        "id": 1618529,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-12T16:30:00+03:00",
-        "timestamp": 1797082200,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 92,
-        "name": "Derde Divisie",
-        "country": "Netherlands",
-        "logo": "https://media.api-sports.io/football/leagues/92.png",
-        "flag": "https://media.api-sports.io/flags/nl.svg",
-        "season": 2026,
-        "round": "Regular Season - 17",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 1247,
-          "name": "Noordwijk",
-          "logo": "https://media.api-sports.io/football/teams/1247.png",
-          "winner": null
-        },
-        "away": {
-          "id": 1257,
-          "name": "FC Lisse",
-          "logo": "https://media.api-sports.io/football/teams/1257.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
         "id": 1618530,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -724765,76 +724975,6 @@
           "id": 14235,
           "name": "Hoogeveen",
           "logo": "https://media.api-sports.io/football/teams/14235.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1618531,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-12T16:30:00+03:00",
-        "timestamp": 1797082200,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 92,
-        "name": "Derde Divisie",
-        "country": "Netherlands",
-        "logo": "https://media.api-sports.io/football/leagues/92.png",
-        "flag": "https://media.api-sports.io/flags/nl.svg",
-        "season": 2026,
-        "round": "Regular Season - 17",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 1275,
-          "name": "Zwaluwen",
-          "logo": "https://media.api-sports.io/football/teams/1275.png",
-          "winner": null
-        },
-        "away": {
-          "id": 3892,
-          "name": "GOES",
-          "logo": "https://media.api-sports.io/football/teams/3892.png",
           "winner": null
         }
       },
@@ -756923,6 +757063,76 @@
     },
     {
       "fixture": {
+        "id": 1618543,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-12T21:00:00+03:00",
+        "timestamp": 1797098400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 92,
+        "name": "Derde Divisie",
+        "country": "Netherlands",
+        "logo": "https://media.api-sports.io/football/leagues/92.png",
+        "flag": "https://media.api-sports.io/flags/nl.svg",
+        "season": 2026,
+        "round": "Regular Season - 17",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 19266,
+          "name": "Roosendaal",
+          "logo": "https://media.api-sports.io/football/teams/19266.png",
+          "winner": null
+        },
+        "away": {
+          "id": 3938,
+          "name": "UDI '19",
+          "logo": "https://media.api-sports.io/football/teams/3938.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
         "id": 1560301,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -773065,76 +773275,6 @@
           "id": 1230,
           "name": "Gemert",
           "logo": "https://media.api-sports.io/football/teams/1230.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1618543,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-13T16:00:00+03:00",
-        "timestamp": 1797166800,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 92,
-        "name": "Derde Divisie",
-        "country": "Netherlands",
-        "logo": "https://media.api-sports.io/football/leagues/92.png",
-        "flag": "https://media.api-sports.io/flags/nl.svg",
-        "season": 2026,
-        "round": "Regular Season - 17",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 19266,
-          "name": "Roosendaal",
-          "logo": "https://media.api-sports.io/football/teams/19266.png",
-          "winner": null
-        },
-        "away": {
-          "id": 3938,
-          "name": "UDI '19",
-          "logo": "https://media.api-sports.io/football/teams/3938.png",
           "winner": null
         }
       },
@@ -801303,76 +801443,6 @@
     },
     {
       "fixture": {
-        "id": 1601951,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-13T19:00:00+03:00",
-        "timestamp": 1797177600,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": "Gabala"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 419,
-        "name": "Premyer Liqa",
-        "country": "Azerbaijan",
-        "logo": "https://media.api-sports.io/football/leagues/419.png",
-        "flag": "https://media.api-sports.io/flags/az.svg",
-        "season": 2026,
-        "round": "Regular Season - 15",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 627,
-          "name": "Qabala",
-          "logo": "https://media.api-sports.io/football/teams/627.png",
-          "winner": null
-        },
-        "away": {
-          "id": 5490,
-          "name": "Kapaz",
-          "logo": "https://media.api-sports.io/football/teams/5490.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
         "id": 1601953,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -801485,76 +801555,6 @@
           "id": 25318,
           "name": "Safa Baku",
           "logo": "https://media.api-sports.io/football/teams/25318.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1601955,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-13T19:00:00+03:00",
-        "timestamp": 1797177600,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": "Shamakhi City Stadium",
-          "city": "Shamakhi"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 419,
-        "name": "Premyer Liqa",
-        "country": "Azerbaijan",
-        "logo": "https://media.api-sports.io/football/leagues/419.png",
-        "flag": "https://media.api-sports.io/flags/az.svg",
-        "season": 2026,
-        "round": "Regular Season - 15",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 666,
-          "name": "Şamaxı FK",
-          "logo": "https://media.api-sports.io/football/teams/666.png",
-          "winner": null
-        },
-        "away": {
-          "id": 5503,
-          "name": "Sumqayıt",
-          "logo": "https://media.api-sports.io/football/teams/5503.png",
           "winner": null
         }
       },
