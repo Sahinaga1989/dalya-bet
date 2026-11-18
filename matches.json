@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-11-18T02:55:35.030481+00:00",
+  "updated_at": "2026-11-18T03:58:57.399728+00:00",
   "date": "2026-11-18",
   "dates": [
     "2026-11-16",
     "2026-11-17",
     "2026-11-18",
     "2026-11-19",
-    "2026-12-02",
-    "2026-12-03"
+    "2026-12-04",
+    "2026-12-05"
   ],
   "horizon_days": 30,
   "response": [
@@ -22218,10 +22218,10 @@
           "city": "San Salvador"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
+          "long": "Match Finished",
+          "short": "FT",
           "elapsed": 90,
-          "extra": 1
+          "extra": null
         }
       },
       "league": {
@@ -22258,8 +22258,8 @@
           "away": 1
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 3,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -22288,9 +22288,9 @@
           "city": "Santiago de Cali"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 48,
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
           "extra": null
         }
       },
@@ -22319,8 +22319,8 @@
         }
       },
       "goals": {
-        "home": 0,
-        "away": 0
+        "home": 1,
+        "away": 1
       },
       "score": {
         "halftime": {
@@ -22328,8 +22328,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -22358,10 +22358,10 @@
           "city": "Colon"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 66,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 10
         }
       },
       "league": {
@@ -22379,17 +22379,17 @@
           "id": 2882,
           "name": "CD Arabe Unido",
           "logo": "https://media.api-sports.io/football/teams/2882.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 15620,
           "name": "Veraguas",
           "logo": "https://media.api-sports.io/football/teams/15620.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": 2,
+        "home": 3,
         "away": 2
       },
       "score": {
@@ -22398,8 +22398,8 @@
           "away": 2
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 3,
+          "away": 2
         },
         "extratime": {
           "home": null,
@@ -22428,9 +22428,9 @@
           "city": "Monterrey"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 24,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 68,
           "extra": null
         }
       },
@@ -22449,22 +22449,22 @@
           "id": 16,
           "name": "Mexico",
           "logo": "https://media.api-sports.io/football/teams/16.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 2385,
           "name": "Jamaica",
           "logo": "https://media.api-sports.io/football/teams/2385.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "score": {
         "halftime": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "fulltime": {
@@ -22498,9 +22498,9 @@
           "city": "Managua"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "Halftime",
+          "short": "HT",
+          "elapsed": 45,
           "extra": null
         }
       },
@@ -22529,13 +22529,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -468873,6 +468873,496 @@
     },
     {
       "fixture": {
+        "id": 1650724,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-04T11:30:00+03:00",
+        "timestamp": 1796373000,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 1253,
+        "name": "Liga Nusantara",
+        "country": "Indonesia",
+        "logo": "https://media.api-sports.io/football/leagues/1253.png",
+        "flag": "https://media.api-sports.io/flags/id.svg",
+        "season": 2026,
+        "round": "Regular Season - 6",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 28712,
+          "name": "Pekanbaru",
+          "logo": "https://media.api-sports.io/football/teams/28712.png",
+          "winner": null
+        },
+        "away": {
+          "id": 11130,
+          "name": "Persekat",
+          "logo": "https://media.api-sports.io/football/teams/11130.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1650725,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-04T11:30:00+03:00",
+        "timestamp": 1796373000,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Stadion Letjend H.Soedirman Bojonegoro",
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 1253,
+        "name": "Liga Nusantara",
+        "country": "Indonesia",
+        "logo": "https://media.api-sports.io/football/leagues/1253.png",
+        "flag": "https://media.api-sports.io/flags/id.svg",
+        "season": 2026,
+        "round": "Regular Season - 6",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 15814,
+          "name": "Persibo",
+          "logo": "https://media.api-sports.io/football/teams/15814.png",
+          "winner": null
+        },
+        "away": {
+          "id": 15809,
+          "name": "Persiba Bantul",
+          "logo": "https://media.api-sports.io/football/teams/15809.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1650726,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-04T11:30:00+03:00",
+        "timestamp": 1796373000,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Benteng Stadium",
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 1253,
+        "name": "Liga Nusantara",
+        "country": "Indonesia",
+        "logo": "https://media.api-sports.io/football/leagues/1253.png",
+        "flag": "https://media.api-sports.io/flags/id.svg",
+        "season": 2026,
+        "round": "Regular Season - 6",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 24996,
+          "name": "Persikota Tangerang",
+          "logo": "https://media.api-sports.io/football/teams/24996.png",
+          "winner": null
+        },
+        "away": {
+          "id": 28708,
+          "name": "Batavia",
+          "logo": "https://media.api-sports.io/football/teams/28708.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1650727,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-04T11:30:00+03:00",
+        "timestamp": 1796373000,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Stadion Joyokusumo",
+          "city": "Pati"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 1253,
+        "name": "Liga Nusantara",
+        "country": "Indonesia",
+        "logo": "https://media.api-sports.io/football/leagues/1253.png",
+        "flag": "https://media.api-sports.io/flags/id.svg",
+        "season": 2026,
+        "round": "Regular Season - 6",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 20076,
+          "name": "Persipa Pati",
+          "logo": "https://media.api-sports.io/football/teams/20076.png",
+          "winner": null
+        },
+        "away": {
+          "id": 28720,
+          "name": "Pesinga Ngawi",
+          "logo": "https://media.api-sports.io/football/teams/28720.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1650728,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-04T11:30:00+03:00",
+        "timestamp": 1796373000,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 1253,
+        "name": "Liga Nusantara",
+        "country": "Indonesia",
+        "logo": "https://media.api-sports.io/football/leagues/1253.png",
+        "flag": "https://media.api-sports.io/flags/id.svg",
+        "season": 2026,
+        "round": "Regular Season - 6",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 28718,
+          "name": "Persitara",
+          "logo": "https://media.api-sports.io/football/teams/28718.png",
+          "winner": null
+        },
+        "away": {
+          "id": 20074,
+          "name": "Nusantara United",
+          "logo": "https://media.api-sports.io/football/teams/20074.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1650729,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-04T11:30:00+03:00",
+        "timestamp": 1796373000,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 1253,
+        "name": "Liga Nusantara",
+        "country": "Indonesia",
+        "logo": "https://media.api-sports.io/football/leagues/1253.png",
+        "flag": "https://media.api-sports.io/flags/id.svg",
+        "season": 2026,
+        "round": "Regular Season - 6",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 15810,
+          "name": "Persibangga Purbalingga",
+          "logo": "https://media.api-sports.io/football/teams/15810.png",
+          "winner": null
+        },
+        "away": {
+          "id": 28715,
+          "name": "Persika Karanganyar",
+          "logo": "https://media.api-sports.io/football/teams/28715.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1650730,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-04T11:30:00+03:00",
+        "timestamp": 1796373000,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 1253,
+        "name": "Liga Nusantara",
+        "country": "Indonesia",
+        "logo": "https://media.api-sports.io/football/leagues/1253.png",
+        "flag": "https://media.api-sports.io/flags/id.svg",
+        "season": 2026,
+        "round": "Regular Season - 6",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 28721,
+          "name": "Putra Sang Fajar",
+          "logo": "https://media.api-sports.io/football/teams/28721.png",
+          "winner": null
+        },
+        "away": {
+          "id": 15800,
+          "name": "Persegres Gresik United",
+          "logo": "https://media.api-sports.io/football/teams/15800.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
         "id": 1507269,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -474193,6 +474683,76 @@
     },
     {
       "fixture": {
+        "id": 1590238,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-04T16:00:00+03:00",
+        "timestamp": 1796389200,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Stadion Kustosija",
+          "city": "Zagreb"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 211,
+        "name": "First NL",
+        "country": "Croatia",
+        "logo": "https://media.api-sports.io/football/leagues/211.png",
+        "flag": "https://media.api-sports.io/flags/hr.svg",
+        "season": 2026,
+        "round": "Regular Season - 15",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 1481,
+          "name": "Kustosija",
+          "logo": "https://media.api-sports.io/football/teams/1481.png",
+          "winner": null
+        },
+        "away": {
+          "id": 1479,
+          "name": "Sesvete",
+          "logo": "https://media.api-sports.io/football/teams/1479.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
         "id": 1601164,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -474655,6 +475215,76 @@
           "id": 8010,
           "name": "Al Zawra'a",
           "logo": "https://media.api-sports.io/football/teams/8010.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1635303,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-04T16:00:00+03:00",
+        "timestamp": 1796389200,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Hoima City Stadium",
+          "city": "Hoima"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 585,
+        "name": "Premier League",
+        "country": "Uganda",
+        "logo": "https://media.api-sports.io/football/leagues/585.png",
+        "flag": "https://media.api-sports.io/flags/ug.svg",
+        "season": 2026,
+        "round": "Regular Season - 8",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 15562,
+          "name": "Kitara",
+          "logo": "https://media.api-sports.io/football/teams/15562.png",
+          "winner": null
+        },
+        "away": {
+          "id": 12449,
+          "name": "BUL",
+          "logo": "https://media.api-sports.io/football/teams/12449.png",
           "winner": null
         }
       },
@@ -477175,6 +477805,76 @@
           "id": 4537,
           "name": "Al Wihdat",
           "logo": "https://media.api-sports.io/football/teams/4537.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1558054,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-04T19:30:00+03:00",
+        "timestamp": 1796401800,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Sportni park Aluminij",
+          "city": "Kidricevo"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 373,
+        "name": "1. SNL",
+        "country": "Slovenia",
+        "logo": "https://media.api-sports.io/football/leagues/373.png",
+        "flag": "https://media.api-sports.io/flags/si.svg",
+        "season": 2026,
+        "round": "Regular Season - 18",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 4358,
+          "name": "Aluminij",
+          "logo": "https://media.api-sports.io/football/teams/4358.png",
+          "winner": null
+        },
+        "away": {
+          "id": 4197,
+          "name": "Mura",
+          "logo": "https://media.api-sports.io/football/teams/4197.png",
           "winner": null
         }
       },
@@ -486513,6 +487213,286 @@
     },
     {
       "fixture": {
+        "id": 1650731,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-05T11:30:00+03:00",
+        "timestamp": 1796459400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 1253,
+        "name": "Liga Nusantara",
+        "country": "Indonesia",
+        "logo": "https://media.api-sports.io/football/leagues/1253.png",
+        "flag": "https://media.api-sports.io/flags/id.svg",
+        "season": 2026,
+        "round": "Regular Season - 6",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 28709,
+          "name": "Donggala United",
+          "logo": "https://media.api-sports.io/football/teams/28709.png",
+          "winner": null
+        },
+        "away": {
+          "id": 28716,
+          "name": "Persinab Nabire",
+          "logo": "https://media.api-sports.io/football/teams/28716.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1650732,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-05T11:30:00+03:00",
+        "timestamp": 1796459400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 1253,
+        "name": "Liga Nusantara",
+        "country": "Indonesia",
+        "logo": "https://media.api-sports.io/football/leagues/1253.png",
+        "flag": "https://media.api-sports.io/flags/id.svg",
+        "season": 2026,
+        "round": "Regular Season - 6",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 28710,
+          "name": "Ngada",
+          "logo": "https://media.api-sports.io/football/teams/28710.png",
+          "winner": null
+        },
+        "away": {
+          "id": 28713,
+          "name": "Perseden Denpasar",
+          "logo": "https://media.api-sports.io/football/teams/28713.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1650733,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-05T11:30:00+03:00",
+        "timestamp": 1796459400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 1253,
+        "name": "Liga Nusantara",
+        "country": "Indonesia",
+        "logo": "https://media.api-sports.io/football/leagues/1253.png",
+        "flag": "https://media.api-sports.io/flags/id.svg",
+        "season": 2026,
+        "round": "Regular Season - 6",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 28711,
+          "name": "Pasuruan United",
+          "logo": "https://media.api-sports.io/football/teams/28711.png",
+          "winner": null
+        },
+        "away": {
+          "id": 28717,
+          "name": "Persipani Paniai",
+          "logo": "https://media.api-sports.io/football/teams/28717.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1650819,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-05T11:30:00+03:00",
+        "timestamp": 1796459400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 1253,
+        "name": "Liga Nusantara",
+        "country": "Indonesia",
+        "logo": "https://media.api-sports.io/football/leagues/1253.png",
+        "flag": "https://media.api-sports.io/flags/id.svg",
+        "season": 2026,
+        "round": "Regular Season - 6",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 28714,
+          "name": "Persikutim",
+          "logo": "https://media.api-sports.io/football/teams/28714.png",
+          "winner": null
+        },
+        "away": {
+          "id": 15803,
+          "name": "Persekabpas Pasuruan",
+          "logo": "https://media.api-sports.io/football/teams/15803.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
         "id": 1593712,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -486905,76 +487885,6 @@
           "id": 19170,
           "name": "CS Dinamo București",
           "logo": "https://media.api-sports.io/football/teams/19170.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1602578,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-05T12:00:00+03:00",
-        "timestamp": 1796461200,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 284,
-        "name": "Liga II",
-        "country": "Romania",
-        "logo": "https://media.api-sports.io/football/leagues/284.png",
-        "flag": "https://media.api-sports.io/flags/ro.svg",
-        "season": 2026,
-        "round": "Regular Season - 16",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 22000,
-          "name": "FC Bacau",
-          "logo": "https://media.api-sports.io/football/teams/22000.png",
-          "winner": null
-        },
-        "away": {
-          "id": 2586,
-          "name": "Chindia Targoviste",
-          "logo": "https://media.api-sports.io/football/teams/2586.png",
           "winner": null
         }
       },
@@ -488655,6 +489565,76 @@
           "id": 24735,
           "name": "Lazio U20",
           "logo": "https://media.api-sports.io/football/teams/24735.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1572760,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-05T13:00:00+03:00",
+        "timestamp": 1796464800,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 877,
+        "name": "Segunda División RFEF - Group 3",
+        "country": "Spain",
+        "logo": "https://media.api-sports.io/football/leagues/877.png",
+        "flag": "https://media.api-sports.io/flags/es.svg",
+        "season": 2026,
+        "round": "Group 3 - 14",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 9691,
+          "name": "Elche II",
+          "logo": "https://media.api-sports.io/football/teams/9691.png",
+          "winner": null
+        },
+        "away": {
+          "id": 9820,
+          "name": "Real Murcia II",
+          "logo": "https://media.api-sports.io/football/teams/9820.png",
           "winner": null
         }
       },
@@ -490783,6 +491763,76 @@
     },
     {
       "fixture": {
+        "id": 1590237,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-05T14:45:00+03:00",
+        "timestamp": 1796471100,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "NK Jadran",
+          "city": "Luka Ploce"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 211,
+        "name": "First NL",
+        "country": "Croatia",
+        "logo": "https://media.api-sports.io/football/leagues/211.png",
+        "flag": "https://media.api-sports.io/flags/hr.svg",
+        "season": 2026,
+        "round": "Regular Season - 15",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 5708,
+          "name": "Jadran LP",
+          "logo": "https://media.api-sports.io/football/teams/5708.png",
+          "winner": null
+        },
+        "away": {
+          "id": 15295,
+          "name": "Karlovac 1919",
+          "logo": "https://media.api-sports.io/football/teams/15295.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
         "id": 1634458,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -492785,6 +493835,356 @@
           "id": 1315,
           "name": "FSV Zwickau",
           "logo": "https://media.api-sports.io/football/teams/1315.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1590235,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-05T15:00:00+03:00",
+        "timestamp": 1796472000,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "SRC Pescenica",
+          "city": "Zagreb"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 211,
+        "name": "First NL",
+        "country": "Croatia",
+        "logo": "https://media.api-sports.io/football/leagues/211.png",
+        "flag": "https://media.api-sports.io/flags/hr.svg",
+        "season": 2026,
+        "round": "Regular Season - 15",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 6255,
+          "name": "Dubrava Zagreb",
+          "logo": "https://media.api-sports.io/football/teams/6255.png",
+          "winner": null
+        },
+        "away": {
+          "id": 22416,
+          "name": "Dinamo Zagreb U21",
+          "logo": "https://media.api-sports.io/football/teams/22416.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1590236,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-05T15:00:00+03:00",
+        "timestamp": 1796472000,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Gradski stadion Hrvace",
+          "city": "Hrvace"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 211,
+        "name": "First NL",
+        "country": "Croatia",
+        "logo": "https://media.api-sports.io/football/leagues/211.png",
+        "flag": "https://media.api-sports.io/flags/hr.svg",
+        "season": 2026,
+        "round": "Regular Season - 15",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 6241,
+          "name": "Hrvace",
+          "logo": "https://media.api-sports.io/football/teams/6241.png",
+          "winner": null
+        },
+        "away": {
+          "id": 1021,
+          "name": "HNK Cibalia",
+          "logo": "https://media.api-sports.io/football/teams/1021.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1590239,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-05T15:00:00+03:00",
+        "timestamp": 1796472000,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Stadion Kantrida",
+          "city": "Rijeka"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 211,
+        "name": "First NL",
+        "country": "Croatia",
+        "logo": "https://media.api-sports.io/football/leagues/211.png",
+        "flag": "https://media.api-sports.io/flags/hr.svg",
+        "season": 2026,
+        "round": "Regular Season - 15",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 6246,
+          "name": "Opatija",
+          "logo": "https://media.api-sports.io/football/teams/6246.png",
+          "winner": null
+        },
+        "away": {
+          "id": 6254,
+          "name": "Croatia Zmijavci",
+          "logo": "https://media.api-sports.io/football/teams/6254.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1590240,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-05T15:00:00+03:00",
+        "timestamp": 1796472000,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": 4628,
+          "name": "Stadion Krimeja",
+          "city": "Rijeka"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 211,
+        "name": "First NL",
+        "country": "Croatia",
+        "logo": "https://media.api-sports.io/football/leagues/211.png",
+        "flag": "https://media.api-sports.io/flags/hr.svg",
+        "season": 2026,
+        "round": "Regular Season - 15",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 6256,
+          "name": "Orijent 1919",
+          "logo": "https://media.api-sports.io/football/teams/6256.png",
+          "winner": null
+        },
+        "away": {
+          "id": 8593,
+          "name": "Mladost Ždralovi",
+          "logo": "https://media.api-sports.io/football/teams/8593.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1590241,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-05T15:00:00+03:00",
+        "timestamp": 1796472000,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": 422,
+          "name": "Stadion Gradski vrt",
+          "city": "Osijek"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 211,
+        "name": "First NL",
+        "country": "Croatia",
+        "logo": "https://media.api-sports.io/football/leagues/211.png",
+        "flag": "https://media.api-sports.io/flags/hr.svg",
+        "season": 2026,
+        "round": "Regular Season - 15",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 5730,
+          "name": "Vukovar",
+          "logo": "https://media.api-sports.io/football/teams/5730.png",
+          "winner": null
+        },
+        "away": {
+          "id": 1471,
+          "name": "Dugopolje",
+          "logo": "https://media.api-sports.io/football/teams/1471.png",
           "winner": null
         }
       },
@@ -496453,76 +497853,6 @@
     },
     {
       "fixture": {
-        "id": 1633312,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-05T15:00:00+03:00",
-        "timestamp": 1796472000,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 787,
-        "name": "Liga III - Serie 4",
-        "country": "Romania",
-        "logo": "https://media.api-sports.io/football/leagues/787.png",
-        "flag": "https://media.api-sports.io/flags/ro.svg",
-        "season": 2026,
-        "round": "Group 4 - 16",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 6899,
-          "name": "Sporting Lieşti",
-          "logo": "https://media.api-sports.io/football/teams/6899.png",
-          "winner": null
-        },
-        "away": {
-          "id": 2582,
-          "name": "Dunarea Calarasi",
-          "logo": "https://media.api-sports.io/football/teams/2582.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
         "id": 1633313,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -497965,76 +499295,6 @@
           "id": 2953,
           "name": "Al-Washm",
           "logo": "https://media.api-sports.io/football/teams/2953.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1634463,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-05T15:25:00+03:00",
-        "timestamp": 1796473500,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 309,
-        "name": "Division 2",
-        "country": "Saudi-Arabia",
-        "logo": "https://media.api-sports.io/football/leagues/309.png",
-        "flag": "https://media.api-sports.io/flags/sa.svg",
-        "season": 2026,
-        "round": "Regular Season - 10",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 2927,
-          "name": "Najran",
-          "logo": "https://media.api-sports.io/football/teams/2927.png",
-          "winner": null
-        },
-        "away": {
-          "id": 10505,
-          "name": "Al Entesar",
-          "logo": "https://media.api-sports.io/football/teams/10505.png",
           "winner": null
         }
       },
@@ -499645,6 +500905,76 @@
           "id": 9983,
           "name": "Hadiya Hosaena",
           "logo": "https://media.api-sports.io/football/teams/9983.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1634463,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-05T15:35:00+03:00",
+        "timestamp": 1796474100,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 309,
+        "name": "Division 2",
+        "country": "Saudi-Arabia",
+        "logo": "https://media.api-sports.io/football/leagues/309.png",
+        "flag": "https://media.api-sports.io/flags/sa.svg",
+        "season": 2026,
+        "round": "Regular Season - 10",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 2927,
+          "name": "Najran",
+          "logo": "https://media.api-sports.io/football/teams/2927.png",
+          "winner": null
+        },
+        "away": {
+          "id": 10505,
+          "name": "Al Entesar",
+          "logo": "https://media.api-sports.io/football/teams/10505.png",
           "winner": null
         }
       },
@@ -513043,6 +514373,76 @@
     },
     {
       "fixture": {
+        "id": 1558058,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-05T17:00:00+03:00",
+        "timestamp": 1796479200,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Stadion Stozice",
+          "city": "Ljubljana"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 373,
+        "name": "1. SNL",
+        "country": "Slovenia",
+        "logo": "https://media.api-sports.io/football/leagues/373.png",
+        "flag": "https://media.api-sports.io/flags/si.svg",
+        "season": 2026,
+        "round": "Regular Season - 18",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 677,
+          "name": "Olimpija Ljubljana",
+          "logo": "https://media.api-sports.io/football/teams/677.png",
+          "winner": null
+        },
+        "away": {
+          "id": 4374,
+          "name": "Koper",
+          "logo": "https://media.api-sports.io/football/teams/4374.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
         "id": 1560091,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -523753,76 +525153,6 @@
     },
     {
       "fixture": {
-        "id": 1585384,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-05T18:00:00+03:00",
-        "timestamp": 1796482800,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": "VBS Community Stadium",
-          "city": "London"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 43,
-        "name": "National League",
-        "country": "England",
-        "logo": "https://media.api-sports.io/football/leagues/43.png",
-        "flag": "https://media.api-sports.io/flags/gb-eng.svg",
-        "season": 2026,
-        "round": "Regular Season - 21",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 1835,
-          "name": "Sutton Utd",
-          "logo": "https://media.api-sports.io/football/teams/1835.png",
-          "winner": null
-        },
-        "away": {
-          "id": 1839,
-          "name": "AFC Fylde",
-          "logo": "https://media.api-sports.io/football/teams/1839.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
         "id": 1585385,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -534253,6 +535583,76 @@
     },
     {
       "fixture": {
+        "id": 1617413,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-05T18:30:00+03:00",
+        "timestamp": 1796484600,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 454,
+        "name": "Tercera División RFEF - Group 16",
+        "country": "Spain",
+        "logo": "https://media.api-sports.io/football/leagues/454.png",
+        "flag": "https://media.api-sports.io/flags/es.svg",
+        "season": 2026,
+        "round": "Group 16 - 14",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 8154,
+          "name": "Comillas",
+          "logo": "https://media.api-sports.io/football/teams/8154.png",
+          "winner": null
+        },
+        "away": {
+          "id": 9874,
+          "name": "Vianés",
+          "logo": "https://media.api-sports.io/football/teams/9874.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
         "id": 1619777,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -536773,6 +538173,76 @@
     },
     {
       "fixture": {
+        "id": 1573069,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-05T19:00:00+03:00",
+        "timestamp": 1796486400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 878,
+        "name": "Segunda División RFEF - Group 4",
+        "country": "Spain",
+        "logo": "https://media.api-sports.io/football/leagues/878.png",
+        "flag": "https://media.api-sports.io/flags/es.svg",
+        "season": 2026,
+        "round": "Group 4 - 14",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 5259,
+          "name": "Don Benito",
+          "logo": "https://media.api-sports.io/football/teams/5259.png",
+          "winner": null
+        },
+        "away": {
+          "id": 9765,
+          "name": "Real Betis II",
+          "logo": "https://media.api-sports.io/football/teams/9765.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
         "id": 1577069,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -537445,566 +538915,6 @@
           "id": 709,
           "name": "Pyunik Yerevan",
           "logo": "https://media.api-sports.io/football/teams/709.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1590234,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-05T19:00:00+03:00",
-        "timestamp": 1796486400,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": "Bijelo Brdo"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 211,
-        "name": "First NL",
-        "country": "Croatia",
-        "logo": "https://media.api-sports.io/football/leagues/211.png",
-        "flag": "https://media.api-sports.io/flags/hr.svg",
-        "season": 2026,
-        "round": "Regular Season - 15",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 1487,
-          "name": "Bsk Bijelo Brdo",
-          "logo": "https://media.api-sports.io/football/teams/1487.png",
-          "winner": null
-        },
-        "away": {
-          "id": 5722,
-          "name": "Segesta Sisak",
-          "logo": "https://media.api-sports.io/football/teams/5722.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1590235,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-05T19:00:00+03:00",
-        "timestamp": 1796486400,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": "SRC Pescenica",
-          "city": "Zagreb"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 211,
-        "name": "First NL",
-        "country": "Croatia",
-        "logo": "https://media.api-sports.io/football/leagues/211.png",
-        "flag": "https://media.api-sports.io/flags/hr.svg",
-        "season": 2026,
-        "round": "Regular Season - 15",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 6255,
-          "name": "Dubrava Zagreb",
-          "logo": "https://media.api-sports.io/football/teams/6255.png",
-          "winner": null
-        },
-        "away": {
-          "id": 22416,
-          "name": "Dinamo Zagreb U21",
-          "logo": "https://media.api-sports.io/football/teams/22416.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1590236,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-05T19:00:00+03:00",
-        "timestamp": 1796486400,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": "Gradski stadion Hrvace",
-          "city": "Hrvace"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 211,
-        "name": "First NL",
-        "country": "Croatia",
-        "logo": "https://media.api-sports.io/football/leagues/211.png",
-        "flag": "https://media.api-sports.io/flags/hr.svg",
-        "season": 2026,
-        "round": "Regular Season - 15",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 6241,
-          "name": "Hrvace",
-          "logo": "https://media.api-sports.io/football/teams/6241.png",
-          "winner": null
-        },
-        "away": {
-          "id": 1021,
-          "name": "HNK Cibalia",
-          "logo": "https://media.api-sports.io/football/teams/1021.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1590237,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-05T19:00:00+03:00",
-        "timestamp": 1796486400,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": "NK Jadran",
-          "city": "Luka Ploce"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 211,
-        "name": "First NL",
-        "country": "Croatia",
-        "logo": "https://media.api-sports.io/football/leagues/211.png",
-        "flag": "https://media.api-sports.io/flags/hr.svg",
-        "season": 2026,
-        "round": "Regular Season - 15",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 5708,
-          "name": "Jadran LP",
-          "logo": "https://media.api-sports.io/football/teams/5708.png",
-          "winner": null
-        },
-        "away": {
-          "id": 15295,
-          "name": "Karlovac 1919",
-          "logo": "https://media.api-sports.io/football/teams/15295.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1590238,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-05T19:00:00+03:00",
-        "timestamp": 1796486400,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": "Stadion Kustosija",
-          "city": "Zagreb"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 211,
-        "name": "First NL",
-        "country": "Croatia",
-        "logo": "https://media.api-sports.io/football/leagues/211.png",
-        "flag": "https://media.api-sports.io/flags/hr.svg",
-        "season": 2026,
-        "round": "Regular Season - 15",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 1481,
-          "name": "Kustosija",
-          "logo": "https://media.api-sports.io/football/teams/1481.png",
-          "winner": null
-        },
-        "away": {
-          "id": 1479,
-          "name": "Sesvete",
-          "logo": "https://media.api-sports.io/football/teams/1479.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1590239,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-05T19:00:00+03:00",
-        "timestamp": 1796486400,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": "Stadion Kantrida",
-          "city": "Rijeka"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 211,
-        "name": "First NL",
-        "country": "Croatia",
-        "logo": "https://media.api-sports.io/football/leagues/211.png",
-        "flag": "https://media.api-sports.io/flags/hr.svg",
-        "season": 2026,
-        "round": "Regular Season - 15",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 6246,
-          "name": "Opatija",
-          "logo": "https://media.api-sports.io/football/teams/6246.png",
-          "winner": null
-        },
-        "away": {
-          "id": 6254,
-          "name": "Croatia Zmijavci",
-          "logo": "https://media.api-sports.io/football/teams/6254.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1590240,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-05T19:00:00+03:00",
-        "timestamp": 1796486400,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": 4628,
-          "name": "Stadion Krimeja",
-          "city": "Rijeka"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 211,
-        "name": "First NL",
-        "country": "Croatia",
-        "logo": "https://media.api-sports.io/football/leagues/211.png",
-        "flag": "https://media.api-sports.io/flags/hr.svg",
-        "season": 2026,
-        "round": "Regular Season - 15",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 6256,
-          "name": "Orijent 1919",
-          "logo": "https://media.api-sports.io/football/teams/6256.png",
-          "winner": null
-        },
-        "away": {
-          "id": 8593,
-          "name": "Mladost Ždralovi",
-          "logo": "https://media.api-sports.io/football/teams/8593.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1590241,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-05T19:00:00+03:00",
-        "timestamp": 1796486400,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": 422,
-          "name": "Stadion Gradski vrt",
-          "city": "Osijek"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 211,
-        "name": "First NL",
-        "country": "Croatia",
-        "logo": "https://media.api-sports.io/football/leagues/211.png",
-        "flag": "https://media.api-sports.io/flags/hr.svg",
-        "season": 2026,
-        "round": "Regular Season - 15",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 5730,
-          "name": "Vukovar",
-          "logo": "https://media.api-sports.io/football/teams/5730.png",
-          "winner": null
-        },
-        "away": {
-          "id": 1471,
-          "name": "Dugopolje",
-          "logo": "https://media.api-sports.io/football/teams/1471.png",
           "winner": null
         }
       },
@@ -540413,6 +541323,76 @@
     },
     {
       "fixture": {
+        "id": 1558057,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-05T19:30:00+03:00",
+        "timestamp": 1796488200,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": "Lendava"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 373,
+        "name": "1. SNL",
+        "country": "Slovenia",
+        "logo": "https://media.api-sports.io/football/leagues/373.png",
+        "flag": "https://media.api-sports.io/flags/si.svg",
+        "season": 2026,
+        "round": "Regular Season - 18",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 4376,
+          "name": "Nafta",
+          "logo": "https://media.api-sports.io/football/teams/4376.png",
+          "winner": null
+        },
+        "away": {
+          "id": 12744,
+          "name": "Brinje-Grosuplje",
+          "logo": "https://media.api-sports.io/football/teams/12744.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
         "id": 1567974,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -542135,356 +543115,6 @@
           "id": 565,
           "name": "BSC Young Boys",
           "logo": "https://media.api-sports.io/football/teams/565.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1558054,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-05T20:00:00+03:00",
-        "timestamp": 1796490000,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": "Sportni park Aluminij",
-          "city": "Kidricevo"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 373,
-        "name": "1. SNL",
-        "country": "Slovenia",
-        "logo": "https://media.api-sports.io/football/leagues/373.png",
-        "flag": "https://media.api-sports.io/flags/si.svg",
-        "season": 2026,
-        "round": "Regular Season - 18",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 4358,
-          "name": "Aluminij",
-          "logo": "https://media.api-sports.io/football/teams/4358.png",
-          "winner": null
-        },
-        "away": {
-          "id": 4197,
-          "name": "Mura",
-          "logo": "https://media.api-sports.io/football/teams/4197.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1558055,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-05T20:00:00+03:00",
-        "timestamp": 1796490000,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": "Celje"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 373,
-        "name": "1. SNL",
-        "country": "Slovenia",
-        "logo": "https://media.api-sports.io/football/leagues/373.png",
-        "flag": "https://media.api-sports.io/flags/si.svg",
-        "season": 2026,
-        "round": "Regular Season - 18",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 4360,
-          "name": "Celje",
-          "logo": "https://media.api-sports.io/football/teams/4360.png",
-          "winner": null
-        },
-        "away": {
-          "id": 4359,
-          "name": "Bravo",
-          "logo": "https://media.api-sports.io/football/teams/4359.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1558056,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-05T20:00:00+03:00",
-        "timestamp": 1796490000,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": 1441,
-          "name": "Ljudski vrt",
-          "city": "Maribor"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 373,
-        "name": "1. SNL",
-        "country": "Slovenia",
-        "logo": "https://media.api-sports.io/football/leagues/373.png",
-        "flag": "https://media.api-sports.io/flags/si.svg",
-        "season": 2026,
-        "round": "Regular Season - 18",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 552,
-          "name": "Maribor",
-          "logo": "https://media.api-sports.io/football/teams/552.png",
-          "winner": null
-        },
-        "away": {
-          "id": 4378,
-          "name": "Radomlje",
-          "logo": "https://media.api-sports.io/football/teams/4378.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1558057,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-05T20:00:00+03:00",
-        "timestamp": 1796490000,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": "Lendava"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 373,
-        "name": "1. SNL",
-        "country": "Slovenia",
-        "logo": "https://media.api-sports.io/football/leagues/373.png",
-        "flag": "https://media.api-sports.io/flags/si.svg",
-        "season": 2026,
-        "round": "Regular Season - 18",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 4376,
-          "name": "Nafta",
-          "logo": "https://media.api-sports.io/football/teams/4376.png",
-          "winner": null
-        },
-        "away": {
-          "id": 12744,
-          "name": "Brinje-Grosuplje",
-          "logo": "https://media.api-sports.io/football/teams/12744.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1558058,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-05T20:00:00+03:00",
-        "timestamp": 1796490000,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": "Stadion Stozice",
-          "city": "Ljubljana"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 373,
-        "name": "1. SNL",
-        "country": "Slovenia",
-        "logo": "https://media.api-sports.io/football/leagues/373.png",
-        "flag": "https://media.api-sports.io/flags/si.svg",
-        "season": 2026,
-        "round": "Regular Season - 18",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 677,
-          "name": "Olimpija Ljubljana",
-          "logo": "https://media.api-sports.io/football/teams/677.png",
-          "winner": null
-        },
-        "away": {
-          "id": 4374,
-          "name": "Koper",
-          "logo": "https://media.api-sports.io/football/teams/4374.png",
           "winner": null
         }
       },
@@ -548883,6 +549513,76 @@
     },
     {
       "fixture": {
+        "id": 1582956,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-05T21:30:00+03:00",
+        "timestamp": 1796495400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 148,
+        "name": "Second Amateur Division - ACFF",
+        "country": "Belgium",
+        "logo": "https://media.api-sports.io/football/leagues/148.png",
+        "flag": "https://media.api-sports.io/flags/be.svg",
+        "season": 2026,
+        "round": "ACFF - 16",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 22256,
+          "name": "Stade Verviers",
+          "logo": "https://media.api-sports.io/football/teams/22256.png",
+          "winner": null
+        },
+        "away": {
+          "id": 5913,
+          "name": "Richelle United",
+          "logo": "https://media.api-sports.io/football/teams/5913.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
         "id": 1619778,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -549863,7 +550563,7 @@
     },
     {
       "fixture": {
-        "id": 1582956,
+        "id": 1582957,
         "referee": null,
         "timezone": "Europe/Istanbul",
         "date": "2026-12-05T22:00:00+03:00",
@@ -549896,15 +550596,15 @@
       },
       "teams": {
         "home": {
-          "id": 22256,
-          "name": "Stade Verviers",
-          "logo": "https://media.api-sports.io/football/teams/22256.png",
+          "id": 5737,
+          "name": "Acren-Lessines",
+          "logo": "https://media.api-sports.io/football/teams/5737.png",
           "winner": null
         },
         "away": {
-          "id": 5913,
-          "name": "Richelle United",
-          "logo": "https://media.api-sports.io/football/teams/5913.png",
+          "id": 5832,
+          "name": "Huy",
+          "logo": "https://media.api-sports.io/football/teams/5832.png",
           "winner": null
         }
       },
@@ -550955,76 +551655,6 @@
           "id": 234,
           "name": "Pacos Ferreira",
           "logo": "https://media.api-sports.io/football/teams/234.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1648040,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-05T23:00:00+03:00",
-        "timestamp": 1796500800,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 856,
-        "name": "CONCACAF Caribbean Club Championship",
-        "country": "World",
-        "logo": "https://media.api-sports.io/football/leagues/856.png",
-        "flag": null,
-        "season": 2026,
-        "round": "3rd place",
-        "standings": false
-      },
-      "teams": {
-        "home": {
-          "id": 4441,
-          "name": "Violette AC",
-          "logo": "https://media.api-sports.io/football/teams/4441.png",
-          "winner": null
-        },
-        "away": {
-          "id": 12561,
-          "name": "Club Sando",
-          "logo": "https://media.api-sports.io/football/teams/12561.png",
           "winner": null
         }
       },
@@ -581083,76 +581713,6 @@
     },
     {
       "fixture": {
-        "id": 1582957,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-06T17:00:00+03:00",
-        "timestamp": 1796565600,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 148,
-        "name": "Second Amateur Division - ACFF",
-        "country": "Belgium",
-        "logo": "https://media.api-sports.io/football/leagues/148.png",
-        "flag": "https://media.api-sports.io/flags/be.svg",
-        "season": 2026,
-        "round": "ACFF - 16",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 5737,
-          "name": "Acren-Lessines",
-          "logo": "https://media.api-sports.io/football/teams/5737.png",
-          "winner": null
-        },
-        "away": {
-          "id": 5832,
-          "name": "Huy",
-          "logo": "https://media.api-sports.io/football/teams/5832.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
         "id": 1582958,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -594803,76 +595363,6 @@
     },
     {
       "fixture": {
-        "id": 1572760,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-06T19:00:00+03:00",
-        "timestamp": 1796572800,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 877,
-        "name": "Segunda División RFEF - Group 3",
-        "country": "Spain",
-        "logo": "https://media.api-sports.io/football/leagues/877.png",
-        "flag": "https://media.api-sports.io/flags/es.svg",
-        "season": 2026,
-        "round": "Group 3 - 14",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 9691,
-          "name": "Elche II",
-          "logo": "https://media.api-sports.io/football/teams/9691.png",
-          "winner": null
-        },
-        "away": {
-          "id": 9820,
-          "name": "Real Murcia II",
-          "logo": "https://media.api-sports.io/football/teams/9820.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
         "id": 1572761,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -595405,76 +595895,6 @@
           "id": 730,
           "name": "Sevilla Atletico",
           "logo": "https://media.api-sports.io/football/teams/730.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1573069,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-06T19:00:00+03:00",
-        "timestamp": 1796572800,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 878,
-        "name": "Segunda División RFEF - Group 4",
-        "country": "Spain",
-        "logo": "https://media.api-sports.io/football/leagues/878.png",
-        "flag": "https://media.api-sports.io/flags/es.svg",
-        "season": 2026,
-        "round": "Group 4 - 14",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 5259,
-          "name": "Don Benito",
-          "logo": "https://media.api-sports.io/football/teams/5259.png",
-          "winner": null
-        },
-        "away": {
-          "id": 9765,
-          "name": "Real Betis II",
-          "logo": "https://media.api-sports.io/football/teams/9765.png",
           "winner": null
         }
       },
@@ -598275,76 +598695,6 @@
           "id": 9861,
           "name": "Anguiano",
           "logo": "https://media.api-sports.io/football/teams/9861.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1617413,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-06T19:00:00+03:00",
-        "timestamp": 1796572800,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 454,
-        "name": "Tercera División RFEF - Group 16",
-        "country": "Spain",
-        "logo": "https://media.api-sports.io/football/leagues/454.png",
-        "flag": "https://media.api-sports.io/flags/es.svg",
-        "season": 2026,
-        "round": "Group 16 - 14",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 8154,
-          "name": "Comillas",
-          "logo": "https://media.api-sports.io/football/teams/8154.png",
-          "winner": null
-        },
-        "away": {
-          "id": 9874,
-          "name": "Vianés",
-          "logo": "https://media.api-sports.io/football/teams/9874.png",
           "winner": null
         }
       },
