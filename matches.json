@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-11-18T05:05:06.751138+00:00",
+  "updated_at": "2026-11-18T06:12:26.583558+00:00",
   "date": "2026-11-18",
   "dates": [
     "2026-11-16",
     "2026-11-17",
     "2026-11-18",
     "2026-11-19",
-    "2026-12-08",
-    "2026-12-09"
+    "2026-12-10",
+    "2026-12-11"
   ],
   "horizon_days": 30,
   "response": [
@@ -22568,9 +22568,9 @@
           "city": "Chiba"
         },
         "status": {
-          "long": "Halftime",
-          "short": "HT",
-          "elapsed": 45,
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
           "extra": null
         }
       },
@@ -22589,18 +22589,18 @@
           "id": 16948,
           "name": "JEF United W",
           "logo": "https://media.api-sports.io/football/teams/16948.png",
-          "winner": null
+          "winner": false
         },
         "away": {
           "id": 16954,
           "name": "Parceiro Nagano W",
           "logo": "https://media.api-sports.io/football/teams/16954.png",
-          "winner": null
+          "winner": true
         }
       },
       "goals": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "score": {
         "halftime": {
@@ -22608,8 +22608,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -22638,9 +22638,9 @@
           "city": "Niigata"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 2,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 53,
           "extra": null
         }
       },
@@ -22659,22 +22659,22 @@
           "id": 16953,
           "name": "Albirex Niigata W",
           "logo": "https://media.api-sports.io/football/teams/16953.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 16946,
           "name": "Elfen Saitama W",
           "logo": "https://media.api-sports.io/football/teams/16946.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "score": {
         "halftime": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "fulltime": {
@@ -22708,9 +22708,9 @@
           "city": "Sendai"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 2,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 53,
           "extra": null
         }
       },
@@ -22729,23 +22729,23 @@
           "id": 16956,
           "name": "Vegalta Sendai W",
           "logo": "https://media.api-sports.io/football/teams/16956.png",
-          "winner": null
+          "winner": false
         },
         "away": {
           "id": 16951,
           "name": "Tokyo Verdy Beleza W",
           "logo": "https://media.api-sports.io/football/teams/16951.png",
-          "winner": null
+          "winner": true
         }
       },
       "goals": {
-        "home": 0,
-        "away": 0
+        "home": 1,
+        "away": 2
       },
       "score": {
         "halftime": {
           "home": 0,
-          "away": 0
+          "away": 2
         },
         "fulltime": {
           "home": null,
@@ -23264,7 +23264,7 @@
         },
         "venue": {
           "id": 11924,
-          "name": "Yeni Adana Stadyumu",
+          "name": "New Adana Stadium",
           "city": "Adana"
         },
         "status": {
@@ -23404,8 +23404,8 @@
         },
         "venue": {
           "id": null,
-          "name": "Elazig Ataturk Stadyumu",
-          "city": null
+          "name": "Elazığ Atatürk Stadyumu",
+          "city": "Elazi"
         },
         "status": {
           "long": "Not Started",
@@ -23473,9 +23473,9 @@
           "second": null
         },
         "venue": {
-          "id": null,
-          "name": null,
-          "city": null
+          "id": 7145,
+          "name": "Derince Belediyespor Dogal Cim Stadyumu",
+          "city": "Izmit"
         },
         "status": {
           "long": "Not Started",
@@ -23613,9 +23613,9 @@
           "second": null
         },
         "venue": {
-          "id": null,
-          "name": null,
-          "city": null
+          "id": 4787,
+          "name": "Isparta Ataturk Stadium",
+          "city": "Isparta"
         },
         "status": {
           "long": "Not Started",
@@ -23683,9 +23683,9 @@
           "second": null
         },
         "venue": {
-          "id": null,
-          "name": null,
-          "city": null
+          "id": 4775,
+          "name": "Bingöl Sehir Stadyumu",
+          "city": "Bingle"
         },
         "status": {
           "long": "Not Started",
@@ -23754,8 +23754,8 @@
         },
         "venue": {
           "id": null,
-          "name": null,
-          "city": null
+          "name": "Cebeci İnönü Stadium",
+          "city": "Ankara"
         },
         "status": {
           "long": "Not Started",
@@ -23823,9 +23823,9 @@
           "second": null
         },
         "venue": {
-          "id": null,
-          "name": null,
-          "city": null
+          "id": 5405,
+          "name": "Ismail Ogan Stadium",
+          "city": "Serik"
         },
         "status": {
           "long": "Not Started",
@@ -23893,9 +23893,9 @@
           "second": null
         },
         "venue": {
-          "id": null,
-          "name": null,
-          "city": null
+          "id": 22378,
+          "name": "Yavuz Selim Stadi",
+          "city": "Trabzon"
         },
         "status": {
           "long": "Not Started",
@@ -24103,9 +24103,9 @@
           "second": null
         },
         "venue": {
-          "id": null,
-          "name": null,
-          "city": null
+          "id": 20308,
+          "name": "Avanhard Stadium",
+          "city": "Uzhhorod"
         },
         "status": {
           "long": "Not Started",
@@ -24173,9 +24173,9 @@
           "second": null
         },
         "venue": {
-          "id": null,
+          "id": 1597,
           "name": "Slavutych-Arena",
-          "city": "Zaporizhia"
+          "city": "Zaporizhzhia"
         },
         "status": {
           "long": "Not Started",
@@ -24313,9 +24313,9 @@
           "second": null
         },
         "venue": {
-          "id": null,
-          "name": null,
-          "city": null
+          "id": 20747,
+          "name": "CSC Nika Stadium",
+          "city": "Oleksandria"
         },
         "status": {
           "long": "Not Started",
@@ -24523,9 +24523,9 @@
           "second": null
         },
         "venue": {
-          "id": null,
-          "name": null,
-          "city": null
+          "id": 11026,
+          "name": "Bolluca Stadium",
+          "city": "Arnavutkoy"
         },
         "status": {
           "long": "Not Started",
@@ -24593,8 +24593,8 @@
           "second": null
         },
         "venue": {
-          "id": null,
-          "name": "Eryaman Stadium",
+          "id": 2378,
+          "name": "Eryaman Stadyumu",
           "city": "Ankara"
         },
         "status": {
@@ -24663,9 +24663,9 @@
           "second": null
         },
         "venue": {
-          "id": null,
-          "name": "Go Dau Stadium",
-          "city": null
+          "id": 2470,
+          "name": "Thong Nhat Stadium",
+          "city": "Ho Chi Minh City"
         },
         "status": {
           "long": "Not Started",
@@ -24733,9 +24733,9 @@
           "second": null
         },
         "venue": {
-          "id": null,
-          "name": null,
-          "city": null
+          "id": 8330,
+          "name": "Obolon Arena",
+          "city": "Kyiv"
         },
         "status": {
           "long": "Not Started",
@@ -24873,9 +24873,9 @@
           "second": null
         },
         "venue": {
-          "id": null,
-          "name": null,
-          "city": null
+          "id": 20124,
+          "name": "Arena Lviv",
+          "city": "Lviv"
         },
         "status": {
           "long": "Not Started",
@@ -24943,9 +24943,9 @@
           "second": null
         },
         "venue": {
-          "id": null,
-          "name": "Tampines Stadium",
-          "city": "Tampines"
+          "id": 20752,
+          "name": "Our Tampines Hub",
+          "city": "Singapore City"
         },
         "status": {
           "long": "Not Started",
@@ -642473,6 +642473,76 @@
     },
     {
       "fixture": {
+        "id": 1606573,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-10T16:00:00+03:00",
+        "timestamp": 1796907600,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 306,
+        "name": "Second Division",
+        "country": "Qatar",
+        "logo": "https://media.api-sports.io/football/leagues/306.png",
+        "flag": "https://media.api-sports.io/flags/qa.svg",
+        "season": 2026,
+        "round": "Regular Season - 9",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 2911,
+          "name": "Al-Gharafa B",
+          "logo": "https://media.api-sports.io/football/teams/2911.png",
+          "winner": null
+        },
+        "away": {
+          "id": 2909,
+          "name": "Al Rayyan SC B",
+          "logo": "https://media.api-sports.io/football/teams/2909.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
         "id": 1630683,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -643803,6 +643873,76 @@
     },
     {
       "fixture": {
+        "id": 1606576,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-10T18:30:00+03:00",
+        "timestamp": 1796916600,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 306,
+        "name": "Second Division",
+        "country": "Qatar",
+        "logo": "https://media.api-sports.io/football/leagues/306.png",
+        "flag": "https://media.api-sports.io/flags/qa.svg",
+        "season": 2026,
+        "round": "Regular Season - 9",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 10954,
+          "name": "Qatar U23",
+          "logo": "https://media.api-sports.io/football/teams/10954.png",
+          "winner": null
+        },
+        "away": {
+          "id": 11909,
+          "name": "Al Shamal II",
+          "logo": "https://media.api-sports.io/football/teams/11909.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
         "id": 1636433,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -643873,76 +644013,6 @@
     },
     {
       "fixture": {
-        "id": 1561721,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-10T19:00:00+03:00",
-        "timestamp": 1796918400,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": "Bydgoszcz"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 109,
-        "name": "II Liga - East",
-        "country": "Poland",
-        "logo": "https://media.api-sports.io/football/leagues/109.png",
-        "flag": "https://media.api-sports.io/flags/pl.svg",
-        "season": 2026,
-        "round": "Regular Season - 15",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 13843,
-          "name": "Zawisza Bydgoszcz",
-          "logo": "https://media.api-sports.io/football/teams/13843.png",
-          "winner": null
-        },
-        "away": {
-          "id": 3495,
-          "name": "Tychy 71",
-          "logo": "https://media.api-sports.io/football/teams/3495.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
         "id": 1619364,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -643985,6 +644055,76 @@
           "id": 24884,
           "name": "Al Nassr W",
           "logo": "https://media.api-sports.io/football/teams/24884.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1561721,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-10T20:00:00+03:00",
+        "timestamp": 1796922000,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": "Bydgoszcz"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 109,
+        "name": "II Liga - East",
+        "country": "Poland",
+        "logo": "https://media.api-sports.io/football/leagues/109.png",
+        "flag": "https://media.api-sports.io/flags/pl.svg",
+        "season": 2026,
+        "round": "Regular Season - 15",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 13843,
+          "name": "Zawisza Bydgoszcz",
+          "logo": "https://media.api-sports.io/football/teams/13843.png",
+          "winner": null
+        },
+        "away": {
+          "id": 3495,
+          "name": "Tychy 71",
+          "logo": "https://media.api-sports.io/football/teams/3495.png",
           "winner": null
         }
       },
@@ -652203,6 +652343,76 @@
     },
     {
       "fixture": {
+        "id": 1606572,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-11T16:00:00+03:00",
+        "timestamp": 1796994000,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 306,
+        "name": "Second Division",
+        "country": "Qatar",
+        "logo": "https://media.api-sports.io/football/leagues/306.png",
+        "flag": "https://media.api-sports.io/flags/qa.svg",
+        "season": 2026,
+        "round": "Regular Season - 9",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 2925,
+          "name": "Al Bidda SC",
+          "logo": "https://media.api-sports.io/football/teams/2925.png",
+          "winner": null
+        },
+        "away": {
+          "id": 7577,
+          "name": "Al Waab",
+          "logo": "https://media.api-sports.io/football/teams/7577.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
         "id": 1621693,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -653015,76 +653225,6 @@
           "id": 12189,
           "name": "Coastal Union",
           "logo": "https://media.api-sports.io/football/teams/12189.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1600846,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-11T16:15:00+03:00",
-        "timestamp": 1796994900,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": "Ali Hassan Mwinyi Stadium",
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 567,
-        "name": "Ligi kuu Bara",
-        "country": "Tanzania",
-        "logo": "https://media.api-sports.io/football/leagues/567.png",
-        "flag": "https://media.api-sports.io/flags/tz.svg",
-        "season": 2026,
-        "round": "Regular Season - 15",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 22175,
-          "name": "Tabora United",
-          "logo": "https://media.api-sports.io/football/teams/22175.png",
-          "winner": null
-        },
-        "away": {
-          "id": 6432,
-          "name": "Simba",
-          "logo": "https://media.api-sports.io/football/teams/6432.png",
           "winner": null
         }
       },
@@ -654135,6 +654275,76 @@
           "id": 22720,
           "name": "Vegas",
           "logo": "https://media.api-sports.io/football/teams/22720.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1606574,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-11T18:30:00+03:00",
+        "timestamp": 1797003000,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 306,
+        "name": "Second Division",
+        "country": "Qatar",
+        "logo": "https://media.api-sports.io/football/leagues/306.png",
+        "flag": "https://media.api-sports.io/flags/qa.svg",
+        "season": 2026,
+        "round": "Regular Season - 9",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 2915,
+          "name": "Al Mesaimeer",
+          "logo": "https://media.api-sports.io/football/teams/2915.png",
+          "winner": null
+        },
+        "away": {
+          "id": 2901,
+          "name": "Al-Khor",
+          "logo": "https://media.api-sports.io/football/teams/2901.png",
           "winner": null
         }
       },
@@ -729133,76 +729343,6 @@
     },
     {
       "fixture": {
-        "id": 1606573,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-13T16:00:00+03:00",
-        "timestamp": 1797166800,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 306,
-        "name": "Second Division",
-        "country": "Qatar",
-        "logo": "https://media.api-sports.io/football/leagues/306.png",
-        "flag": "https://media.api-sports.io/flags/qa.svg",
-        "season": 2026,
-        "round": "Regular Season - 9",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 2911,
-          "name": "Al-Gharafa B",
-          "logo": "https://media.api-sports.io/football/teams/2911.png",
-          "winner": null
-        },
-        "away": {
-          "id": 2909,
-          "name": "Al Rayyan SC B",
-          "logo": "https://media.api-sports.io/football/teams/2909.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
         "id": 1607059,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -750035,76 +750175,6 @@
           "id": 12249,
           "name": "Hearts of Oak",
           "logo": "https://media.api-sports.io/football/teams/12249.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1606576,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-13T18:30:00+03:00",
-        "timestamp": 1797175800,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 306,
-        "name": "Second Division",
-        "country": "Qatar",
-        "logo": "https://media.api-sports.io/football/leagues/306.png",
-        "flag": "https://media.api-sports.io/flags/qa.svg",
-        "season": 2026,
-        "round": "Regular Season - 9",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 10954,
-          "name": "Qatar U23",
-          "logo": "https://media.api-sports.io/football/teams/10954.png",
-          "winner": null
-        },
-        "away": {
-          "id": 11909,
-          "name": "Al Shamal II",
-          "logo": "https://media.api-sports.io/football/teams/11909.png",
           "winner": null
         }
       },
@@ -773793,76 +773863,6 @@
     },
     {
       "fixture": {
-        "id": 1606572,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-14T16:00:00+03:00",
-        "timestamp": 1797253200,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 306,
-        "name": "Second Division",
-        "country": "Qatar",
-        "logo": "https://media.api-sports.io/football/leagues/306.png",
-        "flag": "https://media.api-sports.io/flags/qa.svg",
-        "season": 2026,
-        "round": "Regular Season - 9",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 2925,
-          "name": "Al Bidda SC",
-          "logo": "https://media.api-sports.io/football/teams/2925.png",
-          "winner": null
-        },
-        "away": {
-          "id": 7577,
-          "name": "Al Waab",
-          "logo": "https://media.api-sports.io/football/teams/7577.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
         "id": 1635362,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -774885,76 +774885,6 @@
           "id": 5570,
           "name": "Imisli FK",
           "logo": "https://media.api-sports.io/football/teams/5570.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1606574,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-14T18:30:00+03:00",
-        "timestamp": 1797262200,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 306,
-        "name": "Second Division",
-        "country": "Qatar",
-        "logo": "https://media.api-sports.io/football/leagues/306.png",
-        "flag": "https://media.api-sports.io/flags/qa.svg",
-        "season": 2026,
-        "round": "Regular Season - 9",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 2915,
-          "name": "Al Mesaimeer",
-          "logo": "https://media.api-sports.io/football/teams/2915.png",
-          "winner": null
-        },
-        "away": {
-          "id": 2901,
-          "name": "Al-Khor",
-          "logo": "https://media.api-sports.io/football/teams/2901.png",
           "winner": null
         }
       },
