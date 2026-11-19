@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-11-19T07:20:48.860589+00:00",
+  "updated_at": "2026-11-19T09:08:47.524161+00:00",
   "date": "2026-11-19",
   "dates": [
     "2026-11-17",
     "2026-11-18",
     "2026-11-19",
     "2026-11-20",
-    "2026-12-05",
-    "2026-12-06"
+    "2026-12-09",
+    "2026-12-10"
   ],
   "horizon_days": 30,
   "response": [
@@ -19963,76 +19963,6 @@
     },
     {
       "fixture": {
-        "id": 1630642,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-18T16:00:00+03:00",
-        "timestamp": 1795006800,
-        "periods": {
-          "first": 1795006800,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Match Suspended",
-          "short": "SUSP",
-          "elapsed": null,
-          "extra": 9
-        }
-      },
-      "league": {
-        "id": 400,
-        "name": "Super League",
-        "country": "Zambia",
-        "logo": "https://media.api-sports.io/football/leagues/400.png",
-        "flag": "https://media.api-sports.io/flags/zm.svg",
-        "season": 2026,
-        "round": "Regular Season - 8",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 11273,
-          "name": "Roan United",
-          "logo": "https://media.api-sports.io/football/teams/11273.png",
-          "winner": null
-        },
-        "away": {
-          "id": 28278,
-          "name": "Chirundu Utd",
-          "logo": "https://media.api-sports.io/football/teams/28278.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": 0,
-        "away": 0
-      },
-      "score": {
-        "halftime": {
-          "home": 0,
-          "away": 0
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
         "id": 1635324,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -27803,13 +27733,83 @@
     },
     {
       "fixture": {
+        "id": 1630642,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-19T11:00:00+03:00",
+        "timestamp": 1795075200,
+        "periods": {
+          "first": 1795006800,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Suspended",
+          "short": "SUSP",
+          "elapsed": null,
+          "extra": 9
+        }
+      },
+      "league": {
+        "id": 400,
+        "name": "Super League",
+        "country": "Zambia",
+        "logo": "https://media.api-sports.io/football/leagues/400.png",
+        "flag": "https://media.api-sports.io/flags/zm.svg",
+        "season": 2026,
+        "round": "Regular Season - 8",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 11273,
+          "name": "Roan United",
+          "logo": "https://media.api-sports.io/football/teams/11273.png",
+          "winner": null
+        },
+        "away": {
+          "id": 28278,
+          "name": "Chirundu Utd",
+          "logo": "https://media.api-sports.io/football/teams/28278.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
         "id": 1640368,
         "referee": null,
         "timezone": "Europe/Istanbul",
         "date": "2026-11-19T11:30:00+03:00",
         "timestamp": 1795077000,
         "periods": {
-          "first": null,
+          "first": 1795077000,
           "second": null
         },
         "venue": {
@@ -27818,9 +27818,9 @@
           "city": "Reservoir"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 33,
           "extra": null
         }
       },
@@ -27839,23 +27839,23 @@
           "id": 19705,
           "name": "Preston Lions",
           "logo": "https://media.api-sports.io/football/teams/19705.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 14106,
           "name": "South Hobart",
           "logo": "https://media.api-sports.io/football/teams/14106.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -27879,7 +27879,7 @@
         "date": "2026-11-19T11:30:00+03:00",
         "timestamp": 1795077000,
         "periods": {
-          "first": null,
+          "first": 1795077000,
           "second": null
         },
         "venue": {
@@ -27888,9 +27888,9 @@
           "city": "Brisbane"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 33,
           "extra": null
         }
       },
@@ -27919,13 +27919,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -27958,9 +27958,9 @@
           "city": "Saitama"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 6,
           "extra": null
         }
       },
@@ -27989,13 +27989,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -28024,8 +28024,8 @@
         },
         "venue": {
           "id": null,
-          "name": null,
-          "city": null
+          "name": "FK Baku Training Base",
+          "city": "Baku"
         },
         "status": {
           "long": "Not Started",
@@ -28164,8 +28164,8 @@
         },
         "venue": {
           "id": null,
-          "name": null,
-          "city": null
+          "name": "Yashar Mammadzade Stadium",
+          "city": "Mingachevir"
         },
         "status": {
           "long": "Not Started",
@@ -28234,7 +28234,7 @@
         },
         "venue": {
           "id": 20358,
-          "name": "Pandit Jawaharlal Nehru Stadium",
+          "name": "Fatorda Stadium",
           "city": "Margao"
         },
         "status": {
@@ -28303,9 +28303,9 @@
           "second": null
         },
         "venue": {
-          "id": null,
+          "id": 4070,
           "name": "Svay Rieng Stadium",
-          "city": "Svay Rieng"
+          "city": "Phnom Penh"
         },
         "status": {
           "long": "Not Started",
@@ -28373,9 +28373,9 @@
           "second": null
         },
         "venue": {
-          "id": null,
-          "name": null,
-          "city": null
+          "id": 20775,
+          "name": "Nevesinje city stadium",
+          "city": "Nevesinje"
         },
         "status": {
           "long": "Not Started",
@@ -28514,7 +28514,7 @@
         },
         "venue": {
           "id": null,
-          "name": "Gelora Bandung Lautan Api Stadium",
+          "name": "Gelora Bandung Lautan Api",
           "city": "Bandung"
         },
         "status": {
@@ -28653,8 +28653,8 @@
           "second": null
         },
         "venue": {
-          "id": null,
-          "name": null,
+          "id": 7249,
+          "name": "MFK Lokomotiva Zvolen Stadium",
           "city": "Zvolen"
         },
         "status": {
@@ -28723,7 +28723,7 @@
           "second": null
         },
         "venue": {
-          "id": null,
+          "id": 2468,
           "name": "Hang Day Stadium",
           "city": "Hanoi"
         },
@@ -29213,7 +29213,7 @@
           "second": null
         },
         "venue": {
-          "id": null,
+          "id": 3338,
           "name": "Beltinci Sports Park",
           "city": "Beltinci"
         },
@@ -29284,7 +29284,7 @@
         },
         "venue": {
           "id": null,
-          "name": null,
+          "name": "Sportni Park Dob",
           "city": "Dob"
         },
         "status": {
@@ -29493,9 +29493,9 @@
           "second": null
         },
         "venue": {
-          "id": null,
-          "name": "Stadion Surkhon",
-          "city": "Termez"
+          "id": 3215,
+          "name": "Markaziy Stadium Qarshi",
+          "city": "Karshi"
         },
         "status": {
           "long": "Not Started",
@@ -29554,7 +29554,7 @@
     {
       "fixture": {
         "id": 1546149,
-        "referee": null,
+        "referee": "Du Jianxin",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-19T16:00:00+03:00",
         "timestamp": 1795093200,
@@ -29564,8 +29564,8 @@
         },
         "venue": {
           "id": null,
-          "name": "Aspire Zone",
-          "city": null
+          "name": "Doha Sports City",
+          "city": "Doha"
         },
         "status": {
           "long": "Not Started",
@@ -29634,8 +29634,8 @@
         },
         "venue": {
           "id": null,
-          "name": "Aspire Zone",
-          "city": null
+          "name": "Doha Sports City",
+          "city": "Doha"
         },
         "status": {
           "long": "Not Started",
@@ -29703,9 +29703,9 @@
           "second": null
         },
         "venue": {
-          "id": null,
-          "name": null,
-          "city": null
+          "id": 3938,
+          "name": "Shinde Stadium",
+          "city": "Mufulira"
         },
         "status": {
           "long": "Not Started",
@@ -29774,8 +29774,8 @@
         },
         "venue": {
           "id": null,
-          "name": null,
-          "city": null
+          "name": "Edwin Imboela Stadium",
+          "city": "Lusaka"
         },
         "status": {
           "long": "Not Started",
@@ -29843,9 +29843,9 @@
           "second": null
         },
         "venue": {
-          "id": null,
-          "name": null,
-          "city": null
+          "id": 3930,
+          "name": "Levy Mwanawasa Stadium",
+          "city": "Ndola"
         },
         "status": {
           "long": "Not Started",
@@ -29984,7 +29984,7 @@
         },
         "venue": {
           "id": null,
-          "name": "Gaddafi Arena",
+          "name": "Kakindu Municipal Stadium",
           "city": "Jinja"
         },
         "status": {
@@ -30124,7 +30124,7 @@
         },
         "venue": {
           "id": null,
-          "name": "Mutesa II Stadium",
+          "name": "Luzira Maximum Prisons Stadium",
           "city": "Kampala"
         },
         "status": {
@@ -30404,8 +30404,8 @@
         },
         "venue": {
           "id": null,
-          "name": null,
-          "city": null
+          "name": "Al Salt Stadium",
+          "city": "Al Salt"
         },
         "status": {
           "long": "Not Started",
@@ -30543,8 +30543,8 @@
           "second": null
         },
         "venue": {
-          "id": null,
-          "name": "Sirous Ghayeghran Stadium",
+          "id": 849,
+          "name": "Takhti Stadium",
           "city": "Bandar-e Anzali"
         },
         "status": {
@@ -30614,8 +30614,8 @@
         },
         "venue": {
           "id": null,
-          "name": "Aspire Zone",
-          "city": null
+          "name": "Doha Sports City",
+          "city": "Doha"
         },
         "status": {
           "long": "Not Started",
@@ -30753,9 +30753,9 @@
           "second": null
         },
         "venue": {
-          "id": null,
-          "name": null,
-          "city": null
+          "id": 12559,
+          "name": "Mes Shahrbabak sports complex",
+          "city": "Shahr-e Babak"
         },
         "status": {
           "long": "Not Started",
@@ -30824,8 +30824,8 @@
         },
         "venue": {
           "id": null,
-          "name": "Aspire Zone",
-          "city": null
+          "name": "Doha Sports City",
+          "city": "Doha"
         },
         "status": {
           "long": "Not Started",
@@ -31243,9 +31243,9 @@
           "second": null
         },
         "venue": {
-          "id": null,
-          "name": null,
-          "city": null
+          "id": 4169,
+          "name": "Stade Municipal",
+          "city": "Dschang"
         },
         "status": {
           "long": "Not Started",
@@ -33543,6 +33543,76 @@
     },
     {
       "fixture": {
+        "id": 1650564,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-19T21:00:00+03:00",
+        "timestamp": 1795111200,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 1114,
+        "name": "Carioca U20",
+        "country": "Brazil",
+        "logo": "https://media.api-sports.io/football/leagues/1114.png",
+        "flag": "https://media.api-sports.io/flags/br.svg",
+        "season": 2026,
+        "round": "Final",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 20762,
+          "name": "Madureira U20",
+          "logo": "https://media.api-sports.io/football/teams/20762.png",
+          "winner": null
+        },
+        "away": {
+          "id": 22831,
+          "name": "Bangu U20",
+          "logo": "https://media.api-sports.io/football/teams/22831.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
         "id": 1648721,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -34048,8 +34118,8 @@
           "city": "Montevideo"
         },
         "status": {
-          "long": "Match Postponed",
-          "short": "PST",
+          "long": "Not Started",
+          "short": "NS",
           "elapsed": null,
           "extra": null
         }
@@ -41635,6 +41705,76 @@
           "id": 15301,
           "name": "Horriya",
           "logo": "https://media.api-sports.io/football/teams/15301.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1645704,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-20T15:00:00+03:00",
+        "timestamp": 1795176000,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 425,
+        "name": "Premier League",
+        "country": "Syria",
+        "logo": "https://media.api-sports.io/football/leagues/425.png",
+        "flag": "https://media.api-sports.io/flags/sy.svg",
+        "season": 2026,
+        "round": "Regular Season - 6",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 9113,
+          "name": "Al Taliya",
+          "logo": "https://media.api-sports.io/football/teams/9113.png",
+          "winner": null
+        },
+        "away": {
+          "id": 28525,
+          "name": "Qamishli",
+          "logo": "https://media.api-sports.io/football/teams/28525.png",
           "winner": null
         }
       },
@@ -49895,76 +50035,6 @@
           "id": 8093,
           "name": "Onze Créateurs",
           "logo": "https://media.api-sports.io/football/teams/8093.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1628040,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-20T19:15:00+03:00",
-        "timestamp": 1795191300,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 542,
-        "name": "Iraqi League",
-        "country": "Iraq",
-        "logo": "https://media.api-sports.io/football/leagues/542.png",
-        "flag": "https://media.api-sports.io/flags/iq.svg",
-        "season": 2026,
-        "round": "Regular Season - 14",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 28222,
-          "name": "Al-Jolan SC",
-          "logo": "https://media.api-sports.io/football/teams/28222.png",
-          "winner": null
-        },
-        "away": {
-          "id": 11071,
-          "name": "Naft",
-          "logo": "https://media.api-sports.io/football/teams/11071.png",
           "winner": null
         }
       },
@@ -100253,76 +100323,6 @@
     },
     {
       "fixture": {
-        "id": 1645704,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-21T16:00:00+03:00",
-        "timestamp": 1795266000,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 425,
-        "name": "Premier League",
-        "country": "Syria",
-        "logo": "https://media.api-sports.io/football/leagues/425.png",
-        "flag": "https://media.api-sports.io/flags/sy.svg",
-        "season": 2026,
-        "round": "Regular Season - 6",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 9113,
-          "name": "Al Taliya",
-          "logo": "https://media.api-sports.io/football/teams/9113.png",
-          "winner": null
-        },
-        "away": {
-          "id": 28525,
-          "name": "Qamishli",
-          "logo": "https://media.api-sports.io/football/teams/28525.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
         "id": 1646476,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -101485,76 +101485,6 @@
           "id": 12979,
           "name": "Vasco da Gama U20",
           "logo": "https://media.api-sports.io/football/teams/12979.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1650564,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-21T16:00:00+03:00",
-        "timestamp": 1795266000,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 1114,
-        "name": "Carioca U20",
-        "country": "Brazil",
-        "logo": "https://media.api-sports.io/football/leagues/1114.png",
-        "flag": "https://media.api-sports.io/flags/br.svg",
-        "season": 2026,
-        "round": "Final",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 20762,
-          "name": "Madureira U20",
-          "logo": "https://media.api-sports.io/football/teams/20762.png",
-          "winner": null
-        },
-        "away": {
-          "id": 22831,
-          "name": "Bangu U20",
-          "logo": "https://media.api-sports.io/football/teams/22831.png",
           "winner": null
         }
       },
@@ -629033,6 +628963,76 @@
     },
     {
       "fixture": {
+        "id": 1598764,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-09T14:00:00+03:00",
+        "timestamp": 1796814000,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 701,
+        "name": "Liga Revelação U23",
+        "country": "Portugal",
+        "logo": "https://media.api-sports.io/football/leagues/701.png",
+        "flag": "https://media.api-sports.io/flags/pt.svg",
+        "season": 2026,
+        "round": "Regular Season - 14",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 15463,
+          "name": "Estoril U23",
+          "logo": "https://media.api-sports.io/football/teams/15463.png",
+          "winner": null
+        },
+        "away": {
+          "id": 19824,
+          "name": "Estrela U23",
+          "logo": "https://media.api-sports.io/football/teams/19824.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
         "id": 1639383,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -631035,6 +631035,76 @@
           "id": 2926,
           "name": "Al Baten",
           "logo": "https://media.api-sports.io/football/teams/2926.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1559420,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-09T15:00:00+03:00",
+        "timestamp": 1796817600,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 356,
+        "name": "Second League",
+        "country": "Montenegro",
+        "logo": "https://media.api-sports.io/football/leagues/356.png",
+        "flag": "https://media.api-sports.io/flags/me.svg",
+        "season": 2026,
+        "round": "Regular Season - 17",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 2258,
+          "name": "Rudar",
+          "logo": "https://media.api-sports.io/football/teams/2258.png",
+          "winner": null
+        },
+        "away": {
+          "id": 3737,
+          "name": "Grbalj",
+          "logo": "https://media.api-sports.io/football/teams/3737.png",
           "winner": null
         }
       },
@@ -636663,76 +636733,6 @@
     },
     {
       "fixture": {
-        "id": 1598764,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-09T20:00:00+03:00",
-        "timestamp": 1796835600,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 701,
-        "name": "Liga Revelação U23",
-        "country": "Portugal",
-        "logo": "https://media.api-sports.io/football/leagues/701.png",
-        "flag": "https://media.api-sports.io/flags/pt.svg",
-        "season": 2026,
-        "round": "Regular Season - 14",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 15463,
-          "name": "Estoril U23",
-          "logo": "https://media.api-sports.io/football/teams/15463.png",
-          "winner": null
-        },
-        "away": {
-          "id": 19824,
-          "name": "Estrela U23",
-          "logo": "https://media.api-sports.io/football/teams/19824.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
         "id": 1647627,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -638735,76 +638735,6 @@
           "id": 8663,
           "name": "Wealdstone",
           "logo": "https://media.api-sports.io/football/teams/8663.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1588508,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-09T22:45:00+03:00",
-        "timestamp": 1796845500,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 51,
-        "name": "National League - South",
-        "country": "England",
-        "logo": "https://media.api-sports.io/football/leagues/51.png",
-        "flag": "https://media.api-sports.io/flags/gb-eng.svg",
-        "season": 2026,
-        "round": "National League South - 21",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 7715,
-          "name": "Farnborough",
-          "logo": "https://media.api-sports.io/football/teams/7715.png",
-          "winner": null
-        },
-        "away": {
-          "id": 1825,
-          "name": "Maidstone Utd",
-          "logo": "https://media.api-sports.io/football/teams/1825.png",
           "winner": null
         }
       },
