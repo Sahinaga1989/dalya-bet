@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-11-20T05:04:32.348316+00:00",
+  "updated_at": "2026-11-20T06:10:44.722553+00:00",
   "date": "2026-11-20",
   "dates": [
     "2026-11-18",
     "2026-11-19",
     "2026-11-20",
     "2026-11-21",
-    "2026-11-24",
-    "2026-11-25"
+    "2026-11-26",
+    "2026-11-27"
   ],
   "horizon_days": 30,
   "response": [
@@ -21028,9 +21028,9 @@
           "city": "Seattle"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 90,
+          "long": "Match Finished",
+          "short": "PEN",
+          "elapsed": 120,
           "extra": null
         }
       },
@@ -21049,13 +21049,13 @@
           "id": 1595,
           "name": "Seattle Sounders",
           "logo": "https://media.api-sports.io/football/teams/1595.png",
-          "winner": null
+          "winner": false
         },
         "away": {
           "id": 1606,
           "name": "Real Salt Lake",
           "logo": "https://media.api-sports.io/football/teams/1606.png",
-          "winner": null
+          "winner": true
         }
       },
       "goals": {
@@ -21068,16 +21068,16 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 1
         },
         "extratime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "penalty": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 4
         }
       }
     },
@@ -252993,6 +252993,76 @@
     },
     {
       "fixture": {
+        "id": 1621678,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-27T14:00:00+03:00",
+        "timestamp": 1795777200,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 496,
+        "name": "Liga Alef",
+        "country": "Israel",
+        "logo": "https://media.api-sports.io/football/leagues/496.png",
+        "flag": "https://media.api-sports.io/flags/il.svg",
+        "season": 2026,
+        "round": "South - 11",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 6195,
+          "name": "Maccabi Kiryat Malachi",
+          "logo": "https://media.api-sports.io/football/teams/6195.png",
+          "winner": null
+        },
+        "away": {
+          "id": 6208,
+          "name": "Shimshon Tel Aviv",
+          "logo": "https://media.api-sports.io/football/teams/6208.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
         "id": 1633942,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -253875,76 +253945,6 @@
           "id": 2978,
           "name": "Hetten FC",
           "logo": "https://media.api-sports.io/football/teams/2978.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1634436,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-27T14:55:00+03:00",
-        "timestamp": 1795780500,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 309,
-        "name": "Division 2",
-        "country": "Saudi-Arabia",
-        "logo": "https://media.api-sports.io/football/leagues/309.png",
-        "flag": "https://media.api-sports.io/flags/sa.svg",
-        "season": 2026,
-        "round": "Regular Season - 9",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 10520,
-          "name": "Al Nairyah",
-          "logo": "https://media.api-sports.io/football/teams/10520.png",
-          "winner": null
-        },
-        "away": {
-          "id": 13170,
-          "name": "Al-Ain",
-          "logo": "https://media.api-sports.io/football/teams/13170.png",
           "winner": null
         }
       },
@@ -257123,6 +257123,76 @@
     },
     {
       "fixture": {
+        "id": 1590231,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-27T15:30:00+03:00",
+        "timestamp": 1795782600,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Stadion Ivan Laljak-Ivic",
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 211,
+        "name": "First NL",
+        "country": "Croatia",
+        "logo": "https://media.api-sports.io/football/leagues/211.png",
+        "flag": "https://media.api-sports.io/flags/hr.svg",
+        "season": 2026,
+        "round": "Regular Season - 14",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 22416,
+          "name": "Dinamo Zagreb U21",
+          "logo": "https://media.api-sports.io/football/teams/22416.png",
+          "winner": null
+        },
+        "away": {
+          "id": 6241,
+          "name": "Hrvace",
+          "logo": "https://media.api-sports.io/football/teams/6241.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
         "id": 1590233,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -258733,76 +258803,6 @@
     },
     {
       "fixture": {
-        "id": 1590231,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-27T16:00:00+03:00",
-        "timestamp": 1795784400,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": "Stadion Ivan Laljak-Ivic",
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 211,
-        "name": "First NL",
-        "country": "Croatia",
-        "logo": "https://media.api-sports.io/football/leagues/211.png",
-        "flag": "https://media.api-sports.io/flags/hr.svg",
-        "season": 2026,
-        "round": "Regular Season - 14",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 22416,
-          "name": "Dinamo Zagreb U21",
-          "logo": "https://media.api-sports.io/football/teams/22416.png",
-          "winner": null
-        },
-        "away": {
-          "id": 6241,
-          "name": "Hrvace",
-          "logo": "https://media.api-sports.io/football/teams/6241.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
         "id": 1597969,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -259125,76 +259125,6 @@
           "id": 4498,
           "name": "Hapoel Marmorek",
           "logo": "https://media.api-sports.io/football/teams/4498.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1621678,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-27T16:00:00+03:00",
-        "timestamp": 1795784400,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 496,
-        "name": "Liga Alef",
-        "country": "Israel",
-        "logo": "https://media.api-sports.io/football/leagues/496.png",
-        "flag": "https://media.api-sports.io/flags/il.svg",
-        "season": 2026,
-        "round": "South - 11",
-        "standings": false
-      },
-      "teams": {
-        "home": {
-          "id": 6195,
-          "name": "Maccabi Kiryat Malachi",
-          "logo": "https://media.api-sports.io/football/teams/6195.png",
-          "winner": null
-        },
-        "away": {
-          "id": 6208,
-          "name": "Shimshon Tel Aviv",
-          "logo": "https://media.api-sports.io/football/teams/6208.png",
           "winner": null
         }
       },
@@ -259965,6 +259895,76 @@
           "id": 10569,
           "name": "University of Pretoria",
           "logo": "https://media.api-sports.io/football/teams/10569.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1627779,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-27T16:30:00+03:00",
+        "timestamp": 1795786200,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 289,
+        "name": "1st Division",
+        "country": "South-Africa",
+        "logo": "https://media.api-sports.io/football/leagues/289.png",
+        "flag": "https://media.api-sports.io/flags/za.svg",
+        "season": 2026,
+        "round": "Regular Season - 12",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 10582,
+          "name": "Orbit College",
+          "logo": "https://media.api-sports.io/football/teams/10582.png",
+          "winner": null
+        },
+        "away": {
+          "id": 28236,
+          "name": "NWU FC",
+          "logo": "https://media.api-sports.io/football/teams/28236.png",
           "winner": null
         }
       },
@@ -264235,76 +264235,6 @@
           "id": 10513,
           "name": "NEOM",
           "logo": "https://media.api-sports.io/football/teams/10513.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1627779,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-27T20:30:00+03:00",
-        "timestamp": 1795800600,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 289,
-        "name": "1st Division",
-        "country": "South-Africa",
-        "logo": "https://media.api-sports.io/football/leagues/289.png",
-        "flag": "https://media.api-sports.io/flags/za.svg",
-        "season": 2026,
-        "round": "Regular Season - 12",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 10582,
-          "name": "Orbit College",
-          "logo": "https://media.api-sports.io/football/teams/10582.png",
-          "winner": null
-        },
-        "away": {
-          "id": 28236,
-          "name": "NWU FC",
-          "logo": "https://media.api-sports.io/football/teams/28236.png",
           "winner": null
         }
       },
