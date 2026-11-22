@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-11-22T08:54:03.943837+00:00",
+  "updated_at": "2026-11-22T09:51:42.485310+00:00",
   "date": "2026-11-22",
   "dates": [
     "2026-11-20",
     "2026-11-21",
     "2026-11-22",
     "2026-11-23",
-    "2026-12-14",
-    "2026-12-15"
+    "2026-12-16",
+    "2026-12-17"
   ],
   "horizon_days": 30,
   "response": [
@@ -79183,76 +79183,6 @@
     },
     {
       "fixture": {
-        "id": 1547050,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-21T18:00:00+03:00",
-        "timestamp": 1795273200,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 730,
-        "name": "Football League - Highland League",
-        "country": "Scotland",
-        "logo": "https://media.api-sports.io/football/leagues/730.png",
-        "flag": "https://media.api-sports.io/flags/gb-sct.svg",
-        "season": 2026,
-        "round": "Highland League - 18",
-        "standings": false
-      },
-      "teams": {
-        "home": {
-          "id": 7445,
-          "name": "Inverurie Loco Works",
-          "logo": "https://media.api-sports.io/football/teams/7445.png",
-          "winner": null
-        },
-        "away": {
-          "id": 7432,
-          "name": "Buckie Thistle",
-          "logo": "https://media.api-sports.io/football/teams/7432.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
         "id": 1547051,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -93240,76 +93170,6 @@
         "fulltime": {
           "home": 1,
           "away": 1
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1628609,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-21T18:00:00+03:00",
-        "timestamp": 1795273200,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": 3926,
-          "name": "Yakubu Gowon Stadium",
-          "city": "Port Harcourt"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 399,
-        "name": "NPFL",
-        "country": "Nigeria",
-        "logo": "https://media.api-sports.io/football/leagues/399.png",
-        "flag": "https://media.api-sports.io/flags/ng.svg",
-        "season": 2027,
-        "round": "Regular Season - 14",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 5192,
-          "name": "Rivers United",
-          "logo": "https://media.api-sports.io/football/teams/5192.png",
-          "winner": null
-        },
-        "away": {
-          "id": 5189,
-          "name": "Niger Tornadoes",
-          "logo": "https://media.api-sports.io/football/teams/5189.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
         },
         "extratime": {
           "home": null,
@@ -119938,10 +119798,10 @@
           "city": null
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
+          "long": "Match Finished",
+          "short": "FT",
           "elapsed": 90,
-          "extra": 5
+          "extra": 6
         }
       },
       "league": {
@@ -119978,8 +119838,8 @@
           "away": 3
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 3
         },
         "extratime": {
           "home": null,
@@ -120148,10 +120008,10 @@
           "city": "Paju"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 66,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 13
         }
       },
       "league": {
@@ -120169,18 +120029,18 @@
           "id": 7098,
           "name": "Paju Citizen",
           "logo": "https://media.api-sports.io/football/teams/7098.png",
-          "winner": true
+          "winner": false
         },
         "away": {
           "id": 7060,
           "name": "Cheonan City",
           "logo": "https://media.api-sports.io/football/teams/7060.png",
-          "winner": false
+          "winner": true
         }
       },
       "goals": {
         "home": 1,
-        "away": 0
+        "away": 2
       },
       "score": {
         "halftime": {
@@ -120188,8 +120048,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 2
         },
         "extratime": {
           "home": null,
@@ -120218,10 +120078,10 @@
           "city": "Seoul"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 68,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 6
         }
       },
       "league": {
@@ -120249,8 +120109,8 @@
         }
       },
       "goals": {
-        "home": 0,
-        "away": 0
+        "home": 1,
+        "away": 1
       },
       "score": {
         "halftime": {
@@ -120258,8 +120118,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -120288,10 +120148,10 @@
           "city": null
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 68,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 4
         }
       },
       "league": {
@@ -120319,7 +120179,7 @@
         }
       },
       "goals": {
-        "home": 0,
+        "home": 1,
         "away": 4
       },
       "score": {
@@ -120328,8 +120188,8 @@
           "away": 3
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 4
         },
         "extratime": {
           "home": null,
@@ -120358,10 +120218,10 @@
           "city": null
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 65,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 5
         }
       },
       "league": {
@@ -120379,18 +120239,18 @@
           "id": 9427,
           "name": "Taipower",
           "logo": "https://media.api-sports.io/football/teams/9427.png",
-          "winner": true
+          "winner": false
         },
         "away": {
           "id": 12543,
           "name": "Tainan City",
           "logo": "https://media.api-sports.io/football/teams/12543.png",
-          "winner": false
+          "winner": true
         }
       },
       "goals": {
         "home": 1,
-        "away": 0
+        "away": 2
       },
       "score": {
         "halftime": {
@@ -120398,8 +120258,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 2
         },
         "extratime": {
           "home": null,
@@ -120428,10 +120288,10 @@
           "city": "Dingnan"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 64,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 3
         }
       },
       "league": {
@@ -120449,18 +120309,18 @@
           "id": 1445,
           "name": "Heilongjiang Lava Spring",
           "logo": "https://media.api-sports.io/football/teams/1445.png",
-          "winner": null
+          "winner": false
         },
         "away": {
           "id": 25775,
           "name": "Guizhou Zhucheng",
           "logo": "https://media.api-sports.io/football/teams/25775.png",
-          "winner": null
+          "winner": true
         }
       },
       "goals": {
         "home": 0,
-        "away": 0
+        "away": 2
       },
       "score": {
         "halftime": {
@@ -120468,8 +120328,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 2
         },
         "extratime": {
           "home": null,
@@ -120490,7 +120350,7 @@
         "timestamp": 1795334400,
         "periods": {
           "first": 1795334400,
-          "second": null
+          "second": 1795338000
         },
         "venue": {
           "id": null,
@@ -120498,10 +120358,10 @@
           "city": null
         },
         "status": {
-          "long": "Halftime",
-          "short": "HT",
-          "elapsed": 45,
-          "extra": 2
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 90,
+          "extra": 3
         }
       },
       "league": {
@@ -120519,17 +120379,17 @@
           "id": 17717,
           "name": "Marumo Gallants U23",
           "logo": "https://media.api-sports.io/football/teams/17717.png",
-          "winner": true
+          "winner": null
         },
         "away": {
           "id": 22378,
           "name": "Polokwane City U23",
           "logo": "https://media.api-sports.io/football/teams/22378.png",
-          "winner": false
+          "winner": null
         }
       },
       "goals": {
-        "home": 1,
+        "home": 0,
         "away": 0
       },
       "score": {
@@ -120700,7 +120560,7 @@
         "timestamp": 1795334400,
         "periods": {
           "first": 1795334400,
-          "second": null
+          "second": 1795338000
         },
         "venue": {
           "id": null,
@@ -120708,9 +120568,9 @@
           "city": null
         },
         "status": {
-          "long": "Halftime",
-          "short": "HT",
-          "elapsed": 45,
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
           "extra": 5
         }
       },
@@ -120729,18 +120589,18 @@
           "id": 28451,
           "name": "Oudomxay Entremets",
           "logo": "https://media.api-sports.io/football/teams/28451.png",
-          "winner": null
+          "winner": false
         },
         "away": {
           "id": 8032,
           "name": "Lao Toyota",
           "logo": "https://media.api-sports.io/football/teams/8032.png",
-          "winner": null
+          "winner": true
         }
       },
       "goals": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "score": {
         "halftime": {
@@ -120748,8 +120608,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -120770,7 +120630,7 @@
         "timestamp": 1795334400,
         "periods": {
           "first": 1795334400,
-          "second": null
+          "second": 1795338000
         },
         "venue": {
           "id": null,
@@ -120778,9 +120638,9 @@
           "city": null
         },
         "status": {
-          "long": "Halftime",
-          "short": "HT",
-          "elapsed": 45,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 90,
           "extra": 2
         }
       },
@@ -120809,7 +120669,7 @@
         }
       },
       "goals": {
-        "home": 1,
+        "home": 4,
         "away": 0
       },
       "score": {
@@ -120918,9 +120778,9 @@
           "city": "Ufa"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 23,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 63,
           "extra": null
         }
       },
@@ -120939,23 +120799,23 @@
           "id": 1078,
           "name": "FC UFA",
           "logo": "https://media.api-sports.io/football/teams/1078.png",
-          "winner": null
+          "winner": false
         },
         "away": {
           "id": 1084,
           "name": "Ural",
           "logo": "https://media.api-sports.io/football/teams/1084.png",
-          "winner": null
+          "winner": true
         }
       },
       "goals": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "score": {
         "halftime": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "fulltime": {
           "home": null,
@@ -120980,7 +120840,7 @@
         "timestamp": 1795336200,
         "periods": {
           "first": 1795336200,
-          "second": null
+          "second": 1795339800
         },
         "venue": {
           "id": null,
@@ -120988,9 +120848,9 @@
           "city": null
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 24,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 61,
           "extra": null
         }
       },
@@ -121050,7 +120910,7 @@
         "timestamp": 1795336200,
         "periods": {
           "first": 1795336200,
-          "second": null
+          "second": 1795339800
         },
         "venue": {
           "id": null,
@@ -121058,9 +120918,9 @@
           "city": null
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 24,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 63,
           "extra": null
         }
       },
@@ -121089,12 +120949,12 @@
         }
       },
       "goals": {
-        "home": 0,
-        "away": 1
+        "home": 1,
+        "away": 2
       },
       "score": {
         "halftime": {
-          "home": 0,
+          "home": 1,
           "away": 1
         },
         "fulltime": {
@@ -121120,7 +120980,7 @@
         "timestamp": 1795336200,
         "periods": {
           "first": 1795336200,
-          "second": null
+          "second": 1795339800
         },
         "venue": {
           "id": null,
@@ -121128,9 +120988,9 @@
           "city": null
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 24,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 64,
           "extra": null
         }
       },
@@ -121149,22 +121009,22 @@
           "id": 28710,
           "name": "Ngada",
           "logo": "https://media.api-sports.io/football/teams/28710.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 28716,
           "name": "Persinab Nabire",
           "logo": "https://media.api-sports.io/football/teams/28716.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "score": {
         "halftime": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "fulltime": {
@@ -121190,7 +121050,7 @@
         "timestamp": 1795336200,
         "periods": {
           "first": 1795336200,
-          "second": null
+          "second": 1795339800
         },
         "venue": {
           "id": null,
@@ -121198,9 +121058,9 @@
           "city": null
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 24,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 63,
           "extra": null
         }
       },
@@ -121400,7 +121260,7 @@
         "timestamp": 1795336200,
         "periods": {
           "first": 1795336200,
-          "second": null
+          "second": 1795339800
         },
         "venue": {
           "id": null,
@@ -121408,9 +121268,9 @@
           "city": null
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 24,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 64,
           "extra": null
         }
       },
@@ -121439,12 +121299,12 @@
         }
       },
       "goals": {
-        "home": 0,
-        "away": 0
+        "home": 1,
+        "away": 1
       },
       "score": {
         "halftime": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "fulltime": {
@@ -121539,7 +121399,7 @@
         "date": "2026-11-22T12:15:00+03:00",
         "timestamp": 1795338900,
         "periods": {
-          "first": null,
+          "first": 1795338900,
           "second": null
         },
         "venue": {
@@ -121548,9 +121408,9 @@
           "city": "Prague"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 37,
           "extra": null
         }
       },
@@ -121579,13 +121439,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 1
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 1
         },
         "fulltime": {
           "home": null,
@@ -121618,8 +121478,8 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
+          "long": "Match Postponed",
+          "short": "PST",
           "elapsed": null,
           "extra": null
         }
@@ -121679,7 +121539,7 @@
         "date": "2026-11-22T12:30:00+03:00",
         "timestamp": 1795339800,
         "periods": {
-          "first": null,
+          "first": 1795339800,
           "second": null
         },
         "venue": {
@@ -121688,9 +121548,9 @@
           "city": "Kuala Lumpur"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 21,
           "extra": null
         }
       },
@@ -121719,13 +121579,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -121749,7 +121609,7 @@
         "date": "2026-11-22T12:30:00+03:00",
         "timestamp": 1795339800,
         "periods": {
-          "first": null,
+          "first": 1795339800,
           "second": null
         },
         "venue": {
@@ -121758,9 +121618,9 @@
           "city": "Yangon"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 21,
           "extra": null
         }
       },
@@ -121779,23 +121639,23 @@
           "id": 12532,
           "name": "Dagon",
           "logo": "https://media.api-sports.io/football/teams/12532.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 8017,
           "name": "Yadanarbon",
           "logo": "https://media.api-sports.io/football/teams/8017.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -121889,7 +121749,7 @@
         "date": "2026-11-22T12:45:00+03:00",
         "timestamp": 1795340700,
         "periods": {
-          "first": null,
+          "first": 1795340700,
           "second": null
         },
         "venue": {
@@ -121898,9 +121758,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 7,
           "extra": null
         }
       },
@@ -121929,13 +121789,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -139733,6 +139593,216 @@
     },
     {
       "fixture": {
+        "id": 1651231,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-22T15:30:00+03:00",
+        "timestamp": 1795350600,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 760,
+        "name": "LFA First Division",
+        "country": "Liberia",
+        "logo": "https://media.api-sports.io/football/leagues/760.png",
+        "flag": "https://media.api-sports.io/flags/lr.svg",
+        "season": 2026,
+        "round": "Regular Season - 10",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 25191,
+          "name": "Black Man Warrior",
+          "logo": "https://media.api-sports.io/football/teams/25191.png",
+          "winner": null
+        },
+        "away": {
+          "id": 26907,
+          "name": "Wologizi",
+          "logo": "https://media.api-sports.io/football/teams/26907.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1651232,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-22T15:30:00+03:00",
+        "timestamp": 1795350600,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 760,
+        "name": "LFA First Division",
+        "country": "Liberia",
+        "logo": "https://media.api-sports.io/football/leagues/760.png",
+        "flag": "https://media.api-sports.io/flags/lr.svg",
+        "season": 2026,
+        "round": "Regular Season - 10",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 28536,
+          "name": "District 17",
+          "logo": "https://media.api-sports.io/football/teams/28536.png",
+          "winner": null
+        },
+        "away": {
+          "id": 16146,
+          "name": "NPA Anchors",
+          "logo": "https://media.api-sports.io/football/teams/16146.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1651233,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-22T15:30:00+03:00",
+        "timestamp": 1795350600,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 760,
+        "name": "LFA First Division",
+        "country": "Liberia",
+        "logo": "https://media.api-sports.io/football/leagues/760.png",
+        "flag": "https://media.api-sports.io/flags/lr.svg",
+        "season": 2026,
+        "round": "Regular Season - 10",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 8062,
+          "name": "LISCR",
+          "logo": "https://media.api-sports.io/football/teams/8062.png",
+          "winner": null
+        },
+        "away": {
+          "id": 4048,
+          "name": "Discoveries",
+          "logo": "https://media.api-sports.io/football/teams/4048.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
         "id": 1634423,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -148484,7 +148554,7 @@
     {
       "fixture": {
         "id": 1561445,
-        "referee": null,
+        "referee": "Andrey Prokopov",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-22T16:30:00+03:00",
         "timestamp": 1795354200,
@@ -154615,6 +154685,76 @@
           "id": 2691,
           "name": "Kaizer Chiefs",
           "logo": "https://media.api-sports.io/football/teams/2691.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1651234,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-22T16:30:00+03:00",
+        "timestamp": 1795354200,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 760,
+        "name": "LFA First Division",
+        "country": "Liberia",
+        "logo": "https://media.api-sports.io/football/leagues/760.png",
+        "flag": "https://media.api-sports.io/flags/lr.svg",
+        "season": 2026,
+        "round": "Regular Season - 10",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 16143,
+          "name": "BEA Mountain",
+          "logo": "https://media.api-sports.io/football/teams/16143.png",
+          "winner": null
+        },
+        "away": {
+          "id": 18110,
+          "name": "Heaven Eleven",
+          "logo": "https://media.api-sports.io/football/teams/18110.png",
           "winner": null
         }
       },
@@ -165283,6 +165423,76 @@
     },
     {
       "fixture": {
+        "id": 1628609,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-22T18:00:00+03:00",
+        "timestamp": 1795359600,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": 3926,
+          "name": "Yakubu Gowon Stadium",
+          "city": "Port Harcourt"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 399,
+        "name": "NPFL",
+        "country": "Nigeria",
+        "logo": "https://media.api-sports.io/football/leagues/399.png",
+        "flag": "https://media.api-sports.io/flags/ng.svg",
+        "season": 2027,
+        "round": "Regular Season - 14",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 5192,
+          "name": "Rivers United",
+          "logo": "https://media.api-sports.io/football/teams/5192.png",
+          "winner": null
+        },
+        "away": {
+          "id": 5189,
+          "name": "Niger Tornadoes",
+          "logo": "https://media.api-sports.io/football/teams/5189.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
         "id": 1630974,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -172885,6 +173095,356 @@
           "id": 20689,
           "name": "Rilindja 1974",
           "logo": "https://media.api-sports.io/football/teams/20689.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1651235,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-22T19:00:00+03:00",
+        "timestamp": 1795363200,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 760,
+        "name": "LFA First Division",
+        "country": "Liberia",
+        "logo": "https://media.api-sports.io/football/leagues/760.png",
+        "flag": "https://media.api-sports.io/flags/lr.svg",
+        "season": 2026,
+        "round": "Regular Season - 10",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 25192,
+          "name": "Fassell",
+          "logo": "https://media.api-sports.io/football/teams/25192.png",
+          "winner": null
+        },
+        "away": {
+          "id": 28535,
+          "name": "Golden Dream",
+          "logo": "https://media.api-sports.io/football/teams/28535.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1651236,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-22T19:00:00+03:00",
+        "timestamp": 1795363200,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 760,
+        "name": "LFA First Division",
+        "country": "Liberia",
+        "logo": "https://media.api-sports.io/football/leagues/760.png",
+        "flag": "https://media.api-sports.io/flags/lr.svg",
+        "season": 2026,
+        "round": "Regular Season - 10",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 16144,
+          "name": "Freeport",
+          "logo": "https://media.api-sports.io/football/teams/16144.png",
+          "winner": null
+        },
+        "away": {
+          "id": 26909,
+          "name": "Downtown",
+          "logo": "https://media.api-sports.io/football/teams/26909.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1651237,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-22T19:00:00+03:00",
+        "timestamp": 1795363200,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 760,
+        "name": "LFA First Division",
+        "country": "Liberia",
+        "logo": "https://media.api-sports.io/football/leagues/760.png",
+        "flag": "https://media.api-sports.io/flags/lr.svg",
+        "season": 2026,
+        "round": "Regular Season - 10",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 26910,
+          "name": "Gardnersville",
+          "logo": "https://media.api-sports.io/football/teams/26910.png",
+          "winner": null
+        },
+        "away": {
+          "id": 25193,
+          "name": "Shaita",
+          "logo": "https://media.api-sports.io/football/teams/25193.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1651238,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-22T19:00:00+03:00",
+        "timestamp": 1795363200,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 760,
+        "name": "LFA First Division",
+        "country": "Liberia",
+        "logo": "https://media.api-sports.io/football/leagues/760.png",
+        "flag": "https://media.api-sports.io/flags/lr.svg",
+        "season": 2026,
+        "round": "Regular Season - 10",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 6425,
+          "name": "LPRC Oilers",
+          "logo": "https://media.api-sports.io/football/teams/6425.png",
+          "winner": null
+        },
+        "away": {
+          "id": 22358,
+          "name": "Paynesville",
+          "logo": "https://media.api-sports.io/football/teams/22358.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1651239,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-22T19:00:00+03:00",
+        "timestamp": 1795363200,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 760,
+        "name": "LFA First Division",
+        "country": "Liberia",
+        "logo": "https://media.api-sports.io/football/leagues/760.png",
+        "flag": "https://media.api-sports.io/flags/lr.svg",
+        "season": 2026,
+        "round": "Regular Season - 10",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 16151,
+          "name": "Watanga",
+          "logo": "https://media.api-sports.io/football/teams/16151.png",
+          "winner": null
+        },
+        "away": {
+          "id": 26908,
+          "name": "Borough",
+          "logo": "https://media.api-sports.io/football/teams/26908.png",
           "winner": null
         }
       },
