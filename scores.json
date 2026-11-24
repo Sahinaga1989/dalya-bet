@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-11-24T22:02:09.384089+00:00",
+  "updated_at": "2026-11-24T23:00:46.312682+00:00",
   "date": "2026-11-25",
   "dates": [
     "2026-11-23",
     "2026-11-24",
     "2026-11-25",
     "2026-11-26",
-    "2026-12-01",
-    "2026-12-02"
+    "2026-12-03",
+    "2026-12-04"
   ],
   "horizon_days": 30,
   "response": [
@@ -21229,8 +21229,8 @@
         "date": "2026-11-24T22:00:00+03:00",
         "timestamp": 1795546800,
         "periods": {
-          "first": null,
-          "second": null
+          "first": 1795546800,
+          "second": 1795550400
         },
         "venue": {
           "id": null,
@@ -21238,9 +21238,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
           "extra": null
         }
       },
@@ -21259,27 +21259,27 @@
           "id": 12712,
           "name": "Dietikon",
           "logo": "https://media.api-sports.io/football/teams/12712.png",
-          "winner": null
+          "winner": false
         },
         "away": {
           "id": 12713,
           "name": "Eschen / Mauren",
           "logo": "https://media.api-sports.io/football/teams/12713.png",
-          "winner": null
+          "winner": true
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 2
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 1
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 2
         },
         "extratime": {
           "home": null,
@@ -25718,9 +25718,9 @@
           "city": null
         },
         "status": {
-          "long": "Extra Time",
-          "short": "ET",
-          "elapsed": 111,
+          "long": "Match Finished",
+          "short": "PEN",
+          "elapsed": 120,
           "extra": null
         }
       },
@@ -25739,13 +25739,13 @@
           "id": 5350,
           "name": "Carrick Rangers",
           "logo": "https://media.api-sports.io/football/teams/5350.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 2275,
           "name": "Glenavon FC",
           "logo": "https://media.api-sports.io/football/teams/2275.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
@@ -25766,8 +25766,8 @@
           "away": 0
         },
         "penalty": {
-          "home": null,
-          "away": null
+          "home": 8,
+          "away": 7
         }
       }
     },
@@ -26199,8 +26199,8 @@
         "date": "2026-11-24T22:45:00+03:00",
         "timestamp": 1795549500,
         "periods": {
-          "first": null,
-          "second": null
+          "first": 1795549500,
+          "second": 1795553100
         },
         "venue": {
           "id": null,
@@ -26208,9 +26208,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
           "extra": null
         }
       },
@@ -26229,27 +26229,27 @@
           "id": 5355,
           "name": "Warrenpoint Town",
           "logo": "https://media.api-sports.io/football/teams/5355.png",
-          "winner": null
+          "winner": false
         },
         "away": {
           "id": 2266,
           "name": "Cliftonville FC",
           "logo": "https://media.api-sports.io/football/teams/2266.png",
-          "winner": null
+          "winner": true
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 2
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 2
         },
         "extratime": {
           "home": null,
@@ -27468,9 +27468,9 @@
           "city": "Chapeco"
         },
         "status": {
-          "long": "Halftime",
-          "short": "HT",
-          "elapsed": 45,
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
           "extra": null
         }
       },
@@ -27499,7 +27499,7 @@
         }
       },
       "goals": {
-        "home": 2,
+        "home": 3,
         "away": 0
       },
       "score": {
@@ -27508,8 +27508,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 3,
+          "away": 0
         },
         "extratime": {
           "home": null,
@@ -27608,10 +27608,10 @@
           "city": "Coquimbo"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 1,
-          "extra": null
+          "long": "Halftime",
+          "short": "HT",
+          "elapsed": 45,
+          "extra": 4
         }
       },
       "league": {
@@ -27629,23 +27629,23 @@
           "id": 2330,
           "name": "Coquimbo Unido",
           "logo": "https://media.api-sports.io/football/teams/2330.png",
-          "winner": null
+          "winner": false
         },
         "away": {
           "id": 2326,
           "name": "Union La Calera",
           "logo": "https://media.api-sports.io/football/teams/2326.png",
-          "winner": null
+          "winner": true
         }
       },
       "goals": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "score": {
         "halftime": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "fulltime": {
           "home": null,
@@ -260105,6 +260105,216 @@
           "id": 1153,
           "name": "Independiente del Valle",
           "logo": "https://media.api-sports.io/football/teams/1153.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1651688,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-03T00:00:00+03:00",
+        "timestamp": 1796245200,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 591,
+        "name": "Pro League",
+        "country": "Trinidad-And-Tobago",
+        "logo": "https://media.api-sports.io/football/leagues/591.png",
+        "flag": "https://media.api-sports.io/flags/tt.svg",
+        "season": 2027,
+        "round": "Regular Season - 1",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 12562,
+          "name": "Cunupia",
+          "logo": "https://media.api-sports.io/football/teams/12562.png",
+          "winner": null
+        },
+        "away": {
+          "id": 12567,
+          "name": "San Juan Jabloteh",
+          "logo": "https://media.api-sports.io/football/teams/12567.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1651689,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-03T00:00:00+03:00",
+        "timestamp": 1796245200,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 591,
+        "name": "Pro League",
+        "country": "Trinidad-And-Tobago",
+        "logo": "https://media.api-sports.io/football/leagues/591.png",
+        "flag": "https://media.api-sports.io/flags/tt.svg",
+        "season": 2027,
+        "round": "Regular Season - 1",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 12565,
+          "name": "Morvant Caledonia United",
+          "logo": "https://media.api-sports.io/football/teams/12565.png",
+          "winner": null
+        },
+        "away": {
+          "id": 12561,
+          "name": "Club Sando",
+          "logo": "https://media.api-sports.io/football/teams/12561.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1651692,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-03T00:00:00+03:00",
+        "timestamp": 1796245200,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 591,
+        "name": "Pro League",
+        "country": "Trinidad-And-Tobago",
+        "logo": "https://media.api-sports.io/football/leagues/591.png",
+        "flag": "https://media.api-sports.io/flags/tt.svg",
+        "season": 2027,
+        "round": "Regular Season - 1",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 12563,
+          "name": "Defence Force",
+          "logo": "https://media.api-sports.io/football/teams/12563.png",
+          "winner": null
+        },
+        "away": {
+          "id": 28733,
+          "name": "QPCC",
+          "logo": "https://media.api-sports.io/football/teams/28733.png",
           "winner": null
         }
       },
