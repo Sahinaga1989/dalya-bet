@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-11-24T02:57:33.656986+00:00",
+  "updated_at": "2026-11-24T04:03:31.834918+00:00",
   "date": "2026-11-24",
   "dates": [
     "2026-11-22",
     "2026-11-23",
     "2026-11-24",
     "2026-11-25",
-    "2026-12-16",
-    "2026-12-17"
+    "2026-12-20",
+    "2026-12-21"
   ],
   "horizon_days": 30,
   "response": [
@@ -74704,7 +74704,7 @@
     {
       "fixture": {
         "id": 1584467,
-        "referee": "D. Tonusluoglu",
+        "referee": "Direnc Tonusluoglu, Türkiye",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-23T20:00:00+03:00",
         "timestamp": 1795453200,
@@ -79058,9 +79058,9 @@
           "city": "Saint Louis"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 75,
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
           "extra": null
         }
       },
@@ -79089,8 +79089,8 @@
         }
       },
       "goals": {
-        "home": 2,
-        "away": 1
+        "home": 3,
+        "away": 2
       },
       "score": {
         "halftime": {
@@ -79098,8 +79098,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 3,
+          "away": 2
         },
         "extratime": {
           "home": null,
@@ -79120,7 +79120,7 @@
         "timestamp": 1795485600,
         "periods": {
           "first": 1795485600,
-          "second": null
+          "second": 1795489200
         },
         "venue": {
           "id": 393,
@@ -79128,10 +79128,10 @@
           "city": "Alajuela"
         },
         "status": {
-          "long": "Halftime",
-          "short": "HT",
-          "elapsed": 45,
-          "extra": 6
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
         }
       },
       "league": {
@@ -79149,18 +79149,18 @@
           "id": 822,
           "name": "LD Alajuelense",
           "logo": "https://media.api-sports.io/football/teams/822.png",
-          "winner": true
+          "winner": false
         },
         "away": {
           "id": 820,
           "name": "CS Cartagines",
           "logo": "https://media.api-sports.io/football/teams/820.png",
-          "winner": false
+          "winner": true
         }
       },
       "goals": {
         "home": 1,
-        "away": 0
+        "away": 2
       },
       "score": {
         "halftime": {
@@ -79168,8 +79168,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 2
         },
         "extratime": {
           "home": null,
@@ -79190,7 +79190,7 @@
         "timestamp": 1795485900,
         "periods": {
           "first": 1795485900,
-          "second": null
+          "second": 1795489500
         },
         "venue": {
           "id": null,
@@ -79198,10 +79198,10 @@
           "city": null
         },
         "status": {
-          "long": "Halftime",
-          "short": "HT",
-          "elapsed": 45,
-          "extra": 5
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 90,
+          "extra": 7
         }
       },
       "league": {
@@ -719823,6 +719823,146 @@
     },
     {
       "fixture": {
+        "id": 1651448,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-20T14:30:00+03:00",
+        "timestamp": 1797766200,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 1254,
+        "name": "Premier League 2",
+        "country": "Singapore",
+        "logo": "https://media.api-sports.io/football/leagues/1254.png",
+        "flag": "https://media.api-sports.io/flags/sg.svg",
+        "season": 2026,
+        "round": "Regular season",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 28726,
+          "name": "Hougang II",
+          "logo": "https://media.api-sports.io/football/teams/28726.png",
+          "winner": null
+        },
+        "away": {
+          "id": 28723,
+          "name": "Balestier Khalsa II",
+          "logo": "https://media.api-sports.io/football/teams/28723.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1651449,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-20T14:30:00+03:00",
+        "timestamp": 1797766200,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 1254,
+        "name": "Premier League 2",
+        "country": "Singapore",
+        "logo": "https://media.api-sports.io/football/leagues/1254.png",
+        "flag": "https://media.api-sports.io/flags/sg.svg",
+        "season": 2026,
+        "round": "Regular season",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 28729,
+          "name": "Tanjong P. II",
+          "logo": "https://media.api-sports.io/football/teams/28729.png",
+          "winner": null
+        },
+        "away": {
+          "id": 28730,
+          "name": "Young Lions II",
+          "logo": "https://media.api-sports.io/football/teams/28730.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
         "id": 1615900,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -741103,146 +741243,6 @@
     },
     {
       "fixture": {
-        "id": 1610760,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-20T18:00:00+03:00",
-        "timestamp": 1797778800,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": "Funchal"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 948,
-        "name": "1a Divisão - Women",
-        "country": "Portugal",
-        "logo": "https://media.api-sports.io/football/leagues/948.png",
-        "flag": "https://media.api-sports.io/flags/pt.svg",
-        "season": 2026,
-        "round": "Regular Season - 8",
-        "standings": false
-      },
-      "teams": {
-        "home": {
-          "id": 20510,
-          "name": "Marítimo W",
-          "logo": "https://media.api-sports.io/football/teams/20510.png",
-          "winner": null
-        },
-        "away": {
-          "id": 26783,
-          "name": "Rio Ave W",
-          "logo": "https://media.api-sports.io/football/teams/26783.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1610761,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-20T18:00:00+03:00",
-        "timestamp": 1797778800,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": 1266,
-          "name": "Caixa Futebol Campus",
-          "city": "Seixal"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 948,
-        "name": "1a Divisão - Women",
-        "country": "Portugal",
-        "logo": "https://media.api-sports.io/football/leagues/948.png",
-        "flag": "https://media.api-sports.io/flags/pt.svg",
-        "season": 2026,
-        "round": "Regular Season - 8",
-        "standings": false
-      },
-      "teams": {
-        "home": {
-          "id": 15495,
-          "name": "SL Benfica W",
-          "logo": "https://media.api-sports.io/football/teams/15495.png",
-          "winner": null
-        },
-        "away": {
-          "id": 20513,
-          "name": "Valadares Gaia W",
-          "logo": "https://media.api-sports.io/football/teams/20513.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
         "id": 1610762,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -741285,76 +741285,6 @@
           "id": 26782,
           "name": "Racing Power W",
           "logo": "https://media.api-sports.io/football/teams/26782.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1610893,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-20T18:00:00+03:00",
-        "timestamp": 1797778800,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": "Braga"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 948,
-        "name": "1a Divisão - Women",
-        "country": "Portugal",
-        "logo": "https://media.api-sports.io/football/leagues/948.png",
-        "flag": "https://media.api-sports.io/flags/pt.svg",
-        "season": 2026,
-        "round": "Regular Season - 8",
-        "standings": false
-      },
-      "teams": {
-        "home": {
-          "id": 10905,
-          "name": "Sporting Braga W",
-          "logo": "https://media.api-sports.io/football/teams/10905.png",
-          "winner": null
-        },
-        "away": {
-          "id": 26784,
-          "name": "Vitoria Guimaraes W",
-          "logo": "https://media.api-sports.io/football/teams/26784.png",
           "winner": null
         }
       },
@@ -753703,6 +753633,146 @@
     },
     {
       "fixture": {
+        "id": 1651291,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-20T19:00:00+03:00",
+        "timestamp": 1797782400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 1049,
+        "name": "King's Cup",
+        "country": "Bahrain",
+        "logo": "https://media.api-sports.io/football/leagues/1049.png",
+        "flag": "https://media.api-sports.io/flags/bh.svg",
+        "season": 2026,
+        "round": "Round of 16",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 5482,
+          "name": "Al Riffa",
+          "logo": "https://media.api-sports.io/football/teams/5482.png",
+          "winner": null
+        },
+        "away": {
+          "id": 5487,
+          "name": "Manama",
+          "logo": "https://media.api-sports.io/football/teams/5487.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1651292,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-20T19:00:00+03:00",
+        "timestamp": 1797782400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 1049,
+        "name": "King's Cup",
+        "country": "Bahrain",
+        "logo": "https://media.api-sports.io/football/leagues/1049.png",
+        "flag": "https://media.api-sports.io/flags/bh.svg",
+        "season": 2026,
+        "round": "Round of 16",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 5485,
+          "name": "East Riffa",
+          "logo": "https://media.api-sports.io/football/teams/5485.png",
+          "winner": null
+        },
+        "away": {
+          "id": 5479,
+          "name": "Al Najma",
+          "logo": "https://media.api-sports.io/football/teams/5479.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
         "id": 1557517,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -761025,6 +761095,76 @@
           "id": 5046,
           "name": "Kalamata",
           "logo": "https://media.api-sports.io/football/teams/5046.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1610761,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-20T21:00:00+03:00",
+        "timestamp": 1797789600,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": 1266,
+          "name": "Caixa Futebol Campus",
+          "city": "Seixal"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 948,
+        "name": "1a Divisão - Women",
+        "country": "Portugal",
+        "logo": "https://media.api-sports.io/football/leagues/948.png",
+        "flag": "https://media.api-sports.io/flags/pt.svg",
+        "season": 2026,
+        "round": "Regular Season - 8",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 15495,
+          "name": "SL Benfica W",
+          "logo": "https://media.api-sports.io/football/teams/15495.png",
+          "winner": null
+        },
+        "away": {
+          "id": 20513,
+          "name": "Valadares Gaia W",
+          "logo": "https://media.api-sports.io/football/teams/20513.png",
           "winner": null
         }
       },
