@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-24T23:00:46.312682+00:00",
+  "updated_at": "2026-11-24T23:53:12.394730+00:00",
   "date": "2026-11-25",
   "dates": [
     "2026-11-23",
@@ -27600,7 +27600,7 @@
         "timestamp": 1795557600,
         "periods": {
           "first": 1795557600,
-          "second": null
+          "second": 1795561200
         },
         "venue": {
           "id": null,
@@ -27608,10 +27608,10 @@
           "city": "Coquimbo"
         },
         "status": {
-          "long": "Halftime",
-          "short": "HT",
-          "elapsed": 45,
-          "extra": 4
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 90,
+          "extra": 1
         }
       },
       "league": {
@@ -27629,17 +27629,17 @@
           "id": 2330,
           "name": "Coquimbo Unido",
           "logo": "https://media.api-sports.io/football/teams/2330.png",
-          "winner": false
+          "winner": null
         },
         "away": {
           "id": 2326,
           "name": "Union La Calera",
           "logo": "https://media.api-sports.io/football/teams/2326.png",
-          "winner": true
+          "winner": null
         }
       },
       "goals": {
-        "home": 0,
+        "home": 1,
         "away": 1
       },
       "score": {
@@ -27669,7 +27669,7 @@
         "date": "2026-11-25T02:00:00+03:00",
         "timestamp": 1795561200,
         "periods": {
-          "first": null,
+          "first": 1795561200,
           "second": null
         },
         "venue": {
@@ -27678,9 +27678,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 45,
           "extra": null
         }
       },
@@ -27709,13 +27709,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -27734,23 +27734,23 @@
     {
       "fixture": {
         "id": 1650513,
-        "referee": null,
+        "referee": "Ferney Ossa Orozco, Colombia",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-25T02:20:00+03:00",
         "timestamp": 1795562400,
         "periods": {
-          "first": null,
+          "first": 1795562400,
           "second": null
         },
         "venue": {
           "id": null,
-          "name": null,
-          "city": null
+          "name": "Estadio Nemesio Camacho El Campin",
+          "city": "Bogota"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 33,
           "extra": null
         }
       },
@@ -27769,23 +27769,23 @@
           "id": 1125,
           "name": "Millonarios",
           "logo": "https://media.api-sports.io/football/teams/1125.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 1131,
           "name": "Bucaramanga",
           "logo": "https://media.api-sports.io/football/teams/1131.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 2,
+        "away": 1
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 1
         },
         "fulltime": {
           "home": null,
@@ -27809,7 +27809,7 @@
         "date": "2026-11-25T02:30:00+03:00",
         "timestamp": 1795563000,
         "periods": {
-          "first": null,
+          "first": 1795563000,
           "second": null
         },
         "venue": {
@@ -27818,9 +27818,9 @@
           "city": "Caracas"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 23,
           "extra": null
         }
       },
@@ -27849,13 +27849,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
