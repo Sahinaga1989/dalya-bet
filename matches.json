@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-11-25T01:18:22.207660+00:00",
+  "updated_at": "2026-11-25T02:59:49.384860+00:00",
   "date": "2026-11-25",
   "dates": [
     "2026-11-23",
     "2026-11-24",
     "2026-11-25",
     "2026-11-26",
-    "2026-12-07",
-    "2026-12-08"
+    "2026-12-09",
+    "2026-12-10"
   ],
   "horizon_days": 30,
   "response": [
@@ -3583,6 +3583,76 @@
     },
     {
       "fixture": {
+        "id": 1647898,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-23T13:30:00+03:00",
+        "timestamp": 1795429800,
+        "periods": {
+          "first": 1795429800,
+          "second": 1795433400
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 291,
+        "name": "Azadegan League",
+        "country": "Iran",
+        "logo": "https://media.api-sports.io/football/leagues/291.png",
+        "flag": "https://media.api-sports.io/flags/ir.svg",
+        "season": 2026,
+        "round": "Regular Season - 11",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 7502,
+          "name": "Niroye Zamini",
+          "logo": "https://media.api-sports.io/football/teams/7502.png",
+          "winner": true
+        },
+        "away": {
+          "id": 15541,
+          "name": "Havadar",
+          "logo": "https://media.api-sports.io/football/teams/15541.png",
+          "winner": false
+        }
+      },
+      "goals": {
+        "home": 1,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 1,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
         "id": 1629483,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -4054,8 +4124,8 @@
       },
       "score": {
         "halftime": {
-          "home": 0,
-          "away": 1
+          "home": 1,
+          "away": 0
         },
         "fulltime": {
           "home": 3,
@@ -5544,7 +5614,7 @@
     {
       "fixture": {
         "id": 1646633,
-        "referee": null,
+        "referee": "L. Lakshay",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-23T16:00:00+03:00",
         "timestamp": 1795438800,
@@ -6874,7 +6944,7 @@
     {
       "fixture": {
         "id": 1604064,
-        "referee": null,
+        "referee": "O. Abuzaid",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-23T17:30:00+03:00",
         "timestamp": 1795444200,
@@ -7574,7 +7644,7 @@
     {
       "fixture": {
         "id": 1604065,
-        "referee": null,
+        "referee": "E. Al Shaqaq",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-23T18:15:00+03:00",
         "timestamp": 1795446900,
@@ -8218,9 +8288,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
           "extra": null
         }
       },
@@ -8239,18 +8309,18 @@
           "id": 27456,
           "name": "Military Union SC",
           "logo": "https://media.api-sports.io/football/teams/27456.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 12438,
           "name": "Khaleej Sart",
           "logo": "https://media.api-sports.io/football/teams/12438.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 0
       },
       "score": {
         "halftime": {
@@ -8258,8 +8328,8 @@
           "away": null
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         },
         "extratime": {
           "home": null,
@@ -8414,7 +8484,7 @@
     {
       "fixture": {
         "id": 1584467,
-        "referee": "Direnc Tonusluoglu, Türkiye",
+        "referee": "D. Tonusluoglu",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-23T20:00:00+03:00",
         "timestamp": 1795453200,
@@ -9254,7 +9324,7 @@
     {
       "fixture": {
         "id": 1565309,
-        "referee": "Andrei Moroita, Romania",
+        "referee": "A. Moroita",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-23T21:00:00+03:00",
         "timestamp": 1795456800,
@@ -12824,7 +12894,7 @@
     {
       "fixture": {
         "id": 1551727,
-        "referee": null,
+        "referee": "J. Calderon",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-24T05:00:00+03:00",
         "timestamp": 1795485600,
@@ -14070,76 +14140,6 @@
         "fulltime": {
           "home": 2,
           "away": 1
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1647898,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-24T14:00:00+03:00",
-        "timestamp": 1795518000,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 291,
-        "name": "Azadegan League",
-        "country": "Iran",
-        "logo": "https://media.api-sports.io/football/leagues/291.png",
-        "flag": "https://media.api-sports.io/flags/ir.svg",
-        "season": 2026,
-        "round": "Regular Season - 11",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 7502,
-          "name": "Niroye Zamini",
-          "logo": "https://media.api-sports.io/football/teams/7502.png",
-          "winner": null
-        },
-        "away": {
-          "id": 15541,
-          "name": "Havadar",
-          "logo": "https://media.api-sports.io/football/teams/15541.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
         },
         "extratime": {
           "home": null,
@@ -17384,7 +17384,7 @@
         },
         "venue": {
           "id": null,
-          "name": "Vivekananda Yuba Bharati Krirangan",
+          "name": "Salt Lake Stadium",
           "city": "Kolkata"
         },
         "status": {
@@ -19484,8 +19484,8 @@
         },
         "venue": {
           "id": null,
-          "name": "Seeb Sports Stadium",
-          "city": "Muscat"
+          "name": "Al-Seeb Stadium",
+          "city": "Seeb"
         },
         "status": {
           "long": "Match Finished",
@@ -20174,7 +20174,7 @@
     {
       "fixture": {
         "id": 1635641,
-        "referee": "Halil Umut Meler, Türkiye",
+        "referee": "H. U. Meler",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-24T20:45:00+03:00",
         "timestamp": 1795542300,
@@ -20244,7 +20244,7 @@
     {
       "fixture": {
         "id": 1635667,
-        "referee": "Daniel Siebert, Germany",
+        "referee": "D. Siebert",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-24T20:45:00+03:00",
         "timestamp": 1795542300,
@@ -20254,7 +20254,7 @@
         },
         "venue": {
           "id": null,
-          "name": "Rams Park Stadyumu",
+          "name": "Rams Park",
           "city": "Istanbul"
         },
         "status": {
@@ -26894,7 +26894,7 @@
     {
       "fixture": {
         "id": 1635611,
-        "referee": "Maurizio Mariani, Italy",
+        "referee": "M. Mariani",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-24T23:00:00+03:00",
         "timestamp": 1795550400,
@@ -26964,7 +26964,7 @@
     {
       "fixture": {
         "id": 1635649,
-        "referee": "Javier Alberola Rojas, Spain",
+        "referee": "J. Alberola",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-24T23:00:00+03:00",
         "timestamp": 1795550400,
@@ -27034,7 +27034,7 @@
     {
       "fixture": {
         "id": 1635663,
-        "referee": "Irfan Peljto, Bosnia & Herzegovina",
+        "referee": "I. Peljto",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-24T23:00:00+03:00",
         "timestamp": 1795550400,
@@ -27104,7 +27104,7 @@
     {
       "fixture": {
         "id": 1635692,
-        "referee": "Istvan Kovacs, Romania",
+        "referee": "I. Kovacs",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-24T23:00:00+03:00",
         "timestamp": 1795550400,
@@ -27174,7 +27174,7 @@
     {
       "fixture": {
         "id": 1635713,
-        "referee": "Ivan Kružliak, Slovakia",
+        "referee": "I. Kruzliak",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-24T23:00:00+03:00",
         "timestamp": 1795550400,
@@ -27244,7 +27244,7 @@
     {
       "fixture": {
         "id": 1635715,
-        "referee": "Espen Eskas, Norway",
+        "referee": "E. Eskas",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-24T23:00:00+03:00",
         "timestamp": 1795550400,
@@ -27314,7 +27314,7 @@
     {
       "fixture": {
         "id": 1635731,
-        "referee": "Jérôme Brisard, France",
+        "referee": "J. Brisard",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-24T23:00:00+03:00",
         "timestamp": 1795550400,
@@ -27818,9 +27818,9 @@
           "city": "Caracas"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 89,
+          "long": "Match Finished",
+          "short": "PEN",
+          "elapsed": 120,
           "extra": null
         }
       },
@@ -27839,13 +27839,13 @@
           "id": 2840,
           "name": "UCV",
           "logo": "https://media.api-sports.io/football/teams/2840.png",
-          "winner": null
+          "winner": false
         },
         "away": {
           "id": 18806,
           "name": "Anzoátegui FC",
           "logo": "https://media.api-sports.io/football/teams/18806.png",
-          "winner": null
+          "winner": true
         }
       },
       "goals": {
@@ -27858,16 +27858,16 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "extratime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "penalty": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 4
         }
       }
     },
@@ -27880,7 +27880,7 @@
         "timestamp": 1795566600,
         "periods": {
           "first": 1795566600,
-          "second": null
+          "second": 1795570200
         },
         "venue": {
           "id": null,
@@ -27888,10 +27888,10 @@
           "city": null
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 45,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 9
         }
       },
       "league": {
@@ -27909,18 +27909,18 @@
           "id": 12973,
           "name": "São Paulo U20",
           "logo": "https://media.api-sports.io/football/teams/12973.png",
-          "winner": true
+          "winner": false
         },
         "away": {
           "id": 12952,
           "name": "Atlético Mineiro U20",
           "logo": "https://media.api-sports.io/football/teams/12952.png",
-          "winner": false
+          "winner": true
         }
       },
       "goals": {
         "home": 1,
-        "away": 0
+        "away": 2
       },
       "score": {
         "halftime": {
@@ -27928,8 +27928,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 2
         },
         "extratime": {
           "home": null,
@@ -27944,23 +27944,23 @@
     {
       "fixture": {
         "id": 1650514,
-        "referee": null,
+        "referee": "Wilmar Roldan, Colombia",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-25T04:30:00+03:00",
         "timestamp": 1795570200,
         "periods": {
-          "first": null,
-          "second": null
+          "first": 1795570200,
+          "second": 1795573800
         },
         "venue": {
           "id": null,
-          "name": null,
-          "city": "Cali"
+          "name": "Olimpico Pascual Guerrero",
+          "city": "Santiago de Cali"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 71,
           "extra": null
         }
       },
@@ -27979,23 +27979,23 @@
           "id": 1138,
           "name": "America de Cali",
           "logo": "https://media.api-sports.io/football/teams/1138.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 1127,
           "name": "Deportivo Cali",
           "logo": "https://media.api-sports.io/football/teams/1127.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 2,
+        "away": 1
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -28685,6 +28685,76 @@
           "id": 20240,
           "name": "Rukh Vynnyky U19",
           "logo": "https://media.api-sports.io/football/teams/20240.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1634844,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-25T12:00:00+03:00",
+        "timestamp": 1795597200,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 588,
+        "name": "National League",
+        "country": "Myanmar",
+        "logo": "https://media.api-sports.io/football/leagues/588.png",
+        "flag": "https://media.api-sports.io/flags/mm.svg",
+        "season": 2026,
+        "round": "Regular Season - 4",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 8013,
+          "name": "Yangon United",
+          "logo": "https://media.api-sports.io/football/teams/8013.png",
+          "winner": null
+        },
+        "away": {
+          "id": 19048,
+          "name": "Myawady",
+          "logo": "https://media.api-sports.io/football/teams/19048.png",
           "winner": null
         }
       },
@@ -30085,76 +30155,6 @@
           "id": 21879,
           "name": "Noah II",
           "logo": "https://media.api-sports.io/football/teams/21879.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1605132,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-25T13:00:00+03:00",
-        "timestamp": 1795600800,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": "MIKA Stadium",
-          "city": "Yerevan"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 343,
-        "name": "First League",
-        "country": "Armenia",
-        "logo": "https://media.api-sports.io/football/leagues/343.png",
-        "flag": "https://media.api-sports.io/flags/am.svg",
-        "season": 2026,
-        "round": "Regular Season - 15",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 11174,
-          "name": "Mika",
-          "logo": "https://media.api-sports.io/football/teams/11174.png",
-          "winner": null
-        },
-        "away": {
-          "id": 27987,
-          "name": "Olympia Yerevan",
-          "logo": "https://media.api-sports.io/football/teams/27987.png",
           "winner": null
         }
       },
@@ -32074,7 +32074,7 @@
     {
       "fixture": {
         "id": 1637393,
-        "referee": null,
+        "referee": "P. Simani",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-25T14:00:00+03:00",
         "timestamp": 1795604400,
@@ -32214,7 +32214,7 @@
     {
       "fixture": {
         "id": 1649073,
-        "referee": null,
+        "referee": "S. Levi",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-25T14:00:00+03:00",
         "timestamp": 1795604400,
@@ -33054,7 +33054,7 @@
     {
       "fixture": {
         "id": 1637394,
-        "referee": null,
+        "referee": "M. Tozan",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-25T15:00:00+03:00",
         "timestamp": 1795608000,
@@ -33124,7 +33124,7 @@
     {
       "fixture": {
         "id": 1637395,
-        "referee": null,
+        "referee": "H. Vidoy",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-25T15:00:00+03:00",
         "timestamp": 1795608000,
@@ -33684,7 +33684,7 @@
     {
       "fixture": {
         "id": 1648778,
-        "referee": null,
+        "referee": "K. Umudlu",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-25T15:00:00+03:00",
         "timestamp": 1795608000,
@@ -35434,7 +35434,7 @@
     {
       "fixture": {
         "id": 1637396,
-        "referee": null,
+        "referee": "G. Avazashvili",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-25T16:00:00+03:00",
         "timestamp": 1795611600,
@@ -35644,7 +35644,7 @@
     {
       "fixture": {
         "id": 1649071,
-        "referee": null,
+        "referee": "J. H. Ellefsen",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-25T16:00:00+03:00",
         "timestamp": 1795611600,
@@ -36204,7 +36204,7 @@
     {
       "fixture": {
         "id": 1637389,
-        "referee": null,
+        "referee": "F. Lata",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-25T17:00:00+03:00",
         "timestamp": 1795615200,
@@ -36274,7 +36274,7 @@
     {
       "fixture": {
         "id": 1637390,
-        "referee": null,
+        "referee": "M. MacDermid",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-25T17:00:00+03:00",
         "timestamp": 1795615200,
@@ -36344,7 +36344,7 @@
     {
       "fixture": {
         "id": 1637391,
-        "referee": null,
+        "referee": "G. Maqedonci",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-25T17:00:00+03:00",
         "timestamp": 1795615200,
@@ -37603,78 +37603,8 @@
     },
     {
       "fixture": {
-        "id": 1628561,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-25T18:00:00+03:00",
-        "timestamp": 1795618800,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": "Mobolaji Johnson Arena",
-          "city": "Lagos"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 399,
-        "name": "NPFL",
-        "country": "Nigeria",
-        "logo": "https://media.api-sports.io/football/leagues/399.png",
-        "flag": "https://media.api-sports.io/flags/ng.svg",
-        "season": 2027,
-        "round": "Regular Season - 10",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 22585,
-          "name": "Sporting Lagos",
-          "logo": "https://media.api-sports.io/football/teams/22585.png",
-          "winner": null
-        },
-        "away": {
-          "id": 5176,
-          "name": "Enugu Rangers",
-          "logo": "https://media.api-sports.io/football/teams/5176.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
         "id": 1637388,
-        "referee": null,
+        "referee": "L. Kuzma",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-25T18:00:00+03:00",
         "timestamp": 1795618800,
@@ -37744,7 +37674,7 @@
     {
       "fixture": {
         "id": 1637392,
-        "referee": null,
+        "referee": "M. Erceg",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-25T18:00:00+03:00",
         "timestamp": 1795618800,
@@ -37954,7 +37884,7 @@
     {
       "fixture": {
         "id": 1649065,
-        "referee": null,
+        "referee": "B. Brand",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-25T18:00:00+03:00",
         "timestamp": 1795618800,
@@ -38794,7 +38724,7 @@
     {
       "fixture": {
         "id": 1649067,
-        "referee": null,
+        "referee": "L. Dzivjak",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-25T19:00:00+03:00",
         "timestamp": 1795622400,
@@ -38864,7 +38794,7 @@
     {
       "fixture": {
         "id": 1649069,
-        "referee": null,
+        "referee": "M. Bejtullahu",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-25T19:00:00+03:00",
         "timestamp": 1795622400,
@@ -38934,7 +38864,7 @@
     {
       "fixture": {
         "id": 1649072,
-        "referee": null,
+        "referee": "V. Paulauskas",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-25T19:00:00+03:00",
         "timestamp": 1795622400,
@@ -38975,566 +38905,6 @@
           "id": 7959,
           "name": "Maccabi Tel Aviv U19",
           "logo": "https://media.api-sports.io/football/teams/7959.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1650179,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-25T19:00:00+03:00",
-        "timestamp": 1795622400,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 321,
-        "name": "Cup",
-        "country": "Cyprus",
-        "logo": "https://media.api-sports.io/football/leagues/321.png",
-        "flag": "https://media.api-sports.io/flags/cy.svg",
-        "season": 2026,
-        "round": "Round of 16",
-        "standings": false
-      },
-      "teams": {
-        "home": {
-          "id": 614,
-          "name": "AEK Larnaca",
-          "logo": "https://media.api-sports.io/football/teams/614.png",
-          "winner": null
-        },
-        "away": {
-          "id": 2269,
-          "name": "Anorthosis",
-          "logo": "https://media.api-sports.io/football/teams/2269.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1650180,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-25T19:00:00+03:00",
-        "timestamp": 1795622400,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 321,
-        "name": "Cup",
-        "country": "Cyprus",
-        "logo": "https://media.api-sports.io/football/leagues/321.png",
-        "flag": "https://media.api-sports.io/flags/cy.svg",
-        "season": 2026,
-        "round": "Round of 16",
-        "standings": false
-      },
-      "teams": {
-        "home": {
-          "id": 3396,
-          "name": "AEL",
-          "logo": "https://media.api-sports.io/football/teams/3396.png",
-          "winner": null
-        },
-        "away": {
-          "id": 3399,
-          "name": "Enosis",
-          "logo": "https://media.api-sports.io/football/teams/3399.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1650181,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-25T19:00:00+03:00",
-        "timestamp": 1795622400,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 321,
-        "name": "Cup",
-        "country": "Cyprus",
-        "logo": "https://media.api-sports.io/football/leagues/321.png",
-        "flag": "https://media.api-sports.io/flags/cy.svg",
-        "season": 2026,
-        "round": "Round of 16",
-        "standings": false
-      },
-      "teams": {
-        "home": {
-          "id": 2247,
-          "name": "Apoel Nicosia",
-          "logo": "https://media.api-sports.io/football/teams/2247.png",
-          "winner": null
-        },
-        "away": {
-          "id": 3408,
-          "name": "Aris",
-          "logo": "https://media.api-sports.io/football/teams/3408.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1650182,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-25T19:00:00+03:00",
-        "timestamp": 1795622400,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 321,
-        "name": "Cup",
-        "country": "Cyprus",
-        "logo": "https://media.api-sports.io/football/leagues/321.png",
-        "flag": "https://media.api-sports.io/flags/cy.svg",
-        "season": 2026,
-        "round": "Round of 16",
-        "standings": false
-      },
-      "teams": {
-        "home": {
-          "id": 3413,
-          "name": "Karmiotissa",
-          "logo": "https://media.api-sports.io/football/teams/3413.png",
-          "winner": null
-        },
-        "away": {
-          "id": 602,
-          "name": "Apollon Limassol",
-          "logo": "https://media.api-sports.io/football/teams/602.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1650183,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-25T19:00:00+03:00",
-        "timestamp": 1795622400,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 321,
-        "name": "Cup",
-        "country": "Cyprus",
-        "logo": "https://media.api-sports.io/football/leagues/321.png",
-        "flag": "https://media.api-sports.io/flags/cy.svg",
-        "season": 2026,
-        "round": "Round of 16",
-        "standings": false
-      },
-      "teams": {
-        "home": {
-          "id": 3424,
-          "name": "Digenis Ypsonas",
-          "logo": "https://media.api-sports.io/football/teams/3424.png",
-          "winner": null
-        },
-        "away": {
-          "id": 3405,
-          "name": "ASIL Lysi",
-          "logo": "https://media.api-sports.io/football/teams/3405.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1650184,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-25T19:00:00+03:00",
-        "timestamp": 1795622400,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 321,
-        "name": "Cup",
-        "country": "Cyprus",
-        "logo": "https://media.api-sports.io/football/leagues/321.png",
-        "flag": "https://media.api-sports.io/flags/cy.svg",
-        "season": 2026,
-        "round": "Round of 16",
-        "standings": false
-      },
-      "teams": {
-        "home": {
-          "id": 3401,
-          "name": "Nea Salamis",
-          "logo": "https://media.api-sports.io/football/teams/3401.png",
-          "winner": null
-        },
-        "away": {
-          "id": 3403,
-          "name": "Pafos",
-          "logo": "https://media.api-sports.io/football/teams/3403.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1650185,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-25T19:00:00+03:00",
-        "timestamp": 1795622400,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 321,
-        "name": "Cup",
-        "country": "Cyprus",
-        "logo": "https://media.api-sports.io/football/leagues/321.png",
-        "flag": "https://media.api-sports.io/flags/cy.svg",
-        "season": 2026,
-        "round": "Round of 16",
-        "standings": false
-      },
-      "teams": {
-        "home": {
-          "id": 3402,
-          "name": "Omonia Nicosia",
-          "logo": "https://media.api-sports.io/football/teams/3402.png",
-          "winner": null
-        },
-        "away": {
-          "id": 3415,
-          "name": "Olympiakos",
-          "logo": "https://media.api-sports.io/football/teams/3415.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1650186,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-25T19:00:00+03:00",
-        "timestamp": 1795622400,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 321,
-        "name": "Cup",
-        "country": "Cyprus",
-        "logo": "https://media.api-sports.io/football/leagues/321.png",
-        "flag": "https://media.api-sports.io/flags/cy.svg",
-        "season": 2026,
-        "round": "Round of 16",
-        "standings": false
-      },
-      "teams": {
-        "home": {
-          "id": 3416,
-          "name": "Omonia Aradippou",
-          "logo": "https://media.api-sports.io/football/teams/3416.png",
-          "winner": null
-        },
-        "away": {
-          "id": 14126,
-          "name": "Omonia 29is Maiou",
-          "logo": "https://media.api-sports.io/football/teams/14126.png",
           "winner": null
         }
       },
@@ -39984,7 +39354,7 @@
     {
       "fixture": {
         "id": 1649066,
-        "referee": null,
+        "referee": "S. Galia",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-25T19:30:00+03:00",
         "timestamp": 1795624200,
@@ -40404,7 +39774,7 @@
     {
       "fixture": {
         "id": 1649068,
-        "referee": null,
+        "referee": "M. Beltrano",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-25T20:00:00+03:00",
         "timestamp": 1795626000,
@@ -41943,78 +41313,8 @@
     },
     {
       "fixture": {
-        "id": 1618433,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-25T22:00:00+03:00",
-        "timestamp": 1795633200,
-        "periods": {
-          "first": 1792933200,
-          "second": 1792936800
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 92,
-        "name": "Derde Divisie",
-        "country": "Netherlands",
-        "logo": "https://media.api-sports.io/football/leagues/92.png",
-        "flag": "https://media.api-sports.io/flags/nl.svg",
-        "season": 2026,
-        "round": "Regular Season - 11",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 19266,
-          "name": "Roosendaal",
-          "logo": "https://media.api-sports.io/football/teams/19266.png",
-          "winner": null
-        },
-        "away": {
-          "id": 1230,
-          "name": "Gemert",
-          "logo": "https://media.api-sports.io/football/teams/1230.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": 0,
-          "away": 0
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
         "id": 1649070,
-        "referee": null,
+        "referee": "H. M. Jonasson",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-25T22:00:00+03:00",
         "timestamp": 1795633200,
@@ -46913,6 +46213,76 @@
     },
     {
       "fixture": {
+        "id": 1507263,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-26T14:00:00+03:00",
+        "timestamp": 1795690800,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Kavkasioni Arena",
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 326,
+        "name": "Erovnuli Liga 2",
+        "country": "Georgia",
+        "logo": "https://media.api-sports.io/football/leagues/326.png",
+        "flag": "https://media.api-sports.io/flags/ge.svg",
+        "season": 2026,
+        "round": "Regular Season - 34",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 3511,
+          "name": "Telavi",
+          "logo": "https://media.api-sports.io/football/teams/3511.png",
+          "winner": null
+        },
+        "away": {
+          "id": 14861,
+          "name": "Gori",
+          "logo": "https://media.api-sports.io/football/teams/14861.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
         "id": 1602752,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -46955,6 +46325,76 @@
           "id": 6604,
           "name": "Songkhla",
           "logo": "https://media.api-sports.io/football/teams/6604.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1605132,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-26T14:00:00+03:00",
+        "timestamp": 1795690800,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "MIKA Stadium",
+          "city": "Yerevan"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 343,
+        "name": "First League",
+        "country": "Armenia",
+        "logo": "https://media.api-sports.io/football/leagues/343.png",
+        "flag": "https://media.api-sports.io/flags/am.svg",
+        "season": 2026,
+        "round": "Regular Season - 15",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 27987,
+          "name": "Olympia Yerevan",
+          "logo": "https://media.api-sports.io/football/teams/27987.png",
+          "winner": null
+        },
+        "away": {
+          "id": 11174,
+          "name": "Mika",
+          "logo": "https://media.api-sports.io/football/teams/11174.png",
           "winner": null
         }
       },
@@ -49503,76 +48943,6 @@
     },
     {
       "fixture": {
-        "id": 1507263,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-26T18:00:00+03:00",
-        "timestamp": 1795705200,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": "Kavkasioni Arena",
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 326,
-        "name": "Erovnuli Liga 2",
-        "country": "Georgia",
-        "logo": "https://media.api-sports.io/football/leagues/326.png",
-        "flag": "https://media.api-sports.io/flags/ge.svg",
-        "season": 2026,
-        "round": "Regular Season - 34",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 3511,
-          "name": "Telavi",
-          "logo": "https://media.api-sports.io/football/teams/3511.png",
-          "winner": null
-        },
-        "away": {
-          "id": 14861,
-          "name": "Gori",
-          "logo": "https://media.api-sports.io/football/teams/14861.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
         "id": 1546186,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -49924,7 +49294,7 @@
     {
       "fixture": {
         "id": 1636435,
-        "referee": null,
+        "referee": "P. Raczkowski",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-26T18:30:00+03:00",
         "timestamp": 1795707000,
@@ -50175,6 +49545,76 @@
           "id": 3984,
           "name": "Tekstilshchik",
           "logo": "https://media.api-sports.io/football/teams/3984.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1621398,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-26T19:00:00+03:00",
+        "timestamp": 1795708800,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 496,
+        "name": "Liga Alef",
+        "country": "Israel",
+        "logo": "https://media.api-sports.io/football/leagues/496.png",
+        "flag": "https://media.api-sports.io/flags/il.svg",
+        "season": 2026,
+        "round": "North - 11",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 4487,
+          "name": "Hapoel Nazareth Illit",
+          "logo": "https://media.api-sports.io/football/teams/4487.png",
+          "winner": null
+        },
+        "away": {
+          "id": 20291,
+          "name": "Maccabi K. Ata Bialik",
+          "logo": "https://media.api-sports.io/football/teams/20291.png",
           "winner": null
         }
       },
@@ -50525,76 +49965,6 @@
           "id": 2909,
           "name": "Al Rayyan SC B",
           "logo": "https://media.api-sports.io/football/teams/2909.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1621398,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-26T20:00:00+03:00",
-        "timestamp": 1795712400,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 496,
-        "name": "Liga Alef",
-        "country": "Israel",
-        "logo": "https://media.api-sports.io/football/leagues/496.png",
-        "flag": "https://media.api-sports.io/flags/il.svg",
-        "season": 2026,
-        "round": "North - 11",
-        "standings": false
-      },
-      "teams": {
-        "home": {
-          "id": 4487,
-          "name": "Hapoel Nazareth Illit",
-          "logo": "https://media.api-sports.io/football/teams/4487.png",
-          "winner": null
-        },
-        "away": {
-          "id": 20291,
-          "name": "Maccabi K. Ata Bialik",
-          "logo": "https://media.api-sports.io/football/teams/20291.png",
           "winner": null
         }
       },
@@ -51464,7 +50834,7 @@
     {
       "fixture": {
         "id": 1636381,
-        "referee": null,
+        "referee": "M. Redder",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-26T20:45:00+03:00",
         "timestamp": 1795715100,
@@ -51534,7 +50904,7 @@
     {
       "fixture": {
         "id": 1636393,
-        "referee": null,
+        "referee": "A. Menelaos",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-26T20:45:00+03:00",
         "timestamp": 1795715100,
@@ -51604,7 +50974,7 @@
     {
       "fixture": {
         "id": 1636395,
-        "referee": null,
+        "referee": "M. Jollenbeck",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-26T20:45:00+03:00",
         "timestamp": 1795715100,
@@ -51674,7 +51044,7 @@
     {
       "fixture": {
         "id": 1636405,
-        "referee": null,
+        "referee": "O. Johnson",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-26T20:45:00+03:00",
         "timestamp": 1795715100,
@@ -51744,7 +51114,7 @@
     {
       "fixture": {
         "id": 1636421,
-        "referee": null,
+        "referee": "D. Schlager",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-26T20:45:00+03:00",
         "timestamp": 1795715100,
@@ -51814,7 +51184,7 @@
     {
       "fixture": {
         "id": 1636426,
-        "referee": null,
+        "referee": "H. Fesnic",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-26T20:45:00+03:00",
         "timestamp": 1795715100,
@@ -51884,7 +51254,7 @@
     {
       "fixture": {
         "id": 1636431,
-        "referee": null,
+        "referee": "D. Smajc",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-26T20:45:00+03:00",
         "timestamp": 1795715100,
@@ -51954,7 +51324,7 @@
     {
       "fixture": {
         "id": 1636438,
-        "referee": null,
+        "referee": "D. Sakhi",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-26T20:45:00+03:00",
         "timestamp": 1795715100,
@@ -52024,7 +51394,7 @@
     {
       "fixture": {
         "id": 1636460,
-        "referee": null,
+        "referee": "I. Barbara",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-26T20:45:00+03:00",
         "timestamp": 1795715100,
@@ -53214,7 +52584,7 @@
     {
       "fixture": {
         "id": 1636386,
-        "referee": null,
+        "referee": "N. Verboomen",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-26T23:00:00+03:00",
         "timestamp": 1795723200,
@@ -53284,7 +52654,7 @@
     {
       "fixture": {
         "id": 1636389,
-        "referee": null,
+        "referee": "O. Derevinskyi",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-26T23:00:00+03:00",
         "timestamp": 1795723200,
@@ -53354,7 +52724,7 @@
     {
       "fixture": {
         "id": 1636402,
-        "referee": null,
+        "referee": "J. Pignard",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-26T23:00:00+03:00",
         "timestamp": 1795723200,
@@ -53424,7 +52794,7 @@
     {
       "fixture": {
         "id": 1636410,
-        "referee": null,
+        "referee": "M. Lukjancukas",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-26T23:00:00+03:00",
         "timestamp": 1795723200,
@@ -53494,7 +52864,7 @@
     {
       "fixture": {
         "id": 1636412,
-        "referee": null,
+        "referee": "M. Marcenaro",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-26T23:00:00+03:00",
         "timestamp": 1795723200,
@@ -53564,7 +52934,7 @@
     {
       "fixture": {
         "id": 1636420,
-        "referee": null,
+        "referee": "M. Marchetti",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-26T23:00:00+03:00",
         "timestamp": 1795723200,
@@ -53634,7 +53004,7 @@
     {
       "fixture": {
         "id": 1636428,
-        "referee": null,
+        "referee": "M. De Gabriele",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-26T23:00:00+03:00",
         "timestamp": 1795723200,
@@ -53704,7 +53074,7 @@
     {
       "fixture": {
         "id": 1636457,
-        "referee": null,
+        "referee": "J. Weinberger",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-26T23:00:00+03:00",
         "timestamp": 1795723200,
@@ -145753,76 +145123,6 @@
     },
     {
       "fixture": {
-        "id": 1607475,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-28T19:30:00+03:00",
-        "timestamp": 1795883400,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": "Abdelaziz Chtioui Stadium",
-          "city": "La Marsa"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 202,
-        "name": "Ligue 1",
-        "country": "Tunisia",
-        "logo": "https://media.api-sports.io/football/leagues/202.png",
-        "flag": "https://media.api-sports.io/flags/tn.svg",
-        "season": 2026,
-        "round": "Regular Season - 9",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 10368,
-          "name": "AS Marsa",
-          "logo": "https://media.api-sports.io/football/teams/10368.png",
-          "winner": null
-        },
-        "away": {
-          "id": 983,
-          "name": "CS Sfaxien",
-          "logo": "https://media.api-sports.io/football/teams/983.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
         "id": 1607476,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -145865,146 +145165,6 @@
           "id": 989,
           "name": "ES Zarzis",
           "logo": "https://media.api-sports.io/football/teams/989.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1607477,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-28T19:30:00+03:00",
-        "timestamp": 1795883400,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": 22571,
-          "name": "Stade Hedi-Enneifer",
-          "city": "Le Bardo"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 202,
-        "name": "Ligue 1",
-        "country": "Tunisia",
-        "logo": "https://media.api-sports.io/football/leagues/202.png",
-        "flag": "https://media.api-sports.io/flags/tn.svg",
-        "season": 2026,
-        "round": "Regular Season - 9",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 980,
-          "name": "ES Tunis",
-          "logo": "https://media.api-sports.io/football/teams/980.png",
-          "winner": null
-        },
-        "away": {
-          "id": 10609,
-          "name": "ES Hammam-Sousse",
-          "logo": "https://media.api-sports.io/football/teams/10609.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1607478,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-28T19:30:00+03:00",
-        "timestamp": 1795883400,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": "Stade Olympique de Sousse",
-          "city": "Sousse"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 202,
-        "name": "Ligue 1",
-        "country": "Tunisia",
-        "logo": "https://media.api-sports.io/football/leagues/202.png",
-        "flag": "https://media.api-sports.io/flags/tn.svg",
-        "season": 2026,
-        "round": "Regular Season - 9",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 990,
-          "name": "ES Sahel",
-          "logo": "https://media.api-sports.io/football/teams/990.png",
-          "winner": null
-        },
-        "away": {
-          "id": 988,
-          "name": "Club Africain",
-          "logo": "https://media.api-sports.io/football/teams/988.png",
           "winner": null
         }
       },
@@ -430863,6 +430023,76 @@
     },
     {
       "fixture": {
+        "id": 1651687,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-09T03:30:00+03:00",
+        "timestamp": 1796776200,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": 1232,
+          "name": "Estadio Mansiche",
+          "city": "Trujillo"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 282,
+        "name": "Segunda División",
+        "country": "Peru",
+        "logo": "https://media.api-sports.io/football/leagues/282.png",
+        "flag": "https://media.api-sports.io/flags/pe.svg",
+        "season": 2026,
+        "round": "Semi-finals",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 2551,
+          "name": "Carlos A. Mannucci",
+          "logo": "https://media.api-sports.io/football/teams/2551.png",
+          "winner": null
+        },
+        "away": {
+          "id": 2552,
+          "name": "Union Comercio",
+          "logo": "https://media.api-sports.io/football/teams/2552.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
         "id": 1560972,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -432683,286 +431913,6 @@
     },
     {
       "fixture": {
-        "id": 1649450,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-09T14:00:00+03:00",
-        "timestamp": 1796814000,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 898,
-        "name": "League Cup",
-        "country": "Thailand",
-        "logo": "https://media.api-sports.io/football/leagues/898.png",
-        "flag": "https://media.api-sports.io/flags/th.svg",
-        "season": 2026,
-        "round": "Round of 32",
-        "standings": false
-      },
-      "teams": {
-        "home": {
-          "id": 26998,
-          "name": "Burapha United",
-          "logo": "https://media.api-sports.io/football/teams/26998.png",
-          "winner": null
-        },
-        "away": {
-          "id": 15282,
-          "name": "Rasi Salai United",
-          "logo": "https://media.api-sports.io/football/teams/15282.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1649451,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-09T14:00:00+03:00",
-        "timestamp": 1796814000,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 898,
-        "name": "League Cup",
-        "country": "Thailand",
-        "logo": "https://media.api-sports.io/football/leagues/898.png",
-        "flag": "https://media.api-sports.io/flags/th.svg",
-        "season": 2026,
-        "round": "Round of 32",
-        "standings": false
-      },
-      "teams": {
-        "home": {
-          "id": 2793,
-          "name": "Chiangmai FC",
-          "logo": "https://media.api-sports.io/football/teams/2793.png",
-          "winner": null
-        },
-        "away": {
-          "id": 2789,
-          "name": "Port FC",
-          "logo": "https://media.api-sports.io/football/teams/2789.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1649452,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-09T14:00:00+03:00",
-        "timestamp": 1796814000,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 898,
-        "name": "League Cup",
-        "country": "Thailand",
-        "logo": "https://media.api-sports.io/football/leagues/898.png",
-        "flag": "https://media.api-sports.io/flags/th.svg",
-        "season": 2026,
-        "round": "Round of 32",
-        "standings": false
-      },
-      "teams": {
-        "home": {
-          "id": 2795,
-          "name": "Khonkaen",
-          "logo": "https://media.api-sports.io/football/teams/2795.png",
-          "winner": null
-        },
-        "away": {
-          "id": 2783,
-          "name": "Sukhothai FC",
-          "logo": "https://media.api-sports.io/football/teams/2783.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1649453,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-09T14:00:00+03:00",
-        "timestamp": 1796814000,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": "Khonkaen Stadium",
-          "city": "Khon Kaen"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 898,
-        "name": "League Cup",
-        "country": "Thailand",
-        "logo": "https://media.api-sports.io/football/leagues/898.png",
-        "flag": "https://media.api-sports.io/flags/th.svg",
-        "season": 2026,
-        "round": "Round of 32",
-        "standings": false
-      },
-      "teams": {
-        "home": {
-          "id": 10086,
-          "name": "Khon Kaen United",
-          "logo": "https://media.api-sports.io/football/teams/10086.png",
-          "winner": null
-        },
-        "away": {
-          "id": 18395,
-          "name": "Sisaket United",
-          "logo": "https://media.api-sports.io/football/teams/18395.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
         "id": 1649454,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -433033,286 +431983,6 @@
     },
     {
       "fixture": {
-        "id": 1649455,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-09T14:00:00+03:00",
-        "timestamp": 1796814000,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": "Thunderdome Stadium",
-          "city": "Nonthaburi"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 898,
-        "name": "League Cup",
-        "country": "Thailand",
-        "logo": "https://media.api-sports.io/football/leagues/898.png",
-        "flag": "https://media.api-sports.io/flags/th.svg",
-        "season": 2026,
-        "round": "Round of 32",
-        "standings": false
-      },
-      "teams": {
-        "home": {
-          "id": 2786,
-          "name": "Muangthong United",
-          "logo": "https://media.api-sports.io/football/teams/2786.png",
-          "winner": null
-        },
-        "away": {
-          "id": 6572,
-          "name": "Lamphun Warrior",
-          "logo": "https://media.api-sports.io/football/teams/6572.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1649456,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-09T14:00:00+03:00",
-        "timestamp": 1796814000,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": "Nakhon Pathom Municipality Stadium",
-          "city": "Nakhon Pathom"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 898,
-        "name": "League Cup",
-        "country": "Thailand",
-        "logo": "https://media.api-sports.io/football/leagues/898.png",
-        "flag": "https://media.api-sports.io/flags/th.svg",
-        "season": 2026,
-        "round": "Round of 32",
-        "standings": false
-      },
-      "teams": {
-        "home": {
-          "id": 6578,
-          "name": "Nakhon Pathom",
-          "logo": "https://media.api-sports.io/football/teams/6578.png",
-          "winner": null
-        },
-        "away": {
-          "id": 2803,
-          "name": "Ayutthaya FC",
-          "logo": "https://media.api-sports.io/football/teams/2803.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1649457,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-09T14:00:00+03:00",
-        "timestamp": 1796814000,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": 11517,
-          "name": "Pitchaya Stadium",
-          "city": "Nong Bua Lam Phu"
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 898,
-        "name": "League Cup",
-        "country": "Thailand",
-        "logo": "https://media.api-sports.io/football/leagues/898.png",
-        "flag": "https://media.api-sports.io/flags/th.svg",
-        "season": 2026,
-        "round": "Round of 32",
-        "standings": false
-      },
-      "teams": {
-        "home": {
-          "id": 2796,
-          "name": "Nong Bua Pitchaya",
-          "logo": "https://media.api-sports.io/football/teams/2796.png",
-          "winner": null
-        },
-        "away": {
-          "id": 10088,
-          "name": "Uthai Thani",
-          "logo": "https://media.api-sports.io/football/teams/10088.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1649458,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-09T14:00:00+03:00",
-        "timestamp": 1796814000,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 898,
-        "name": "League Cup",
-        "country": "Thailand",
-        "logo": "https://media.api-sports.io/football/leagues/898.png",
-        "flag": "https://media.api-sports.io/flags/th.svg",
-        "season": 2026,
-        "round": "Round of 32",
-        "standings": false
-      },
-      "teams": {
-        "home": {
-          "id": 17914,
-          "name": "Phichit United",
-          "logo": "https://media.api-sports.io/football/teams/17914.png",
-          "winner": null
-        },
-        "away": {
-          "id": 2772,
-          "name": "Chonburi FC",
-          "logo": "https://media.api-sports.io/football/teams/2772.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
         "id": 1649459,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -433355,286 +432025,6 @@
           "id": 6582,
           "name": "Pattani",
           "logo": "https://media.api-sports.io/football/teams/6582.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1649460,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-09T14:00:00+03:00",
-        "timestamp": 1796814000,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 898,
-        "name": "League Cup",
-        "country": "Thailand",
-        "logo": "https://media.api-sports.io/football/leagues/898.png",
-        "flag": "https://media.api-sports.io/flags/th.svg",
-        "season": 2026,
-        "round": "Round of 32",
-        "standings": false
-      },
-      "teams": {
-        "home": {
-          "id": 20430,
-          "name": "Thap Luang United",
-          "logo": "https://media.api-sports.io/football/teams/20430.png",
-          "winner": null
-        },
-        "away": {
-          "id": 2770,
-          "name": "Bangkok United",
-          "logo": "https://media.api-sports.io/football/teams/2770.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1649461,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-09T14:00:00+03:00",
-        "timestamp": 1796814000,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 898,
-        "name": "League Cup",
-        "country": "Thailand",
-        "logo": "https://media.api-sports.io/football/leagues/898.png",
-        "flag": "https://media.api-sports.io/flags/th.svg",
-        "season": 2026,
-        "round": "Round of 32",
-        "standings": false
-      },
-      "teams": {
-        "home": {
-          "id": 27279,
-          "name": "Udon Banjan United",
-          "logo": "https://media.api-sports.io/football/teams/27279.png",
-          "winner": null
-        },
-        "away": {
-          "id": 2797,
-          "name": "Rayong FC",
-          "logo": "https://media.api-sports.io/football/teams/2797.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1649462,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-09T14:00:00+03:00",
-        "timestamp": 1796814000,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 898,
-        "name": "League Cup",
-        "country": "Thailand",
-        "logo": "https://media.api-sports.io/football/leagues/898.png",
-        "flag": "https://media.api-sports.io/flags/th.svg",
-        "season": 2026,
-        "round": "Round of 32",
-        "standings": false
-      },
-      "teams": {
-        "home": {
-          "id": 27004,
-          "name": "Yala FC",
-          "logo": "https://media.api-sports.io/football/teams/27004.png",
-          "winner": null
-        },
-        "away": {
-          "id": 2769,
-          "name": "BG Pathum United",
-          "logo": "https://media.api-sports.io/football/teams/2769.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1649471,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-12-09T14:00:00+03:00",
-        "timestamp": 1796814000,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 898,
-        "name": "League Cup",
-        "country": "Thailand",
-        "logo": "https://media.api-sports.io/football/leagues/898.png",
-        "flag": "https://media.api-sports.io/flags/th.svg",
-        "season": 2026,
-        "round": "Round of 32",
-        "standings": false
-      },
-      "teams": {
-        "home": {
-          "id": 28682,
-          "name": "Pluakdaeng Rayong United",
-          "logo": "https://media.api-sports.io/football/teams/28682.png",
-          "winner": null
-        },
-        "away": {
-          "id": 2791,
-          "name": "Prachuap",
-          "logo": "https://media.api-sports.io/football/teams/2791.png",
           "winner": null
         }
       },
@@ -433775,6 +432165,146 @@
           "id": 3475,
           "name": "Goa",
           "logo": "https://media.api-sports.io/football/teams/3475.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1649456,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-09T14:30:00+03:00",
+        "timestamp": 1796815800,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Nakhon Pathom Municipality Stadium",
+          "city": "Nakhon Pathom"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 898,
+        "name": "League Cup",
+        "country": "Thailand",
+        "logo": "https://media.api-sports.io/football/leagues/898.png",
+        "flag": "https://media.api-sports.io/flags/th.svg",
+        "season": 2026,
+        "round": "Round of 32",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 6578,
+          "name": "Nakhon Pathom",
+          "logo": "https://media.api-sports.io/football/teams/6578.png",
+          "winner": null
+        },
+        "away": {
+          "id": 2803,
+          "name": "Ayutthaya FC",
+          "logo": "https://media.api-sports.io/football/teams/2803.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1649457,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-09T14:30:00+03:00",
+        "timestamp": 1796815800,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": 11517,
+          "name": "Pitchaya Stadium",
+          "city": "Nong Bua Lam Phu"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 898,
+        "name": "League Cup",
+        "country": "Thailand",
+        "logo": "https://media.api-sports.io/football/leagues/898.png",
+        "flag": "https://media.api-sports.io/flags/th.svg",
+        "season": 2026,
+        "round": "Round of 32",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 2796,
+          "name": "Nong Bua Pitchaya",
+          "logo": "https://media.api-sports.io/football/teams/2796.png",
+          "winner": null
+        },
+        "away": {
+          "id": 10088,
+          "name": "Uthai Thani",
+          "logo": "https://media.api-sports.io/football/teams/10088.png",
           "winner": null
         }
       },
@@ -434615,6 +433145,146 @@
           "id": 7928,
           "name": "Salzburg U19",
           "logo": "https://media.api-sports.io/football/teams/7928.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1649453,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-09T15:00:00+03:00",
+        "timestamp": 1796817600,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Khonkaen Stadium",
+          "city": "Khon Kaen"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 898,
+        "name": "League Cup",
+        "country": "Thailand",
+        "logo": "https://media.api-sports.io/football/leagues/898.png",
+        "flag": "https://media.api-sports.io/flags/th.svg",
+        "season": 2026,
+        "round": "Round of 32",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 10086,
+          "name": "Khon Kaen United",
+          "logo": "https://media.api-sports.io/football/teams/10086.png",
+          "winner": null
+        },
+        "away": {
+          "id": 18395,
+          "name": "Sisaket United",
+          "logo": "https://media.api-sports.io/football/teams/18395.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1649455,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-09T15:00:00+03:00",
+        "timestamp": 1796817600,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Thunderdome Stadium",
+          "city": "Nonthaburi"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 898,
+        "name": "League Cup",
+        "country": "Thailand",
+        "logo": "https://media.api-sports.io/football/leagues/898.png",
+        "flag": "https://media.api-sports.io/flags/th.svg",
+        "season": 2026,
+        "round": "Round of 32",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 2786,
+          "name": "Muangthong United",
+          "logo": "https://media.api-sports.io/football/teams/2786.png",
+          "winner": null
+        },
+        "away": {
+          "id": 6572,
+          "name": "Lamphun Warrior",
+          "logo": "https://media.api-sports.io/football/teams/6572.png",
           "winner": null
         }
       },
@@ -435875,6 +434545,76 @@
           "id": 579,
           "name": "Buducnost Podgorica",
           "logo": "https://media.api-sports.io/football/teams/579.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1607478,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-09T16:00:00+03:00",
+        "timestamp": 1796821200,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Stade Olympique de Sousse",
+          "city": "Sousse"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 202,
+        "name": "Ligue 1",
+        "country": "Tunisia",
+        "logo": "https://media.api-sports.io/football/leagues/202.png",
+        "flag": "https://media.api-sports.io/flags/tn.svg",
+        "season": 2026,
+        "round": "Regular Season - 9",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 990,
+          "name": "ES Sahel",
+          "logo": "https://media.api-sports.io/football/teams/990.png",
+          "winner": null
+        },
+        "away": {
+          "id": 988,
+          "name": "Club Africain",
+          "logo": "https://media.api-sports.io/football/teams/988.png",
           "winner": null
         }
       },
@@ -438493,6 +437233,76 @@
     },
     {
       "fixture": {
+        "id": 1628561,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-09T18:00:00+03:00",
+        "timestamp": 1796828400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Mobolaji Johnson Arena",
+          "city": "Lagos"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 399,
+        "name": "NPFL",
+        "country": "Nigeria",
+        "logo": "https://media.api-sports.io/football/leagues/399.png",
+        "flag": "https://media.api-sports.io/flags/ng.svg",
+        "season": 2027,
+        "round": "Regular Season - 10",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 22585,
+          "name": "Sporting Lagos",
+          "logo": "https://media.api-sports.io/football/teams/22585.png",
+          "winner": null
+        },
+        "away": {
+          "id": 5176,
+          "name": "Enugu Rangers",
+          "logo": "https://media.api-sports.io/football/teams/5176.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
         "id": 1630475,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -440285,6 +439095,76 @@
           "id": 7952,
           "name": "HJK U19",
           "logo": "https://media.api-sports.io/football/teams/7952.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1650180,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-09T20:00:00+03:00",
+        "timestamp": 1796835600,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 321,
+        "name": "Cup",
+        "country": "Cyprus",
+        "logo": "https://media.api-sports.io/football/leagues/321.png",
+        "flag": "https://media.api-sports.io/flags/cy.svg",
+        "season": 2026,
+        "round": "Round of 16",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 3396,
+          "name": "AEL",
+          "logo": "https://media.api-sports.io/football/teams/3396.png",
+          "winner": null
+        },
+        "away": {
+          "id": 3399,
+          "name": "Enosis",
+          "logo": "https://media.api-sports.io/football/teams/3399.png",
           "winner": null
         }
       },
@@ -442553,6 +441433,216 @@
     },
     {
       "fixture": {
+        "id": 1570003,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-09T23:00:00+03:00",
+        "timestamp": 1796846400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": 2618,
+          "name": "Estadi de la FAF",
+          "city": "Encamp"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 141,
+        "name": "Segunda División",
+        "country": "Spain",
+        "logo": "https://media.api-sports.io/football/leagues/141.png",
+        "flag": "https://media.api-sports.io/flags/es.svg",
+        "season": 2026,
+        "round": "Regular Season - 13",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 8157,
+          "name": "FC Andorra",
+          "logo": "https://media.api-sports.io/football/teams/8157.png",
+          "winner": null
+        },
+        "away": {
+          "id": 798,
+          "name": "Mallorca",
+          "logo": "https://media.api-sports.io/football/teams/798.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1570006,
+        "referee": "J. Guzman",
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-09T23:00:00+03:00",
+        "timestamp": 1796846400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": 3968,
+          "name": "Estadio Municipal de Castalia",
+          "city": "Castellon"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 141,
+        "name": "Segunda División",
+        "country": "Spain",
+        "logo": "https://media.api-sports.io/football/leagues/141.png",
+        "flag": "https://media.api-sports.io/flags/es.svg",
+        "season": 2026,
+        "round": "Regular Season - 13",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 5254,
+          "name": "Castellón",
+          "logo": "https://media.api-sports.io/football/teams/5254.png",
+          "winner": null
+        },
+        "away": {
+          "id": 545,
+          "name": "Eibar",
+          "logo": "https://media.api-sports.io/football/teams/545.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1570010,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-09T23:00:00+03:00",
+        "timestamp": 1796846400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": 1479,
+          "name": "Nuevo Los Cármenes",
+          "city": "Granada"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 141,
+        "name": "Segunda División",
+        "country": "Spain",
+        "logo": "https://media.api-sports.io/football/leagues/141.png",
+        "flag": "https://media.api-sports.io/flags/es.svg",
+        "season": 2026,
+        "round": "Regular Season - 13",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 715,
+          "name": "Granada CF",
+          "logo": "https://media.api-sports.io/football/teams/715.png",
+          "winner": null
+        },
+        "away": {
+          "id": 719,
+          "name": "Tenerife",
+          "logo": "https://media.api-sports.io/football/teams/719.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
         "id": 1635610,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -443225,6 +442315,76 @@
           "id": 11,
           "name": "Panama",
           "logo": "https://media.api-sports.io/football/teams/11.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1649461,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-10T11:00:00+03:00",
+        "timestamp": 1796889600,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 898,
+        "name": "League Cup",
+        "country": "Thailand",
+        "logo": "https://media.api-sports.io/football/leagues/898.png",
+        "flag": "https://media.api-sports.io/flags/th.svg",
+        "season": 2026,
+        "round": "Round of 32",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 27279,
+          "name": "Udon Banjan United",
+          "logo": "https://media.api-sports.io/football/teams/27279.png",
+          "winner": null
+        },
+        "away": {
+          "id": 2797,
+          "name": "Rayong FC",
+          "logo": "https://media.api-sports.io/football/teams/2797.png",
           "winner": null
         }
       },
@@ -444695,6 +443855,146 @@
           "id": 2909,
           "name": "Al Rayyan SC B",
           "logo": "https://media.api-sports.io/football/teams/2909.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1607475,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-10T16:00:00+03:00",
+        "timestamp": 1796907600,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Abdelaziz Chtioui Stadium",
+          "city": "La Marsa"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 202,
+        "name": "Ligue 1",
+        "country": "Tunisia",
+        "logo": "https://media.api-sports.io/football/leagues/202.png",
+        "flag": "https://media.api-sports.io/flags/tn.svg",
+        "season": 2026,
+        "round": "Regular Season - 9",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 10368,
+          "name": "AS Marsa",
+          "logo": "https://media.api-sports.io/football/teams/10368.png",
+          "winner": null
+        },
+        "away": {
+          "id": 983,
+          "name": "CS Sfaxien",
+          "logo": "https://media.api-sports.io/football/teams/983.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1607477,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-10T16:00:00+03:00",
+        "timestamp": 1796907600,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": 22571,
+          "name": "Stade Hedi-Enneifer",
+          "city": "Le Bardo"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 202,
+        "name": "Ligue 1",
+        "country": "Tunisia",
+        "logo": "https://media.api-sports.io/football/leagues/202.png",
+        "flag": "https://media.api-sports.io/flags/tn.svg",
+        "season": 2026,
+        "round": "Regular Season - 9",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 980,
+          "name": "ES Tunis",
+          "logo": "https://media.api-sports.io/football/teams/980.png",
+          "winner": null
+        },
+        "away": {
+          "id": 10609,
+          "name": "ES Hammam-Sousse",
+          "logo": "https://media.api-sports.io/football/teams/10609.png",
           "winner": null
         }
       },
