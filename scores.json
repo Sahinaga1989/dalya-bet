@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-11-25T04:10:13.802907+00:00",
+  "updated_at": "2026-11-25T06:04:22.796312+00:00",
   "date": "2026-11-25",
   "dates": [
     "2026-11-23",
     "2026-11-24",
     "2026-11-25",
     "2026-11-26",
-    "2026-12-13",
-    "2026-12-14"
+    "2026-12-17",
+    "2026-12-18"
   ],
   "horizon_days": 30,
   "response": [
@@ -4200,76 +4200,6 @@
         "fulltime": {
           "home": 1,
           "away": 1
-        },
-        "extratime": {
-          "home": null,
-          "away": null
-        },
-        "penalty": {
-          "home": null,
-          "away": null
-        }
-      }
-    },
-    {
-      "fixture": {
-        "id": 1626928,
-        "referee": null,
-        "timezone": "Europe/Istanbul",
-        "date": "2026-11-23T15:00:00+03:00",
-        "timestamp": 1795435200,
-        "periods": {
-          "first": null,
-          "second": null
-        },
-        "venue": {
-          "id": null,
-          "name": null,
-          "city": null
-        },
-        "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
-        }
-      },
-      "league": {
-        "id": 175,
-        "name": "Third League - Northeast",
-        "country": "Bulgaria",
-        "logo": "https://media.api-sports.io/football/leagues/175.png",
-        "flag": "https://media.api-sports.io/flags/bg.svg",
-        "season": 2026,
-        "round": "Northeast - 15",
-        "standings": true
-      },
-      "teams": {
-        "home": {
-          "id": 19891,
-          "name": "Cherno more II",
-          "logo": "https://media.api-sports.io/football/teams/19891.png",
-          "winner": null
-        },
-        "away": {
-          "id": 24545,
-          "name": "Fratria II",
-          "logo": "https://media.api-sports.io/football/teams/24545.png",
-          "winner": null
-        }
-      },
-      "goals": {
-        "home": null,
-        "away": null
-      },
-      "score": {
-        "halftime": {
-          "home": null,
-          "away": null
-        },
-        "fulltime": {
-          "home": null,
-          "away": null
         },
         "extratime": {
           "home": null,
@@ -9324,7 +9254,7 @@
     {
       "fixture": {
         "id": 1565309,
-        "referee": "A. Moroita",
+        "referee": "Andrei Moroita, Romania",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-23T21:00:00+03:00",
         "timestamp": 1795456800,
@@ -13999,6 +13929,76 @@
         },
         "fulltime": {
           "home": 2,
+          "away": 0
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1626928,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-11-24T14:00:00+03:00",
+        "timestamp": 1795518000,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 175,
+        "name": "Third League - Northeast",
+        "country": "Bulgaria",
+        "logo": "https://media.api-sports.io/football/leagues/175.png",
+        "flag": "https://media.api-sports.io/flags/bg.svg",
+        "season": 2026,
+        "round": "Northeast - 15",
+        "standings": true
+      },
+      "teams": {
+        "home": {
+          "id": 19891,
+          "name": "Cherno more II",
+          "logo": "https://media.api-sports.io/football/teams/19891.png",
+          "winner": null
+        },
+        "away": {
+          "id": 24545,
+          "name": "Fratria II",
+          "logo": "https://media.api-sports.io/football/teams/24545.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": 0,
+        "away": 0
+      },
+      "score": {
+        "halftime": {
+          "home": 0,
+          "away": 0
+        },
+        "fulltime": {
+          "home": 0,
           "away": 0
         },
         "extratime": {
@@ -26894,7 +26894,7 @@
     {
       "fixture": {
         "id": 1635611,
-        "referee": "M. Mariani",
+        "referee": "Maurizio Mariani, Italy",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-24T23:00:00+03:00",
         "timestamp": 1795550400,
@@ -27538,9 +27538,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
           "extra": null
         }
       },
@@ -27559,18 +27559,18 @@
           "id": 26559,
           "name": "Mec Maraba U20",
           "logo": "https://media.api-sports.io/football/teams/26559.png",
-          "winner": null
+          "winner": false
         },
         "away": {
           "id": 25222,
           "name": "Águia de Marabá U20",
           "logo": "https://media.api-sports.io/football/teams/25222.png",
-          "winner": null
+          "winner": true
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 2
       },
       "score": {
         "halftime": {
@@ -27578,8 +27578,8 @@
           "away": null
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 2
         },
         "extratime": {
           "home": null,
@@ -28014,7 +28014,7 @@
     {
       "fixture": {
         "id": 1555829,
-        "referee": null,
+        "referee": "Hiromichi Oka",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-25T06:00:00+03:00",
         "timestamp": 1795575600,
@@ -28023,15 +28023,15 @@
           "second": 1795579200
         },
         "venue": {
-          "id": null,
-          "name": "Okinawa Athletic Park Stadium",
+          "id": 959,
+          "name": "Tapic Kenso Hiyagon Stadium",
           "city": "Okinawa"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 52,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 5
         }
       },
       "league": {
@@ -28059,8 +28059,8 @@
         }
       },
       "goals": {
-        "home": 0,
-        "away": 0
+        "home": 1,
+        "away": 1
       },
       "score": {
         "halftime": {
@@ -28068,8 +28068,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -28098,9 +28098,9 @@
           "city": "San Jose"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 40,
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
           "extra": null
         }
       },
@@ -28130,7 +28130,7 @@
       },
       "goals": {
         "home": 2,
-        "away": 0
+        "away": 1
       },
       "score": {
         "halftime": {
@@ -28138,8 +28138,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -28159,18 +28159,18 @@
         "date": "2026-11-25T08:00:00+03:00",
         "timestamp": 1795582800,
         "periods": {
-          "first": null,
+          "first": 1795582800,
           "second": null
         },
         "venue": {
-          "id": null,
+          "id": 2775,
           "name": "Mikuni World Stadium Kitakyushu",
           "city": "Kitakyushu"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "Halftime",
+          "short": "HT",
+          "elapsed": 45,
           "extra": null
         }
       },
@@ -28199,13 +28199,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -28234,8 +28234,8 @@
         },
         "venue": {
           "id": null,
-          "name": "AAMI Park",
-          "city": "Melbourne"
+          "name": "GMHBA Stadium",
+          "city": "Geelong"
         },
         "status": {
           "long": "Not Started",
@@ -28583,9 +28583,9 @@
           "second": null
         },
         "venue": {
-          "id": null,
+          "id": 5182,
           "name": "Heiwado HATO Stadium",
-          "city": "Hikone"
+          "city": "Shiga"
         },
         "status": {
           "long": "Not Started",
@@ -28653,9 +28653,9 @@
           "second": null
         },
         "venue": {
-          "id": null,
-          "name": null,
-          "city": null
+          "id": 20120,
+          "name": "Kolos Stadium",
+          "city": "Kovalivka"
         },
         "status": {
           "long": "Not Started",
@@ -28724,8 +28724,8 @@
         },
         "venue": {
           "id": null,
-          "name": null,
-          "city": null
+          "name": "Thuwunna Youth Training Centre Stadium",
+          "city": "Yangon"
         },
         "status": {
           "long": "Not Started",
@@ -28793,9 +28793,9 @@
           "second": null
         },
         "venue": {
-          "id": null,
-          "name": null,
-          "city": null
+          "id": 5713,
+          "name": "Taunggyi Stadium",
+          "city": "Taunggyi"
         },
         "status": {
           "long": "Not Started",
@@ -28935,7 +28935,7 @@
         "venue": {
           "id": 3306,
           "name": "Sagamihara Gion Stadium",
-          "city": "Sagamihara"
+          "city": "Sagamihara City"
         },
         "status": {
           "long": "Not Started",
@@ -29003,7 +29003,7 @@
           "second": null
         },
         "venue": {
-          "id": 0,
+          "id": 11578,
           "name": "Prifoods Stadium",
           "city": "Hachinohe"
         },
@@ -29074,7 +29074,7 @@
         },
         "venue": {
           "id": 0,
-          "name": "Arigato Service Dream",
+          "name": "ASICS Satoyama Stadium",
           "city": "Imabari"
         },
         "status": {
@@ -29143,8 +29143,8 @@
           "second": null
         },
         "venue": {
-          "id": null,
-          "name": "Gifu Memorial Center Nagaragawa Ball Field",
+          "id": 958,
+          "name": "Gifu Nagaragawa Stadium",
           "city": "Gifu"
         },
         "status": {
@@ -29213,8 +29213,8 @@
           "second": null
         },
         "venue": {
-          "id": null,
-          "name": "Pikara",
+          "id": 1935,
+          "name": "Kagawa Marugame Stadium",
           "city": "Marugame"
         },
         "status": {
@@ -29283,8 +29283,8 @@
           "second": null
         },
         "venue": {
-          "id": null,
-          "name": "Nagano U Stadium",
+          "id": 3305,
+          "name": "Minami Nagano Sports Park Stadium",
           "city": "Nagano"
         },
         "status": {
@@ -29354,7 +29354,7 @@
         },
         "venue": {
           "id": null,
-          "name": "Konoike Athletic Stadium",
+          "name": "Rohto Field Nara",
           "city": "Nara"
         },
         "status": {
@@ -29424,8 +29424,8 @@
         },
         "venue": {
           "id": 20561,
-          "name": "Hanazono Rugby Stadium",
-          "city": "Higashiosaka"
+          "name": "Kintetsu Hanazono Rugby Stadium",
+          "city": "Osaka"
         },
         "status": {
           "long": "Not Started",
@@ -30123,9 +30123,9 @@
           "second": null
         },
         "venue": {
-          "id": null,
-          "name": null,
-          "city": null
+          "id": 120,
+          "name": "Yerevan Football Academy",
+          "city": "Yerevan"
         },
         "status": {
           "long": "Not Started",
@@ -30193,9 +30193,9 @@
           "second": null
         },
         "venue": {
-          "id": 0,
+          "id": 971,
           "name": "ND Soft Stadium Yamagata",
-          "city": "Tendo"
+          "city": "Yamagata"
         },
         "status": {
           "long": "Not Started",
@@ -30333,8 +30333,8 @@
           "second": null
         },
         "venue": {
-          "id": 0,
-          "name": "MNHK Spring Mitsuzawa Football Stadium",
+          "id": 11579,
+          "name": "NHK Spring Mitsuzawa Football Stadium",
           "city": "Yokohama"
         },
         "status": {
@@ -30403,8 +30403,8 @@
           "second": null
         },
         "venue": {
-          "id": 0,
-          "name": "Iwaki Greenfield",
+          "id": 20560,
+          "name": "Hawaiians Stadium Iwaki",
           "city": "Iwaki"
         },
         "status": {
@@ -30473,7 +30473,7 @@
           "second": null
         },
         "venue": {
-          "id": 0,
+          "id": 19674,
           "name": "NACK5 Stadium Omiya",
           "city": "Saitama"
         },
@@ -30543,7 +30543,7 @@
           "second": null
         },
         "venue": {
-          "id": 0,
+          "id": 974,
           "name": "Ekimae Real Estate Stadium",
           "city": "Tosu"
         },
@@ -30613,9 +30613,9 @@
           "second": null
         },
         "venue": {
-          "id": 0,
-          "name": "Lemon Gas Stadium",
-          "city": "Hiratsuka"
+          "id": 21809,
+          "name": "Lemon Gas Stadium Hiratsuka",
+          "city": "Kanagawa"
         },
         "status": {
           "long": "Not Started",
@@ -30683,7 +30683,7 @@
           "second": null
         },
         "venue": {
-          "id": 0,
+          "id": 21807,
           "name": "Sapporo Dome",
           "city": "Sapporo"
         },
@@ -30754,8 +30754,8 @@
         },
         "venue": {
           "id": null,
-          "name": null,
-          "city": null
+          "name": "Metalist Stadium",
+          "city": "Kharkiv"
         },
         "status": {
           "long": "Not Started",
@@ -30823,9 +30823,9 @@
           "second": null
         },
         "venue": {
-          "id": null,
-          "name": null,
-          "city": null
+          "id": 20119,
+          "name": "Ukraina Stadium",
+          "city": "Lviv"
         },
         "status": {
           "long": "Not Started",
@@ -30893,9 +30893,9 @@
           "second": null
         },
         "venue": {
-          "id": null,
-          "name": null,
-          "city": null
+          "id": 11948,
+          "name": "Tsentralnyi Stadion",
+          "city": "Zhytomyr"
         },
         "status": {
           "long": "Not Started",
@@ -30954,7 +30954,7 @@
     {
       "fixture": {
         "id": 1629989,
-        "referee": null,
+        "referee": "Kim Jong-hyeok",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-25T13:00:00+03:00",
         "timestamp": 1795600800,
@@ -31024,7 +31024,7 @@
     {
       "fixture": {
         "id": 1629990,
-        "referee": null,
+        "referee": "Adam Kersey",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-25T13:00:00+03:00",
         "timestamp": 1795600800,
@@ -31313,9 +31313,9 @@
           "second": null
         },
         "venue": {
-          "id": null,
-          "name": null,
-          "city": null
+          "id": 1781,
+          "name": "Bukhungu Stadium",
+          "city": "Kakamega"
         },
         "status": {
           "long": "Not Started",
@@ -31453,9 +31453,9 @@
           "second": null
         },
         "venue": {
-          "id": 21813,
-          "name": "Kalyani Stadium",
-          "city": "Kalyani"
+          "id": 20465,
+          "name": "The Salt Lake Stadium",
+          "city": "Calcutta"
         },
         "status": {
           "long": "Not Started",
@@ -31664,7 +31664,7 @@
         },
         "venue": {
           "id": 8353,
-          "name": "700th Anniversary Stadium",
+          "name": "700th Anniversary of Chiang Mai Stadium",
           "city": "Chiang Mai"
         },
         "status": {
@@ -31734,8 +31734,8 @@
         },
         "venue": {
           "id": null,
-          "name": "Insee Chantarasatit Stadium",
-          "city": null
+          "name": "TOT Stadium Chaeng Watthana",
+          "city": "Bangkok"
         },
         "status": {
           "long": "Not Started",
@@ -31874,8 +31874,8 @@
         },
         "venue": {
           "id": null,
-          "name": null,
-          "city": null
+          "name": "Dynamo Training Center",
+          "city": "Kyiv"
         },
         "status": {
           "long": "Not Started",
@@ -32013,9 +32013,9 @@
           "second": null
         },
         "venue": {
-          "id": null,
-          "name": null,
-          "city": null
+          "id": 20308,
+          "name": "Avanhard Stadium",
+          "city": "Uzhhorod"
         },
         "status": {
           "long": "Not Started",
@@ -32293,9 +32293,9 @@
           "second": null
         },
         "venue": {
-          "id": null,
-          "name": "Thunderdome Stadium",
-          "city": "Nonthaburi"
+          "id": 1551,
+          "name": "Rajamangala National Stadium",
+          "city": "Bangkok"
         },
         "status": {
           "long": "Not Started",
@@ -50274,7 +50274,7 @@
     {
       "fixture": {
         "id": 1636231,
-        "referee": null,
+        "referee": "Morten Krogh",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-26T20:45:00+03:00",
         "timestamp": 1795715100,
@@ -50344,7 +50344,7 @@
     {
       "fixture": {
         "id": 1636244,
-        "referee": null,
+        "referee": "Harm Osmers",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-26T20:45:00+03:00",
         "timestamp": 1795715100,
@@ -50414,7 +50414,7 @@
     {
       "fixture": {
         "id": 1636255,
-        "referee": null,
+        "referee": "Mikola Balakin",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-26T20:45:00+03:00",
         "timestamp": 1795715100,
@@ -50484,7 +50484,7 @@
     {
       "fixture": {
         "id": 1636298,
-        "referee": null,
+        "referee": "Nikola Dabanovic",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-26T20:45:00+03:00",
         "timestamp": 1795715100,
@@ -50554,7 +50554,7 @@
     {
       "fixture": {
         "id": 1636307,
-        "referee": null,
+        "referee": "Chris Kavanagh",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-26T20:45:00+03:00",
         "timestamp": 1795715100,
@@ -50624,7 +50624,7 @@
     {
       "fixture": {
         "id": 1636315,
-        "referee": null,
+        "referee": "Igor Pajac",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-26T20:45:00+03:00",
         "timestamp": 1795715100,
@@ -50694,7 +50694,7 @@
     {
       "fixture": {
         "id": 1636329,
-        "referee": null,
+        "referee": "Jose Maria Sanchez Martinez",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-26T20:45:00+03:00",
         "timestamp": 1795715100,
@@ -50764,7 +50764,7 @@
     {
       "fixture": {
         "id": 1636334,
-        "referee": null,
+        "referee": "Lawrence Visser",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-26T20:45:00+03:00",
         "timestamp": 1795715100,
@@ -51884,7 +51884,7 @@
     {
       "fixture": {
         "id": 1636252,
-        "referee": null,
+        "referee": "Rohit Saggi",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-26T23:00:00+03:00",
         "timestamp": 1795723200,
@@ -51954,7 +51954,7 @@
     {
       "fixture": {
         "id": 1636261,
-        "referee": null,
+        "referee": "Simone Sozza",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-26T23:00:00+03:00",
         "timestamp": 1795723200,
@@ -52024,7 +52024,7 @@
     {
       "fixture": {
         "id": 1636270,
-        "referee": null,
+        "referee": "Luis Miguel Branco Godinho",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-26T23:00:00+03:00",
         "timestamp": 1795723200,
@@ -52094,7 +52094,7 @@
     {
       "fixture": {
         "id": 1636277,
-        "referee": null,
+        "referee": "Samuel Barrott",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-26T23:00:00+03:00",
         "timestamp": 1795723200,
@@ -52164,7 +52164,7 @@
     {
       "fixture": {
         "id": 1636294,
-        "referee": null,
+        "referee": "Sebastian Gishamer",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-26T23:00:00+03:00",
         "timestamp": 1795723200,
@@ -52234,7 +52234,7 @@
     {
       "fixture": {
         "id": 1636301,
-        "referee": null,
+        "referee": "Nenad Minakovic",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-26T23:00:00+03:00",
         "timestamp": 1795723200,
@@ -52304,7 +52304,7 @@
     {
       "fixture": {
         "id": 1636305,
-        "referee": null,
+        "referee": "Kristo Tohver",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-26T23:00:00+03:00",
         "timestamp": 1795723200,
@@ -52374,7 +52374,7 @@
     {
       "fixture": {
         "id": 1636336,
-        "referee": null,
+        "referee": "Antonio Nobre",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-26T23:00:00+03:00",
         "timestamp": 1795723200,
@@ -52444,7 +52444,7 @@
     {
       "fixture": {
         "id": 1636343,
-        "referee": null,
+        "referee": "Georgi Nikolov Kabakov",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-26T23:00:00+03:00",
         "timestamp": 1795723200,
@@ -52514,7 +52514,7 @@
     {
       "fixture": {
         "id": 1636349,
-        "referee": null,
+        "referee": "Allard Lindhout",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-26T23:00:00+03:00",
         "timestamp": 1795723200,
