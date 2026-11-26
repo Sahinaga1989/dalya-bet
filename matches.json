@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-11-26T17:58:42.383354+00:00",
+  "updated_at": "2026-11-26T19:03:09.347475+00:00",
   "date": "2026-11-26",
   "dates": [
     "2026-11-24",
     "2026-11-25",
     "2026-11-26",
     "2026-11-27",
-    "2026-12-04",
-    "2026-12-05"
+    "2026-12-08",
+    "2026-12-09"
   ],
   "horizon_days": 30,
   "response": [
@@ -39709,8 +39709,8 @@
         "date": "2026-11-26T19:00:00+03:00",
         "timestamp": 1795708800,
         "periods": {
-          "first": null,
-          "second": null
+          "first": 1795708800,
+          "second": 1795712400
         },
         "venue": {
           "id": null,
@@ -39718,9 +39718,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
           "extra": null
         }
       },
@@ -39739,27 +39739,27 @@
           "id": 4048,
           "name": "Discoveries",
           "logo": "https://media.api-sports.io/football/teams/4048.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 26910,
           "name": "Gardnersville",
           "logo": "https://media.api-sports.io/football/teams/26910.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 3,
+        "away": 1
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 1
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 3,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -39779,8 +39779,8 @@
         "date": "2026-11-26T19:00:00+03:00",
         "timestamp": 1795708800,
         "periods": {
-          "first": null,
-          "second": null
+          "first": 1795708800,
+          "second": 1795712400
         },
         "venue": {
           "id": null,
@@ -39788,9 +39788,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
           "extra": null
         }
       },
@@ -39809,27 +39809,27 @@
           "id": 28535,
           "name": "Golden Dream",
           "logo": "https://media.api-sports.io/football/teams/28535.png",
-          "winner": null
+          "winner": false
         },
         "away": {
           "id": 6425,
           "name": "LPRC Oilers",
           "logo": "https://media.api-sports.io/football/teams/6425.png",
-          "winner": null
+          "winner": true
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 1
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -39858,9 +39858,9 @@
           "city": "Moscow"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 65,
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
           "extra": null
         }
       },
@@ -39889,8 +39889,8 @@
         }
       },
       "goals": {
-        "home": 1,
-        "away": 0
+        "home": 2,
+        "away": 1
       },
       "score": {
         "halftime": {
@@ -39898,8 +39898,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -39928,10 +39928,10 @@
           "city": null
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 68,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 7
         }
       },
       "league": {
@@ -39949,18 +39949,18 @@
           "id": 2915,
           "name": "Al Mesaimeer",
           "logo": "https://media.api-sports.io/football/teams/2915.png",
-          "winner": null
+          "winner": false
         },
         "away": {
           "id": 10954,
           "name": "Qatar U23",
           "logo": "https://media.api-sports.io/football/teams/10954.png",
-          "winner": null
+          "winner": true
         }
       },
       "goals": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "score": {
         "halftime": {
@@ -39968,8 +39968,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -39998,10 +39998,10 @@
           "city": "Doha"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 71,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 5
         }
       },
       "league": {
@@ -40038,8 +40038,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 0
         },
         "extratime": {
           "home": null,
@@ -40130,7 +40130,7 @@
         "timestamp": 1795713600,
         "periods": {
           "first": 1795713600,
-          "second": null
+          "second": 1795717200
         },
         "venue": {
           "id": null,
@@ -40138,9 +40138,9 @@
           "city": "Kuwait"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 38,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 85,
           "extra": null
         }
       },
@@ -40159,18 +40159,18 @@
           "id": 3532,
           "name": "Al Arabi",
           "logo": "https://media.api-sports.io/football/teams/3532.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 3545,
           "name": "Khaitan",
           "logo": "https://media.api-sports.io/football/teams/3545.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": 0,
-        "away": 0
+        "home": 2,
+        "away": 1
       },
       "score": {
         "halftime": {
@@ -40208,9 +40208,9 @@
           "city": "Madimaa"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 27,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 71,
           "extra": null
         }
       },
@@ -40239,13 +40239,13 @@
         }
       },
       "goals": {
-        "home": 0,
-        "away": 1
+        "home": 1,
+        "away": 2
       },
       "score": {
         "halftime": {
           "home": 0,
-          "away": 1
+          "away": 2
         },
         "fulltime": {
           "home": null,
@@ -40270,7 +40270,7 @@
         "timestamp": 1795715100,
         "periods": {
           "first": 1795715100,
-          "second": null
+          "second": 1795718700
         },
         "venue": {
           "id": null,
@@ -40278,9 +40278,9 @@
           "city": null
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 12,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 57,
           "extra": null
         }
       },
@@ -40309,13 +40309,13 @@
         }
       },
       "goals": {
-        "home": 0,
-        "away": 0
+        "home": 1,
+        "away": 1
       },
       "score": {
         "halftime": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "fulltime": {
           "home": null,
@@ -40350,7 +40350,7 @@
         "status": {
           "long": "First Half",
           "short": "1H",
-          "elapsed": 13,
+          "elapsed": 44,
           "extra": null
         }
       },
@@ -40418,9 +40418,9 @@
           "city": "Vigo"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 14,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 59,
           "extra": null
         }
       },
@@ -40449,12 +40449,12 @@
         }
       },
       "goals": {
-        "home": 0,
-        "away": 0
+        "home": 1,
+        "away": 1
       },
       "score": {
         "halftime": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "fulltime": {
@@ -40488,9 +40488,9 @@
           "city": "Zagreb"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 12,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 59,
           "extra": null
         }
       },
@@ -40520,12 +40520,12 @@
       },
       "goals": {
         "home": 0,
-        "away": 1
+        "away": 2
       },
       "score": {
         "halftime": {
           "home": 0,
-          "away": 1
+          "away": 2
         },
         "fulltime": {
           "home": null,
@@ -40558,9 +40558,9 @@
           "city": "Marseille"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 13,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 59,
           "extra": null
         }
       },
@@ -40579,22 +40579,22 @@
           "id": 81,
           "name": "Marseille",
           "logo": "https://media.api-sports.io/football/teams/81.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 646,
           "name": "Levski Sofia",
           "logo": "https://media.api-sports.io/football/teams/646.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "score": {
         "halftime": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "fulltime": {
@@ -40628,9 +40628,9 @@
           "city": "Piraeus"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 13,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 60,
           "extra": null
         }
       },
@@ -40649,22 +40649,22 @@
           "id": 553,
           "name": "Olympiakos Piraeus",
           "logo": "https://media.api-sports.io/football/teams/553.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 489,
           "name": "AC Milan",
           "logo": "https://media.api-sports.io/football/teams/489.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": 0,
-        "away": 0
+        "home": 2,
+        "away": 1
       },
       "score": {
         "halftime": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "fulltime": {
@@ -40698,9 +40698,9 @@
           "city": "Pilsner"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 13,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 59,
           "extra": null
         }
       },
@@ -40719,22 +40719,22 @@
           "id": 567,
           "name": "Plzen",
           "logo": "https://media.api-sports.io/football/teams/567.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 211,
           "name": "Benfica",
           "logo": "https://media.api-sports.io/football/teams/211.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": 0,
+        "home": 4,
         "away": 0
       },
       "score": {
         "halftime": {
-          "home": 0,
+          "home": 3,
           "away": 0
         },
         "fulltime": {
@@ -40768,9 +40768,9 @@
           "city": "Heverley"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 12,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 58,
           "extra": null
         }
       },
@@ -40789,23 +40789,23 @@
           "id": 1393,
           "name": "Union St. Gilloise",
           "logo": "https://media.api-sports.io/football/teams/1393.png",
-          "winner": null
+          "winner": false
         },
         "away": {
           "id": 347,
           "name": "Lech Poznan",
           "logo": "https://media.api-sports.io/football/teams/347.png",
-          "winner": null
+          "winner": true
         }
       },
       "goals": {
-        "home": 0,
-        "away": 0
+        "home": 1,
+        "away": 2
       },
       "score": {
         "halftime": {
           "home": 0,
-          "away": 0
+          "away": 2
         },
         "fulltime": {
           "home": null,
@@ -40838,9 +40838,9 @@
           "city": "Salzburg"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 12,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 61,
           "extra": null
         }
       },
@@ -40859,17 +40859,17 @@
           "id": 571,
           "name": "Red Bull Salzburg",
           "logo": "https://media.api-sports.io/football/teams/571.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 3683,
           "name": "Ararat-Armenia",
           "logo": "https://media.api-sports.io/football/teams/3683.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": 0,
+        "home": 2,
         "away": 0
       },
       "score": {
@@ -40894,7 +40894,7 @@
     {
       "fixture": {
         "id": 1636381,
-        "referee": "M. Redder",
+        "referee": "Mikkel Redder",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-26T20:45:00+03:00",
         "timestamp": 1795715100,
@@ -40908,9 +40908,9 @@
           "city": "Amsterdam"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 12,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 58,
           "extra": null
         }
       },
@@ -40939,12 +40939,12 @@
         }
       },
       "goals": {
-        "home": 1,
+        "home": 2,
         "away": 0
       },
       "score": {
         "halftime": {
-          "home": 1,
+          "home": 2,
           "away": 0
         },
         "fulltime": {
@@ -40978,9 +40978,9 @@
           "city": "Bergen"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 13,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 61,
           "extra": null
         }
       },
@@ -40999,23 +40999,23 @@
           "id": 319,
           "name": "Brann",
           "logo": "https://media.api-sports.io/football/teams/319.png",
-          "winner": null
+          "winner": false
         },
         "away": {
           "id": 406,
           "name": "Aarhus",
           "logo": "https://media.api-sports.io/football/teams/406.png",
-          "winner": null
+          "winner": true
         }
       },
       "goals": {
-        "home": 0,
-        "away": 0
+        "home": 1,
+        "away": 4
       },
       "score": {
         "halftime": {
           "home": 0,
-          "away": 0
+          "away": 2
         },
         "fulltime": {
           "home": null,
@@ -41048,9 +41048,9 @@
           "city": "Falmer"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 14,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 57,
           "extra": null
         }
       },
@@ -41079,12 +41079,12 @@
         }
       },
       "goals": {
-        "home": 1,
+        "home": 2,
         "away": 0
       },
       "score": {
         "halftime": {
-          "home": 1,
+          "home": 2,
           "away": 0
         },
         "fulltime": {
@@ -41118,9 +41118,9 @@
           "city": "Rrogozhine"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 13,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 60,
           "extra": null
         }
       },
@@ -41139,17 +41139,17 @@
           "id": 3327,
           "name": "Egnatia Rrogozhinë",
           "logo": "https://media.api-sports.io/football/teams/3327.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 667,
           "name": "Lincoln Red Imps FC",
           "logo": "https://media.api-sports.io/football/teams/667.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "score": {
@@ -41188,9 +41188,9 @@
           "city": "Edinburgh"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 9,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 55,
           "extra": null
         }
       },
@@ -41219,13 +41219,13 @@
         }
       },
       "goals": {
-        "home": 0,
-        "away": 0
+        "home": 2,
+        "away": 2
       },
       "score": {
         "halftime": {
-          "home": 0,
-          "away": 0
+          "home": 2,
+          "away": 2
         },
         "fulltime": {
           "home": null,
@@ -41258,9 +41258,9 @@
           "city": "Tbilisi"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 12,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 59,
           "extra": null
         }
       },
@@ -41279,22 +41279,22 @@
           "id": 3502,
           "name": "FC Iberia 1999",
           "logo": "https://media.api-sports.io/football/teams/3502.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 546,
           "name": "Getafe",
           "logo": "https://media.api-sports.io/football/teams/546.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "score": {
         "halftime": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "fulltime": {
@@ -41328,9 +41328,9 @@
           "city": "Jablonec"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 13,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 59,
           "extra": null
         }
       },
@@ -41398,9 +41398,9 @@
           "city": "Kaunas"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 12,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 49,
           "extra": null
         }
       },
@@ -41468,9 +41468,9 @@
           "city": "Paphos"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 15,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 61,
           "extra": null
         }
       },
@@ -41489,23 +41489,23 @@
           "id": 3403,
           "name": "Pafos",
           "logo": "https://media.api-sports.io/football/teams/3403.png",
-          "winner": null
+          "winner": false
         },
         "away": {
           "id": 397,
           "name": "FC Midtjylland",
           "logo": "https://media.api-sports.io/football/teams/397.png",
-          "winner": null
+          "winner": true
         }
       },
       "goals": {
         "home": 0,
-        "away": 0
+        "away": 1
       },
       "score": {
         "halftime": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "fulltime": {
           "home": null,
@@ -41529,7 +41529,7 @@
         "date": "2026-11-26T21:00:00+03:00",
         "timestamp": 1795716000,
         "periods": {
-          "first": null,
+          "first": 1795716000,
           "second": null
         },
         "venue": {
@@ -41538,10 +41538,10 @@
           "city": "Aalborg"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
+          "long": "Halftime",
+          "short": "HT",
+          "elapsed": 45,
+          "extra": 2
         }
       },
       "league": {
@@ -41569,13 +41569,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 1
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 1
         },
         "fulltime": {
           "home": null,
@@ -41669,7 +41669,7 @@
         "date": "2026-11-26T22:00:00+03:00",
         "timestamp": 1795719600,
         "periods": {
-          "first": null,
+          "first": 1795719600,
           "second": null
         },
         "venue": {
@@ -41678,9 +41678,9 @@
           "city": "Stoke on Trent"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 2,
           "extra": null
         }
       },
@@ -41709,13 +41709,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -41739,7 +41739,7 @@
         "date": "2026-11-26T22:00:00+03:00",
         "timestamp": 1795719600,
         "periods": {
-          "first": null,
+          "first": 1795719600,
           "second": null
         },
         "venue": {
@@ -41748,9 +41748,9 @@
           "city": null
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 2,
           "extra": null
         }
       },
@@ -41779,13 +41779,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -412943,6 +412943,1126 @@
     },
     {
       "fixture": {
+        "id": 1652068,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-08T17:00:00+03:00",
+        "timestamp": 1796738400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "The Wham Stadium",
+          "city": "Accrington"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 46,
+        "name": "EFL Trophy",
+        "country": "England",
+        "logo": "https://media.api-sports.io/football/leagues/46.png",
+        "flag": "https://media.api-sports.io/flags/gb-eng.svg",
+        "season": 2026,
+        "round": "Round of 32",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 1360,
+          "name": "Accrington ST",
+          "logo": "https://media.api-sports.io/football/teams/1360.png",
+          "winner": null
+        },
+        "away": {
+          "id": 1381,
+          "name": "Tranmere",
+          "logo": "https://media.api-sports.io/football/teams/1381.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1652069,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-08T17:00:00+03:00",
+        "timestamp": 1796738400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": 496,
+          "name": "The Hive Stadium",
+          "city": "London"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 46,
+        "name": "EFL Trophy",
+        "country": "England",
+        "logo": "https://media.api-sports.io/football/leagues/46.png",
+        "flag": "https://media.api-sports.io/flags/gb-eng.svg",
+        "season": 2026,
+        "round": "Round of 32",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 1369,
+          "name": "Barnet",
+          "logo": "https://media.api-sports.io/football/teams/1369.png",
+          "winner": null
+        },
+        "away": {
+          "id": 46,
+          "name": "Leicester",
+          "logo": "https://media.api-sports.io/football/teams/46.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1652070,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-08T17:00:00+03:00",
+        "timestamp": 1796738400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Valley Parade",
+          "city": "Bradford"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 46,
+        "name": "EFL Trophy",
+        "country": "England",
+        "logo": "https://media.api-sports.io/football/leagues/46.png",
+        "flag": "https://media.api-sports.io/flags/gb-eng.svg",
+        "season": 2026,
+        "round": "Round of 32",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 1343,
+          "name": "Bradford",
+          "logo": "https://media.api-sports.io/football/teams/1343.png",
+          "winner": null
+        },
+        "away": {
+          "id": 19746,
+          "name": "Nottingham Forest U21",
+          "logo": "https://media.api-sports.io/football/teams/19746.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1652071,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-08T17:00:00+03:00",
+        "timestamp": 1796738400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Abbey Stadium",
+          "city": "Cambridge"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 46,
+        "name": "EFL Trophy",
+        "country": "England",
+        "logo": "https://media.api-sports.io/football/leagues/46.png",
+        "flag": "https://media.api-sports.io/flags/gb-eng.svg",
+        "season": 2026,
+        "round": "Round of 32",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 1370,
+          "name": "Cambridge United",
+          "logo": "https://media.api-sports.io/football/teams/1370.png",
+          "winner": null
+        },
+        "away": {
+          "id": 1364,
+          "name": "Exeter City",
+          "logo": "https://media.api-sports.io/football/teams/1364.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1652072,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-08T17:00:00+03:00",
+        "timestamp": 1796738400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "SMH Group Stadium",
+          "city": "Chesterfield"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 46,
+        "name": "EFL Trophy",
+        "country": "England",
+        "logo": "https://media.api-sports.io/football/leagues/46.png",
+        "flag": "https://media.api-sports.io/flags/gb-eng.svg",
+        "season": 2026,
+        "round": "Round of 32",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 1345,
+          "name": "Chesterfield",
+          "logo": "https://media.api-sports.io/football/teams/1345.png",
+          "winner": null
+        },
+        "away": {
+          "id": 1349,
+          "name": "Oldham",
+          "logo": "https://media.api-sports.io/football/teams/1349.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1652073,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-08T17:00:00+03:00",
+        "timestamp": 1796738400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Highbury Stadium",
+          "city": "Fleetwood"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 46,
+        "name": "EFL Trophy",
+        "country": "England",
+        "logo": "https://media.api-sports.io/football/leagues/46.png",
+        "flag": "https://media.api-sports.io/flags/gb-eng.svg",
+        "season": 2026,
+        "round": "Round of 32",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 1336,
+          "name": "Fleetwood Town",
+          "logo": "https://media.api-sports.io/football/teams/1336.png",
+          "winner": null
+        },
+        "away": {
+          "id": 74,
+          "name": "Sheffield Wednesday",
+          "logo": "https://media.api-sports.io/football/teams/74.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1652074,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-08T17:00:00+03:00",
+        "timestamp": 1796738400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Accu Stadium",
+          "city": "Huddersfield"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 46,
+        "name": "EFL Trophy",
+        "country": "England",
+        "logo": "https://media.api-sports.io/football/leagues/46.png",
+        "flag": "https://media.api-sports.io/flags/gb-eng.svg",
+        "season": 2026,
+        "round": "Round of 32",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 37,
+          "name": "Huddersfield",
+          "logo": "https://media.api-sports.io/football/teams/37.png",
+          "winner": null
+        },
+        "away": {
+          "id": 7199,
+          "name": "Newcastle United U21",
+          "logo": "https://media.api-sports.io/football/teams/7199.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1652075,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-08T17:00:00+03:00",
+        "timestamp": 1796738400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Kenilworth Road",
+          "city": "Luton"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 46,
+        "name": "EFL Trophy",
+        "country": "England",
+        "logo": "https://media.api-sports.io/football/leagues/46.png",
+        "flag": "https://media.api-sports.io/flags/gb-eng.svg",
+        "season": 2026,
+        "round": "Round of 32",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 1359,
+          "name": "Luton",
+          "logo": "https://media.api-sports.io/football/teams/1359.png",
+          "winner": null
+        },
+        "away": {
+          "id": 17000,
+          "name": "Crystal Palace U21",
+          "logo": "https://media.api-sports.io/football/teams/17000.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1652076,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-08T17:00:00+03:00",
+        "timestamp": 1796738400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Stadium MK",
+          "city": "Milton Keynes"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 46,
+        "name": "EFL Trophy",
+        "country": "England",
+        "logo": "https://media.api-sports.io/football/leagues/46.png",
+        "flag": "https://media.api-sports.io/flags/gb-eng.svg",
+        "season": 2026,
+        "round": "Round of 32",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 1348,
+          "name": "Milton Keynes Dons",
+          "logo": "https://media.api-sports.io/football/teams/1348.png",
+          "winner": null
+        },
+        "away": {
+          "id": 7192,
+          "name": "Chelsea U21",
+          "logo": "https://media.api-sports.io/football/teams/7192.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1652077,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-08T17:00:00+03:00",
+        "timestamp": 1796738400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Meadow Lane",
+          "city": "Nottingham"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 46,
+        "name": "EFL Trophy",
+        "country": "England",
+        "logo": "https://media.api-sports.io/football/leagues/46.png",
+        "flag": "https://media.api-sports.io/flags/gb-eng.svg",
+        "season": 2026,
+        "round": "Round of 32",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 1376,
+          "name": "Notts County",
+          "logo": "https://media.api-sports.io/football/teams/1376.png",
+          "winner": null
+        },
+        "away": {
+          "id": 1356,
+          "name": "Blackpool",
+          "logo": "https://media.api-sports.io/football/teams/1356.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1652078,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-08T17:00:00+03:00",
+        "timestamp": 1796738400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Kassam Stadium",
+          "city": "Oxford"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 46,
+        "name": "EFL Trophy",
+        "country": "England",
+        "logo": "https://media.api-sports.io/football/leagues/46.png",
+        "flag": "https://media.api-sports.io/flags/gb-eng.svg",
+        "season": 2026,
+        "round": "Round of 32",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 1338,
+          "name": "Oxford United",
+          "logo": "https://media.api-sports.io/football/teams/1338.png",
+          "winner": null
+        },
+        "away": {
+          "id": 20079,
+          "name": "Brentford U21",
+          "logo": "https://media.api-sports.io/football/teams/20079.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1652079,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-08T17:00:00+03:00",
+        "timestamp": 1796738400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": 571,
+          "name": "Home Park",
+          "city": "Plymouth"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 46,
+        "name": "EFL Trophy",
+        "country": "England",
+        "logo": "https://media.api-sports.io/football/leagues/46.png",
+        "flag": "https://media.api-sports.io/flags/gb-eng.svg",
+        "season": 2026,
+        "round": "Round of 32",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 1357,
+          "name": "Plymouth",
+          "logo": "https://media.api-sports.io/football/teams/1357.png",
+          "winner": null
+        },
+        "away": {
+          "id": 1350,
+          "name": "Peterborough",
+          "logo": "https://media.api-sports.io/football/teams/1350.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1652080,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-08T17:00:00+03:00",
+        "timestamp": 1796738400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "SPORTA Arena",
+          "city": "Stevenage"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 46,
+        "name": "EFL Trophy",
+        "country": "England",
+        "logo": "https://media.api-sports.io/football/leagues/46.png",
+        "flag": "https://media.api-sports.io/flags/gb-eng.svg",
+        "season": 2026,
+        "round": "Round of 32",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 1368,
+          "name": "Stevenage",
+          "logo": "https://media.api-sports.io/football/teams/1368.png",
+          "winner": null
+        },
+        "away": {
+          "id": 1347,
+          "name": "Gillingham",
+          "logo": "https://media.api-sports.io/football/teams/1347.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1652081,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-08T17:00:00+03:00",
+        "timestamp": 1796738400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Edgeley Park",
+          "city": "Stockport"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 46,
+        "name": "EFL Trophy",
+        "country": "England",
+        "logo": "https://media.api-sports.io/football/leagues/46.png",
+        "flag": "https://media.api-sports.io/flags/gb-eng.svg",
+        "season": 2026,
+        "round": "Round of 32",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 4686,
+          "name": "Stockport County",
+          "logo": "https://media.api-sports.io/football/teams/4686.png",
+          "winner": null
+        },
+        "away": {
+          "id": 1351,
+          "name": "Port Vale",
+          "logo": "https://media.api-sports.io/football/teams/1351.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1652082,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-08T17:00:00+03:00",
+        "timestamp": 1796738400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "The Brick Community Stadium",
+          "city": "Wigan"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 46,
+        "name": "EFL Trophy",
+        "country": "England",
+        "logo": "https://media.api-sports.io/football/leagues/46.png",
+        "flag": "https://media.api-sports.io/flags/gb-eng.svg",
+        "season": 2026,
+        "round": "Round of 32",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 61,
+          "name": "Wigan",
+          "logo": "https://media.api-sports.io/football/teams/61.png",
+          "winner": null
+        },
+        "away": {
+          "id": 1354,
+          "name": "Doncaster",
+          "logo": "https://media.api-sports.io/football/teams/1354.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1652083,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-08T17:00:00+03:00",
+        "timestamp": 1796738400,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": "Adams Park",
+          "city": "High Wycombe"
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 46,
+        "name": "EFL Trophy",
+        "country": "England",
+        "logo": "https://media.api-sports.io/football/leagues/46.png",
+        "flag": "https://media.api-sports.io/flags/gb-eng.svg",
+        "season": 2026,
+        "round": "Round of 32",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 1358,
+          "name": "Wycombe",
+          "logo": "https://media.api-sports.io/football/teams/1358.png",
+          "winner": null
+        },
+        "away": {
+          "id": 7189,
+          "name": "Arsenal U21",
+          "logo": "https://media.api-sports.io/football/teams/7189.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
         "id": 1627340,
         "referee": null,
         "timezone": "Europe/Istanbul",
@@ -426495,6 +427615,76 @@
           "id": 28200,
           "name": "Modica",
           "logo": "https://media.api-sports.io/football/teams/28200.png",
+          "winner": null
+        }
+      },
+      "goals": {
+        "home": null,
+        "away": null
+      },
+      "score": {
+        "halftime": {
+          "home": null,
+          "away": null
+        },
+        "fulltime": {
+          "home": null,
+          "away": null
+        },
+        "extratime": {
+          "home": null,
+          "away": null
+        },
+        "penalty": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "fixture": {
+        "id": 1652084,
+        "referee": null,
+        "timezone": "Europe/Istanbul",
+        "date": "2026-12-09T16:00:00+03:00",
+        "timestamp": 1796821200,
+        "periods": {
+          "first": null,
+          "second": null
+        },
+        "venue": {
+          "id": null,
+          "name": null,
+          "city": null
+        },
+        "status": {
+          "long": "Not Started",
+          "short": "NS",
+          "elapsed": null,
+          "extra": null
+        }
+      },
+      "league": {
+        "id": 892,
+        "name": "Coppa Italia Serie D",
+        "country": "Italy",
+        "logo": "https://media.api-sports.io/football/leagues/892.png",
+        "flag": "https://media.api-sports.io/flags/it.svg",
+        "season": 2026,
+        "round": "Quarter-finals",
+        "standings": false
+      },
+      "teams": {
+        "home": {
+          "id": 26514,
+          "name": "Valenzana",
+          "logo": "https://media.api-sports.io/football/teams/26514.png",
+          "winner": null
+        },
+        "away": {
+          "id": 1706,
+          "name": "Pro Patria",
+          "logo": "https://media.api-sports.io/football/teams/1706.png",
           "winner": null
         }
       },
