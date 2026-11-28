@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-11-28T05:05:30.277066+00:00",
+  "updated_at": "2026-11-28T06:07:32.409809+00:00",
   "date": "2026-11-28",
   "dates": [
     "2026-11-26",
     "2026-11-27",
     "2026-11-28",
     "2026-11-29",
-    "2026-12-22",
-    "2026-12-23"
+    "2026-12-24",
+    "2026-12-25"
   ],
   "horizon_days": 30,
   "response": [
@@ -36218,9 +36218,9 @@
           "city": "Sandy"
         },
         "status": {
-          "long": "Second Half",
-          "short": "2H",
-          "elapsed": 77,
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
           "extra": null
         }
       },
@@ -36258,8 +36258,8 @@
           "away": 0
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -36280,7 +36280,7 @@
         "timestamp": 1795838400,
         "periods": {
           "first": 1795838400,
-          "second": null
+          "second": 1795842000
         },
         "venue": {
           "id": null,
@@ -36288,10 +36288,10 @@
           "city": "Melbourne"
         },
         "status": {
-          "long": "Halftime",
-          "short": "HT",
-          "elapsed": 45,
-          "extra": null
+          "long": "Match Finished",
+          "short": "FT",
+          "elapsed": 90,
+          "extra": 5
         }
       },
       "league": {
@@ -36309,17 +36309,17 @@
           "id": 19705,
           "name": "Preston Lions",
           "logo": "https://media.api-sports.io/football/teams/19705.png",
-          "winner": false
+          "winner": true
         },
         "away": {
           "id": 26874,
           "name": "Wests APIA",
           "logo": "https://media.api-sports.io/football/teams/26874.png",
-          "winner": true
+          "winner": false
         }
       },
       "goals": {
-        "home": 0,
+        "home": 2,
         "away": 1
       },
       "score": {
@@ -36328,8 +36328,8 @@
           "away": 1
         },
         "fulltime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 1
         },
         "extratime": {
           "home": null,
@@ -36350,7 +36350,7 @@
         "timestamp": 1795842000,
         "periods": {
           "first": 1795842000,
-          "second": null
+          "second": 1795845600
         },
         "venue": {
           "id": null,
@@ -36358,9 +36358,9 @@
           "city": null
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 5,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 51,
           "extra": null
         }
       },
@@ -36420,7 +36420,7 @@
         "timestamp": 1795842000,
         "periods": {
           "first": 1795842000,
-          "second": null
+          "second": 1795845600
         },
         "venue": {
           "id": 22429,
@@ -36428,9 +36428,9 @@
           "city": "Yongin"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 6,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 48,
           "extra": null
         }
       },
@@ -36490,7 +36490,7 @@
         "timestamp": 1795842000,
         "periods": {
           "first": 1795842000,
-          "second": null
+          "second": 1795845600
         },
         "venue": {
           "id": null,
@@ -36498,9 +36498,9 @@
           "city": "Kochi"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 2,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 47,
           "extra": null
         }
       },
@@ -36568,9 +36568,9 @@
           "city": "Kyoto"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 2,
+          "long": "Halftime",
+          "short": "HT",
+          "elapsed": 45,
           "extra": null
         }
       },
@@ -36589,23 +36589,23 @@
           "id": 302,
           "name": "Kyoto Sanga",
           "logo": "https://media.api-sports.io/football/teams/302.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 291,
           "name": "Cerezo Osaka",
           "logo": "https://media.api-sports.io/football/teams/291.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": 0,
-        "away": 0
+        "home": 2,
+        "away": 1
       },
       "score": {
         "halftime": {
-          "home": 0,
-          "away": 0
+          "home": 2,
+          "away": 1
         },
         "fulltime": {
           "home": null,
@@ -36638,9 +36638,9 @@
           "city": "Shizuoka"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 3,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 47,
           "extra": null
         }
       },
@@ -36699,7 +36699,7 @@
         "date": "2026-11-28T08:00:00+03:00",
         "timestamp": 1795842000,
         "periods": {
-          "first": null,
+          "first": 1795842000,
           "second": null
         },
         "venue": {
@@ -36708,10 +36708,10 @@
           "city": "Saitama"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
-          "extra": null
+          "long": "Halftime",
+          "short": "HT",
+          "elapsed": 45,
+          "extra": 3
         }
       },
       "league": {
@@ -36739,13 +36739,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 1,
+        "away": 1
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 1
         },
         "fulltime": {
           "home": null,
@@ -36764,7 +36764,7 @@
     {
       "fixture": {
         "id": 1647384,
-        "referee": "Choi Hyun-Jae",
+        "referee": "Choi Hyun-jai",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-28T08:00:00+03:00",
         "timestamp": 1795842000,
@@ -36778,9 +36778,9 @@
           "city": "Seoul"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 6,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 46,
           "extra": null
         }
       },
@@ -36799,22 +36799,22 @@
           "id": 2766,
           "name": "FC Seoul",
           "logo": "https://media.api-sports.io/football/teams/2766.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 2750,
           "name": "Daejeon Citizen",
           "logo": "https://media.api-sports.io/football/teams/2750.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": 0,
+        "home": 2,
         "away": 0
       },
       "score": {
         "halftime": {
-          "home": 0,
+          "home": 2,
           "away": 0
         },
         "fulltime": {
@@ -36848,9 +36848,9 @@
           "city": "Anyang"
         },
         "status": {
-          "long": "First Half",
-          "short": "1H",
-          "elapsed": 5,
+          "long": "Second Half",
+          "short": "2H",
+          "elapsed": 49,
           "extra": null
         }
       },
@@ -36869,22 +36869,22 @@
           "id": 2748,
           "name": "FC Anyang",
           "logo": "https://media.api-sports.io/football/teams/2748.png",
-          "winner": null
+          "winner": true
         },
         "away": {
           "id": 2761,
           "name": "Jeju United FC",
           "logo": "https://media.api-sports.io/football/teams/2761.png",
-          "winner": null
+          "winner": false
         }
       },
       "goals": {
-        "home": 0,
+        "home": 1,
         "away": 0
       },
       "score": {
         "halftime": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "fulltime": {
@@ -36904,7 +36904,7 @@
     {
       "fixture": {
         "id": 1556161,
-        "referee": null,
+        "referee": "Ryo Tanimoto",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-28T09:00:00+03:00",
         "timestamp": 1795845600,
@@ -36918,9 +36918,9 @@
           "city": "Kashima"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 4,
           "extra": null
         }
       },
@@ -36949,13 +36949,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -36974,7 +36974,7 @@
     {
       "fixture": {
         "id": 1556169,
-        "referee": null,
+        "referee": "Masuya Ueda",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-28T09:00:00+03:00",
         "timestamp": 1795845600,
@@ -36988,9 +36988,9 @@
           "city": "Kobe"
         },
         "status": {
-          "long": "Not Started",
-          "short": "NS",
-          "elapsed": null,
+          "long": "First Half",
+          "short": "1H",
+          "elapsed": 4,
           "extra": null
         }
       },
@@ -37019,13 +37019,13 @@
         }
       },
       "goals": {
-        "home": null,
-        "away": null
+        "home": 0,
+        "away": 0
       },
       "score": {
         "halftime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "fulltime": {
           "home": null,
@@ -37044,7 +37044,7 @@
     {
       "fixture": {
         "id": 1556162,
-        "referee": null,
+        "referee": "Shiino Daichi",
         "timezone": "Europe/Istanbul",
         "date": "2026-11-28T10:00:00+03:00",
         "timestamp": 1795849200,
